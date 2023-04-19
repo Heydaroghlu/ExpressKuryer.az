@@ -1,4 +1,10 @@
+using ExpressKuryer.Application.Profiles;
+using ExpressKuryer.Application.Repositories;
+using ExpressKuryer.Application.UnitOfWorks;
+using ExpressKuryer.Persistence.Configurations;
+using ExpressKuryer.Persistence.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection;
 
 namespace ExpressKuryer.API.Controllers
 {
@@ -6,28 +12,16 @@ namespace ExpressKuryer.API.Controllers
 	[Route("[controller]")]
 	public class WeatherForecastController : ControllerBase
 	{
-		private static readonly string[] Summaries = new[]
-		{
-		"Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-	};
 
-		private readonly ILogger<WeatherForecastController> _logger;
-
-		public WeatherForecastController(ILogger<WeatherForecastController> logger)
+		[HttpGet]
+		public IActionResult Index()
 		{
-			_logger = logger;
+
+
+
+			return Ok();
 		}
 
-		[HttpGet(Name = "GetWeatherForecast")]
-		public IEnumerable<WeatherForecast> Get()
-		{
-			return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-			{
-				Date = DateTime.Now.AddDays(index),
-				TemperatureC = Random.Shared.Next(-20, 55),
-				Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-			})
-			.ToArray();
-		}
 	}
+
 }
