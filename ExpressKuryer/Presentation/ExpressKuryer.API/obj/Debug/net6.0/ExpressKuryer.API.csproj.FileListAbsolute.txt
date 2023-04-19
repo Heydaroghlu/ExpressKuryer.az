@@ -37,6 +37,7 @@ C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\Expr
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.pdb
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.genruntimeconfig.cache
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ref\ExpressKuryer.API.dll
+<<<<<<< HEAD
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -75,3 +76,15 @@ C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\Expr
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+=======
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.csproj.AssemblyReference.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.AssemblyInfoInputs.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.AssemblyInfo.cs
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.csproj.CoreCompileInputs.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.dll
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\refint\ExpressKuryer.API.dll
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.pdb
+>>>>>>> 3f5d40c4dda3204b73b00de3f5ce2649fc2df176

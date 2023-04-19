@@ -15,3 +15,11 @@ C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Infrastructure\Ex
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\refint\ExpressKuryer.Persistence.dll
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\ExpressKuryer.Persistence.pdb
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\ref\ExpressKuryer.Persistence.dll
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\ExpressKuryer.Persistence.csproj.AssemblyReference.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\ExpressKuryer.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\ExpressKuryer.Persistence.AssemblyInfoInputs.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\ExpressKuryer.Persistence.AssemblyInfo.cs
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\ExpressKuryer.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\ExpressKuryer.Persistence.dll
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\refint\ExpressKuryer.Persistence.dll
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\ExpressKuryer.Persistence.pdb
