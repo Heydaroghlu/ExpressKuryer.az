@@ -9,6 +9,7 @@ namespace ExpressKuryer.Domain.Entities
 {
     public class AppUser:IdentityUser
     {
+        //AppUser
         public string Name { get;set; } 
         public string Surname { get; set; } 
         public bool IsAdmin { get; set; }
