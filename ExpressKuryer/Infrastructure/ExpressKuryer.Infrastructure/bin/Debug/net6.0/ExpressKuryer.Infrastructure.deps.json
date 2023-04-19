@@ -14,7 +14,6 @@
           "ExpressKuryer.Infrastructure.dll": {}
         }
       },
-<<<<<<< HEAD
       "AutoMapper/12.0.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0"
@@ -38,8 +37,6 @@
           }
         }
       },
-      "Microsoft.CSharp/4.7.0": {},
-=======
       "Microsoft.AspNetCore.Cryptography.Internal/6.0.16": {
         "runtime": {
           "lib/net6.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
@@ -83,6 +80,7 @@
           }
         }
       },
+      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.EntityFrameworkCore/6.0.16": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Abstractions": "6.0.16",
@@ -170,7 +168,6 @@
           }
         }
       },
->>>>>>> 3f5d40c4dda3204b73b00de3f5ce2649fc2df176
       "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
         "runtime": {
           "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
@@ -179,8 +176,6 @@
           }
         }
       },
-<<<<<<< HEAD
-=======
       "Microsoft.Extensions.Identity.Core/6.0.16": {
         "dependencies": {
           "Microsoft.AspNetCore.Cryptography.KeyDerivation": "6.0.16",
@@ -230,7 +225,6 @@
           }
         }
       },
->>>>>>> 3f5d40c4dda3204b73b00de3f5ce2649fc2df176
       "Microsoft.Extensions.Options/6.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
@@ -254,8 +248,6 @@
           }
         }
       },
-<<<<<<< HEAD
-=======
       "System.Collections.Immutable/6.0.0": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
@@ -280,7 +272,6 @@
           }
         }
       },
->>>>>>> 3f5d40c4dda3204b73b00de3f5ce2649fc2df176
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "ExpressKuryer.Application/1.0.0": {
         "dependencies": {
@@ -309,7 +300,6 @@
       "serviceable": false,
       "sha512": ""
     },
-<<<<<<< HEAD
     "AutoMapper/12.0.1": {
       "type": "package",
       "serviceable": true,
@@ -324,13 +314,6 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/11.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512"
     },
-    "Microsoft.CSharp/4.7.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
-      "path": "microsoft.csharp/4.7.0",
-      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
-=======
     "Microsoft.AspNetCore.Cryptography.Internal/6.0.16": {
       "type": "package",
       "serviceable": true,
@@ -358,6 +341,13 @@
       "sha512": "sha512-V3/fddcj0OG4kgluPK6eh+dzB6U2YcEVheTmC1sHqvXTh1Zz30nNEkmy7GtHL+U10AwF4mRQ0DmuYbAbiM3Cwg==",
       "path": "microsoft.aspnetcore.identity.entityframeworkcore/6.0.16",
       "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.6.0.16.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/6.0.16": {
       "type": "package",
@@ -414,7 +404,6 @@
       "sha512": "sha512-vWXPg3HJQIpZkENn1KWq8SfbqVujVD7S7vIAyFXXqK5xkf1Vho+vG0bLBCHxU36lD1cLLtmGpfYf0B3MYFi9tQ==",
       "path": "microsoft.extensions.dependencyinjection/6.0.1",
       "hashPath": "microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512"
->>>>>>> 3f5d40c4dda3204b73b00de3f5ce2649fc2df176
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
       "type": "package",
@@ -423,8 +412,6 @@
       "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
     },
-<<<<<<< HEAD
-=======
     "Microsoft.Extensions.Identity.Core/6.0.16": {
       "type": "package",
       "serviceable": true,
@@ -453,7 +440,6 @@
       "path": "microsoft.extensions.logging.abstractions/6.0.0",
       "hashPath": "microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"
     },
->>>>>>> 3f5d40c4dda3204b73b00de3f5ce2649fc2df176
     "Microsoft.Extensions.Options/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -468,8 +454,6 @@
       "path": "microsoft.extensions.primitives/6.0.0",
       "hashPath": "microsoft.extensions.primitives.6.0.0.nupkg.sha512"
     },
-<<<<<<< HEAD
-=======
     "System.Collections.Immutable/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -491,7 +475,6 @@
       "path": "system.io.pipelines/5.0.2",
       "hashPath": "system.io.pipelines.5.0.2.nupkg.sha512"
     },
->>>>>>> 3f5d40c4dda3204b73b00de3f5ce2649fc2df176
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",
       "serviceable": true,
