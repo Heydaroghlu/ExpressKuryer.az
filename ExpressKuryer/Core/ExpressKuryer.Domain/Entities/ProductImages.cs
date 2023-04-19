@@ -9,6 +9,7 @@ namespace ExpressKuryer.Domain.Entities
 {
     public class ProductImages
     {
+        //one to many relations
         public string Image { get; set; }
         public bool IsPoster { get; set; }
         public int ProductId { get; set; }
