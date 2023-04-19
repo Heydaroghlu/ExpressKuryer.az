@@ -23,3 +23,12 @@ C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer
 C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\ExpressKuryer.Persistence.dll
 C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\refint\ExpressKuryer.Persistence.dll
 C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\ExpressKuryer.Persistence.pdb
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\bin\Debug\net6.0\ExpressKuryer.Persistence.deps.json
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\bin\Debug\net6.0\ExpressKuryer.Persistence.dll
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\bin\Debug\net6.0\ExpressKuryer.Persistence.pdb
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\bin\Debug\net6.0\ExpressKuryer.Application.dll
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\bin\Debug\net6.0\ExpressKuryer.Domain.dll
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\bin\Debug\net6.0\ExpressKuryer.Application.pdb
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\bin\Debug\net6.0\ExpressKuryer.Domain.pdb
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\ExpressKuryer.Persistence.csproj.CopyComplete
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Persistence\obj\Debug\net6.0\ref\ExpressKuryer.Persistence.dll
