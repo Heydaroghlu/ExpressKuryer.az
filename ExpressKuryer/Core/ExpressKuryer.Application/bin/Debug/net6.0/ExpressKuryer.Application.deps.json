@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ExpressKuryer.Application/1.0.0": {
+        "dependencies": {
+          "ExpressKuryer.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ExpressKuryer.Application.dll": {}
+        }
+      },
+      "ExpressKuryer.Domain/1.0.0": {
+        "runtime": {
+          "ExpressKuryer.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ExpressKuryer.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ExpressKuryer.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

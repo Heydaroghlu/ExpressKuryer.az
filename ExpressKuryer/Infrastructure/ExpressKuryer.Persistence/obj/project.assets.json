@@ -1,0 +1,109 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "ExpressKuryer.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ExpressKuryer.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ExpressKuryer.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExpressKuryer.Application.dll": {}
+        }
+      },
+      "ExpressKuryer.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ExpressKuryer.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExpressKuryer.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ExpressKuryer.Application/1.0.0": {
+      "type": "project",
+      "path": "../../Core/ExpressKuryer.Application/ExpressKuryer.Application.csproj",
+      "msbuildProject": "../../Core/ExpressKuryer.Application/ExpressKuryer.Application.csproj"
+    },
+    "ExpressKuryer.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Core/ExpressKuryer.Domain/ExpressKuryer.Domain.csproj",
+      "msbuildProject": "../../Core/ExpressKuryer.Domain/ExpressKuryer.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "ExpressKuryer.Application >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\SWIFT\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj",
+      "projectName": "ExpressKuryer.Persistence",
+      "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj",
+      "packagesPath": "C:\\Users\\SWIFT\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\SWIFT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj": {
+              "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

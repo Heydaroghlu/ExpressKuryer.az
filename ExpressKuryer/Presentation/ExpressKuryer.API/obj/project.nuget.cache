@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "qYr1SWnuSJjaENKJVgDye+DDn8mZ4Cl7Jc1R6LfYcTjovhDWNmZ03BRKpQ9lmSi9ZL2/06kbrGJmaWRAM9Isow==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.API\\ExpressKuryer.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SWIFT\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\SWIFT\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\SWIFT\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\SWIFT\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\SWIFT\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\SWIFT\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
