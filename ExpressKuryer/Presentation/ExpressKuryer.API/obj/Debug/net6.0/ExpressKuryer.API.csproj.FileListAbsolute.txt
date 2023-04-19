@@ -37,3 +37,13 @@ C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\Expr
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.pdb
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.genruntimeconfig.cache
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ref\ExpressKuryer.API.dll
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.csproj.AssemblyReference.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.AssemblyInfoInputs.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.AssemblyInfo.cs
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.csproj.CoreCompileInputs.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.dll
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\refint\ExpressKuryer.API.dll
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.pdb
