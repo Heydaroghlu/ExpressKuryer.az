@@ -18,7 +18,7 @@ namespace ExpressKuryer.Persistence.Configurations
 			{
 				ConfigurationManager configurationManager = new ConfigurationManager();
 				configurationManager.SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../", "../", "Presentation/ExpressKuryer.Api"));
-				configurationManager.AddJsonFile("appsetting.json");
+				configurationManager.AddJsonFile("appsettings.json");
 
 				return configurationManager.GetConnectionString("DataContext");
 			}
