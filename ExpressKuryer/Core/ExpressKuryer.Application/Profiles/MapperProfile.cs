@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using ExpressKuryer.Application.DTOs.Contact;
+using ExpressKuryer.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,7 @@ namespace ExpressKuryer.Application.Profiles
 	{
 		public MapperProfile()
 		{
+			CreateMap<ContactDto, Contact>();
 		}
 	}
 }

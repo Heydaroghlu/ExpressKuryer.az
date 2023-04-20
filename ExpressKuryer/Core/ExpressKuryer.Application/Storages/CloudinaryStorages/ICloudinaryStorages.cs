@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExpressKuryer.Application.Storages.CloudfareStorages
+namespace ExpressKuryer.Application.Storages.CloudinaryStorages
 {
-	public interface ICloudfareStorage : IStorage
+	public interface ICloudinaryStorages : IStorage
 	{
 
 	}
