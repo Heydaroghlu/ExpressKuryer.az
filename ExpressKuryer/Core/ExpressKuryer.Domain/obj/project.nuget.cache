@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fOWAKwxUXoSFD6dw/6Lu6qrBhubYFUGen/LEgbgw6Fr/CqNZvo39M1d6imU+nfcnnVJv8NAPja+qIaTvevbmdQ==",
+  "dgSpecHash": "IcvlB06i7XyPeaG3L/oBMMR9uRILAZP9Lk6+VYwuHeicn4TM3XvLW1qu0Hxj6EsUHVeskFo/g4+bYBgKzUCv4w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Isa\\Desktop\\2\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Isa\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.16\\microsoft.aspnetcore.cryptography.internal.6.0.16.nupkg.sha512",
     "C:\\Users\\Isa\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.16\\microsoft.aspnetcore.cryptography.keyderivation.6.0.16.nupkg.sha512",
