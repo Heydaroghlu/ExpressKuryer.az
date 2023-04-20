@@ -15,4 +15,9 @@
     <ProjectReference Include="..\ExpressKuryer.Domain\ExpressKuryer.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Commands\AppUser\Login\" />
+    <Folder Include="Features\Commands\AppUser\Register\" />
+  </ItemGroup>
+
 </Project>

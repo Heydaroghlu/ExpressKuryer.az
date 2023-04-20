@@ -11,7 +11,9 @@ namespace ExpressKuryer.Domain.Entities
     {
         //AppUser
         public string Name { get;set; } 
-        public string Surname { get; set; } 
+        public string Surname { get; set; }
+        public string Address { get; set; }
+
         public bool IsAdmin { get; set; }
 
     }

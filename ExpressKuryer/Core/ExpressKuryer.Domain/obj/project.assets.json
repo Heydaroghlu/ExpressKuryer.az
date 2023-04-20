@@ -900,11 +900,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Isa\\Desktop\\2\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
       "projectName": "ExpressKuryer.Domain",
-      "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
+      "projectPath": "C:\\Users\\Isa\\Desktop\\2\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
       "packagesPath": "C:\\Users\\Isa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Isa\\Desktop\\2\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Isa\\AppData\\Roaming\\NuGet\\NuGet.Config",
