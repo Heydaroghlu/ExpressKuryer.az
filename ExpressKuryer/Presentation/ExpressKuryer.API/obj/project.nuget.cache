@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r1M5RdU2/1xk/JArEZLBcMgxhtbLhUAbzrpNHIfh7ZRXuN9mAEP6ixaT2uKyJpIRcreLPesy9DQCoBhsREFscw==",
+  "dgSpecHash": "Ba5PavniveU6NK3PooeHwNKkCqOdEczA3QyqUF1JyWM9q/fhZlwebxpSY6riN/bewLkp8Ig7wvPFiM53q99DZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Isa\\Desktop\\2\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.API\\ExpressKuryer.API.csproj",
+  "projectFilePath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.API\\ExpressKuryer.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Isa\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Isa\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
