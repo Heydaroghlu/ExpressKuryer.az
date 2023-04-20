@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ExpressKuryer.Domain.Entities.Common;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ExpressKuryer.Domain.Entities
 {
-    public class ProductImages
+    public class ProductImages:BaseEntity
     {
         //one to many relations by Isa
         public string Image { get; set; }

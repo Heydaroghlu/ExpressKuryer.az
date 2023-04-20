@@ -1,5 +1,7 @@
-﻿using ExpressKuryer.Application.Enums;
+﻿using ExpressKuryer.Application.Abstractions.Token;
+using ExpressKuryer.Application.Enums;
 using ExpressKuryer.Application.Storages;
+using ExpressKuryer.Infrastructure.Services.Token;
 using ExpressKuryer.Infrastructure.Storages.CloudfareStorages;
 using ExpressKuryer.Infrastructure.Storages.LocalStorages;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +21,7 @@ namespace ExpressKuryer.Infrastructure
 		}
 		public static void AddInfrastructureServices(this IServiceCollection services, StorageEnum storageEnum)
 		{
+			services.AddScoped<ITokenHandler, TokenHandler>();
 			switch (storageEnum)
 			{
 				case StorageEnum.LocalStorage:

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ExpressKuryer.Domain.Entities.Common;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ExpressKuryer.Domain.Entities
 {
-    public class Setting
+    public class Setting:BaseEntity
     {
         public string Key { get; set; } 
         public string Value { get; set; }

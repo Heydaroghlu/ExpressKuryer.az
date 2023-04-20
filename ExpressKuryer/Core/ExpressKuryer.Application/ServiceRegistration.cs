@@ -21,7 +21,8 @@ namespace ExpressKuryer.Application
 
 			IMapper mapper = mapperConfig.CreateMapper();
 			services.AddSingleton(mapper);
-		}
+       
+        }
 
 	}
 }
