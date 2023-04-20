@@ -1,6 +1,6 @@
 ﻿using ExpressKuryer.Application.Enums;
 using ExpressKuryer.Application.Storages;
-using ExpressKuryer.Infrastructure.Storages.CloudfareStorages;
+using ExpressKuryer.Infrastructure.Storages.CloudinaryStorages;
 using ExpressKuryer.Infrastructure.Storages.LocalStorages;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -25,7 +25,7 @@ namespace ExpressKuryer.Infrastructure
 					services.AddScoped<IStorage, LocalStorage>();
 					break;
 				case StorageEnum.CloudfareStorage:
-					services.AddScoped<IStorage, CloudfareStorage>();
+					services.AddScoped<IStorage, CloudinaryStorage>();
 					break;
 				default:
 					services.AddScoped<IStorage, LocalStorage>();

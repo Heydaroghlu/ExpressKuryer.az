@@ -9,15 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C483D437-B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{7544CB62-DFD7-494E-93C7-BD41857D7314}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressKuryer.API", "Presentation\ExpressKuryer.API\ExpressKuryer.API.csproj", "{68E62121-2075-4047-9A44-A6108E96671D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressKuryer.API", "Presentation\ExpressKuryer.API\ExpressKuryer.API.csproj", "{68E62121-2075-4047-9A44-A6108E96671D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressKuryer.Domain", "Core\ExpressKuryer.Domain\ExpressKuryer.Domain.csproj", "{611CAF3D-B00B-4A30-9FB3-088460A6850E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressKuryer.Domain", "Core\ExpressKuryer.Domain\ExpressKuryer.Domain.csproj", "{611CAF3D-B00B-4A30-9FB3-088460A6850E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressKuryer.Application", "Core\ExpressKuryer.Application\ExpressKuryer.Application.csproj", "{F4718F3C-655E-4245-B6C8-B1FF6B4FA8A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressKuryer.Application", "Core\ExpressKuryer.Application\ExpressKuryer.Application.csproj", "{F4718F3C-655E-4245-B6C8-B1FF6B4FA8A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressKuryer.Infrastructure", "Infrastructure\ExpressKuryer.Infrastructure\ExpressKuryer.Infrastructure.csproj", "{35E84163-952B-45EB-9704-729CF908F19E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressKuryer.Infrastructure", "Infrastructure\ExpressKuryer.Infrastructure\ExpressKuryer.Infrastructure.csproj", "{35E84163-952B-45EB-9704-729CF908F19E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressKuryer.Persistence", "Infrastructure\ExpressKuryer.Persistence\ExpressKuryer.Persistence.csproj", "{D87C77E2-6CCC-4157-8E9F-0DE0CAAEAEC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressKuryer.Persistence", "Infrastructure\ExpressKuryer.Persistence\ExpressKuryer.Persistence.csproj", "{D87C77E2-6CCC-4157-8E9F-0DE0CAAEAEC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

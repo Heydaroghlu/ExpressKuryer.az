@@ -163,3 +163,10 @@ C:\Users\Isa\Desktop\2\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer
 C:\Users\Isa\Desktop\2\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ExpressKuryer.API.genruntimeconfig.cache
 C:\Users\Isa\Desktop\2\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\obj\Debug\net6.0\ref\ExpressKuryer.API.dll
 C:\Users\Isa\Desktop\2\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\bin\Debug\net6.0\CloudinaryDotNet.dll
+C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\bin\Debug\net6.0\dotenv.net.dll
+C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
