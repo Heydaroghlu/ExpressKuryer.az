@@ -65,7 +65,7 @@ namespace ExpressKuryer.Infrastructure.Storages.CloudinaryStorages
         public async Task<(string fileName, string pathOrContainerName)> UploadAsync(string pathOrContainerName, IFormFile file, string? contentType = null)
         {
 
-            CheckPdf(file,contentType);
+            CheckFileType(file,contentType);
 
             var result = await _cloudinary.CreateFolderAsync(pathOrContainerName);
             
@@ -114,7 +114,7 @@ namespace ExpressKuryer.Infrastructure.Storages.CloudinaryStorages
 
 
         //todo add to local storage
-        public void CheckPdf(IFormFile file , string contentType)
+        public void CheckFileType(IFormFile file , string contentType)
         {
             if (file.ContentType.ToLower().Equals(contentType.ToLower()) == false)
             {

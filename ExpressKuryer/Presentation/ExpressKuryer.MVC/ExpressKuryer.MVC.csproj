@@ -6,4 +6,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\ExpressKuryer.Infrastructure\ExpressKuryer.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\ExpressKuryer.Persistence\ExpressKuryer.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>
