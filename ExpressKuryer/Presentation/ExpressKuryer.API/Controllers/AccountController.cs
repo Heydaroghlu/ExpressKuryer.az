@@ -3,6 +3,7 @@ using ExpressKuryer.Application.DTOs.AppUser;
 using ExpressKuryer.Application.DTOs.Token;
 using ExpressKuryer.Application.HelperManager;
 using ExpressKuryer.Domain.Entities;
+using ExpressKuryer.Infrastructure.Services.Email;
 using ExpressKuryer.Infrastructure.Services.Token;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -20,9 +21,11 @@ namespace ExpressKuryer.API.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ITokenHandler _tokenHandler;
-        public AccountController(UserManager<AppUser> userManager,ITokenHandler tokenHandler, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
+        private readonly IEmailService _emailService;
+        public AccountController(UserManager<AppUser> userManager,IEmailService emailService,ITokenHandler tokenHandler, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _roleManager = roleManager;
+            _emailService = emailService;
             _userManager = userManager;
             _signInManager = signInManager;
             _tokenHandler = tokenHandler;
@@ -109,7 +112,7 @@ namespace ExpressKuryer.API.Controllers
             _emailService.Send(user.Email, "Yeni Şifrə", passurl);
             return Ok();
         }
-        public async Task<IActionResult> ResetPassword(ResetPassDTO resetPassDTO)
+   /*     public async Task<IActionResult> ResetPassword(ResetPassDTO resetPassDTO)
         {
             if (resetPassDTO.Email == null)
             {
@@ -120,7 +123,7 @@ namespace ExpressKuryer.API.Controllers
             {
                 return BadRequest();
             }
-        }
+        }*/
     }
-}
+
 }
