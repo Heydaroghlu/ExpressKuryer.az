@@ -8,9 +8,7 @@ namespace ExpressKuryer.Application.Enums
 {
 	public enum StorageEnum
 	{
-
 		LocalStorage,
-		CloudfareStorage
-
+		CloudinaryStorage
 	}
 }

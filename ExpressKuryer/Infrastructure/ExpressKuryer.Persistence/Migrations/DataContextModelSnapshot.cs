@@ -60,7 +60,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("WhoIsModified")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -129,7 +128,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("WhoIsModified")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("expressDelivery")
@@ -183,7 +181,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("WhoIsModified")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -218,7 +215,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("WhoIsModified")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -269,7 +265,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("WhoIsModified")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -308,7 +303,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("WhoIsModified")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -352,7 +346,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("WhoIsModified")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -387,7 +380,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("WhoIsModified")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -422,7 +414,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("WhoIsModified")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -453,7 +444,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("WhoIsModified")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -498,7 +488,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("WhoIsModified")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

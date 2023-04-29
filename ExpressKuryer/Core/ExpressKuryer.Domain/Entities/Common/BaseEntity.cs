@@ -11,7 +11,7 @@ namespace ExpressKuryer.Domain.Entities.Common
         public int Id { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
-        public string WhoIsModified { get; set; }
+        public string? WhoIsModified { get; set; }
         public bool IsDeleted { get; set; }
     }
 }

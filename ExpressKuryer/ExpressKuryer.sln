@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressKuryer.Infrastructur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressKuryer.Persistence", "Infrastructure\ExpressKuryer.Persistence\ExpressKuryer.Persistence.csproj", "{D87C77E2-6CCC-4157-8E9F-0DE0CAAEAEC8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressKuryer.MVC", "Presentation\ExpressKuryer.MVC\ExpressKuryer.MVC.csproj", "{2DBA7F6B-13E5-42A7-BE97-DDEE4D703843}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{D87C77E2-6CCC-4157-8E9F-0DE0CAAEAEC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D87C77E2-6CCC-4157-8E9F-0DE0CAAEAEC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D87C77E2-6CCC-4157-8E9F-0DE0CAAEAEC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DBA7F6B-13E5-42A7-BE97-DDEE4D703843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DBA7F6B-13E5-42A7-BE97-DDEE4D703843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DBA7F6B-13E5-42A7-BE97-DDEE4D703843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DBA7F6B-13E5-42A7-BE97-DDEE4D703843}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{F4718F3C-655E-4245-B6C8-B1FF6B4FA8A1} = {C483D437-BF5B-490F-9006-C36BF1D51B26}
 		{35E84163-952B-45EB-9704-729CF908F19E} = {7544CB62-DFD7-494E-93C7-BD41857D7314}
 		{D87C77E2-6CCC-4157-8E9F-0DE0CAAEAEC8} = {7544CB62-DFD7-494E-93C7-BD41857D7314}
+		{2DBA7F6B-13E5-42A7-BE97-DDEE4D703843} = {608CDBFB-653A-4853-90B7-A44E2C42C7CC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1F435E96-EF6A-4964-9C54-A7BD005782AD}

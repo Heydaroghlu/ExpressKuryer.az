@@ -30,7 +30,13 @@ namespace ExpressKuryer.Infrastructure.Storages.LocalStorages
             throw new NotImplementedException();
         }
 
-        public Task<List<(string fileName, string pathOrContainerName)>> UploadAsync(string pathOrContainerName, IFormFileCollection files)
+        public Task<(string fileName, string pathOrContainerName)> UploadAsync(string pathOrContainerName, IFormFile file, string? contentType = null)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public Task<List<(string fileName, string pathOrContainerName)>> UploadRangeAsync(string pathOrContainerName, IFormFileCollection files, string? contentType = null)
         {
             throw new NotImplementedException();
         }

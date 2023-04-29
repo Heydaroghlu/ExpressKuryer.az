@@ -1,5 +1,6 @@
 using ExpressKuryer.Application;
 using ExpressKuryer.Application.Enums;
+using ExpressKuryer.Application.Middlewares;
 using ExpressKuryer.Infrastructure;
 using ExpressKuryer.Persistence;
 using Microsoft.IdentityModel.Tokens;
@@ -15,7 +16,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddPersistenceServices();
-builder.Services.AddInfrastructureServices(StorageEnum.LocalStorage);
+builder.Services.AddInfrastructureServices(StorageEnum.CloudinaryStorage);
 builder.Services.AddApplicationServices();
 
 builder.Services.AddAuthentication("ExpressMember")
@@ -33,6 +34,7 @@ builder.Services.AddAuthentication("ExpressMember")
 			IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"])) 
 		}; 
 	});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -41,6 +43,8 @@ if (app.Environment.IsDevelopment())
 	app.UseSwagger();
 	app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ErrorHandlerMiddleware>();
 
 app.UseHttpsRedirection();
 

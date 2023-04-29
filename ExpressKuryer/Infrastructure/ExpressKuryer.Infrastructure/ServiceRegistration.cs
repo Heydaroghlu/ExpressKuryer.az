@@ -22,12 +22,13 @@ namespace ExpressKuryer.Infrastructure
 		public static void AddInfrastructureServices(this IServiceCollection services, StorageEnum storageEnum)
 		{
 			services.AddScoped<ITokenHandler, TokenHandler>();
+
 			switch (storageEnum)
 			{
 				case StorageEnum.LocalStorage:
 					services.AddScoped<IStorage, LocalStorage>();
 					break;
-				case StorageEnum.CloudfareStorage:
+				case StorageEnum.CloudinaryStorage:
 					services.AddScoped<IStorage, CloudinaryStorage>();
 					break;
 				default:

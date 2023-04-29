@@ -1,4 +1,5 @@
 ﻿using ExpressKuryer.Application.Repositories;
+using ExpressKuryer.Domain.Entities;
 using ExpressKuryer.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
@@ -35,7 +36,7 @@ namespace ExpressKuryer.Persistence.Repositories
 			return query.ToList();
 		}
 
-		public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> expression, bool tracking = true, params string[] includes)
+        public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> expression, bool tracking = true, params string[] includes)
 		{
 			var query = Table.AsQueryable<TEntity>();
 			IsTracking(query, tracking);
@@ -84,5 +85,6 @@ namespace ExpressKuryer.Persistence.Repositories
 				query = query.Include(include);
 			}
 		}
-	}
+
+    }
 }
