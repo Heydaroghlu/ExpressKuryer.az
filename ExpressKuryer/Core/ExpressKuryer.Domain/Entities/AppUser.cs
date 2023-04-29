@@ -17,5 +17,6 @@ namespace ExpressKuryer.Domain.Entities
         public bool IsAdmin { get; set; }
         public List<Delivery> Deliveries { get; set; }
 
+
     }
 }
