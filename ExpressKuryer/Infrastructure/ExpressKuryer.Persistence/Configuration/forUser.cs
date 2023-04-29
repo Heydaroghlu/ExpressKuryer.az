@@ -13,6 +13,8 @@ namespace ExpressKuryer.Persistence.Configuration
     {
         public void Configure(EntityTypeBuilder<AppUser> builder)
         {
+            builder.Property(x => x.Id).HasColumnName("AppUserId");
+
             builder.Property(x => x.Name).IsRequired().HasMaxLength(20);
             builder.Property(x => x.Surname).IsRequired().HasMaxLength(20);
 
