@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\SWIFT\\.nuget\\packages\\": {}
+    "C:\\Users\\Isa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
+      "projectUniqueName": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
       "projectName": "ExpressKuryer.MVC",
-      "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
-      "packagesPath": "C:\\Users\\SWIFT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\",
+      "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
+      "packagesPath": "C:\\Users\\Isa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SWIFT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Isa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
