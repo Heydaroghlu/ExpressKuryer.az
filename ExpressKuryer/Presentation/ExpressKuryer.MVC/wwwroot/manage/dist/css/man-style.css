@@ -1,0 +1,28 @@
+﻿body {
+}
+
+
+.page-item {
+    outline: none;
+    box-shadow: none;
+}
+.page-item:focus{
+    border:none;
+     outline:none;
+    box-shadow:none;
+}
+.page-link{
+    color:black;
+    outline:none;
+    box-shadow:none;
+}
+.page-link:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.form-control {
+    outline: none;
+    box-shadow: none;
+}

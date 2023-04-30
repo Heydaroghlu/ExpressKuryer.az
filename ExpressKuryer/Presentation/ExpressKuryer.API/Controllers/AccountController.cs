@@ -1,14 +1,12 @@
 ﻿using ExpressKuryer.Application.Abstractions.Token;
 using ExpressKuryer.Application.DTOs.AppUser;
 using ExpressKuryer.Application.DTOs.Token;
-using ExpressKuryer.Application.HelperManager;
 using ExpressKuryer.Domain.Entities;
 using ExpressKuryer.Infrastructure.Services.Email;
 using ExpressKuryer.Infrastructure.Services.Token;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace ExpressKuryer.API.Controllers

@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Edit";
+}
+
+@model Setting
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-12" style="padding: 20px; display: flex; justify-content: center; align-items: center;">
+                    <h1>Update Setting Data</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form method="post" enctype="multipart/form-data">
+
+                                <input asp-for="Key" type="hidden" class="form-control">
+
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <h5><span style=" font-size: 22px; font-weight: 500; color: red;">Key :</span> @Model.Key</h5>
+                                </div>
+
+                                @if (Model.Key.Contains("image"))
+                                {
+                                    <input asp-for="Value" type="hidden" class="form-control">
+                                    <div class="mb-3">
+                                        <label asp-for="FormFile" class="form-label">ImageFile</label>
+                                        <input asp-for="FormFile" class="form-control img-upload-input">
+                                        <span class="text-danger" asp-validation-for="FormFile"></span>
+                                    </div>
+                                    <div class="img-box-big d-flex justify-content-center align-items-center">
+                                        <img src="~/uploads/settings/@Model.Value" style="width:400px;height:400px;object-fit:cover;" />
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="mb-3">
+                                        <label asp-for="Value" class="form-label">Value</label>
+                                        <textarea asp-for="Value" class="form-control" id="editor" rows="3"></textarea>
+                                        <span class="text-danger" asp-validation-for="Value"></span>
+                                    </div>
+                                }
+
+                                <button type="submit" class="btn btn-primary my-3">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+
+
+@section Scripts{
+    <script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script>
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+}
