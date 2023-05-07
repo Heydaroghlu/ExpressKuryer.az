@@ -9,13 +9,14 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ExpressKuryer.MVC
 build_property.RootNamespace = ExpressKuryer.MVC
-build_property.ProjectDir = C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\
+build_property.ProjectDir = C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC
+build_property.MSBuildProjectDirectory = C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC
 build_property._RazorSourceGeneratorDebug = 
 
+<<<<<<< HEAD
 [C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Contact/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -61,21 +62,33 @@ build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Setting/Edit.cshtml]
+=======
+[C:/Users/Isa/Desktop/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Isa/Desktop/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Partner/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydG5lclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Isa/Desktop/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Setting/Edit.cshtml]
+>>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V0dGluZ1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Setting/Index.cshtml]
+[C:/Users/Isa/Desktop/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Setting/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V0dGluZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Shared/Error.cshtml]
+[C:/Users/Isa/Desktop/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Isa/Desktop/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
 [C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Slider/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2xpZGVyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -101,13 +114,16 @@ build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjYW5jeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/_ViewImports.cshtml]
+=======
+[C:/Users/Isa/Desktop/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/_ViewImports.cshtml]
+>>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/_ViewStart.cshtml]
+[C:/Users/Isa/Desktop/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Shared/_Layout.cshtml]
+[C:/Users/Isa/Desktop/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-l6h133cxra

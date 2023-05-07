@@ -29,6 +29,39 @@ C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\Expr
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.pdb
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.genruntimeconfig.cache
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ref\ExpressKuryer.MVC.dll
+<<<<<<< HEAD
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\appsettings.json
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\ExpressKuryer.MVC.staticwebassets.runtime.json
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\ExpressKuryer.MVC.exe
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\ExpressKuryer.MVC.deps.json
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\ExpressKuryer.MVC.runtimeconfig.json
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\ExpressKuryer.MVC.dll
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\ExpressKuryer.MVC.pdb
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.csproj.AssemblyReference.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.AssemblyInfoInputs.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.AssemblyInfo.cs
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.csproj.CoreCompileInputs.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.RazorAssemblyInfo.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.RazorAssemblyInfo.cs
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\staticwebassets\msbuild.ExpressKuryer.MVC.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\staticwebassets\msbuild.build.ExpressKuryer.MVC.props
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ExpressKuryer.MVC.props
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ExpressKuryer.MVC.props
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\scopedcss\bundle\ExpressKuryer.MVC.styles.css
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\scopedcss\projectbundle\ExpressKuryer.MVC.bundle.scp.css
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.dll
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\refint\ExpressKuryer.MVC.dll
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.pdb
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.genruntimeconfig.cache
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ref\ExpressKuryer.MVC.dll
+=======
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\Humanizer.dll
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\MessagePack.dll
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\MessagePack.Annotations.dll
@@ -291,6 +324,7 @@ C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\Expr
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\ExpressKuryer.Application.pdb
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\ExpressKuryer.Domain.pdb
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.MvcApplicationPartsAssemblyInfo.cs
+<<<<<<< HEAD
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\MailKit.dll
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\MimeKit.dll
@@ -306,3 +340,7 @@ C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\Expr
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\ExpressKuryer.API.dll
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\ExpressKuryer.API.pdb
 C:\Users\SWIFT\Desktop\GitRepos\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+=======
+>>>>>>> 1cd1ff720023661a08b02ba5c5931f77d85c6b35
+C:\Users\Isa\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC\obj\Debug\net6.0\ExpressKuryer.MVC.MvcApplicationPartsAssemblyInfo.cs
+>>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
