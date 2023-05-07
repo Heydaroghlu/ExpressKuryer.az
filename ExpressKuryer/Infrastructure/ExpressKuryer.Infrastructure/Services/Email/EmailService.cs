@@ -1,15 +1,10 @@
-﻿using MailKit.Security;
-using MimeKit.Text;
+﻿using MailKit.Net.Smtp;
+using MailKit.Security;
 using MimeKit;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Security;
+using MimeKit.Text;
 using System.Net;
+using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using MailKit.Net.Smtp;
 
 namespace ExpressKuryer.Infrastructure.Services.Email
 {
@@ -20,8 +15,6 @@ namespace ExpressKuryer.Infrastructure.Services.Email
 
     public class EmailService : IEmailService
     {
-
-
         public void Send(string to, string subject, string html)
         {
             // create message

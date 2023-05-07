@@ -6,6 +6,7 @@ using ExpressKuryer.Domain.Entities;
 using ExpressKuryer.Persistence.Configurations;
 using ExpressKuryer.Persistence.Contexts;
 using ExpressKuryer.Persistence.Repositories;
+using ExpressKuryer.Persistence.Services;
 using ExpressKuryer.Persistence.UnitOfWorks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -22,14 +23,19 @@ namespace ExpressKuryer.Persistence
 {
 	public static class ServiceRegistration 
 	{
+
 		public static void AddPersistenceServices(this IServiceCollection services)
 		{
-			services.AddDbContext<DataContext>(options =>
+
+			services.AddScoped<LayoutService>();
+
+            services.AddDbContext<DataContext>(options =>
 			{
 				options.UseSqlServer(ServiceConfiguration.ConnectionString);
 			});
 
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 			services.AddIdentity<AppUser,IdentityRole>(opt=>
 			{
                 opt.Password.RequireDigit = false;

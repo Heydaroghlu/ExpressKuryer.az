@@ -17,13 +17,7 @@ builder.Services.AddPersistenceServices();
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(StorageEnum.CloudinaryStorage);
 
-//builder.Services.AddIdentity<AppUser, IdentityRole>(x =>
-//{
-//    x.Password.RequiredLength = 5;
-//    x.Password.RequireNonAlphanumeric = false;
-//    x.Password.RequireUppercase = false;
-//    x.Password.RequireLowercase = false;
-//}).AddDefaultTokenProviders().AddEntityFrameworkStores<DataContext>();
+
 
 var app = builder.Build();
 

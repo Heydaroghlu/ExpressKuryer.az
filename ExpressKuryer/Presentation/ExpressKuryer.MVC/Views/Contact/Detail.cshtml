@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Detail";
+    int pageId = (int)TempData["Page"];
+    string isDeleted = (string)TempData["isDeleted"];
+    string word = (string)TempData["searchWord"];
+}
+
+@model ContactEditDto
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-12" style="padding: 20px; display: flex; justify-content: center; align-items: center;">
+                    <h1>Contact Detail</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form method="post" enctype="multipart/form-data">
+
+                                <h3>Name</h3>
+                                <p>
+                                    @Model.Name
+                                </p>
+
+                                <h3>Email</h3>
+                                <p>
+                                    @Model.Email
+                                </p>
+
+                                <h3>Message</h3>
+                                <p>
+                                    @Model.Message
+                                </p>
+
+                                <h3>Send Time</h3>
+                                <p>
+                                    @Model.CreatedAt.ToString("dd:mm:yyyy")
+                                </p>
+
+                                <a asp-action="index" asp-route-isDeleted="@isDeleted" asp-route-searchWord="@word"  asp-route-page="@pageId">Back</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+

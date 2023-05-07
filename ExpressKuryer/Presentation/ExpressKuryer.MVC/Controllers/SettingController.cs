@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using ExpressKuryer.Application.DTOs;
 using ExpressKuryer.Application.DTOs.Setting;
+using ExpressKuryer.Application.HelperManager;
 using ExpressKuryer.Application.Storages;
 using ExpressKuryer.Application.UnitOfWorks;
 using Microsoft.AspNetCore.Mvc;
@@ -22,22 +23,24 @@ namespace ExpressKuryer.MVC.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index(int page = 1, string? searchWord = null, bool? isDeleted = null)
+        public async Task<IActionResult> Index(int page = 1, string? searchWord = null, string? isDeleted = "false")
         {
             var entities = await _unitOfWork.RepositorySetting.GetAllAsync(x => true, false);
+            int pageSize = 10;
+            ViewBag.PageSize = pageSize;
+            ViewBag.Word = searchWord;
+            ViewBag.IsDeleted = isDeleted;
+
+            if (isDeleted == "true")
+                entities = await _unitOfWork.RepositorySetting.GetAllAsync(x => x.IsDeleted);
+            if (isDeleted == "false")
+                entities = await _unitOfWork.RepositorySetting.GetAllAsync(x => !x.IsDeleted);
 
             if (string.IsNullOrWhiteSpace(searchWord) == false)
             {
-                entities = await _unitOfWork.RepositorySetting.GetAllAsync(x => x.Value.Contains(searchWord));
+                entities = entities.Where(x => x.Value.Contains(searchWord)).ToList();
             }
-
-            if (isDeleted == true)
-                entities = await _unitOfWork.RepositorySetting.GetAllAsync(x => x.IsDeleted);
-            else
-                entities = await _unitOfWork.RepositorySetting.GetAllAsync(x => !x.IsDeleted);
-
-            int pageSize = 10;
-
+            
             var returnDto = _mapper.Map<List<SettingReturnDto>>(entities);
 
             var query = returnDto.AsQueryable();
@@ -48,11 +51,7 @@ namespace ExpressKuryer.MVC.Controllers
             return View(list);
         }
 
-
-
-
         [HttpGet]
-        [Route("Edit")]
         public async Task<IActionResult> Edit(int id)
         {   
             var setting = await _unitOfWork.RepositorySetting.GetAsync(x => x.Id == id, false);
@@ -61,7 +60,6 @@ namespace ExpressKuryer.MVC.Controllers
 
 
         [HttpPost]
-        [Route("Edit")]
         public async Task<IActionResult> Edit(SettingDto settingDto, int id, int page = 1)
         {
 
@@ -75,6 +73,16 @@ namespace ExpressKuryer.MVC.Controllers
                 if (settingDto.FormFile != null)
                 {
                     bool check = _storage.HasFile("uploads/settings/", existSetting.Value);
+
+                    try
+                    {
+                        _storage.CheckFileType(settingDto.FormFile, ContentTypeManager.ImageContentTypes);
+                    }
+                    catch (Exception)
+                    {
+                        ModelState.AddModelError("FormFile", ContentTypeManager.ImageContentMessage());
+                        return View(settingDto);
+                    }
 
                     if (check == true)
                     {
@@ -93,7 +101,6 @@ namespace ExpressKuryer.MVC.Controllers
                 existSetting.Value = settingDto.Value;
 
             await _unitOfWork.CommitAsync();
-
 
             return RedirectToAction("Index", new { page = page });
         }

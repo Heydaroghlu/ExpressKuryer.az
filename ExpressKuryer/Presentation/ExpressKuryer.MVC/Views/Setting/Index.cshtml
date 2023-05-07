@@ -2,6 +2,7 @@
 
 @{
     int count = (Model.PageIndex - 1) * ViewBag.PageSize + 1;
+    string? isDeleted = (string)ViewBag.IsDeleted;
 }
 
 <div class="content-wrapper">
@@ -11,6 +12,52 @@
             <div class="row mb-2">
                 <div class="col-sm-12">
                     <h1>Settings</h1>
+                    <div class="col-sm-12 d-flex">
+
+                        <form asp-action="index" method="get" class="my-3 d-flex justify-content-center align-items-center flex-column" style="width:100%">
+                            <div class="form-group" style="width:100%">
+                                <select class="form-control bg-gray-light" name="isDeleted">
+                                    @if (isDeleted == "null")
+                                    {
+                                        <option value="null" class="bg-gray-light" selected>All</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="null" class="bg-gray-light">All</option>
+                                    }
+
+                                    @if (isDeleted == "false")
+                                    {
+                                        <option value="false" class="bg-gray-light" selected>Not Deleted</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="false" class="bg-gray-light">Not Deleted</option>
+                                    }
+
+                                    @if (isDeleted == "true")
+                                    {
+                                        <option value="true" class="bg-gray-light" selected>Deleted</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="true" class="bg-gray-light">Deleted</option>
+                                    }
+                                </select>
+                            </div>
+
+                            <div class="input-group my-2">
+                                <input type="search" name="searchWord" value="@(ViewBag.Word)" class="form-control form-control-lg my-2" placeholder="Search" style="height:30px;font-size:15px;  ">
+                                <div class="input-group-append my-2" style="height:30px;padding:0px">
+                                    <button type="submit" class="btn btn-lg btn-default" style="padding:0px 10px">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-outline-dark mb-3">Save</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div><!-- /.container-fluid -->

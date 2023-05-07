@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ExpressKuryer.Application.DTOs.Vacancy;
+using ExpressKuryer.Application.HelperManager;
 using ExpressKuryer.Application.Storages;
 using ExpressKuryer.Application.UnitOfWorks;
 using ExpressKuryer.Domain.Entities;
@@ -33,7 +34,9 @@ namespace ExpressKuryer.API.Controllers
 
             if (vacancyDto.FormFile == null) return BadRequest("File must be fill");
 
-            var contentInfo = await _storage.UploadAsync("uploads/vacancies/", vacancyDto.FormFile, "application/pdf");
+            _storage.CheckFileType(vacancyDto.FormFile, ContentTypeManager.PDFContentTypes);
+
+            var contentInfo = await _storage.UploadAsync("uploads/vacancies/", vacancyDto.FormFile);
 
             var entity = _mapper.Map<Vacancy>(vacancyDto);
             entity.Cv = contentInfo.fileName;

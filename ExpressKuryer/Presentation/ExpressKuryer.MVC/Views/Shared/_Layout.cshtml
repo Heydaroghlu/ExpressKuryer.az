@@ -1,4 +1,16 @@
-﻿<!DOCTYPE html>
+﻿@using ExpressKuryer.Application.Enums;
+
+@inject LayoutService services
+
+@{
+
+    List<string> listOfController = new();
+    foreach (string name in Enum.GetNames(typeof(ControllerEnum)))
+    {
+        listOfController.Add(name);
+    }
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -27,7 +39,7 @@
     <!-- summernote -->
     <link rel="stylesheet" href="~/manage/plugins/summernote/summernote-bs4.min.css">
 
-    <link rel="stylesheet" href="~/assets/vendor/toaster/toastr.min.css">
+    <link rel="stylesheet" href="~/manage/plugins/toastr/toastr.min.css">
 
     <!-- Bootstrap Icons Cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -158,84 +170,77 @@
                                         </p>
                                     </a>
                                     <ul class="nav nav-treeview">
+                                        
+
+                                     @*   @foreach (var controller in listOfController)
+                                        {
+
+                                            <li class="nav-item">
+                                                <a asp-action="Index" asp-controller="Example" asp-route-nameCont="@controller" class="nav-link">
+                                                    <i class="far fa-circle nav-icon"></i>
+                                                    <p>@char.ToUpper(controller[0])@controller.Substring(1)</p>
+                                                </a>
+                                            </li>
+                                        }*@
+
                                         <li class="nav-item">
-                                            <a asp-action="index" asp-controller="setting" class="nav-link">
+                                            <a asp-action="Index" asp-controller="Setting" class="nav-link">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Setting</p>
                                             </a>
                                         </li>
+
                                         <li class="nav-item">
-                                            <a asp-action="index" asp-controller="Partner" class="nav-link">
+                                            <a asp-action="Index" asp-controller="Partner" class="nav-link">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Partner</p>
                                             </a>
                                         </li>
+
                                         <li class="nav-item">
-                                            <a asp-action="index" asp-controller="ShopOnInstagram" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>ShopOnInstagram</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a asp-action="index" asp-controller="sosialMedia" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Sosial Media</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a asp-action="index" asp-controller="category" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Category</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a asp-action="index" asp-controller="product" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Product</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a asp-action="index" asp-controller="Size" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Size</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a asp-action="index" asp-controller="color" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Color</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a asp-action="index" asp-controller="order" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Order</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a asp-action="index" asp-controller="gift" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Gift</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a asp-action="index" asp-controller="headerTop" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Header Top</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a asp-action="sendmessage" asp-controller="subscribe" class="nav-link">
+                                            <a asp-action="Index" asp-controller="Subscribe" class="nav-link">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Subscribe</p>
                                             </a>
                                         </li>
+
                                         <li class="nav-item">
-                                            <a asp-action="index" asp-controller="bestsale3category" class="nav-link">
+                                            <a asp-action="Index" asp-controller="Slider" class="nav-link">
                                                 <i class="far fa-circle nav-icon"></i>
-                                                <p>BestSaleCategory</p>
+                                                <p>Slider</p>
                                             </a>
                                         </li>
+
+                                        <li class="nav-item">
+                                            <a asp-action="Index" asp-controller="Vacancy" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Vacancy</p>
+                                            </a>
+                                        </li>
+
+
+                                        <li class="nav-item">
+                                            <a asp-action="Index" asp-controller="Contact" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Contact</p>
+                                            </a>
+                                        </li>
+
+                                        
+                                        <li class="nav-item">
+                                            <a asp-action="Index" asp-controller="PartnerProduct" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Partner Product</p>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a asp-action="Index" asp-controller="Service" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Service</p>
+                                            </a>
+                                        </li>
+
                                     </ul>
                                 </li>
                             </ul>
@@ -304,7 +309,7 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="~/manage/dist/js/pages/dashboard.js"></script>
 
-    <script src="~/assets/vendor/toaster/toastr.min.js"></script>
+    <script src="~/manage/plugins/toastr/toastr.min.js"></script>
 
     @RenderSection("Scripts", required: false)
 

@@ -1,0 +1,164 @@
+﻿@model PagenatedList<VacancyReturnDto>
+
+@{
+    int count = (Model.PageIndex - 1) * ViewBag.PageSize + 1;
+    List<string> listOfURLs = ViewBag.ListOfURLs;
+    string? isDeleted = (string)ViewBag.IsDeleted;
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-12 d-flex">
+                    <h1 class="col-lg-6">Vacnacies</h1>
+                    <a asp-action="create" class="align-items-center col-lg-6" style="display: flex; justify-content: flex-end;color:black;">
+                        <i class="bi bi-plus-circle-fill"></i>
+                    </a>
+                </div>
+                <div class="col-sm-12 d-flex">
+
+                    <form asp-action="index" method="get" class="my-3 d-flex justify-content-center align-items-center flex-column" style="width:100%">
+                        <div class="form-group" style="width:100%">
+                            <select class="form-control bg-gray-light" name="isDeleted">
+                                @if (isDeleted == "null")
+                                {
+                                    <option value="null" class="bg-gray-light" selected>All</option>
+                                }
+                                else
+                                {
+                                    <option value="null" class="bg-gray-light">All</option>
+                                }
+
+                                @if (isDeleted == "false")
+                                {
+                                    <option value="false" class="bg-gray-light" selected>Not Deleted</option>
+                                }
+                                else
+                                {
+                                    <option value="false" class="bg-gray-light">Not Deleted</option>
+                                }
+
+                                @if (isDeleted == "true")
+                                {
+                                    <option value="true" class="bg-gray-light" selected>Deleted</option>
+                                }
+                                else
+                                {
+                                    <option value="true" class="bg-gray-light">Deleted</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="input-group my-2">
+                            <input type="search" name="searchWord" value="@(ViewBag.Word)" class="form-control form-control-lg my-2" placeholder="Search" style="height:30px;font-size:15px;  ">
+                            <div class="input-group-append my-2" style="height:30px;padding:0px">
+                                <button type="submit" class="btn btn-lg btn-default" style="padding:0px 10px">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-outline-dark mb-3">Save</button>
+                    </form>
+                </div>
+
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <table class="table table-striped projects">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Surname</th>
+                                        <th scope="col">CV</th>
+                                        <th scope="col">CreatedAt</th>
+                                        <th>
+                                            Action :
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (VacancyReturnDto item in Model)
+                                    {
+                                        <tr>
+                                            <th scope="row" style=" vertical-align: middle;">@(count++)</th>
+                                            <td>@item.Name</td>
+                                            <td>@item.Surname</td>
+                                            <td><a href="@item.CV" target="_blank" download>CV</a></td>
+                                            <td>@item.CreatedAt.ToString("dd:mm:yyyy")</td>
+                                            <td>
+                                                <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-outline-dark">
+                                                    <i class="bi bi-pencil-square"></i>
+                                                </a>
+                                                <a asp-action="delete" asp-route-id="@item.Id" class="btn btn-outline-dark btn-delete-sweet">
+                                                    <i class="bi bi-x-lg"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                            <nav aria-label="Page navigation example" class="d-flex justify-content-center align-items-center">
+                                <ul class="pagination">
+                                    @if (Model.HasPrev)
+                                    {
+                                        <li class="page-item">
+                                            <a class="page-link" asp-action="index" asp-route-page="@(Model.PageIndex - 1)" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                    }
+                                    @for (int i = 1; i <= Model.TotalPage; i++)
+                                    {
+                                        if (Model.PageIndex - 1 == i)
+                                        {
+                                            <li class="page-item"><a class="page-link" asp-action="index" asp-route-page="@i" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]">@i</a></li>
+                                        }
+
+                                        if (Model.PageIndex == i)
+                                        {
+                                            <li class="page-item active"><a class="page-link" style=" z-index: 3; color: #fff; background-color: black !important; border-color: black !important;" asp-action="index" asp-route-page="@i" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]">@i</a></li>
+                                        }
+                                        if (Model.PageIndex + 1 == i)
+                                        {
+                                            <li class="page-item"><a class="page-link" asp-action="index" asp-route-page="@i" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]">@i</a></li>
+                                        }
+                                    }
+                                    @if (Model.HasNext)
+                                    {
+                                        <li class="page-item">
+                                            <a class="page-link" asp-action="index" asp-route-page="@(Model.PageIndex + 1)" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    }
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+
+@section Scripts{
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
+
+    <script src="~/manage/sweetalert.js"></script>
+
+}

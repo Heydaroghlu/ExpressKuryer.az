@@ -14,7 +14,7 @@ namespace ExpressKuryer.Application.DTOs.Contact
         public string Email { get; set; }
         public string Message { get; set; }
 
-        public DateTime UpadtedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
         public bool IsDeleted { get; set; }
     }
 }

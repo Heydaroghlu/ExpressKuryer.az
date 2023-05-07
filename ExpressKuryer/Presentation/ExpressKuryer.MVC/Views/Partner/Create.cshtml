@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Edit";
+}
+
+@model PartnerCreateDto
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-12" style="padding: 20px; display: flex; justify-content: center; align-items: center;">
+                    <h1>Create Partner</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form method="post" enctype="multipart/form-data">
+
+                                <div class="mb-3">
+                                    <label asp-for="Name" class="form-label">Name</label>
+                                    <input asp-for="Name" class="form-control">
+                                    <span class="text-danger" asp-validation-for="Name"></span>
+                                </div>
+
+                                <div class="mb-3 image-box">
+                                    <label asp-for="FormFile" class="form-label">ImageFile</label>
+                                    <input asp-for="FormFile" class="form-control file" style="margin:20px 0px">
+                                    <img style="width:300px;height:300px;object-fit:cover;" />
+                                </div>
+                                
+                                <div>
+                                    <span class="text-danger" asp-validation-for="FormFile" style="display:flex;"></span>
+                                </div>
+
+                                <button type="submit" class="btn btn-outline-dark my-3">Submit</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+
+
+
+
+@section Scripts{
+    <script src="~/manage/main.js"></script>
+}

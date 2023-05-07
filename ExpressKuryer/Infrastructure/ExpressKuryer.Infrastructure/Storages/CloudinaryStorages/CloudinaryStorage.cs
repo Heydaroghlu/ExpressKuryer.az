@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using ExpressKuryer.Application.Exceptions;
 using System.Net.Mime;
+using System.IO;
 
 namespace ExpressKuryer.Infrastructure.Storages.CloudinaryStorages
 {
@@ -25,14 +26,12 @@ namespace ExpressKuryer.Infrastructure.Storages.CloudinaryStorages
             Account account = configuration.GetSection("CloudinarySettings").Get<Account>();
             _cloudinary = new Cloudinary(account);
         }
-
         public async Task<bool> DeleteAsync(string pathOrContainerName, string fileName)
         {
             var deletionParams = new DeletionParams(pathOrContainerName+fileName);
             var deletionResult = _cloudinary.DestroyAsync(deletionParams);
             return true;
         }
-
         public bool HasFile(string pathOrContainerName, string fileName)
         {
             var getResource = new GetResourceParams(pathOrContainerName+fileName)
@@ -47,8 +46,7 @@ namespace ExpressKuryer.Infrastructure.Storages.CloudinaryStorages
                 return false;
 
         }
-
-        public async Task<List<(string fileName, string pathOrContainerName)>> UploadRangeAsync(string pathOrContainerName, IFormFileCollection files, string? contentType = null)
+        public async Task<List<(string fileName, string pathOrContainerName)>> UploadRangeAsync(string pathOrContainerName, IFormFileCollection files)
         {
             var result = await _cloudinary.CreateFolderAsync(pathOrContainerName);
 
@@ -61,20 +59,14 @@ namespace ExpressKuryer.Infrastructure.Storages.CloudinaryStorages
             }
             return fileNameList;
         }
-
-        public async Task<(string fileName, string pathOrContainerName)> UploadAsync(string pathOrContainerName, IFormFile file, string? contentType = null)
+        public async Task<(string fileName, string pathOrContainerName)> UploadAsync(string pathOrContainerName, IFormFile file)
         {
-
-            CheckFileType(file,contentType);
-
             var result = await _cloudinary.CreateFolderAsync(pathOrContainerName);
             
             string fileNewName = UploadImageAction(pathOrContainerName,result.Path,file);
 
             return (fileNewName, pathOrContainerName);
         }
-
-
         public new List<string> FileNames(string path, string ceoFriendlyName)
         {
             return _cloudinary.Search().Expression($"public_id:{path}/{ceoFriendlyName}*").Execute().Resources.Select(x => x.PublicId).ToList();
@@ -86,8 +78,6 @@ namespace ExpressKuryer.Infrastructure.Storages.CloudinaryStorages
             int length = endIndex - startIndex;
             return imageUrl.Substring(startIndex, length);
         }
-
-
         public string UploadImageAction(string pathOrContainerName,string resultPath, IFormFile file)
         {
             using var stream = file.OpenReadStream();
@@ -114,14 +104,45 @@ namespace ExpressKuryer.Infrastructure.Storages.CloudinaryStorages
 
 
         //todo add to local storage
-        public void CheckFileType(IFormFile file , string contentType)
+        public void CheckFileType(IFormFile file , List<string> contentTypes)
         {
-            if (file.ContentType.ToLower().Equals(contentType.ToLower()) == false)
+            bool check = false;
+
+            foreach (var contentType in contentTypes)
             {
-                throw new ContentTypeException("type must be pdf");
+                if (file.ContentType.ToLower().Equals(contentType.ToLower()) == true)
+                {
+                    check = true;
+                    break;
+                }
+            }
+
+            string message = "type must be ";
+            for (int i = 0; i < contentTypes.Count; i++)
+            {
+                if (i == contentTypes.Count - 1)
+                {
+                    message += contentTypes[i];
+                }
+                else
+                {
+                    message += contentTypes[i] + " or ";
+                }
+            }
+
+
+            if (check == false)
+            {
+                throw new ContentTypeException(message);
             }
         }
-        
+
+        public string GetUrl(string pathOrContainerName, string folderName, string fileName)
+        {
+            var getResult = _cloudinary.GetResource(pathOrContainerName + folderName + fileName);
+            return getResult.Url;
+        }
+
         #region FileName
 
         //private async Task<string> FileRenameAsync(string pathOrContainerName,string fileName, List<string> fileNames)

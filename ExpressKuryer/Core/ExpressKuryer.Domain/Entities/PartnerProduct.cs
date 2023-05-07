@@ -26,5 +26,8 @@ namespace ExpressKuryer.Domain.Entities
         public decimal DiscountPrice { get; set; }
         public bool IsInterestFree { get; set; }
 
+
+        public Partner Partner { get; set; }
+        public int PartnerId { get; set; }
     }
 }

@@ -258,6 +258,9 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
+                    b.Property<int>("PartnerId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("SalePrice")
                         .HasColumnType("decimal(18,2)");
 
@@ -268,6 +271,8 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PartnerId");
 
                     b.ToTable("express_PartnersProducts", (string)null);
                 });
@@ -742,6 +747,17 @@ namespace ExpressKuryer.Persistence.Migrations
                     b.Navigation("Service");
                 });
 
+            modelBuilder.Entity("ExpressKuryer.Domain.Entities.PartnerProduct", b =>
+                {
+                    b.HasOne("ExpressKuryer.Domain.Entities.Partner", "Partner")
+                        .WithMany("PartnerProducts")
+                        .HasForeignKey("PartnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Partner");
+                });
+
             modelBuilder.Entity("ExpressKuryer.Domain.Entities.ProductImages", b =>
                 {
                     b.HasOne("ExpressKuryer.Domain.Entities.PartnerProduct", "PartnerProduct")
@@ -802,6 +818,11 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ExpressKuryer.Domain.Entities.Partner", b =>
+                {
+                    b.Navigation("PartnerProducts");
                 });
 #pragma warning restore 612, 618
         }

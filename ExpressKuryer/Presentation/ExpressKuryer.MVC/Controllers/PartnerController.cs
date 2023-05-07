@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
 using ExpressKuryer.Application.DTOs;
 using ExpressKuryer.Application.DTOs.Partner;
+using ExpressKuryer.Application.HelperManager;
 using ExpressKuryer.Application.Storages;
 using ExpressKuryer.Application.UnitOfWorks;
 using ExpressKuryer.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace ExpressKuryer.MVC.Controllers
 {
@@ -22,39 +24,60 @@ namespace ExpressKuryer.MVC.Controllers
         }
 
         [HttpGet]
-        //todo change it
-        public async Task<IActionResult> Index(int page = 1, string? searchWord = null, bool? isDeleted = null)
+        public async Task<IActionResult> Index( int page = 1, string? searchWord = null, string? isDeleted = "false")
         {
             var entities = await _unitOfWork.RepositoryPartner.GetAllAsync(x => true, false);
+            int pageSize = 10;
+            ViewBag.PageSize = pageSize;
+            ViewBag.Word = searchWord;
+            ViewBag.IsDeleted = isDeleted;
+
+            if (isDeleted == "true")
+                entities = await _unitOfWork.RepositoryPartner.GetAllAsync(x => x.IsDeleted);
+            if (isDeleted == "false")
+                entities = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted);
+
 
             if (string.IsNullOrWhiteSpace(searchWord) == false)
             {
-                entities = await _unitOfWork.RepositoryPartner.GetAllAsync(x => x.Name.Contains(searchWord));
+                entities = entities.Where(x => x.Name.Contains(searchWord)).ToList();
             }
 
-            if (isDeleted == true)
-                entities = await _unitOfWork.RepositoryPartner.GetAllAsync(x => x.IsDeleted);
-            else
-                entities = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted);
-
-            int pageSize = 10;
 
             var returnDto = _mapper.Map<List<PartnerReturnDto>>(entities);
-
             var query = returnDto.AsQueryable();
 
             var list = PagenatedList<PartnerReturnDto>.Save(query, page, pageSize);
-            ViewBag.PageSize = pageSize;
+            List<string> listOfUrls = new List<string>();
+
+            foreach(var item in list)
+            {
+                var listOfUrl = _storage.GetUrl("uploads/","partners/",item.Image);
+                item.Image = listOfUrl;
+            }
 
             return View(list);
         }
 
-        [HttpPost]
-        [Route("Create")]
-        public async Task<IActionResult> Create([FromForm] PartnerCreateDto objectDto)
+        public IActionResult Create()
         {
+            return View();
+        }
 
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+        [HttpPost]
+        public async Task<IActionResult> Create(PartnerCreateDto objectDto)
+        {
+            if (!ModelState.IsValid) return View(ModelState);
+
+            try
+            {
+                _storage.CheckFileType(objectDto.FormFile, ContentTypeManager.ImageContentTypes);
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("FormFile", ContentTypeManager.ImageContentMessage());
+                return View(objectDto);
+            }
 
             var imageInfo = await _storage.UploadAsync("uploads/partners/", objectDto.FormFile);
 
@@ -64,32 +87,44 @@ namespace ExpressKuryer.MVC.Controllers
             await _unitOfWork.RepositoryPartner.InsertAsync(partner);
             await _unitOfWork.CommitAsync();
 
-            return Ok(partner);
+            object page = TempData["Page"] as int?;
+
+            return RedirectToAction("Index",new { page = page });
         }
 
-
         [HttpGet]
-        [Route("Edit")]
         public async Task<IActionResult> Edit(int id)
         {
             var existObject = await _unitOfWork.RepositoryPartner.GetAsync(x => x.Id == id, false);
-            if (existObject == null) return NotFound();
-            return Ok(existObject);
+            if (existObject == null) return RedirectToAction("NotFound","Page");
+
+            var editDto = _mapper.Map<PartnerEditDto>(existObject);
+            editDto.Image = _storage.GetUrl("uploads/", "partners/", editDto.Image);
+            return View(editDto);
         }
 
-
         [HttpPost]
-        [Route("Edit")]
-        public async Task<IActionResult> Edit([FromForm] PartnerEditDto objectDto, int id, int page = 1)
+        public async Task<IActionResult> Edit(PartnerEditDto objectDto, int id)
         {
             var existObject = await _unitOfWork.RepositoryPartner.GetAsync(x => x.Id == id);
 
-            if (existObject == null) return NotFound();
+            if (existObject == null) return RedirectToAction("NotFound","Page");
 
-            if (!ModelState.IsValid) return StatusCode(400, ModelState.ValidationState);
+            if (!ModelState.IsValid) return View(objectDto);
 
             if (objectDto.FormFile != null)
             {
+                try
+                {
+                    _storage.CheckFileType(objectDto.FormFile, ContentTypeManager.ImageContentTypes);
+                }
+                catch (Exception)
+                {
+                    ModelState.AddModelError("FormFile", ContentTypeManager.ImageContentMessage());
+                    objectDto.Image = _storage.GetUrl("uploads/", "partners/", existObject.Image);
+                    return View(objectDto);
+                }
+
                 var check = _storage.HasFile("uploads/partners/", existObject.Image);
                 if (check == true)
                 {
@@ -107,7 +142,24 @@ namespace ExpressKuryer.MVC.Controllers
             existObject.Name = objectDto.Name;
             await _unitOfWork.CommitAsync();
 
-            return Ok(existObject);
+            object page = TempData["Page"] as int?;
+
+            return RedirectToAction("Index",new {page = page});
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var entity = await _unitOfWork.RepositoryPartner.GetAsync(x => x.Id == id);
+
+            if (entity == null) return RedirectToAction("NotFound", "Page");
+
+            entity.IsDeleted = true;
+
+            await _unitOfWork.CommitAsync();
+            
+            object page = TempData["Page"] as int?;
+
+            return RedirectToAction("Index", new { page = page });
         }
     }
 }

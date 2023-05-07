@@ -15,5 +15,8 @@ namespace ExpressKuryer.Domain.Entities
         public string Image { get; set; }
         [NotMapped]
         public IFormFile FormFile { get; set; }
+
+
+        public List<PartnerProduct> PartnerProducts { get; set; }
     }
 }
