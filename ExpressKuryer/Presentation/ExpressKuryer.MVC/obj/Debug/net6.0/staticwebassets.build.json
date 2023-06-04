@@ -1,14 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "Hash": "yMXvFgjZ8HOXzIEu/IFyuKiz5ejfC7wjCALTiKOkn94=",
-=======
-<<<<<<< HEAD
-  "Hash": "6EbT1O+zTrVSiovrRE2ULzoPeD0YjvtT+HTdxszMtss=",
-=======
-  "Hash": "S0mNpS+5iUvSr0dgtTT6rj2woq6PLX3yLdlDjE65LWg=",
->>>>>>> 1cd1ff720023661a08b02ba5c5931f77d85c6b35
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
   "Source": "ExpressKuryer.MVC",
   "BasePath": "_content/ExpressKuryer.MVC",
   "Mode": "Default",
@@ -30,17 +22,17 @@
     {
       "Name": "ExpressKuryer.MVC\\wwwroot",
       "Source": "ExpressKuryer.MVC",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ExpressKuryer.MVC.styles.css",
+      "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ExpressKuryer.MVC.styles.css",
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "ExpressKuryer.MVC.styles.css",
       "AssetKind": "All",
@@ -51,13 +43,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ExpressKuryer.MVC.styles.css"
+      "OriginalItemSpec": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ExpressKuryer.MVC.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ExpressKuryer.MVC.bundle.scp.css",
+      "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ExpressKuryer.MVC.bundle.scp.css",
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "ExpressKuryer.MVC.bundle.scp.css",
       "AssetKind": "All",
@@ -68,34 +60,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ExpressKuryer.MVC.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ExpressKuryer.MVC.bundle.scp.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\css\\site.css",
-      "SourceId": "ExpressKuryer.MVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
-      "BasePath": "_content/ExpressKuryer.MVC",
-      "RelativePath": "css/site.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\favicon.ico",
-=======
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\favicon.ico",
->>>>>>> 1cd1ff720023661a08b02ba5c5931f77d85c6b35
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -109,35 +80,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\adminlte.css",
-=======
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\js\\site.js",
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
-      "BasePath": "_content/ExpressKuryer.MVC",
-      "RelativePath": "js/site.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
-    },
-    {
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-=======
-      "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
->>>>>>> 1cd1ff720023661a08b02ba5c5931f77d85c6b35
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
-      "SourceId": "ExpressKuryer.MVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/adminlte.css",
       "AssetKind": "All",
@@ -151,14 +97,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\adminlte.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\adminlte.css.map",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/adminlte.css.map",
       "AssetKind": "All",
@@ -172,14 +114,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\adminlte.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\adminlte.min.css",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/adminlte.min.css",
       "AssetKind": "All",
@@ -193,14 +131,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\adminlte.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\adminlte.min.css.map",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/adminlte.min.css.map",
       "AssetKind": "All",
@@ -214,14 +148,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\adminlte.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.components.css",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.components.css",
       "AssetKind": "All",
@@ -235,14 +165,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.components.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.components.css.map",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.components.css.map",
       "AssetKind": "All",
@@ -256,14 +182,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.components.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.components.min.css",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.components.min.css",
       "AssetKind": "All",
@@ -277,14 +199,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.components.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.components.min.css.map",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.components.min.css.map",
       "AssetKind": "All",
@@ -298,14 +216,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.components.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.core.css",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.core.css",
       "AssetKind": "All",
@@ -319,14 +233,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.core.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.core.css.map",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.core.css.map",
       "AssetKind": "All",
@@ -340,14 +250,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.core.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.core.min.css",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.core.min.css",
       "AssetKind": "All",
@@ -361,14 +267,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.core.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.core.min.css.map",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.core.min.css.map",
       "AssetKind": "All",
@@ -382,14 +284,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.core.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.extra-components.css",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.extra-components.css",
       "AssetKind": "All",
@@ -403,14 +301,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.extra-components.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.extra-components.css.map",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.extra-components.css.map",
       "AssetKind": "All",
@@ -424,14 +318,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.extra-components.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.extra-components.min.css",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.extra-components.min.css",
       "AssetKind": "All",
@@ -445,14 +335,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.extra-components.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.extra-components.min.css.map",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.extra-components.min.css.map",
       "AssetKind": "All",
@@ -466,14 +352,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.extra-components.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.light.css",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.light.css",
       "AssetKind": "All",
@@ -487,14 +369,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.light.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.light.css.map",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.light.css.map",
       "AssetKind": "All",
@@ -508,14 +386,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.light.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.light.min.css",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.light.min.css",
       "AssetKind": "All",
@@ -529,14 +403,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.light.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.light.min.css.map",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.light.min.css.map",
       "AssetKind": "All",
@@ -550,14 +420,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.light.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.pages.css",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.pages.css",
       "AssetKind": "All",
@@ -571,14 +437,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.pages.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.pages.css.map",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.pages.css.map",
       "AssetKind": "All",
@@ -592,14 +454,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.pages.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.pages.min.css",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.pages.min.css",
       "AssetKind": "All",
@@ -613,14 +471,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.pages.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.pages.min.css.map",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.pages.min.css.map",
       "AssetKind": "All",
@@ -634,14 +488,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.pages.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.plugins.css",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.plugins.css",
       "AssetKind": "All",
@@ -655,14 +505,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.plugins.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.plugins.css.map",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.plugins.css.map",
       "AssetKind": "All",
@@ -676,14 +522,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.plugins.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.plugins.min.css",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.plugins.min.css",
       "AssetKind": "All",
@@ -697,14 +539,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.plugins.min.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\alt\\adminlte.plugins.min.css.map",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/alt/adminlte.plugins.min.css.map",
       "AssetKind": "All",
@@ -718,14 +556,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\alt\\adminlte.plugins.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\css\\man-style.css",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/css/man-style.css",
       "AssetKind": "All",
@@ -739,14 +573,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\css\\man-style.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\AdminLTELogo.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/AdminLTELogo.png",
       "AssetKind": "All",
@@ -760,14 +590,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\AdminLTELogo.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\avatar.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/avatar.png",
       "AssetKind": "All",
@@ -781,14 +607,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\avatar.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\avatar2.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/avatar2.png",
       "AssetKind": "All",
@@ -802,14 +624,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\avatar2.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\avatar3.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/avatar3.png",
       "AssetKind": "All",
@@ -823,14 +641,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\avatar3.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\avatar4.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/avatar4.png",
       "AssetKind": "All",
@@ -844,14 +658,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\avatar4.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\avatar5.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/avatar5.png",
       "AssetKind": "All",
@@ -865,14 +675,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\avatar5.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\boxed-bg.jpg",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/boxed-bg.jpg",
       "AssetKind": "All",
@@ -886,14 +692,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\boxed-bg.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\boxed-bg.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/boxed-bg.png",
       "AssetKind": "All",
@@ -907,14 +709,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\boxed-bg.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\credit\\american-express.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/credit/american-express.png",
       "AssetKind": "All",
@@ -928,14 +726,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\credit\\american-express.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\credit\\cirrus.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/credit/cirrus.png",
       "AssetKind": "All",
@@ -949,14 +743,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\credit\\cirrus.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\credit\\mastercard.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/credit/mastercard.png",
       "AssetKind": "All",
@@ -970,14 +760,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\credit\\mastercard.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\credit\\paypal.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/credit/paypal.png",
       "AssetKind": "All",
@@ -991,14 +777,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\credit\\paypal.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\credit\\paypal2.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/credit/paypal2.png",
       "AssetKind": "All",
@@ -1012,14 +794,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\credit\\paypal2.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\credit\\visa.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/credit/visa.png",
       "AssetKind": "All",
@@ -1033,14 +811,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\credit\\visa.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\default-150x150.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/default-150x150.png",
       "AssetKind": "All",
@@ -1054,14 +828,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\default-150x150.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\icons.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\bootstrap\\LICENSE",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/icons.png",
       "AssetKind": "All",
@@ -1075,14 +845,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\icons.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\photo1.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/photo1.png",
       "AssetKind": "All",
@@ -1096,14 +862,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\photo1.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\photo2.png",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/photo2.png",
       "AssetKind": "All",
@@ -1117,14 +879,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\photo2.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\photo3.jpg",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/photo3.jpg",
       "AssetKind": "All",
@@ -1138,14 +896,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\photo3.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\photo4.jpg",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/photo4.jpg",
       "AssetKind": "All",
@@ -1159,14 +913,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\photo4.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\prod-1.jpg",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/prod-1.jpg",
       "AssetKind": "All",
@@ -1180,14 +930,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\prod-1.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\prod-2.jpg",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/prod-2.jpg",
       "AssetKind": "All",
@@ -1201,14 +947,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\prod-2.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\prod-3.jpg",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/prod-3.jpg",
       "AssetKind": "All",
@@ -1222,14 +964,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\prod-3.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\prod-4.jpg",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/prod-4.jpg",
       "AssetKind": "All",
@@ -1243,14 +981,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\prod-4.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\prod-5.jpg",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/prod-5.jpg",
       "AssetKind": "All",
@@ -1264,14 +998,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\prod-5.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\user1-128x128.jpg",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/user1-128x128.jpg",
       "AssetKind": "All",
@@ -1285,14 +1015,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\user1-128x128.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\user2-160x160.jpg",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/user2-160x160.jpg",
       "AssetKind": "All",
@@ -1306,14 +1032,10 @@
       "OriginalItemSpec": "wwwroot\\manage\\dist\\img\\user2-160x160.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\dist\\img\\user3-128x128.jpg",
-=======
-      "Identity": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       "SourceId": "ExpressKuryer.MVC",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
       "BasePath": "_content/ExpressKuryer.MVC",
       "RelativePath": "manage/dist/img/user3-128x128.jpg",
       "AssetKind": "All",

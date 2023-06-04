@@ -1,28 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj": {}
+    "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj": {
+    "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj",
+        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj",
         "projectName": "ExpressKuryer.Application",
-        "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj",
-        "packagesPath": "C:\\Users\\Isa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\obj\\",
+        "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj",
+        "packagesPath": "C:\\Users\\SWIFT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\SWIFT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\Isa\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -37,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj": {
-                "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj"
+              "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj": {
+                "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj"
               }
             }
           }
@@ -94,33 +90,25 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
         }
       }
     },
-    "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj": {
+    "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
         "projectName": "ExpressKuryer.Domain",
-        "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
-        "packagesPath": "C:\\Users\\Isa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\obj\\",
+        "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
+        "packagesPath": "C:\\Users\\SWIFT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\SWIFT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\Isa\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -172,33 +160,25 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
         }
       }
     },
-    "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj": {
+    "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj",
         "projectName": "ExpressKuryer.Infrastructure",
-        "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Isa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\SWIFT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\SWIFT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\Isa\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -213,8 +193,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj": {
-                "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj"
+              "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj": {
+                "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj"
               }
             }
           }
@@ -266,33 +246,25 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
         }
       }
     },
-    "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj": {
+    "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj",
         "projectName": "ExpressKuryer.Persistence",
-        "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj",
-        "packagesPath": "C:\\Users\\Isa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj",
+        "packagesPath": "C:\\Users\\SWIFT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\SWIFT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\Isa\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -307,8 +279,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj": {
-                "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj"
+              "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj": {
+                "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj"
               }
             }
           }
@@ -356,7 +328,6 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
@@ -444,31 +415,24 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
         }
       }
     },
-    "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj": {
+    "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
+        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
         "projectName": "ExpressKuryer.MVC",
-        "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
-        "packagesPath": "C:\\Users\\Isa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\",
+        "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
+        "packagesPath": "C:\\Users\\SWIFT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\SWIFT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\Isa\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -483,19 +447,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj"
+              "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj"
               },
-<<<<<<< HEAD
               "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj": {
                 "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj"
               },
               "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.API\\ExpressKuryer.API.csproj": {
                 "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.API\\ExpressKuryer.API.csproj"
-=======
-              "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj": {
-                "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj"
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
               }
             }
           }
@@ -540,11 +499,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
         }
       }
     }

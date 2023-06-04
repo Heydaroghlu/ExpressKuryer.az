@@ -2695,7 +2695,9 @@
         "dependencies": {
           "CloudinaryDotNet": "1.20.0",
           "ExpressKuryer.Application": "1.0.0",
+          "MailKit": "4.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.16",
+          "MimeKit": "4.0.0",
           "dotenv.net": "3.1.2"
         },
         "runtime": {

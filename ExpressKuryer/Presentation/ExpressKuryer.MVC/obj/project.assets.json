@@ -150,22 +150,6 @@
           }
         }
       },
-      "MailKit/4.0.0": {
-        "type": "package",
-        "dependencies": {
-          "MimeKit": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/MailKit.dll": {
-            "related": ".dll.config;.pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/MailKit.dll": {
-            "related": ".dll.config;.pdb;.xml"
-          }
-        }
-      },
       "MessagePack/2.1.152": {
         "type": "package",
         "dependencies": {
@@ -4582,42 +4566,6 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
-      ]
-    },
-    "MailKit/4.0.0": {
-      "sha512": "vtP6nUU0ByEZTnpbtsfdxyRvcssNSgIml4zi2hpBOV4gYNoaYSt+4VCx28MMnfaO/9J1IzcG+Hc8kXMkWX6iRQ==",
-      "type": "package",
-      "path": "mailkit/4.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icons/mailkit-50.png",
-        "lib/net462/MailKit.dll",
-        "lib/net462/MailKit.dll.config",
-        "lib/net462/MailKit.pdb",
-        "lib/net462/MailKit.xml",
-        "lib/net47/MailKit.dll",
-        "lib/net47/MailKit.dll.config",
-        "lib/net47/MailKit.pdb",
-        "lib/net47/MailKit.xml",
-        "lib/net48/MailKit.dll",
-        "lib/net48/MailKit.dll.config",
-        "lib/net48/MailKit.pdb",
-        "lib/net48/MailKit.xml",
-        "lib/net6.0/MailKit.dll",
-        "lib/net6.0/MailKit.dll.config",
-        "lib/net6.0/MailKit.pdb",
-        "lib/net6.0/MailKit.xml",
-        "lib/netstandard2.0/MailKit.dll",
-        "lib/netstandard2.0/MailKit.dll.config",
-        "lib/netstandard2.0/MailKit.pdb",
-        "lib/netstandard2.0/MailKit.xml",
-        "lib/netstandard2.1/MailKit.dll",
-        "lib/netstandard2.1/MailKit.dll.config",
-        "lib/netstandard2.1/MailKit.pdb",
-        "lib/netstandard2.1/MailKit.xml",
-        "mailkit.4.0.0.nupkg.sha512",
-        "mailkit.nuspec"
       ]
     },
     "MailKit/4.0.0": {
@@ -11812,32 +11760,24 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\SWIFT\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
-=======
-    "C:\\Users\\Isa\\.nuget\\packages\\": {}
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
+      "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
       "projectName": "ExpressKuryer.MVC",
-      "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
-      "packagesPath": "C:\\Users\\Isa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\",
+      "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
+      "packagesPath": "C:\\Users\\SWIFT\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\SWIFT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-        "C:\\Users\\Isa\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11852,19 +11792,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj"
+            "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj"
             },
-<<<<<<< HEAD
             "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj": {
               "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj"
             },
             "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.API\\ExpressKuryer.API.csproj": {
               "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.API\\ExpressKuryer.API.csproj"
-=======
-            "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj": {
-              "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj"
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
             }
           }
         }
@@ -11909,11 +11844,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       }
     }
   }

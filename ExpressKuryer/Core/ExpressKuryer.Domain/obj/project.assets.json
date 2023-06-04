@@ -895,32 +895,24 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\SWIFT\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
-=======
-    "C:\\Users\\Isa\\.nuget\\packages\\": {}
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
       "projectName": "ExpressKuryer.Domain",
-      "projectPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
-      "packagesPath": "C:\\Users\\Isa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Isa\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\obj\\",
+      "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
+      "packagesPath": "C:\\Users\\SWIFT\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\SWIFT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-        "C:\\Users\\Isa\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -972,11 +964,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
->>>>>>> 99010fff530fe0641b961972b4cb48b51ae490c7
       }
     }
   }
