@@ -17,8 +17,6 @@ builder.Services.AddPersistenceServices();
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(StorageEnum.CloudinaryStorage);
 
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
