@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Edit";
+}
+
+@model DeliveryReturnDto
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-12" style="padding: 20px; display: flex; justify-content: center; align-items: center;">
+                    <h1>Delivery</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form method="post" enctype="multipart/form-data">
+
+                                <div class="mb-3">
+                                    <label asp-for="Name" class="form-label">Name</label>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label asp-for="Telephone" class="form-label">Telephone</label>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="Message" class="form-label">Message</label>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="TotalAmount" class="form-label">TotalAmount</label>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="DisCount" class="form-label">DisCount</label>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="CreatedAt" class="form-label">CreatedAt</label>
+                                </div>
+
+                                <button type="submit" class="btn btn-outline-dark my-3">Submit</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+
+@section Scripts{
+    <script src="~/manage/main.js"></script>
+}

@@ -19,12 +19,11 @@ namespace ExpressKuryer.Infrastructure
 
 		public static void AddInfrastructureServices(this IServiceCollection services)
 		{
-		}
+            services.AddScoped<ITokenHandler, TokenHandler>();
+            services.AddScoped<EmailService>();
+        }
 		public static void AddInfrastructureServices(this IServiceCollection services, StorageEnum storageEnum)
 		{
-			services.AddScoped<ITokenHandler, TokenHandler>();
-            services.AddScoped<EmailService>();
-
 
             switch (storageEnum)
 			{
@@ -39,6 +38,5 @@ namespace ExpressKuryer.Infrastructure
 					break;
 			}
 		}
-
 	}
 }

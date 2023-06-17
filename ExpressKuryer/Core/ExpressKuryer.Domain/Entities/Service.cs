@@ -13,6 +13,5 @@ namespace ExpressKuryer.Domain.Entities
         public double Depozit { get; set; } 
         public string Icon { get;set; }
         public double OwnAvragePercent { get; set; }
-      
     }
 }

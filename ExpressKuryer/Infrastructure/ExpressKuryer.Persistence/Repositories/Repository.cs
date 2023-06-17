@@ -39,8 +39,8 @@ namespace ExpressKuryer.Persistence.Repositories
         public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> expression, bool tracking = true, params string[] includes)
 		{
 			var query = Table.AsQueryable<TEntity>();
-			IsTracking(query, tracking);
-			Includes(query, includes);
+			query = IsTracking(query, tracking);
+            query = Includes(query, includes);
 			return await query.FirstOrDefaultAsync(expression);
 		}
 
@@ -71,20 +71,22 @@ namespace ExpressKuryer.Persistence.Repositories
 			Table.RemoveRange(entities);
 		}
 
-		private void IsTracking(IQueryable<TEntity> query, bool tracking)
-		{
-			if (!tracking)
-			{
-				query = query.AsNoTracking();
-			}
-		}
-		private void Includes(IQueryable<TEntity> query, params string[] includes)
-		{
-			foreach (var include in includes)
-			{
-				query = query.Include(include);
-			}
-		}
+        private IQueryable<TEntity> IsTracking(IQueryable<TEntity> query, bool tracking)
+        {
+            if (!tracking)
+            {
+                query = query.AsNoTracking();
+            }
+            return query;
 
+        }
+        private IQueryable<TEntity> Includes(IQueryable<TEntity> query, params string[] includes)
+        {
+            foreach (var include in includes)
+            {
+                query = query.Include(include);
+            }
+            return query;
+        }
     }
 }

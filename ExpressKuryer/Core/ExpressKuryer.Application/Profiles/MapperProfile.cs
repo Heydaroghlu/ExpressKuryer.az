@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ExpressKuryer.Application.DTOs.Contact;
+using ExpressKuryer.Application.DTOs.DeliveryDTOs;
 using ExpressKuryer.Application.DTOs.Partner;
 using ExpressKuryer.Application.DTOs.PartnerProduct;
 using ExpressKuryer.Application.DTOs.Service;
@@ -43,12 +44,14 @@ namespace ExpressKuryer.Application.Profiles
 			CreateMap<Contact, ContactReturnDto>();
 			CreateMap<Contact, ContactEditDto>();
 
-            CreateMap<PartnerProduct, PartnerProductReturnDto>();
 			CreateMap<PartnerProductCreateDto, PartnerProduct>();
 			CreateMap<PartnerProduct, PartnerProductEditDto>();
 			CreateMap<PartnerProductEditDto, PartnerProduct>();
 
-			CreateMap<Service, ServiceReturnDto>();
+            CreateMap<Delivery, DeliveryReturnDto>();
+            CreateMap<Service, ServiceReturnDto>();
+            CreateMap<PartnerProduct, PartnerProductReturnDto>();
+
         }
     }
 }

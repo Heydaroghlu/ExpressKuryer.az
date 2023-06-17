@@ -45,8 +45,16 @@ namespace ExpressKuryer.API.Controllers
             }
             TokenDTO token = _tokenHandler.CreateAccessToken(user,60);
             return Ok(token);
-
         }
+
+        [HttpPost("role")]
+        public async Task<IActionResult> Role()
+        {
+            await _roleManager.CreateAsync(new IdentityRole("Admin"));
+            await _roleManager.CreateAsync(new IdentityRole("Member"));
+            return Ok();
+        }
+
         [HttpPost("hesab/qeydiyyat")]
         public async Task<IActionResult> Register(RegisterDTO register)
         {

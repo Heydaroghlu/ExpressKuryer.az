@@ -28,6 +28,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Delivery/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVsaXZlcnlcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Delivery/Get.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVsaXZlcnlcR2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Delivery/GetAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVsaXZlcnlcR2V0QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/PartnerProduct/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydG5lclByb2R1Y3RcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

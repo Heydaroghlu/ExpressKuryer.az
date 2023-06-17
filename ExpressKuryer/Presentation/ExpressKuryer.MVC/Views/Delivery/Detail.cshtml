@@ -1,0 +1,204 @@
+﻿@{
+    ViewData["Title"] = "Detail";
+}
+
+@model Delivery
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-12" style="padding: 20px; display: flex; justify-content: center; align-items: center;">
+                    <h1>Detail</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form method="post" enctype="multipart/form-data">
+
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Name</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                @Model.Name
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Telephone</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                @Model.Telephone
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">CreatedAt</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                @Model.DisCount
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">TotalAmount</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                @Model.TotalAmount
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Message</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                @Model.Message
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Service Name</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                @Model.Service.Name
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Address From</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                @Model.AddressFrom
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Address To</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                @Model.AddressTo
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">DisCount</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                @Model.CreatedAt
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">expressDelivery</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                @Model.expressDelivery
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">suprizDelivery</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                @Model.suprizDelivery
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Delivery Status</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                @Model.DeliveryStatus
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <div class="card-body" bis_skin_checked="1">
+                                            <select class="form-control bg-gray-light" name="isDeleted">
+                                                <option value="true" class="bg-gray-light">@DeliveryStatus.Gözləmədə.ToString()</option>
+
+                                                <option value="null" class="bg-gray-light">@DeliveryStatus.Qəbul.ToString()</option>
+
+                                                <option value="false" class="bg-gray-light">@DeliveryStatus.İmtina.ToString()</option>
+                                            </select>
+
+                                            <button type="submit" class="btn btn-outline-dark my-3">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+
+@section Scripts{
+    <script src="~/manage/main.js"></script>
+}

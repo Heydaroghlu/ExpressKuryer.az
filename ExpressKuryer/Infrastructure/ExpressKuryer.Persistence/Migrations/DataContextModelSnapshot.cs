@@ -85,11 +85,16 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("DeliveryStatus")
-                        .HasColumnType("int");
+                    b.Property<string>("DeliveryStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("DisCount")
                         .HasColumnType("decimal(18,2)");
@@ -107,8 +112,9 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
 
-                    b.Property<int>("OrderDeliveryStatus")
-                        .HasColumnType("int");
+                    b.Property<string>("OrderDeliveryStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PartnerProductId")
                         .HasColumnType("int");
@@ -137,6 +143,8 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
 
                     b.HasIndex("PartnerProductId");
 
@@ -555,7 +563,8 @@ namespace ExpressKuryer.Persistence.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(450)")
+                        .HasColumnName("AppUserId");
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
@@ -730,6 +739,12 @@ namespace ExpressKuryer.Persistence.Migrations
 
             modelBuilder.Entity("ExpressKuryer.Domain.Entities.Delivery", b =>
                 {
+                    b.HasOne("ExpressKuryer.Domain.Entities.AppUser", "AppUser")
+                        .WithMany("Deliveries")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ExpressKuryer.Domain.Entities.PartnerProduct", "PartnerProduct")
                         .WithMany()
                         .HasForeignKey("PartnerProductId")
@@ -741,6 +756,8 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasForeignKey("ServiceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("AppUser");
 
                     b.Navigation("PartnerProduct");
 
@@ -823,6 +840,11 @@ namespace ExpressKuryer.Persistence.Migrations
             modelBuilder.Entity("ExpressKuryer.Domain.Entities.Partner", b =>
                 {
                     b.Navigation("PartnerProducts");
+                });
+
+            modelBuilder.Entity("ExpressKuryer.Domain.Entities.AppUser", b =>
+                {
+                    b.Navigation("Deliveries");
                 });
 #pragma warning restore 612, 618
         }
