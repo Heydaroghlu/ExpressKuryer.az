@@ -31,6 +31,7 @@ namespace ExpressKuryer.MVC.Controllers
             ViewBag.PageSize = pageSize;
             ViewBag.Word = searchWord;
             ViewBag.IsDeleted = isDeleted;
+            TempData["Title"] = "Vakantlar";
 
             if (isDeleted == "true")
                 entities = await _unitOfWork.RepositoryVacancy.GetAllAsync(x => x.IsDeleted);
@@ -56,7 +57,19 @@ namespace ExpressKuryer.MVC.Controllers
 
             return View(list);
         }
-        
+
+        [HttpGet]
+        public async Task<IActionResult> Detail(int id)
+        {
+            var existObject = await _unitOfWork.RepositoryVacancy.GetAsync(x => x.Id == id, false);
+            if (existObject == null) return RedirectToAction("NotFound", "Page");
+
+            var editDto = _mapper.Map<VacancyReturnDto>(existObject);
+            editDto.CV = _storage.GetUrl("uploads/", "sliders/", editDto.CV);
+            return View(editDto);
+        }
+
+
         public async Task<IActionResult> Delete(int id)
         {
             var entity = await _unitOfWork.RepositoryVacancy.GetAsync(x => x.Id == id);

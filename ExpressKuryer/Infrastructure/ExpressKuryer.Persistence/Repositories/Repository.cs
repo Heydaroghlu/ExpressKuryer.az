@@ -31,8 +31,8 @@ namespace ExpressKuryer.Persistence.Repositories
 		public async Task<List<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> expression, bool tracking = true, params string[] includes)
 		{
 			var query = Table.Where(expression);
-			IsTracking(query, tracking);
-			Includes(query,includes);
+            query = IsTracking(query, tracking);
+            query = Includes(query,includes);
 			return query.ToList();
 		}
 

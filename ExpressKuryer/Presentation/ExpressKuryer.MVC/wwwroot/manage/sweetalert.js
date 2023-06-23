@@ -1,4 +1,4 @@
-
+﻿
 
 $(function () {
 
@@ -22,7 +22,8 @@ $(function () {
                 fetch(url)
                     .then(response => response.text())
                     .then(data => {
-                        location.reload();
+                        console.log(data);
+                        //location.reload();
                     })
             }
         })

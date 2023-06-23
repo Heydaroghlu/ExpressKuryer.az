@@ -15,7 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExpressKuryer.API\ExpressKuryer.API.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\ExpressKuryer.Infrastructure\ExpressKuryer.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\ExpressKuryer.Persistence\ExpressKuryer.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

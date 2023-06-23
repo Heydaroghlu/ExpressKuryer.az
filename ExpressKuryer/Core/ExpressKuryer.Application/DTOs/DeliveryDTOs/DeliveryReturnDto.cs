@@ -1,4 +1,5 @@
-﻿using ExpressKuryer.Application.DTOs.PartnerProduct;
+﻿using ExpressKuryer.Application.DTOs.CourierDTOs;
+using ExpressKuryer.Application.DTOs.PartnerProduct;
 using ExpressKuryer.Application.DTOs.Service;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,10 @@ namespace ExpressKuryer.Application.DTOs.DeliveryDTOs
 {
     public class DeliveryReturnDto
     {
+
+        //todo delivery code
+
+        public string DeliveryCode { get; set; }
         public int Id { get; set; }
         public DateTime CreatedAt { get; set; }
         public int ServiceId { get; set; }
@@ -17,6 +22,7 @@ namespace ExpressKuryer.Application.DTOs.DeliveryDTOs
         public string AddressFrom { get; set; }
         public string AddressTo { get; set; }
         public string Name { get; set; }
+        public string SurName { get; set; } 
         public string Telephone { get; set; }
         public string Message { get; set; }
         public bool expressDelivery { get; set; }
@@ -27,6 +33,7 @@ namespace ExpressKuryer.Application.DTOs.DeliveryDTOs
         public string DeliveryStatus { get; set; }
         public string OrderDeliveryStatus { get; set; }
         public int PartnerProductId { get; set; }
+        public CourierReturnDto Courier { get; set; }
         public PartnerProductReturnDto PartnerProduct { get; set; }
         public ExpressKuryer.Domain.Entities.AppUser AppUser { get; set; }
 

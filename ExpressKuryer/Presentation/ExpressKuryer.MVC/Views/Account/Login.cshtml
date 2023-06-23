@@ -1,0 +1,72 @@
+﻿
+@using ExpressKuryer.Application.DTOs.AppUserDTOs;
+@model LoginDTO
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="admin, dashboard" />
+    <meta name="author" content="DexignZone" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Express Kuryer :  Restaurant Admin Dashboard  Bootstrap 5 Template" />
+    <meta property="og:title" content="Express Kuryer :  Restaurant Admin Dashboard  Bootstrap 5 Template" />
+    <meta property="og:description" content="Express Kuryer :  Restaurant Admin Dashboard  Bootstrap 5 Template" />
+    <meta property="og:image" content="social-image.png" />
+    <meta name="format-detection" content="telephone=no">
+    <title>Express Kuryer -  Restaurant Admin Dashboard </title>
+    <!-- Favicon icon -->
+    @*<link rel="icon" type="image/png" sizes="16x16" href="~/manage/images/favicon.png">*@
+    <link href="~/manage/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="h-100">
+    <div class="authincation h-100">
+        <div class="container h-100">
+            <div class="row justify-content-center h-100 align-items-center">
+                <div class="col-md-6">
+                    <div class="authincation-content">
+                        <div class="row no-gutters">
+                            <div class="col-xl-12">
+                                <div class="auth-form">
+                                    <div class="text-center mb-3">
+                                        <a><img src="~/manage/images/navLogo.png" alt=""></a>
+                                    </div>
+                                    <form method="post">
+                                        <div class="form-group" style="margin:30px 0px">
+                                            <label class="mb-1"><strong>UserName</strong></label>
+                                            <input asp-for="UserName" class="form-control">
+                                        </div>
+                                        <div class="form-group" style="margin:30px 0px">
+                                            <label class="mb-1"><strong>Password</strong></label>
+                                            <input asp-for="Password" class="form-control">
+                                        </div>
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                        <button class="btn btn-outline-dark" style="width:100%">Daxil ol</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/manage/vendor/global/global.min.js"></script>
+    <script src="~/manage/js/custom.min.js"></script>
+    <script src="~/manage/js/deznav-init.js"></script>
+
+</body>
+
+
+<!-- Mirrored from koki.dexignzone.com/xhtml/page-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Jun 2023 12:16:44 GMT -->
+</html>

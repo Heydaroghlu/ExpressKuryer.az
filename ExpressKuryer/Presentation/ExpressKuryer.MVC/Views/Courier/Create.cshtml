@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Create";
+}
+
+@model CourierCreateDto
+
+
+<div class="content-body" style="min-height: 876px;" bis_skin_checked="1">
+
+    <div class="row mb-2">
+        <div class="col-sm-12" style="padding: 20px; display: flex; justify-content: center; align-items: center;">
+            <h1>Kuryer Yarat</h1>
+        </div>
+    </div>
+
+    <!-- row -->
+    <div class="container-fluid" bis_skin_checked="1">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Tənzimləmələr</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="basic-form">
+                            <form method="post" enctype="multipart/form-data">
+
+                                <div class="mb-3">
+                                    <label asp-for="CourierPerson.Name" class="form-label">Ad</label>
+                                    <input asp-for="CourierPerson.Name" class="form-control input-rounded" placeholder="boşluq...">
+                                    <span asp-validation-for="CourierPerson.Name" class="text-danger"></span>
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label asp-for="CourierPerson.Surname" class="form-label">Soyad</label>
+                                    <input asp-for="CourierPerson.Surname" class="form-control input-rounded" placeholder="boşluq...">
+                                    <span asp-validation-for="CourierPerson.Surname" class="text-danger"></span>
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label asp-for="CourierPerson.Email" class="form-label">Email</label>
+                                    <input asp-for="CourierPerson.Email" class="form-control input-rounded" placeholder="boşluq...">
+                                    <span asp-validation-for="CourierPerson.Email" class="text-danger"></span>
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label asp-for="CourierPerson.PhoneNumber" class="form-label">Telefon</label>
+                                    <input asp-for="CourierPerson.PhoneNumber" class="form-control input-rounded" placeholder="boşluq...">
+                                    <span asp-validation-for="CourierPerson.PhoneNumber" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="CourierPerson.Address" class="form-label">Ünvan</label>
+                                    <input asp-for="CourierPerson.Address" class="form-control input-rounded" placeholder="boşluq...">
+                                    <span asp-validation-for="CourierPerson.Address" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3 image-box">
+                                    <label asp-for="FormFile" class="form-label">Şəkil</label>
+                                    <input asp-for="FormFile" class="form-control file input-rounded" placeholder="boşluq...">
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label asp-for="CourierPerson.Password" class="form-label">Parol</label>
+                                    <input asp-for="CourierPerson.Password" class="form-control input-rounded" placeholder="boşluq...">
+                                    <span asp-validation-for="CourierPerson.Password" class="text-danger"></span>
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label asp-for="CourierPerson.DuplicatePassword" class="form-label">Təkrar Parol</label>
+                                    <input asp-for="CourierPerson.DuplicatePassword" class="form-control input-rounded" placeholder="boşluq...">
+                                    <span asp-validation-for="CourierPerson.DuplicatePassword" class="text-danger"></span>
+                                </div>
+
+                                <button type="submit" class="btn btn-outline-dark my-3">Qeyd et</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/manage/main.js"></script>
+    <script src="~/manage/sweetalert.js"></script>
+
+}

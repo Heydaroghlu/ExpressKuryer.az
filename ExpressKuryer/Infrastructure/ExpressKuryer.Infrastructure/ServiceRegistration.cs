@@ -20,7 +20,7 @@ namespace ExpressKuryer.Infrastructure
 		public static void AddInfrastructureServices(this IServiceCollection services)
 		{
             services.AddScoped<ITokenHandler, TokenHandler>();
-            services.AddScoped<EmailService>();
+            services.AddScoped<IEmailService,EmailService>();
         }
 		public static void AddInfrastructureServices(this IServiceCollection services, StorageEnum storageEnum)
 		{

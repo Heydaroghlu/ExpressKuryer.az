@@ -14,22 +14,24 @@ namespace ExpressKuryer.MVC.Controllers
     public class DeliveryController : Controller
     {
         IUnitOfWork _unitOfWork;
-        //EmailService _emailService;
+        IEmailService _emailService;
         UserManager<AppUser> _userManager;
         IMapper _mapper;
-        public DeliveryController(IMapper mapper, IUnitOfWork unitOfWork, UserManager<AppUser> userManager)
+        public DeliveryController(IMapper mapper, IUnitOfWork unitOfWork, UserManager<AppUser> userManager, IEmailService emailService)
         {
             _unitOfWork = unitOfWork;
-            //_emailService = emailService;
+            _emailService = emailService;
             _userManager = userManager;
             _mapper = mapper;
         }
 
+
+
         [HttpGet]
-        [Route("Manage/GetAll")]
-        public async Task<IActionResult> GetAll(int page = 1, string? searchWord = null, bool? isDeleted = false, string? orderStat = null, string? deliveryStat = null)
+        public async Task<IActionResult> Index(int page = 1, string? searchWord = null, bool? isDeleted = false, string? orderStat = null, string? deliveryStat = null)
         {
-            var entities = await _unitOfWork.RepositoryDelivery.GetAllAsync(x => true, false, "Service", "PartnerProduct", "AppUser");
+            var entities = await _unitOfWork.RepositoryDelivery.GetAllAsync(x => true, false, "Service", "PartnerProduct", "MemberUser", "Courier");
+            //todo change to returnDto
             int pageSize = 10;
 
             orderStat = orderStat ?? DeliveryStatus.Gözləmədə.ToString();
@@ -53,49 +55,36 @@ namespace ExpressKuryer.MVC.Controllers
             {
                 entities = entities.Where(x => x.Name.ToLower().Contains(searchWord.ToLower())).ToList();
             }
-            
+
             var returnDto = _mapper.Map<List<DeliveryReturnDto>>(entities);
             var list = PagenatedList<DeliveryReturnDto>.Save(returnDto.AsQueryable(), page, pageSize);
 
             ViewBag.PageSize = pageSize;
-
+            ViewBag.Word = searchWord;
+            TempData["Title"] = "Çatdırılmalar";
             TempData["Page"] = page;
-            TempData["Word"] = searchWord;
             TempData["IsDeleted"] = isDeleted;
 
             return View(list);
         }
 
-       
+
         [HttpGet]
         [Route("Manage/Detail")]
         public async Task<IActionResult> Detail(int id)
         {
-            var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == id, false, "Service", "PartnerProduct", "AppUser");
+            var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == id, false, "Service", "PartnerProduct", "AppUser", "Courier");
             if (entity == null) return NotFound("Order Not Found");
-            return View(entity);
+
+            var returnDto = _mapper.Map<DeliveryReturnDto>(entity);
+            return View(returnDto);
         }
 
 
-        [HttpPost]
-        [Route("Manage/Recover")]
-        public async Task<IActionResult> Recover(int id)
-        {
-            var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == id);
-            if (entity == null) return NotFound("Order Not Found");
 
-            entity.IsDeleted = false;
-            await _unitOfWork.CommitAsync();
-
-
-            object page = TempData["Page"] as int?;
-            object word = TempData["Page"] as string;
-            object isDeleted = TempData["Page"] as bool?;
-            return RedirectToAction("GetAll", new { page = page, searchWord = word, isDeleted = isDeleted });
-        }
 
         [HttpPost]
-        [Route("Manage/ChangeDeliveryStatus")]  
+        [Route("Manage/ChangeDeliveryStatus")]
         public async Task<IActionResult> ChangeDeliveryStatus(int orderId, string status, string appUserId)
         {
             var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == orderId);
@@ -107,7 +96,7 @@ namespace ExpressKuryer.MVC.Controllers
 
             await _unitOfWork.CommitAsync();
 
-            //_emailService.Send(appUser.Email, $"Sifariş statusu", $"Sizin sifarişiniz statusu {status} olaraq dəyişdirildi");
+            _emailService.Send(appUser.Email, $"Sifariş statusu", $"Sizin sifarişiniz statusu {status} olaraq dəyişdirildi");
 
             object page = TempData["Page"] as int?;
             object word = TempData["Page"] as string;
@@ -122,13 +111,18 @@ namespace ExpressKuryer.MVC.Controllers
             var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == orderId);
             var appUser = await _userManager.FindByIdAsync(appUserId);
 
+
             if (status.Equals(OrderDeliveryStatus.Anbarda.ToString())) entity.OrderDeliveryStatus = OrderDeliveryStatus.Anbarda.ToString();
             else if (status.Equals(OrderDeliveryStatus.Kuryerde.ToString())) entity.OrderDeliveryStatus = OrderDeliveryStatus.Kuryerde.ToString();
-            else if (status.Equals(OrderDeliveryStatus.Catdirildi.ToString())) entity.OrderDeliveryStatus = OrderDeliveryStatus.Catdirildi.ToString();
-
+            else if (status.Equals(OrderDeliveryStatus.Catdirildi.ToString()))
+            {
+                entity.OrderDeliveryStatus = OrderDeliveryStatus.Catdirildi.ToString();
+                var gainPercent = await _unitOfWork.RepositorySetting.GetAsync(x => x.Key.Equals("GainPercent"));
+                entity.Courier.Gain = (entity.Courier.Gain / 100) * Convert.ToInt32(gainPercent.Value);
+            }
             await _unitOfWork.CommitAsync();
 
-            //_emailService.Send(appUser.Email, $"Sifariş statusu", $"Sizin sifarişiniz statusu {status} olaraq dəyişdirildi");
+            _emailService.Send(appUser.Email, $"Sifariş statusu", $"Sizin sifarişiniz statusu {status} olaraq dəyişdirildi");
 
             object page = TempData["Page"] as int?;
             object word = TempData["Page"] as string;
@@ -151,5 +145,22 @@ namespace ExpressKuryer.MVC.Controllers
             object isDeleted = TempData["Page"] as bool?;
             return RedirectToAction("GetAll", new { page = page, searchWord = word, isDeleted = isDeleted });
         }
+
+        [HttpPost]
+        [Route("Manage/Recover")]
+        public async Task<IActionResult> Recover(int id)
+        {
+            var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == id);
+            if (entity == null) return NotFound("Order Not Found");
+
+            entity.IsDeleted = false;
+            await _unitOfWork.CommitAsync();
+
+            object page = TempData["Page"] as int?;
+            object word = TempData["Page"] as string;
+            object isDeleted = TempData["Page"] as bool?;
+            return RedirectToAction("GetAll", new { page = page, searchWord = word, isDeleted = isDeleted });
+        }
+
     }
 }

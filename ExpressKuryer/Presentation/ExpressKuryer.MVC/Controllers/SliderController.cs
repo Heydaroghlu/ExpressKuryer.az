@@ -22,15 +22,13 @@ namespace ExpressKuryer.MVC.Controllers
             _mapper = mapper;
             _storage = storage;
         }
-
+        //todo image temasini deyis!
         [HttpGet]
         public async Task<IActionResult> Index(int page = 1, string? searchWord = null, string? isDeleted = "false")
         {
             var entities = await _unitOfWork.RepositorySlider.GetAllAsync(x => true, false);
             int pageSize = 10;
-            ViewBag.PageSize = pageSize;
-            ViewBag.Word = searchWord;
-            ViewBag.IsDeleted = isDeleted;
+          
 
             if (isDeleted == "true")
                 entities = await _unitOfWork.RepositorySlider.GetAllAsync(x => x.IsDeleted);
@@ -42,17 +40,18 @@ namespace ExpressKuryer.MVC.Controllers
                 entities = entities.Where(x => x.Title.Contains(searchWord)).ToList();
             }
 
-            var returnDto = _mapper.Map<List<SliderReturnDto>>(entities);
-            var query = returnDto.AsQueryable();
-
-            var list = PagenatedList<SliderReturnDto>.Save(query, page, pageSize);
-            List<string> listOfUrls = new List<string>();
+            var list = PagenatedList<Slider>.Save(entities.AsQueryable(), page, pageSize);
 
             foreach (var item in list)
             {
                 var listOfUrl = _storage.GetUrl("uploads/", "sliders/", item.Image);
                 item.Image = listOfUrl;
             }
+
+            ViewBag.PageSize = pageSize;
+            ViewBag.Word = searchWord;
+            ViewBag.IsDeleted = isDeleted;
+            TempData["Title"] = "Sliderlər";
 
             return View(list);
         }

@@ -67,6 +67,40 @@ namespace ExpressKuryer.Persistence.Migrations
                     b.ToTable("express_contact", (string)null);
                 });
 
+            modelBuilder.Entity("ExpressKuryer.Domain.Entities.Courier", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("CourierPersonId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("Gain")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("WhoIsModified")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourierPersonId");
+
+                    b.ToTable("Couriers");
+                });
+
             modelBuilder.Entity("ExpressKuryer.Domain.Entities.Delivery", b =>
                 {
                     b.Property<int>("Id")
@@ -85,12 +119,15 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
-                    b.Property<string>("AppUserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int?>("CourierId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("DeliveryCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DeliveryStatus")
                         .IsRequired()
@@ -101,6 +138,10 @@ namespace ExpressKuryer.Persistence.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<string>("MemberUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Message")
                         .IsRequired()
@@ -121,6 +162,10 @@ namespace ExpressKuryer.Persistence.Migrations
 
                     b.Property<int>("ServiceId")
                         .HasColumnType("int");
+
+                    b.Property<string>("SurName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Telephone")
                         .IsRequired()
@@ -144,7 +189,9 @@ namespace ExpressKuryer.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AppUserId");
+                    b.HasIndex("CourierId");
+
+                    b.HasIndex("MemberUserId");
 
                     b.HasIndex("PartnerProductId");
 
@@ -721,6 +768,10 @@ namespace ExpressKuryer.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsAdmin")
                         .HasColumnType("bit");
 
@@ -734,14 +785,33 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<string>("UserType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasDiscriminator().HasValue("AppUser");
+                });
+
+            modelBuilder.Entity("ExpressKuryer.Domain.Entities.Courier", b =>
+                {
+                    b.HasOne("ExpressKuryer.Domain.Entities.AppUser", "CourierPerson")
+                        .WithMany()
+                        .HasForeignKey("CourierPersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CourierPerson");
                 });
 
             modelBuilder.Entity("ExpressKuryer.Domain.Entities.Delivery", b =>
                 {
-                    b.HasOne("ExpressKuryer.Domain.Entities.AppUser", "AppUser")
-                        .WithMany("Deliveries")
-                        .HasForeignKey("AppUserId")
+                    b.HasOne("ExpressKuryer.Domain.Entities.Courier", "Courier")
+                        .WithMany()
+                        .HasForeignKey("CourierId");
+
+                    b.HasOne("ExpressKuryer.Domain.Entities.AppUser", "MemberUser")
+                        .WithMany()
+                        .HasForeignKey("MemberUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -757,7 +827,9 @@ namespace ExpressKuryer.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("AppUser");
+                    b.Navigation("Courier");
+
+                    b.Navigation("MemberUser");
 
                     b.Navigation("PartnerProduct");
 
@@ -840,11 +912,6 @@ namespace ExpressKuryer.Persistence.Migrations
             modelBuilder.Entity("ExpressKuryer.Domain.Entities.Partner", b =>
                 {
                     b.Navigation("PartnerProducts");
-                });
-
-            modelBuilder.Entity("ExpressKuryer.Domain.Entities.AppUser", b =>
-                {
-                    b.Navigation("Deliveries");
                 });
 #pragma warning restore 612, 618
         }

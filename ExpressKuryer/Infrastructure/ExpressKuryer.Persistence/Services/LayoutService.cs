@@ -24,5 +24,10 @@ namespace ExpressKuryer.Persistence.Services
             return await _unitOfWork.RepositorySetting.GetAllAsync(x => true,false);
         }
 
+        public async Task<AppUser> GetUserAsync(string name)
+        {
+            return await _unitOfWork.RepositoryUser.GetAsync(x => x.UserName.Equals(name));
+        }
+
     }
 }

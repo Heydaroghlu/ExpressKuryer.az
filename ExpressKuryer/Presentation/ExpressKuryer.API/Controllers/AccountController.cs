@@ -1,5 +1,5 @@
 ﻿using ExpressKuryer.Application.Abstractions.Token;
-using ExpressKuryer.Application.DTOs.AppUser;
+using ExpressKuryer.Application.DTOs.AppUserDTOs;
 using ExpressKuryer.Application.DTOs.Token;
 using ExpressKuryer.Application.HelperManager;
 using ExpressKuryer.Domain.Entities;

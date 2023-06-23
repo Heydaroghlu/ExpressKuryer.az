@@ -36,6 +36,9 @@ namespace ExpressKuryer.Application.Middlewares
                     case ContentTypeException e:
                         response.StatusCode = (int)HttpStatusCode.BadRequest;
                         break;
+                    case EmailException e:
+                        response.StatusCode = (int)HttpStatusCode.BadRequest;
+                        break;
                     default:
                         response.StatusCode = (int)HttpStatusCode.InternalServerError;
                         break;

@@ -11,7 +11,7 @@ namespace ExpressKuryer.Domain.Entities
     public class Delivery:BaseEntity
     {
         public int ServiceId { get; set; }
-        public string AppUserId { get; set; }
+        
         public string AddressFrom { get; set; }
         public string AddressTo { get; set; }
         public string Name { get; set; }    
@@ -21,11 +21,19 @@ namespace ExpressKuryer.Domain.Entities
         public bool suprizDelivery { get; set; }
         public double TotalAmount { get; set; } 
         public double DisCount { get; set; }
+        public string DeliveryCode { get; set; }
+        public string SurName { get; set; } //todo surname 
+
         public Service Service { get; set; }
         public string DeliveryStatus { get; set; }
         public string OrderDeliveryStatus { get; set; }
         public int PartnerProductId { get; set; }
         public PartnerProduct PartnerProduct { get; set; }  
-        public AppUser AppUser { get; set; }
+        
+        public string MemberUserId { get; set; }
+        public AppUser MemberUser { get; set; }
+
+        public int? CourierId { get; set; }
+        public Courier? Courier { get; set; }
     }
 }

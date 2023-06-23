@@ -1,6 +1,7 @@
 ﻿using ExpressKuryer.Domain.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Asn1.Mozilla;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace ExpressKuryer.Persistence.Contexts
 	public class DataContext : IdentityDbContext
 	{
 		public DataContext(DbContextOptions<DataContext> options):base(options) { }
-	 public DbSet<AppUser> AppUsers { get; set; }
+		public DbSet<AppUser> AppUsers { get; set; }
 		public DbSet<Contact> Contacts { get; set; }
 		public DbSet<Delivery> Delivery { get; set; }
 		public DbSet<Paket> Pakets { get; set; }
@@ -25,6 +26,7 @@ namespace ExpressKuryer.Persistence.Contexts
 		public DbSet<Slider> Sliders { get; set; }
 		public DbSet<Subscribe> Subscribes { get; set; }
 		public DbSet<Vacancy> Vacancies { get; set; }
+		public DbSet<Courier> Couriers { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
 			builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

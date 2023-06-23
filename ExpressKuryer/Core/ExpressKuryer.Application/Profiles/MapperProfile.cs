@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using ExpressKuryer.Application.DTOs.AppUserDTOs;
 using ExpressKuryer.Application.DTOs.Contact;
+using ExpressKuryer.Application.DTOs.CourierDTOs;
 using ExpressKuryer.Application.DTOs.DeliveryDTOs;
 using ExpressKuryer.Application.DTOs.Partner;
 using ExpressKuryer.Application.DTOs.PartnerProduct;
@@ -8,6 +10,7 @@ using ExpressKuryer.Application.DTOs.Setting;
 using ExpressKuryer.Application.DTOs.Slider;
 using ExpressKuryer.Application.DTOs.Subscribe;
 using ExpressKuryer.Application.DTOs.Vacancy;
+using ExpressKuryer.Application.Validators.CourierValidators;
 using ExpressKuryer.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -52,6 +55,11 @@ namespace ExpressKuryer.Application.Profiles
             CreateMap<Service, ServiceReturnDto>();
             CreateMap<PartnerProduct, PartnerProductReturnDto>();
 
-        }
+			CreateMap<Courier, CourierReturnDto>();
+			CreateMap<Courier, CourierEditDto>();
+            CreateMap<CourierCreateDto, Courier>();
+			CreateMap<AppUser, AppUserReturnDto>();
+			CreateMap<AppUserReturnDto, AppUser>();
+		}
     }
 }

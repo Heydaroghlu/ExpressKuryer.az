@@ -30,7 +30,7 @@ namespace ExpressKuryer.Persistence.UnitOfWorks
             RepositorySlider = new Repository<Slider>(_context);
             RepositorySubscribe = new Repository<Subscribe>(_context);
             RepositoryVacancy = new Repository<Vacancy>(_context);
-
+            RepositoryCourier = new Repository<Courier>(_context);
         }
 
         public IRepository<AppUser> RepositoryUser { get; set; }
@@ -44,6 +44,7 @@ namespace ExpressKuryer.Persistence.UnitOfWorks
         public IRepository<Slider> RepositorySlider { get; set; }
         public IRepository<Subscribe> RepositorySubscribe { get; set; }
         public IRepository<Vacancy> RepositoryVacancy { get; set; }
+        public IRepository<Courier> RepositoryCourier { get; set; }
 
         public async Task<int> CommitAsync()
         {
