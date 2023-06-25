@@ -11,7 +11,8 @@ namespace ExpressKuryer.Domain.Entities
     public class Delivery:BaseEntity
     {
         public int ServiceId { get; set; }
-        
+
+        public DateTime DeliveryedAt { get; set; }
         public string AddressFrom { get; set; }
         public string AddressTo { get; set; }
         public string Name { get; set; }    
@@ -34,6 +35,6 @@ namespace ExpressKuryer.Domain.Entities
         public AppUser MemberUser { get; set; }
 
         public int? CourierId { get; set; }
-        public Courier? Courier { get; set; }
+        public Courier?  Courier { get; set; }
     }
 }

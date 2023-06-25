@@ -73,14 +73,12 @@ namespace ExpressKuryer.MVC.Controllers
         [Route("Manage/Detail")]
         public async Task<IActionResult> Detail(int id)
         {
-            var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == id, false, "Service", "PartnerProduct", "AppUser", "Courier");
+            var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == id, false, "Service", "PartnerProduct", "MemberUser", "Courier.CourierPerson");
             if (entity == null) return NotFound("Order Not Found");
 
             var returnDto = _mapper.Map<DeliveryReturnDto>(entity);
             return View(returnDto);
         }
-
-
 
 
         [HttpPost]

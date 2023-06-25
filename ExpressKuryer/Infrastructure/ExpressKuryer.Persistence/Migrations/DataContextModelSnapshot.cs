@@ -133,6 +133,9 @@ namespace ExpressKuryer.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("DeliveryedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<decimal>("DisCount")
                         .HasColumnType("decimal(18,2)");
 

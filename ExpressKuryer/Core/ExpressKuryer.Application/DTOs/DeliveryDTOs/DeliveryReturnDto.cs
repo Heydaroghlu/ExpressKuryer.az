@@ -17,6 +17,7 @@ namespace ExpressKuryer.Application.DTOs.DeliveryDTOs
         public string DeliveryCode { get; set; }
         public int Id { get; set; }
         public DateTime CreatedAt { get; set; }
+        public DateTime DeliveryedAt { get; set; }
         public int ServiceId { get; set; }
         public string AppUserId { get; set; }
         public string AddressFrom { get; set; }
