@@ -22,6 +22,42 @@
                 </a>
             </div>
         </div>
+        <div class="form-head d-flex mb-4 align-items-start">
+
+            <form asp-action="index" method="get" style="width:100%;">
+                <div class="input-group search-area d-inline-flex" style="width:100%;height:50px;">
+                    <input type="search" name="searchWord" value="@(ViewBag.Word)" class="form-control" placeholder="Axtarış et" style="height:100%;">
+                </div>
+                <div class="form-group" style="width:100%;margin:20px 0px;">
+                    <select class="form-control bg-gray-light" name="isDeleted">
+                        @if (isDeleted == "null")
+                        {
+                            <option value="null" class="bg-gray-light" selected>Hamısı</option>
+                        }
+                        else
+                        {
+                            <option value="null" class="bg-gray-light">Hamısı</option>
+                        } @if (isDeleted == "false")
+                        {
+                            <option value="false" class="bg-gray-light" selected>Silinməmişlər</option>
+                        }
+                        else
+                        {
+                            <option value="false" class="bg-gray-light">Silinməmişlər</option>
+                        } @if (isDeleted == "true")
+                        {
+                            <option value="true" class="bg-gray-light" selected>Silinmişlər</option>
+                        }
+                        else
+                        {
+                            <option value="true" class="bg-gray-light">Silinmişlər</option>
+                        }
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-outline-dark my-3">Axtarış et</button>
+
+            </form>
+        </div>
 
         <div class="col-lg-12">
             <div class="card">

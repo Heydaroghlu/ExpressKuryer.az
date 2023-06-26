@@ -2,14 +2,14 @@
     ViewData["Title"] = "Edit";
 }
 
-@model VacancyReturnDto
+@model JobSeekerReturnDto
 
 
 <div class="content-body" style="min-height: 876px;" bis_skin_checked="1">
 
     <div class="row mb-2">
         <div class="col-sm-12" style="padding: 20px; display: flex; justify-content: center; align-items: center;">
-            <h1>Vakanta göz gəzdir</h1>
+            <h1>İş axtarana göz gəzdir</h1>
         </div>
     </div>
 
@@ -47,7 +47,8 @@
 
                                 <div class="mb-3 image-box">
                                     <label asp-for="CV" class="form-label">
-                                        <a href="@Model.CV" download class="btn btn-outline-dark my-3">CV-ni yüklə</a></label>
+                                        <a href="@Model.CV" download class="btn btn-outline-dark my-3">CV-ni yüklə</a>
+                                    </label>
                                 </div>
 
                             </form>

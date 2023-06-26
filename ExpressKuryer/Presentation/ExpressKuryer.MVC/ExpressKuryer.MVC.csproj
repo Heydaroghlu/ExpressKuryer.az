@@ -19,4 +19,9 @@
     <ProjectReference Include="..\..\Infrastructure\ExpressKuryer.Persistence\ExpressKuryer.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\uploads\deliveries\" />
+    <Folder Include="wwwroot\uploads\settings\" />
+  </ItemGroup>
+
 </Project>

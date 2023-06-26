@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7MGtAYtK0OcEqiMYHk4/VZw0sv1Y11zNeJ0e0l98aWo=",
+  "Hash": "vygOj9jtEMFpzzXR0izg1KRxEwaV60l8gnrT6+TH1Rs=",
   "Source": "ExpressKuryer.MVC",
   "BasePath": "_content/ExpressKuryer.MVC",
   "Mode": "Default",
@@ -4826,6 +4826,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\manage\\vendor\\wnumb\\wNumb.js"
+    },
+    {
+      "Identity": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\settings\\ea77712c-a7d2-4146-bf59-5eb2bc54e0ebmonoPOST (1).png",
+      "SourceId": "ExpressKuryer.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\",
+      "BasePath": "_content/ExpressKuryer.MVC",
+      "RelativePath": "uploads/settings/ea77712c-a7d2-4146-bf59-5eb2bc54e0ebmonoPOST (1).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\settings\\ea77712c-a7d2-4146-bf59-5eb2bc54e0ebmonoPOST (1).png"
     }
   ]
 }

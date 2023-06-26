@@ -9,7 +9,7 @@ namespace ExpressKuryer.Application.Exceptions
     public class ContentTypeException : Exception
     {
 
-        public ContentTypeException(string msg):base(msg)
+        public ContentTypeException():base("Kontent tipi xetasi")
         {
 
         }

@@ -6,162 +6,149 @@
     string? isDeleted = (string)ViewBag.IsDeleted;
 }
 
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-12">
-                    <h1>@ViewBag.PartnerName Products</h1>
-                    <a asp-action="create" class="align-items-center" style="display: flex; justify-content: flex-end;color:black;">
-                        <i class="bi bi-plus-circle-fill"></i>
-                    </a>
-                </div>
-                <div class="col-sm-12 d-flex">
 
-                    <form asp-action="index" method="get" class="my-3 d-flex justify-content-center align-items-center flex-column" style="width:100%">
-                        <div class="form-group" style="width:100%">
-                            <select class="form-control bg-gray-light" name="isDeleted">
-                                @if (isDeleted == "null")
-                                {
-                                    <option value="null" class="bg-gray-light" selected>All</option>
-                                }
-                                else
-                                {
-                                    <option value="null" class="bg-gray-light">All</option>
-                                }
+<div class="content-body">
 
-                                @if (isDeleted == "false")
-                                {
-                                    <option value="false" class="bg-gray-light" selected>Not Deleted</option>
-                                }
-                                else
-                                {
-                                    <option value="false" class="bg-gray-light">Not Deleted</option>
-                                }
+    <div class="container-fluid">
 
-                                @if (isDeleted == "true")
-                                {
-                                    <option value="true" class="bg-gray-light" selected>Deleted</option>
-                                }
-                                else
-                                {
-                                    <option value="true" class="bg-gray-light">Deleted</option>
-                                }
-                            </select>
-                        </div>
-
-                        <div class="input-group my-2">
-                            <input type="search" name="searchWord" value="@(ViewBag.Word)" class="form-control form-control-lg my-2" placeholder="Search" style="height:30px;font-size:15px;  ">
-                            <div class="input-group-append my-2" style="height:30px;padding:0px">
-                                <button type="submit" class="btn btn-lg btn-default" style="padding:0px 10px">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-outline-dark mb-3">Save</button>
-                    </form>
+        <div class="row page-titles mx-0">
+            <div class="col-sm-6 p-md-0">
+                <div class="welcome-text">
+                    <h4 style="padding-left:10px;">Partnuyor Məhsulu Yarat</h4>
                 </div>
             </div>
-        </div><!-- /.container-fluid -->
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <table class="table table-striped projects">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Poster Imaeg</th>
-                                        <th scope="col">Sale Price</th>
-                                        <th scope="col">Cost Price</th>
-                                        <th scope="col">Discount Price</th>
-                                        <th scope="col">IsInterestFree</th>
-                                        <th scope="col">CreatedAt</th>
-                                        <th>
-                                            Action :
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (PartnerProductReturnDto item in Model)
-                                    {
-                                        <tr>
-                                            <th scope="row" style=" vertical-align: middle;">@(count++)</th>
-                                            <td>@item.Name</td>
-                                            <td>
-                                                <div class="image-box">
-                                                    <img src="@item.Image" style="width:200px;height:200px;object-fit:contain;" />
-                                                </div>
-                                            </td>
-                                            <td>@item.SalePrice</td>
-                                            <td>@item.CostPrice</td>
-                                            <td>@item.DiscountPrice</td>
-                                            <td>@item.IsInterestFree</td>
-                                            <td>@item.CreatedAt.ToString("dd:mm:yyyy")</td>
-                                            <td>
-                                                <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-outline-dark">
-                                                    <i class="bi bi-pencil-square"></i>
-                                                </a>
-                                                <a asp-action="delete" asp-route-partnerId="@item.Id" class="btn btn-outline-dark btn-delete-sweet">
-                                                    <i class="bi bi-x-lg"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
-
-                            <nav aria-label="Page navigation example" class="d-flex justify-content-center align-items-center">
-                                <ul class="pagination">
-                                    @if (Model.HasPrev)
-                                    {
-                                        <li class="page-item">
-                                            <a class="page-link" asp-action="index" asp-route-page="@(Model.PageIndex - 1)" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]" aria-label="Previous">
-                                                <span aria-hidden="true">&laquo;</span>
-                                            </a>
-                                        </li>
-                                    }
-                                    @for (int i = 1; i <= Model.TotalPage; i++)
-                                    {
-                                        if (Model.PageIndex - 1 == i)
-                                        {
-                                            <li class="page-item"><a class="page-link" asp-action="index" asp-route-page="@i" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]">@i</a></li>
-                                        }
-
-                                        if (Model.PageIndex == i)
-                                        {
-                                            <li class="page-item active"><a class="page-link" style=" z-index: 3; color: #fff; background-color: black !important; border-color: black !important;" asp-action="index" asp-route-page="@i" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]">@i</a></li>
-                                        }
-                                        if (Model.PageIndex + 1 == i)
-                                        {
-                                            <li class="page-item"><a class="page-link" asp-action="index" asp-route-page="@i" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]">@i</a></li>
-                                        }
-                                    }
-                                    @if (Model.HasNext)
-                                    {
-                                        <li class="page-item">
-                                            <a class="page-link" asp-action="index" asp-route-page="@(Model.PageIndex + 1)" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]" aria-label="Next">
-                                                <span aria-hidden="true">&raquo;</span>
-                                            </a>
-                                        </li>
-                                    }
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                <a asp-action="create" style="font-size:20px;padding:0px 10px;">
+                    <i class="lni lni-circle-plus"></i>
+                </a>
             </div>
-        </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+        </div>
+
+        <div class="form-head d-flex mb-4 align-items-start">
+
+            <form asp-action="index" method="get" style="width:100%;">
+                <div class="input-group search-area d-inline-flex" style="width:100%;height:50px;">
+                    <input type="search" name="searchWord" value="@(ViewBag.Word)" class="form-control" placeholder="Axtarış et" style="height:100%;">
+                </div>
+                <div class="form-group" style="width:100%;margin:20px 0px;">
+                    <select class="form-control bg-gray-light" name="isDeleted">
+                        @if (isDeleted == "null")
+                        {
+                            <option value="null" class="bg-gray-light" selected>Hamısı</option>
+                        }
+                        else
+                        {
+                            <option value="null" class="bg-gray-light">Hamısı</option>
+                        } @if (isDeleted == "false")
+                        {
+                            <option value="false" class="bg-gray-light" selected>Silinməmişlər</option>
+                        }
+                        else
+                        {
+                            <option value="false" class="bg-gray-light">Silinməmişlər</option>
+                        } @if (isDeleted == "true")
+                        {
+                            <option value="true" class="bg-gray-light" selected>Silinmişlər</option>
+                        }
+                        else
+                        {
+                            <option value="true" class="bg-gray-light">Silinmişlər</option>
+                        }
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-outline-dark my-3">Axtarış et</button>
+
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="table-responsive">
+                    <table id="example5" class="display mb-4 dataTablesCard" style="width:100%;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Ad</th>
+                                <th scope="col">Şəkil</th>
+                                <th scope="col">Satış Qiyməti</th>
+                                <th scope="col">Maya Qiyməti</th>
+                                <th scope="col">Endirim faizi</th>
+                                <th scope="col">IsInterestFree</th>
+                                <th scope="col">YZaman</th>
+                                <th>
+                                    Aksiyonlar :
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (PartnerProductReturnDto item in Model)
+                            {
+                                <tr>
+                                    <th scope="row" style=" vertical-align: middle;">@(count++)</th>
+                                    <td>@item.Name</td>
+                                    <td>
+                                        <div class="image-box">
+                                            <img src="@item.Image" style="width:200px;height:200px;object-fit:contain;" />
+                                        </div>
+                                    </td>
+                                    <td>@item.SalePrice</td>
+                                    <td>@item.CostPrice</td>
+                                    <td>@item.DiscountPrice</td>
+                                    <td>@item.IsInterestFree</td>
+                                    <td>@item.CreatedAt.ToString("dd:mm:yyyy")</td>
+                                    <td>
+                                        <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-outline-dark">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a asp-action="delete" asp-route-partnerId="@item.Id" class="btn btn-outline-dark btn-delete-sweet">
+                                            <i class="bi bi-x-lg"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <nav aria-label="Page navigation example" class="d-flex justify-content-center align-items-center">
+                    <ul class="pagination">
+                        @if (Model.HasPrev)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" asp-action="index" asp-route-page="@(Model.PageIndex - 1)" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        }
+                        @for (int i = 1; i <= Model.TotalPage; i++)
+                        {
+                            if (Model.PageIndex - 1 == i)
+                            {
+                                <li class="page-item"><a class="page-link" asp-action="index" asp-route-page="@i" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]">@i</a></li>
+                            }
+
+                            if (Model.PageIndex == i)
+                            {
+                                <li class="page-item active"><a class="page-link" style=" z-index: 3; color: #fff; background-color: black !important; border-color: black !important;" asp-action="index" asp-route-page="@i" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]">@i</a></li>
+                            }
+                            if (Model.PageIndex + 1 == i)
+                            {
+                                <li class="page-item"><a class="page-link" asp-action="index" asp-route-page="@i" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]">@i</a></li>
+                            }
+                        }
+                        @if (Model.HasNext)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" asp-action="index" asp-route-page="@(Model.PageIndex + 1)" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
 </div>
 
 @section Scripts{

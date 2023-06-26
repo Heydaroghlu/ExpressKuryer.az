@@ -166,7 +166,11 @@
                             <div class="card">
                                 <div class="card-body border-bottom">
                                     <div class="media align-items-center">
-                                        <img class="me-3 rounded-circle" src="@Model.Courier.CourierPerson.Image" width="90" alt="">
+                                        @if(Model.Courier.CourierPerson.Image != null){
+                                            <img class="me-3 rounded-circle" src="@Model.Courier.CourierPerson.Image" width="90" alt="">
+                                        }else{
+                                            <img class="me-3 rounded-circle" src="~/manage/images/avatar/4.jpg" width="90" alt="">
+                                        }
                                         <div class="media-body">
                                             <h4 class="text-black mb-3">@Model.Courier.CourierPerson.Name @Model.Courier.CourierPerson.Surname</h4>
                                             <span class="bgl-info fs-14 text-info p-2 rounded">Kuryer</span>

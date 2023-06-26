@@ -2,94 +2,86 @@
     ViewData["Title"] = "Edit";
 }
 
-@model PartnerProductEditDto
+@model PartnerProductCreateDto
 
 
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-12" style="padding: 20px; display: flex; justify-content: center; align-items: center;">
-                    <h1>Edit Product</h1>
-                </div>
-            </div>
-        </div><!-- /.container-fluid -->
-    </section>
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <form method="post" enctype="multipart/form-data">
+<div class="content-body" style="min-height: 876px;" bis_skin_checked="1">
 
-                                <div class="mb-3">
-                                    <label asp-for="Name" class="form-label">Name</label>
-                                    <input asp-for="Name" class="form-control">
-                                    <span class="text-danger" asp-validation-for="Name"></span>
+    <div class="row mb-2">
+        <div class="col-sm-12" style="padding: 20px; display: flex; justify-content: center; align-items: center;">
+            <h1>Partnuyor Məhsulu Yarat</h1>
+        </div>
+    </div>
+
+    <!-- row -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form method="post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label asp-for="Name" class="form-label">Ad</label>
+                                <input asp-for="Name" class="form-control">
+                                <span class="text-danger" asp-validation-for="Name"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <div id="editor">
                                 </div>
+                                <textarea class="form-control textarea-Name d-none" asp-for="Description" rows="3"></textarea>
+                            </div>
 
-                                <div class="mb-3">
-                                    <div id="editor">
-                                        @Html.Raw(Model.Description)
-                                    </div>
-                                    <textarea class="form-control textarea-Name d-none" asp-for="Description" rows="3"></textarea>
-                                </div>
+                            <div class="mb-3">
+                                <label asp-for="SalePrice" class="form-label">Satış Qiyməti</label>
+                                <input asp-for="SalePrice" class="form-control">
+                                <span class="text-danger" asp-validation-for="SalePrice"></span>
+                            </div>
 
-                                <div class="mb-3">
-                                    <label asp-for="SalePrice" class="form-label">SalePrice</label>
-                                    <input asp-for="SalePrice" class="form-control">
-                                    <span class="text-danger" asp-validation-for="SalePrice"></span>
-                                </div>
+                            <div class="mb-3">
+                                <label asp-for="CostPrice" class="form-label">Maya dəyəri</label>
+                                <input asp-for="CostPrice" class="form-control">
+                                <span class="text-danger" asp-validation-for="CostPrice"></span>
+                            </div>
 
-                                <div class="mb-3">
-                                    <label asp-for="CostPrice" class="form-label">CostPrice</label>
-                                    <input asp-for="CostPrice" class="form-control">
-                                    <span class="text-danger" asp-validation-for="CostPrice"></span>
-                                </div>
+                            <div class="mb-3">
+                                <label asp-for="DiscountPrice" class="form-label">Endirim faizi</label>
+                                <input asp-for="DiscountPrice" class="form-control">
+                                <span class="text-danger" asp-validation-for="DiscountPrice"></span>
+                            </div>
 
-                                <div class="mb-3">
-                                    <label asp-for="DiscountPrice" class="form-label">DiscountPrice</label>
-                                    <input asp-for="DiscountPrice" class="form-control">
-                                    <span class="text-danger" asp-validation-for="DiscountPrice"></span>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label asp-for="IsInterestFree" class="form-label">IsInterestFree</label>
-                                    <input asp-for="IsInterestFree" class="form-control">
-                                    <span class="text-danger" asp-validation-for="IsInterestFree"></span>
-                                </div>
-
-                                <div class="mb-3 image-box">
-                                    <label asp-for="FormFile" class="form-label">ImageFile</label>
-                                    <input asp-for="FormFile" class="form-control file" style="margin:20px 0px">
-                                    <img src="@Model.Image" style="width:300px;height:300px;object-fit:cover;" />
-                                </div>
-
-                                <div>
-                                    <span class="text-danger" asp-validation-for="FormFile" style="display:flex;"></span>
-                                </div>
-
-                                <button type="submit" class="btn btn-outline-dark my-3">Submit</button>
+                            <div class="mb-3">
+                                <label asp-for="PartnerId" class="form-label">Partnuyor</label>
+                                <select class="form-control" asp-for="PartnerId" asp-items="@new SelectList((List<Partner>)ViewBag.Partners,nameof(Partner.Id),nameof(Partner.Name))"></select>
+                                <span class="text-danger" asp-validation-for="PartnerId"></span>
+                            </div>
 
 
-                            </form>
-                        </div>
+                            <div class="mb-3">
+                                <label asp-for="IsInterestFree" class="form-label">IsInterestFree</label>
+                                <input asp-for="IsInterestFree">
+                                <span class="text-danger" asp-validation-for="IsInterestFree"></span>
+                            </div>
+
+                            <div class="mb-3 image-box">
+                                <label asp-for="FormFile" class="form-label">Şəkil</label>
+                                <input asp-for="FormFile" class="form-control file" style="margin:20px 0px">
+                                <img style="width:300px;height:300px;object-fit:cover;" />
+                            </div>
+
+                            <div>
+                                <span class="text-danger" asp-validation-for="FormFile" style="display:flex;"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-outline-dark my-3">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+        </div>
+    </div><!-- /.container-fluid -->
 </div>
-
-
-
-
-
 
 @section Scripts{
 

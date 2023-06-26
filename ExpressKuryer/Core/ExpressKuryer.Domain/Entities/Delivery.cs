@@ -28,6 +28,8 @@ namespace ExpressKuryer.Domain.Entities
         public Service Service { get; set; }
         public string DeliveryStatus { get; set; }
         public string OrderDeliveryStatus { get; set; }
+
+
         public int PartnerProductId { get; set; }
         public PartnerProduct PartnerProduct { get; set; }  
         

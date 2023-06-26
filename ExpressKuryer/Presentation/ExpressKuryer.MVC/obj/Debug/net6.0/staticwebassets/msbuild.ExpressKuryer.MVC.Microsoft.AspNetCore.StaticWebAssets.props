@@ -4512,5 +4512,21 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\manage\vendor\wnumb\wNumb.js))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\settings\ea77712c-a7d2-4146-bf59-5eb2bc54e0ebmonoPOST (1).png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ExpressKuryer.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ExpressKuryer.MVC</BasePath>
+      <RelativePath>uploads/settings/ea77712c-a7d2-4146-bf59-5eb2bc54e0ebmonoPOST (1).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\settings\ea77712c-a7d2-4146-bf59-5eb2bc54e0ebmonoPOST (1).png))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>

@@ -133,13 +133,18 @@ namespace ExpressKuryer.Infrastructure.Storages.CloudinaryStorages
 
             if (check == false)
             {
-                throw new ContentTypeException(message);
+                throw new ContentTypeException();
             }
         }
 
-        public string GetUrl(string pathOrContainerName, string folderName, string fileName)
+        public Task<List<(string fileName, string pathOrContainerName)>> UploadRangeAsync(string pathOrContainerName, List<IFormFile> files)
         {
-            var getResult = _cloudinary.GetResource(pathOrContainerName + folderName + fileName);
+            throw new NotImplementedException();
+        }
+
+        public string GetUrl(string pathOrContainerName, string fileName)
+        {
+            var getResult = _cloudinary.GetResource(pathOrContainerName + fileName);
             return getResult.Url;
         }
 

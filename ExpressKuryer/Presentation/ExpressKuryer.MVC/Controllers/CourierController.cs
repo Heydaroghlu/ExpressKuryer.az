@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ExpressKuryer.Application.Abstractions.File;
 using ExpressKuryer.Application.DTOs;
 using ExpressKuryer.Application.DTOs.CourierDTOs;
 using ExpressKuryer.Application.DTOs.Slider;
@@ -23,8 +24,9 @@ namespace ExpressKuryer.MVC.Controllers
         UserManager<AppUser> _userManager;
         RoleManager<IdentityRole> _roleManager;
         IEmailService _emailService;
+        IFileService _fileService;
 
-        public CourierController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage, UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager, IEmailService emailService)
+        public CourierController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage, UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager, IEmailService emailService, IFileService fileService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
@@ -32,6 +34,7 @@ namespace ExpressKuryer.MVC.Controllers
             _userManager = userManager;
             _roleManager = roleManager;
             _emailService = emailService;
+            _fileService = fileService;
         }
         [HttpGet]
         public async Task<IActionResult> Index(int page = 1, string? searchWord = null, string? isDeleted = "false")
@@ -56,7 +59,7 @@ namespace ExpressKuryer.MVC.Controllers
 
             foreach (var item in list)
             {
-                if (item.CourierPerson.Image != null) item.CourierPerson.Image = _storage.GetUrl("uploads/", "couriers/", item.CourierPerson.Image);
+                if (item.CourierPerson.Image != null) item.CourierPerson.Image = _storage.GetUrl("uploads/couriers/", item.CourierPerson.Image);
             }
 
             ViewBag.PageSize = pageSize;
@@ -82,7 +85,7 @@ namespace ExpressKuryer.MVC.Controllers
             {
                 try
                 {
-                    _storage.CheckFileType(courierCreateDto.FormFile, ContentTypeManager.ImageContentTypes);
+                    _fileService.CheckFileType(courierCreateDto.FormFile, ContentTypeManager.ImageContentTypes);
                 }
                 catch (Exception)
                 {
@@ -139,7 +142,7 @@ namespace ExpressKuryer.MVC.Controllers
             var returnDto = _mapper.Map<CourierEditDto>(courier);
             TempData["userId"] = courier.CourierPerson.Id;
 
-            returnDto.CourierPerson.Image = _storage.GetUrl("uploads/", "couriers/", courier.CourierPerson.Image);
+            returnDto.CourierPerson.Image = _storage.GetUrl("uploads/couriers/", courier.CourierPerson.Image);
 
             return View(returnDto);
         }
@@ -156,7 +159,7 @@ namespace ExpressKuryer.MVC.Controllers
             {
                 try
                 {
-                    _storage.CheckFileType(editDto.FormFile, ContentTypeManager.ImageContentTypes);
+                    _fileService.CheckFileType(editDto.FormFile, ContentTypeManager.ImageContentTypes);
                 }
                 catch (Exception)
                 {

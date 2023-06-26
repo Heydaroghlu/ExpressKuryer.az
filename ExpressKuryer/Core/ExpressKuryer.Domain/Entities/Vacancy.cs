@@ -11,11 +11,11 @@ namespace ExpressKuryer.Domain.Entities
 {
     public class Vacancy:BaseEntity
     {
-        public string Name { get; set; }
-        public string Surname { get;set; }
-        public string Message { get; set; }
-        public string Cv { get; set; }
-        [NotMapped]
-        public IFormFile FormFile { get; set; }
+
+        public string Title { get; set; }
+        public string Description { get; set; }
+        
+
+        public List<JobSeeker> JobSeekers { get; set; }
     }
 }

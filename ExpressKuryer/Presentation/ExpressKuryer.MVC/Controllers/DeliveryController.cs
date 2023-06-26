@@ -2,6 +2,7 @@
 using ExpressKuryer.Application.DTOs;
 using ExpressKuryer.Application.DTOs.DeliveryDTOs;
 using ExpressKuryer.Application.DTOs.Setting;
+using ExpressKuryer.Application.Storages;
 using ExpressKuryer.Application.UnitOfWorks;
 using ExpressKuryer.Domain.Entities;
 using ExpressKuryer.Domain.Enums.Delivery;
@@ -17,12 +18,14 @@ namespace ExpressKuryer.MVC.Controllers
         IEmailService _emailService;
         UserManager<AppUser> _userManager;
         IMapper _mapper;
-        public DeliveryController(IMapper mapper, IUnitOfWork unitOfWork, UserManager<AppUser> userManager, IEmailService emailService)
+        IStorage _storage;
+        public DeliveryController(IMapper mapper, IUnitOfWork unitOfWork, UserManager<AppUser> userManager, IEmailService emailService, IStorage storage)
         {
             _unitOfWork = unitOfWork;
             _emailService = emailService;
             _userManager = userManager;
             _mapper = mapper;
+            _storage = storage;
         }
 
 
@@ -63,7 +66,7 @@ namespace ExpressKuryer.MVC.Controllers
             ViewBag.Word = searchWord;
             TempData["Title"] = "Çatdırılmalar";
             TempData["Page"] = page;
-            TempData["IsDeleted"] = isDeleted;
+            TempData["IsDeleted"] = isDeleted.ToString();
 
             return View(list);
         }
@@ -77,6 +80,10 @@ namespace ExpressKuryer.MVC.Controllers
             if (entity == null) return NotFound("Order Not Found");
 
             var returnDto = _mapper.Map<DeliveryReturnDto>(entity);
+
+            if(returnDto.Courier != null && returnDto.Courier.CourierPerson != null && returnDto.Courier.CourierPerson.Image != null)
+                returnDto.Courier.CourierPerson.Image = _storage.GetUrl("/uploads/deliveries/", returnDto.Courier.CourierPerson.Image);
+          
             return View(returnDto);
         }
 
@@ -99,6 +106,7 @@ namespace ExpressKuryer.MVC.Controllers
             object page = TempData["Page"] as int?;
             object word = TempData["Page"] as string;
             object isDeleted = TempData["Page"] as bool?;
+
             return RedirectToAction("GetAll", new { page = page, searchWord = word, isDeleted = isDeleted });
         }
 

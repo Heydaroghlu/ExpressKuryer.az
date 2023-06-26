@@ -203,6 +203,52 @@ namespace ExpressKuryer.Persistence.Migrations
                     b.ToTable("express_deliveries", (string)null);
                 });
 
+            modelBuilder.Entity("ExpressKuryer.Domain.Entities.JobSeeker", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Cv")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("VacancyId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("WhoIsModified")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("VacancyId");
+
+                    b.ToTable("JobSeekers");
+                });
+
             modelBuilder.Entity("ExpressKuryer.Domain.Entities.Paket", b =>
                 {
                     b.Property<int>("Id")
@@ -525,27 +571,16 @@ namespace ExpressKuryer.Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Cv")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Message")
+                    b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("Surname")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -555,7 +590,7 @@ namespace ExpressKuryer.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("express_vacancies", (string)null);
+                    b.ToTable("Vacancies");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -839,6 +874,17 @@ namespace ExpressKuryer.Persistence.Migrations
                     b.Navigation("Service");
                 });
 
+            modelBuilder.Entity("ExpressKuryer.Domain.Entities.JobSeeker", b =>
+                {
+                    b.HasOne("ExpressKuryer.Domain.Entities.Vacancy", "Vacancy")
+                        .WithMany("JobSeekers")
+                        .HasForeignKey("VacancyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Vacancy");
+                });
+
             modelBuilder.Entity("ExpressKuryer.Domain.Entities.PartnerProduct", b =>
                 {
                     b.HasOne("ExpressKuryer.Domain.Entities.Partner", "Partner")
@@ -915,6 +961,11 @@ namespace ExpressKuryer.Persistence.Migrations
             modelBuilder.Entity("ExpressKuryer.Domain.Entities.Partner", b =>
                 {
                     b.Navigation("PartnerProducts");
+                });
+
+            modelBuilder.Entity("ExpressKuryer.Domain.Entities.Vacancy", b =>
+                {
+                    b.Navigation("JobSeekers");
                 });
 #pragma warning restore 612, 618
         }

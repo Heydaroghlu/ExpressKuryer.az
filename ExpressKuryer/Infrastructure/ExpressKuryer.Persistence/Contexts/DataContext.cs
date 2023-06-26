@@ -27,6 +27,7 @@ namespace ExpressKuryer.Persistence.Contexts
 		public DbSet<Subscribe> Subscribes { get; set; }
 		public DbSet<Vacancy> Vacancies { get; set; }
 		public DbSet<Courier> Couriers { get; set; }
+		public DbSet<JobSeeker> JobSeekers { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
 			builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

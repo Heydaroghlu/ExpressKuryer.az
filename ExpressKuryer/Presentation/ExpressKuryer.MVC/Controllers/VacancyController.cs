@@ -15,7 +15,6 @@ namespace ExpressKuryer.MVC.Controllers
         readonly IUnitOfWork _unitOfWork;
         readonly IMapper _mapper;
         readonly IStorage _storage;
-
         public VacancyController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage)
         {
             _unitOfWork = unitOfWork;
@@ -28,10 +27,7 @@ namespace ExpressKuryer.MVC.Controllers
         {
             var entities = await _unitOfWork.RepositoryVacancy.GetAllAsync(x => true, false);
             int pageSize = 10;
-            ViewBag.PageSize = pageSize;
-            ViewBag.Word = searchWord;
-            ViewBag.IsDeleted = isDeleted;
-            TempData["Title"] = "Vakantlar";
+
 
             if (isDeleted == "true")
                 entities = await _unitOfWork.RepositoryVacancy.GetAllAsync(x => x.IsDeleted);
@@ -40,34 +36,71 @@ namespace ExpressKuryer.MVC.Controllers
 
             if (string.IsNullOrWhiteSpace(searchWord) == false)
             {
-                entities = entities.Where(x => x.Name.Contains(searchWord)).ToList();
+                entities = entities.Where(x => x.Title.Contains(searchWord)).ToList();
             }
 
             var returnDto = _mapper.Map<List<VacancyReturnDto>>(entities);
             var query = returnDto.AsQueryable();
 
             var list = PagenatedList<VacancyReturnDto>.Save(query, page, pageSize);
-            List<string> listOfUrls = new List<string>();
-
-            foreach (var item in list)
-            {
-                var listOfUrl = _storage.GetUrl("uploads/", "vacancies/", item.CV);
-                item.CV = listOfUrl;
-            }
+            
+            ViewBag.PageSize = pageSize;
+            ViewBag.Word = searchWord;
+            ViewBag.IsDeleted = isDeleted;
+            TempData["Title"] = "Vakansiyalar";
 
             return View(list);
         }
 
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(VacancyCreateDto objectDto)
+        {
+            if (!ModelState.IsValid) return View(objectDto);
+
+            var entity = _mapper.Map<Vacancy>(objectDto);
+
+            await _unitOfWork.RepositoryVacancy.InsertAsync(entity);
+            await _unitOfWork.CommitAsync();
+
+            object page = TempData["Page"] as int?;
+
+            return RedirectToAction("Index", new { page = page });
+        }
+
         [HttpGet]
-        public async Task<IActionResult> Detail(int id)
+        public async Task<IActionResult> Edit(int id)
         {
             var existObject = await _unitOfWork.RepositoryVacancy.GetAsync(x => x.Id == id, false);
             if (existObject == null) return RedirectToAction("NotFound", "Page");
 
-            var editDto = _mapper.Map<VacancyReturnDto>(existObject);
-            editDto.CV = _storage.GetUrl("uploads/", "sliders/", editDto.CV);
+            var editDto = _mapper.Map<VacancyEditDto>(existObject);
             return View(editDto);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(VacancyEditDto objectDto)
+        {
+            var existObject = await _unitOfWork.RepositoryVacancy.GetAsync(x => x.Id == objectDto.Id);
+
+            if (existObject == null) return RedirectToAction("NotFound", "Page");
+
+            if (!ModelState.IsValid) return View(objectDto);
+
+            existObject.Title = objectDto.Title;
+            existObject.Description = objectDto.Description;
+
+            await _unitOfWork.CommitAsync();
+
+            object page = TempData["Page"] as int?;
+
+            return RedirectToAction("Index", new { page = page });
+        }
+
 
 
         public async Task<IActionResult> Delete(int id)

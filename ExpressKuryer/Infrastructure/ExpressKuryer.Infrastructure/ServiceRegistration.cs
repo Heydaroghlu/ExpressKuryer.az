@@ -1,7 +1,9 @@
-﻿using ExpressKuryer.Application.Abstractions.Token;
+﻿using ExpressKuryer.Application.Abstractions.File;
+using ExpressKuryer.Application.Abstractions.Token;
 using ExpressKuryer.Application.Enums;
 using ExpressKuryer.Application.Storages;
 using ExpressKuryer.Infrastructure.Services.Email;
+using ExpressKuryer.Infrastructure.Services.File;
 using ExpressKuryer.Infrastructure.Services.Token;
 using ExpressKuryer.Infrastructure.Storages.CloudinaryStorages;
 using ExpressKuryer.Infrastructure.Storages.LocalStorages;
@@ -21,6 +23,7 @@ namespace ExpressKuryer.Infrastructure
 		{
             services.AddScoped<ITokenHandler, TokenHandler>();
             services.AddScoped<IEmailService,EmailService>();
+			services.AddScoped<IFileService, FileService>();
         }
 		public static void AddInfrastructureServices(this IServiceCollection services, StorageEnum storageEnum)
 		{

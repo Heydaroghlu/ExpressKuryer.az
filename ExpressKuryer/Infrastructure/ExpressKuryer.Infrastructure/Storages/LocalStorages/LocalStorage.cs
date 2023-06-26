@@ -1,4 +1,6 @@
 ﻿using ExpressKuryer.Application.Storages.LocalStorages;
+using ExpressKuryer.Infrastructure.Services;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -10,44 +12,78 @@ namespace ExpressKuryer.Infrastructure.Storages.LocalStorages
 {
     public class LocalStorage : ILocalStorage
     {
-        public void CheckFileType(IFormFile file, List<string> contentTypes)
+
+        IWebHostEnvironment _env;
+
+        public LocalStorage(IWebHostEnvironment env)
         {
-            throw new NotImplementedException();
+            _env = env;
         }
 
-        public Task<bool> DeleteAsync(string pathOrContainerName, string fileName)
+        public async Task<bool> DeleteAsync(string pathOrContainerName, string fileName)
         {
-            throw new NotImplementedException();
+            var check = await Task.Run<bool>(() =>
+            {
+                string path = _env.WebRootPath + pathOrContainerName + fileName;
+                if (System.IO.File.Exists(path))
+                {
+                    System.IO.File.Delete(path);
+                }
+                return true;
+            });
+            return true;
         }
 
-        public List<string> FileNames(string path, string ceoFriendlyName)
+        //todo getUrl LocalStorage
+        public string GetUrl(string pathOrContainerName, string fileName)
         {
-            throw new NotImplementedException();
-        }
-
-        public string GetPublicId(string imageUrl)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string GetUrl(string pathOrContainerName, string folderName, string fileName)
-        {
-            throw new NotImplementedException();
+            return HttpService.StorageUrl(pathOrContainerName, fileName);
         }
 
         public bool HasFile(string pathOrContainerName, string fileName)
         {
-            throw new NotImplementedException();
+            string path = _env.WebRootPath + pathOrContainerName + fileName;
+            return System.IO.File.Exists(path);
         }
 
-        public Task<(string fileName, string pathOrContainerName)> UploadAsync(string pathOrContainerName, IFormFile file)
+        public async Task<(string fileName, string pathOrContainerName)> UploadAsync(string pathOrContainerName, IFormFile file)
         {
-            throw new NotImplementedException();
+            var name = await Task.Run<string>(() =>
+            {
+                string newfilename = Guid.NewGuid().ToString() + file.FileName;
+                string path = _env.WebRootPath + pathOrContainerName + newfilename;
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+                return newfilename;
+            });
+
+            return (name, pathOrContainerName);
         }
 
-        public Task<List<(string fileName, string pathOrContainerName)>> UploadRangeAsync(string pathOrContainerName, IFormFileCollection files)
+        public async Task<List<(string fileName, string pathOrContainerName)>> UploadRangeAsync(string pathOrContainerName, List<IFormFile> files)
         {
-            throw new NotImplementedException();
+            List<(string fileName, string pathOrContainerName)> fileNameList = new();
+
+            var list = await Task<List<(string fileName, string pathOrContainerName)>>.Run(() =>
+            {
+                files.ForEach(file =>
+                {
+                    string newfilename = Guid.NewGuid().ToString() + file.FileName;
+                    string path = _env.WebRootPath + pathOrContainerName + newfilename;
+                    using (FileStream stream = new FileStream(path, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                    }
+                    fileNameList.Add((newfilename, pathOrContainerName));
+                });
+                return fileNameList;
+            });
+
+            return list;
         }
+
+       
     }
 }

@@ -30,11 +30,7 @@ namespace ExpressKuryer.MVC.Controllers
             var entities = await _unitOfWork.RepositoryContact.GetAllAsync(x => true, false);
             int pageSize = 10;
             ViewBag.PageSize = pageSize;
-            
-            TempData["searchWord"] = searchWord;
-            TempData["isDeleted"] = isDeleted;
-            TempData["Page"] = page;
-
+           
             if (isDeleted == "true")
                 entities = await _unitOfWork.RepositoryContact.GetAllAsync(x => x.IsDeleted);
             if (isDeleted == "false")
@@ -50,6 +46,10 @@ namespace ExpressKuryer.MVC.Controllers
 
             var list = PagenatedList<ContactReturnDto>.Save(query, page, pageSize);
 
+
+            TempData["searchWord"] = searchWord;
+            TempData["isDeleted"] = isDeleted;
+            TempData["Title"] = "Əlaqələr";
             return View(list);
         }
 
@@ -59,18 +59,13 @@ namespace ExpressKuryer.MVC.Controllers
             var existObject = await _unitOfWork.RepositoryContact.GetAsync(x => x.Id == id, false);
             if (existObject == null) return RedirectToAction("NotFound", "Page");
 
-            Console.WriteLine(TempData["searchWord"] + "klklkl");
-
-            //todo tempdata
-
             var editDto = _mapper.Map<ContactEditDto>(existObject);
-            return View(editDto);
+			return View(editDto);
         }
 
         public async Task<IActionResult> Delete(int id)
         {
-
-            var entity = await _unitOfWork.RepositoryPartner.GetAsync(x => x.Id == id);
+            var entity = await _unitOfWork.RepositoryContact.GetAsync(x => x.Id == id);
 
             if (entity == null) return RedirectToAction("NotFound", "Page");
 

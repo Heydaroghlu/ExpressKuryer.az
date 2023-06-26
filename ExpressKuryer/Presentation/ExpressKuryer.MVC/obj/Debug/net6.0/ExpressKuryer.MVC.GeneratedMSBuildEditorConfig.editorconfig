@@ -60,6 +60,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVsaXZlcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/JobSeeker/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iU2Vla2VyXERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/JobSeeker/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iU2Vla2VyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/PartnerProduct/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydG5lclByb2R1Y3RcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -86,6 +94,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Service/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Service/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Service/Index.cshtml]
@@ -124,8 +136,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Vic2NyaWJlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Vacancy/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjYW5jeVxEZXRhaWwuY3NodG1s
+[C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Vacancy/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjYW5jeVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Vacancy/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjYW5jeVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SWIFT/Desktop/GitRepos/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Vacancy/Index.cshtml]

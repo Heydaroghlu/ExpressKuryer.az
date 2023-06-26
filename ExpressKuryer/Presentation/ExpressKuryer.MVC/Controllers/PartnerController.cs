@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ExpressKuryer.Application.Abstractions.File;
 using ExpressKuryer.Application.DTOs;
 using ExpressKuryer.Application.DTOs.Partner;
 using ExpressKuryer.Application.HelperManager;
@@ -15,12 +16,15 @@ namespace ExpressKuryer.MVC.Controllers
         readonly IUnitOfWork _unitOfWork;
         readonly IMapper _mapper;
         readonly IStorage _storage;
+        IFileService _fileService;
+        static string _imagePath = _imagePath;
 
-        public PartnerController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage)
+        public PartnerController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage, IFileService fileService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _storage = storage;
+            _fileService = fileService;
         }
 
         [HttpGet]
@@ -28,10 +32,7 @@ namespace ExpressKuryer.MVC.Controllers
         {
             var entities = await _unitOfWork.RepositoryPartner.GetAllAsync(x => true, false);
             int pageSize = 10;
-            ViewBag.PageSize = pageSize;
-            ViewBag.Word = searchWord;
-            ViewBag.IsDeleted = isDeleted;
-
+            
             if (isDeleted == "true")
                 entities = await _unitOfWork.RepositoryPartner.GetAllAsync(x => x.IsDeleted);
             if (isDeleted == "false")
@@ -43,7 +44,6 @@ namespace ExpressKuryer.MVC.Controllers
                 entities = entities.Where(x => x.Name.Contains(searchWord)).ToList();
             }
 
-
             var returnDto = _mapper.Map<List<PartnerReturnDto>>(entities);
             var query = returnDto.AsQueryable();
 
@@ -52,9 +52,14 @@ namespace ExpressKuryer.MVC.Controllers
 
             foreach(var item in list)
             {
-                var listOfUrl = _storage.GetUrl("uploads/","partners/",item.Image);
+                var listOfUrl = _storage.GetUrl(_imagePath,item.Image);
                 item.Image = listOfUrl;
             }
+
+            ViewBag.PageSize = pageSize;
+            ViewBag.Word = searchWord;
+            ViewBag.IsDeleted = isDeleted;
+            TempData["Title"] = "Partnuyorlar";
 
             return View(list);
         }
@@ -71,7 +76,7 @@ namespace ExpressKuryer.MVC.Controllers
 
             try
             {
-                _storage.CheckFileType(objectDto.FormFile, ContentTypeManager.ImageContentTypes);
+                _fileService.CheckFileType(objectDto.FormFile, ContentTypeManager.ImageContentTypes);
             }
             catch (Exception)
             {
@@ -79,7 +84,7 @@ namespace ExpressKuryer.MVC.Controllers
                 return View(objectDto);
             }
 
-            var imageInfo = await _storage.UploadAsync("uploads/partners/", objectDto.FormFile);
+            var imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
 
             var partner = _mapper.Map<Partner>(objectDto);
             partner.Image = imageInfo.fileName;
@@ -99,7 +104,7 @@ namespace ExpressKuryer.MVC.Controllers
             if (existObject == null) return RedirectToAction("NotFound","Page");
 
             var editDto = _mapper.Map<PartnerEditDto>(existObject);
-            editDto.Image = _storage.GetUrl("uploads/", "partners/", editDto.Image);
+            editDto.Image = _storage.GetUrl("uploads/partners", editDto.Image);
             return View(editDto);
         }
 
@@ -116,25 +121,25 @@ namespace ExpressKuryer.MVC.Controllers
             {
                 try
                 {
-                    _storage.CheckFileType(objectDto.FormFile, ContentTypeManager.ImageContentTypes);
+                    _fileService.CheckFileType(objectDto.FormFile, ContentTypeManager.ImageContentTypes);
                 }
                 catch (Exception)
                 {
                     ModelState.AddModelError("FormFile", ContentTypeManager.ImageContentMessage());
-                    objectDto.Image = _storage.GetUrl("uploads/", "partners/", existObject.Image);
+                    objectDto.Image = _storage.GetUrl(_imagePath, existObject.Image);
                     return View(objectDto);
                 }
 
-                var check = _storage.HasFile("uploads/partners/", existObject.Image);
+                var check = _storage.HasFile(_imagePath, existObject.Image);
                 if (check == true)
                 {
-                    await _storage.DeleteAsync("uploads/partners/", existObject.Image);
-                    var imageInfo = await _storage.UploadAsync("uploads/partners/", objectDto.FormFile);
+                    await _storage.DeleteAsync(_imagePath, existObject.Image);
+                    var imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
                     existObject.Image = imageInfo.fileName;
                 }
                 else
                 {
-                    var imageInfo = await _storage.UploadAsync("uploads/partners/", objectDto.FormFile);
+                    var imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
                     existObject.Image = imageInfo.fileName;
                 }
             }

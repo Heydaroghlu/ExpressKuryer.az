@@ -8,6 +8,8 @@ using ExpressKuryer.Application.DTOs.Service;
 using ExpressKuryer.Application.DTOs.Partner;
 using ExpressKuryer.Application.HelperManager;
 using ExpressKuryer.Domain.Entities;
+using ExpressKuryer.Application.Abstractions.File;
+using ExpressKuryer.Application.DTOs.Slider;
 
 namespace ExpressKuryer.MVC.Controllers
 {
@@ -16,12 +18,13 @@ namespace ExpressKuryer.MVC.Controllers
         readonly IUnitOfWork _unitOfWork;
         readonly IMapper _mapper;
         readonly IStorage _storage;
-
-        public ServiceController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage)
+        IFileService _fileService;
+        public ServiceController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage, IFileService fileService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _storage = storage;
+            _fileService = fileService;
         }
 
         [HttpGet]
@@ -29,9 +32,7 @@ namespace ExpressKuryer.MVC.Controllers
         {
             var entities = await _unitOfWork.RepositoryService.GetAllAsync(x => true, false);
             int pageSize = 10;
-            ViewBag.PageSize = pageSize;
-            ViewBag.Word = searchWord;
-            ViewBag.IsDeleted = isDeleted;
+          
 
             if (isDeleted == "true")
                 entities = await _unitOfWork.RepositoryService.GetAllAsync(x => x.IsDeleted);
@@ -48,6 +49,11 @@ namespace ExpressKuryer.MVC.Controllers
 
             var list = PagenatedList<ServiceReturnDto>.Save(query, page, pageSize);
 
+            ViewBag.PageSize = pageSize;
+            ViewBag.Word = searchWord;
+            ViewBag.IsDeleted = isDeleted;
+            TempData["Title"] = "Servis";
+
             return View(list);
         }
 
@@ -57,26 +63,13 @@ namespace ExpressKuryer.MVC.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(PartnerCreateDto objectDto)
+        public async Task<IActionResult> Create(ServiceCreateDto objectDto)
         {
             if (!ModelState.IsValid) return View(ModelState);
 
-            try
-            {
-                _storage.CheckFileType(objectDto.FormFile, ContentTypeManager.ImageContentTypes);
-            }
-            catch (Exception)
-            {
-                ModelState.AddModelError("FormFile", ContentTypeManager.ImageContentMessage());
-                return View(objectDto);
-            }
+            var partner = _mapper.Map<Service>(objectDto);
 
-            var imageInfo = await _storage.UploadAsync("uploads/partners/", objectDto.FormFile);
-
-            var partner = _mapper.Map<Partner>(objectDto);
-            partner.Image = imageInfo.fileName;
-
-            await _unitOfWork.RepositoryPartner.InsertAsync(partner);
+            await _unitOfWork.RepositoryService.InsertAsync(partner);
             await _unitOfWork.CommitAsync();
 
             object page = TempData["Page"] as int?;
@@ -84,6 +77,36 @@ namespace ExpressKuryer.MVC.Controllers
             return RedirectToAction("Index", new { page = page });
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var existObject = await _unitOfWork.RepositoryService.GetAsync(x => x.Id == id, false);
+            if (existObject == null) return RedirectToAction("NotFound", "Page");
+
+            var editDto = _mapper.Map<ServiceEditDto>(existObject);
+            return View(editDto);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(ServiceEditDto objectDto)
+        {
+            var existObject = await _unitOfWork.RepositoryService.GetAsync(x => x.Id == objectDto.Id);
+
+            if (existObject == null) return RedirectToAction("NotFound", "Page");
+
+            if (!ModelState.IsValid) return View(objectDto);
+
+            existObject.Name = objectDto.Name;
+            existObject.OwnAvragePercent = objectDto.OwnAvragePercent;
+            existObject.Depozit = objectDto.Depozit;
+            existObject.Icon = objectDto.Icon;
+
+            await _unitOfWork.CommitAsync();
+
+            object page = TempData["Page"] as int?;
+
+            return RedirectToAction("Index", new { page = page });
+        }
 
     }
 }

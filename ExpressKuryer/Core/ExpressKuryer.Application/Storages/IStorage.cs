@@ -9,13 +9,11 @@ namespace ExpressKuryer.Application.Storages
 {
 	public interface IStorage
 	{
-		Task<List<(string fileName, string pathOrContainerName)>> UploadRangeAsync(string pathOrContainerName, IFormFileCollection files);
+		Task<List<(string fileName, string pathOrContainerName)>> UploadRangeAsync(string pathOrContainerName, List<IFormFile> files);
 		Task<(string fileName, string pathOrContainerName)> UploadAsync(string pathOrContainerName, IFormFile file);
 		Task<bool> DeleteAsync(string pathOrContainerName, string fileName);
 		bool HasFile(string pathOrContainerName, string fileName);
-		List<string> FileNames(string path, string ceoFriendlyName);
-		string GetPublicId(string imageUrl);
-		void CheckFileType(IFormFile file, List<string> contentTypes);
-		string GetUrl(string pathOrContainerName, string folderName, string fileName);
+
+		string GetUrl(string pathOrContainerName, string fileName);
     }
 }

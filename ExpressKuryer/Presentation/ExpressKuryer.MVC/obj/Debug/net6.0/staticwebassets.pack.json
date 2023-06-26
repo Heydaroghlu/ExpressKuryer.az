@@ -1129,6 +1129,10 @@
       "PackagePath": "staticwebassets\\manage\\vendor\\wnumb\\wNumb.js"
     },
     {
+      "Id": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\settings\\ea77712c-a7d2-4146-bf59-5eb2bc54e0ebmonoPOST (1).png",
+      "PackagePath": "staticwebassets\\uploads\\settings\\ea77712c-a7d2-4146-bf59-5eb2bc54e0ebmonoPOST (1).png"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ExpressKuryer.MVC.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

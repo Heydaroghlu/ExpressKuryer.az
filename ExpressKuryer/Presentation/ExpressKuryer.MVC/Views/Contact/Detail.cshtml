@@ -1,61 +1,65 @@
 ﻿@{
     ViewData["Title"] = "Detail";
-    int pageId = (int)TempData["Page"];
     string isDeleted = (string)TempData["isDeleted"];
     string word = (string)TempData["searchWord"];
 }
 
 @model ContactEditDto
 
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-12" style="padding: 20px; display: flex; justify-content: center; align-items: center;">
-                    <h1>Contact Detail</h1>
-                </div>
-            </div>
-        </div><!-- /.container-fluid -->
-    </section>
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <form method="post" enctype="multipart/form-data">
+<!--**********************************
+    Content body start
+***********************************-->
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
 
-                                <h3>Name</h3>
-                                <p>
-                                    @Model.Name
-                                </p>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="right-box-padding">
+                                                <div class="read-content">
+                                                    <div class="media pt-3 d-sm-flex d-block justify-content-between">
+                                                        <div class="clearfix mb-3 d-flex">
+                                                            <img class="me-3 rounded" width="70" height="70" alt="image" src="~/manage/images/avatar/4.jpg">
+                                                            <div class="media-body me-2">
+                                                                <h5 class="text-primary mb-0 mt-1">@Model.Name</h5>
+                                                                <p class="mb-0">@Model.CreatedAt.ToString("dd MMMM yyyy")</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="media mb-2 mt-3">
+                                                        <div class="media-body">
+                                                            <p class="read-content-email">
+                                                                Email : @Model.Email
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="read-content-body">
+                                                        @Html.Raw(Model.Message)
+                                                    </div>
+                                                </div>
 
-                                <h3>Email</h3>
-                                <p>
-                                    @Model.Email
-                                </p>
-
-                                <h3>Message</h3>
-                                <p>
-                                    @Model.Message
-                                </p>
-
-                                <h3>Send Time</h3>
-                                <p>
-                                    @Model.CreatedAt.ToString("dd:mm:yyyy")
-                                </p>
-
-                                <a asp-action="index" asp-route-isDeleted="@isDeleted" asp-route-searchWord="@word"  asp-route-page="@pageId">Back</a>
-                            </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
-        </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+        </div>
+    </div>
 </div>
-
+<!--**********************************
+    Content body end
+***********************************-->

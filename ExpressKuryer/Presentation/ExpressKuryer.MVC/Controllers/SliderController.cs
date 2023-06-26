@@ -7,6 +7,8 @@ using ExpressKuryer.Application.UnitOfWorks;
 using ExpressKuryer.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using ExpressKuryer.Application.DTOs.Slider;
+using ExpressKuryer.Application.Abstractions.File;
+using CloudinaryDotNet.Actions;
 
 namespace ExpressKuryer.MVC.Controllers
 {
@@ -15,12 +17,13 @@ namespace ExpressKuryer.MVC.Controllers
         readonly IUnitOfWork _unitOfWork;
         readonly IMapper _mapper;
         readonly IStorage _storage;
-
-        public SliderController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage)
+        IFileService _fileService;
+        public SliderController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage, IFileService fileService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _storage = storage;
+            _fileService = fileService;
         }
         //todo image temasini deyis!
         [HttpGet]
@@ -44,7 +47,7 @@ namespace ExpressKuryer.MVC.Controllers
 
             foreach (var item in list)
             {
-                var listOfUrl = _storage.GetUrl("uploads/", "sliders/", item.Image);
+                var listOfUrl = _storage.GetUrl("uploads/sliders/", item.Image);
                 item.Image = listOfUrl;
             }
 
@@ -68,7 +71,7 @@ namespace ExpressKuryer.MVC.Controllers
 
             try
             {
-                _storage.CheckFileType(objectDto.FormFile, ContentTypeManager.ImageContentTypes);
+                _fileService.CheckFileType(objectDto.FormFile, ContentTypeManager.ImageContentTypes);
             }
             catch (Exception)
             {
@@ -96,7 +99,7 @@ namespace ExpressKuryer.MVC.Controllers
             if (existObject == null) return RedirectToAction("NotFound", "Page");
 
             var editDto = _mapper.Map<SliderEditDto>(existObject);
-            editDto.Image = _storage.GetUrl("uploads/", "sliders/", editDto.Image);
+            editDto.Image = _storage.GetUrl("uploads/sliders/", editDto.Image);
             return View(editDto);
         }
 
@@ -113,12 +116,12 @@ namespace ExpressKuryer.MVC.Controllers
             {
                 try
                 {
-                    _storage.CheckFileType(objectDto.FormFile, ContentTypeManager.ImageContentTypes);
+                    _fileService.CheckFileType(objectDto.FormFile, ContentTypeManager.ImageContentTypes);
                 }
                 catch (Exception)
                 {
                     ModelState.AddModelError("FormFile", ContentTypeManager.ImageContentMessage());
-                    objectDto.Image =  _storage.GetUrl("uploads/", "sliders/", existObject.Image);
+                    objectDto.Image =  _storage.GetUrl("uploads/sliders/", existObject.Image);
                     return View(objectDto);
                 }
                 var check = _storage.HasFile("uploads/sliders/", existObject.Image);

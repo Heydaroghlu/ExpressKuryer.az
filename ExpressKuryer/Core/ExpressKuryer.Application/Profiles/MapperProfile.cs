@@ -3,6 +3,7 @@ using ExpressKuryer.Application.DTOs.AppUserDTOs;
 using ExpressKuryer.Application.DTOs.Contact;
 using ExpressKuryer.Application.DTOs.CourierDTOs;
 using ExpressKuryer.Application.DTOs.DeliveryDTOs;
+using ExpressKuryer.Application.DTOs.JobSeekerDTOs;
 using ExpressKuryer.Application.DTOs.Partner;
 using ExpressKuryer.Application.DTOs.PartnerProduct;
 using ExpressKuryer.Application.DTOs.Service;
@@ -60,6 +61,16 @@ namespace ExpressKuryer.Application.Profiles
             CreateMap<CourierCreateDto, Courier>();
 			CreateMap<AppUser, AppUserReturnDto>();
 			CreateMap<AppUserReturnDto, AppUser>();
+
+			CreateMap<JobSeeker, JobSeekerReturnDto>();
+
+			CreateMap<VacancyCreateDto, Vacancy>();
+			CreateMap<Vacancy, VacancyReturnDto>();
+			CreateMap<Vacancy, VacancyEditDto>();
+
+			CreateMap<ServiceCreateDto, Service>();
+			CreateMap<Service, ServiceEditDto>();
+
 		}
     }
 }

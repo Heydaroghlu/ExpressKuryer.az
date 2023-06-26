@@ -14,7 +14,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddPersistenceServices();
 builder.Services.AddApplicationServices();
-builder.Services.AddInfrastructureServices(StorageEnum.CloudinaryStorage);
+builder.Services.AddInfrastructureServices(StorageEnum.LocalStorage);
 builder.Services.AddInfrastructureServices();
 
 var app = builder.Build();

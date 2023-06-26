@@ -1,1 +1,64 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Edit";
+}
+
+@model ServiceCreateDto
+
+
+<div class="content-body" style="min-height: 876px;" bis_skin_checked="1">
+
+    <div class="row mb-2">
+        <div class="col-sm-12" style="padding: 20px; display: flex; justify-content: center; align-items: center;">
+            <h1>Servis Yarat</h1>
+        </div>
+    </div>
+
+    <!-- row -->
+    <div class="container-fluid" bis_skin_checked="1">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Tənzimləmələr</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="basic-form">
+                            <form method="post" enctype="multipart/form-data">
+
+                                <div class="mb-3">
+                                    <label asp-for="Name" class="form-label">Ad</label>
+                                    <input asp-for="Name" class="form-control input-rounded" placeholder="boşluq...">
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="Depozit" class="form-label">Depozit</label>
+                                    <input asp-for="Depozit" class="form-control input-rounded" placeholder="boşluq...">
+                                    <span asp-validation-for="Depozit" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="Icon" class="form-label">Ikon</label>
+                                    <input asp-for="Icon" class="form-control input-rounded" placeholder="boşluq...">
+                                    <span asp-validation-for="Icon" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="OwnAvragePercent" class="form-label">Orta Faiz</label>
+                                    <input asp-for="OwnAvragePercent" class="form-control input-rounded" placeholder="boşluq...">
+                                    <span asp-validation-for="OwnAvragePercent" class="text-danger"></span>
+                                </div>
+
+                                <button type="submit" class="btn btn-outline-dark my-3">Qeyd et</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/manage/main.js"></script>
+}
