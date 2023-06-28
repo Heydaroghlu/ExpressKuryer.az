@@ -4,6 +4,7 @@
     int count = (Model.PageIndex - 1) * ViewBag.PageSize + 1;
     List<string> listOfURLs = ViewBag.ListOfURLs;
     string? isDeleted = (string)ViewBag.IsDeleted;
+    string imagePath = (string)TempData["ImagePath"];
 }
 
 
@@ -88,7 +89,7 @@
                                     <td>@item.Name</td>
                                     <td>
                                         <div class="image-box">
-                                            <img src="@item.Image" style="width:200px;height:200px;object-fit:contain;" />
+                                            <img src="@(imagePath+item.Image)" style="width:200px;height:200px;object-fit:contain;" />
                                         </div>
                                     </td>
                                     <td>@item.SalePrice</td>

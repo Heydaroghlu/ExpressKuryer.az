@@ -4,6 +4,10 @@
 
 @model PartnerEditDto
 
+@{
+    string imagePath = (string)TempData["ImagePath"];
+}
+
 
 
 <div class="content-body" style="min-height: 876px;" bis_skin_checked="1">
@@ -31,7 +35,7 @@
                             <div class="mb-3 image-box">
                                 <label asp-for="FormFile" class="form-label">Şəkil</label>
                                 <input asp-for="FormFile" class="form-control file" style="margin:20px 0px">
-                                <img src="@Model.Image" style="width:300px;height:300px;object-fit:cover;" />
+                                <img src="@(imagePath+Model.Image)" style="width:300px;height:300px;object-fit:cover;" />
                             </div>
 
                             <div>

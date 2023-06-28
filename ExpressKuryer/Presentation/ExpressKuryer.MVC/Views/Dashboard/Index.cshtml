@@ -1,4 +1,5 @@
-﻿
+﻿@model DashboardViewModel
+
 <div class="content-body">
     <!-- row -->
     <div class="container-fluid">
@@ -7,7 +8,7 @@
                 <div class="card overflow-hidden">
                     <div class="card-header media border-0 pb-0">
                         <div class="media-body">
-                            <h2 class="text-black">56 <span class="text-success fs-14">+4%</span></h2>
+                            <h2 class="text-black">@Model.ThisMonth <span class="text-success fs-14"> @Model.MonthPercent%</span></h2>
                             <p class="mb-0 text-black">Aylıq çatdırılma</p>
                         </div>
                         <svg style="#EA4989" id="rocket-icon" class="my-2" viewBox="0 0 24 24" width="32" height="31" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -25,7 +26,7 @@
                 <div class="card overflow-hidden">
                     <div class="card-header media border-0 pb-0">
                         <div class="media-body">
-                            <h2 class="text-black">785 <span class="text-success fs-14">+2.7%</span></h2>
+                            <h2 class="text-black">@Model.AllDelivery <span class="text-success fs-14"></span></h2>
                             <p class="mb-0 text-black">Ümümi çatdırılma</p>
                         </div>
                         <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +45,7 @@
                 <div class="card overflow-hidden">
                     <div class="card-header media border-0 pb-0">
                         <div class="media-body">
-                            <h2 class="text-black">56 <span class="text-danger fs-14">-3%</span></h2>
+                            <h2 class="text-black">@Model.AllUser <span class="text-danger fs-14"></span></h2>
                             <p class="mb-0 text-black">Müştərilər</p>
                         </div>
                         <svg width="32" height="36" viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,12 +63,12 @@
                 <div class="card overflow-hidden">
                     <div class="card-header media border-0 pb-0">
                         <div class="media-body">
-                            <h2 class="text-black">$6231 <span class="text-danger fs-14">-3.7%</span></h2>
+                            <h2 class="text-black">₼@Model.GetTotalAmount</h2>
                             <p class="mb-0 text-black">Ümümi gəlir</p>
                         </div>
-                        <svg width="20" height="36" viewBox="0 0 20 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19.08 24.36C19.08 25.64 18.76 26.8667 18.12 28.04C17.48 29.1867 16.5333 30.1467 15.28 30.92C14.0533 31.6933 12.5733 32.1333 10.84 32.24V35.48H8.68V32.24C6.25333 32.0267 4.28 31.2533 2.76 29.92C1.24 28.56 0.466667 26.84 0.44 24.76H4.32C4.42667 25.88 4.84 26.8533 5.56 27.68C6.30667 28.5067 7.34667 29.0267 8.68 29.24V19.24C6.89333 18.7867 5.45333 18.32 4.36 17.84C3.26667 17.36 2.33333 16.6133 1.56 15.6C0.786667 14.5867 0.4 13.2267 0.4 11.52C0.4 9.36 1.14667 7.57333 2.64 6.16C4.16 4.74666 6.17333 3.96 8.68 3.8V0.479998H10.84V3.8C13.1067 3.98667 14.9333 4.72 16.32 6C17.7067 7.25333 18.5067 8.89333 18.72 10.92H14.84C14.7067 9.98667 14.2933 9.14667 13.6 8.4C12.9067 7.62667 11.9867 7.12 10.84 6.88V16.64C12.6 17.0933 14.0267 17.56 15.12 18.04C16.24 18.4933 17.1733 19.2267 17.92 20.24C18.6933 21.2533 19.08 22.6267 19.08 24.36ZM4.12 11.32C4.12 12.6267 4.50667 13.6267 5.28 14.32C6.05333 15.0133 7.18667 15.5867 8.68 16.04V6.8C7.29333 6.93333 6.18667 7.38667 5.36 8.16C4.53333 8.90667 4.12 9.96 4.12 11.32ZM10.84 29.28C12.28 29.12 13.4 28.6 14.2 27.72C15.0267 26.84 15.44 25.7867 15.44 24.56C15.44 23.2533 15.04 22.2533 14.24 21.56C13.44 20.84 12.3067 20.2667 10.84 19.84V29.28Z" fill="#EA4989" />
-                        </svg>
+                         @* <svg width="20" height="36" viewBox="0 0 20 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.08 24.36C19.08 25.64 18.76 26.8667 18.12 28.04C17.48 29.1867 16.5333 30.1467 15.28 30.92C14.0533 31.6933 12.5733 32.1333 10.84 32.24V35.48H8.68V32.24C6.25333 32.0267 4.28 31.2533 2.76 29.92C1.24 28.56 0.466667 26.84 0.44 24.76H4.32C4.42667 25.88 4.84 26.8533 5.56 27.68C6.30667 28.5067 7.34667 29.0267 8.68 29.24V19.24C6.89333 18.7867 5.45333 18.32 4.36 17.84C3.26667 17.36 2.33333 16.6133 1.56 15.6C0.786667 14.5867 0.4 13.2267 0.4 11.52C0.4 9.36 1.14667 7.57333 2.64 6.16C4.16 4.74666 6.17333 3.96 8.68 3.8V0.479998H10.84V3.8C13.1067 3.98667 14.9333 4.72 16.32 6C17.7067 7.25333 18.5067 8.89333 18.72 10.92H14.84C14.7067 9.98667 14.2933 9.14667 13.6 8.4C12.9067 7.62667 11.9867 7.12 10.84 6.88V16.64C12.6 17.0933 14.0267 17.56 15.12 18.04C16.24 18.4933 17.1733 19.2267 17.92 20.24C18.6933 21.2533 19.08 22.6267 19.08 24.36ZM4.12 11.32C4.12 12.6267 4.50667 13.6267 5.28 14.32C6.05333 15.0133 7.18667 15.5867 8.68 16.04V6.8C7.29333 6.93333 6.18667 7.38667 5.36 8.16C4.53333 8.90667 4.12 9.96 4.12 11.32ZM10.84 29.28C12.28 29.12 13.4 28.6 14.2 27.72C15.0267 26.84 15.44 25.7867 15.44 24.56C15.44 23.2533 15.04 22.2533 14.24 21.56C13.44 20.84 12.3067 20.2667 10.84 19.84V29.28Z" fill="#EA4989" />
+                        </svg>*@
                     </div>
                     <div class="card-body p-0">
                         <canvas id="widgetChart4" height="75"></canvas>
@@ -158,75 +159,104 @@
                         <div class="table-responsive" style="padding: 1.5rem 1.875rem 1.25rem;">
                             <table class="table order-request">
                                 <tbody style="display: table;width: 100%;table-layout: fixed;}">
-                                    <tr style="display: table-row;padding:0px">
-                                        <td>
-                                            <div class="media align-items-center">
-                                                <div class="media-body">
-                                                    <h5 class="mt-0 mb-2"><a class="text-black" href="ecom-product-detail.html">Gəminən gedirəm gəlməyəcəm mən</a></h5>
-                                                    <p class="mb-0 text-primary">#0010235</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <h5 class="mb-2 text-black wspace-no">Zaur Eli</h5>
-                                            <p class="mb-0">Qarayev dən Bakmil ə</p>
-                                        </td>
-                                        <td style="width:100px;">
-                                            <div class="d-flex align-items-center justify-content-center">
-                                                <h4 class="mb-0 me-3 fs-20 text-black d-inline-block">$7.4</h4>
-                                                @*<p class="mb-0 fs-20 d-inline-block">x3</p>*@
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <a class="btn bgl-warning text-warning" href="javascript:;">Gözləmədə</a>
-                                                <div class="dropdown ms-auto">
-                                                    <div class="btn-link" data-bs-toggle="dropdown">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
-                                                    </div>
-                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                        <a class="dropdown-item text-black" href="javascript:;">
-                                                            <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="#209F84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                                <path d="M22 4L12 14.01L9 11.01" stroke="#209F84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                            Accept order
-                                                        </a>
-                                                        <a class="dropdown-item text-black" href="javascript:;">
-                                                            <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#F24242" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                                <path d="M15 9L9 15" stroke="#F24242" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                                <path d="M9 9L15 15" stroke="#F24242" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                            Reject order
-                                                        </a>
-                                                        <a class="dropdown-item text-black" href="javascript:;">
-                                                            <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#6F6F6F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                                <path d="M12 16V12" stroke="#6F6F6F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                                <path d="M12 8H12.01" stroke="#6F6F6F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                            View Details
-                                                        </a>
+                                    @foreach (Delivery item in Model.Deliveries)
+                                    {
+                                        <tr style="display: table-row;padding:0px">
+                                            <td>
+                                                <div class="media align-items-center">
+                                                    <div class="media-body">
+                                                        <h5 class="mt-0 mb-2"><a class="text-black" href="ecom-product-detail.html">Çatdırılma ID</a></h5>
+                                                        <p class="mb-0 text-primary">#@item.DeliveryCode</p>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-2 text-black wspace-no">@item.Name @item.SurName</h5>
+                                                <p class="mb-0">@item.AddressFrom dan @item.AddressTo </p>
+                                            </td>
+                                            <td style="width:100px;">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <h4 class="mb-0 me-3 fs-20 text-black d-inline-block">@item.TotalAmount</h4>
+                                                    @*<p class="mb-0 fs-20 d-inline-block">x3</p>*@
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    @if (item.DeliveryStatus == DeliveryStatus.Gözləmədə.ToString())
+                                                    {
+                                                        <a class="btn bgl-warning text-warning deliverystatus">@item.DeliveryStatus</a>
+                                                    }
+                                                    else if (item.DeliveryStatus == DeliveryStatus.Qəbul.ToString())
+                                                    {
+                                                        <a class="btn bgl-success text-success deliverystatus">@item.DeliveryStatus</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a class="btn bgl-danger text-danger deliverystatus">@item.DeliveryStatus</a>
+                                                    }
+                                                    <div class="dropdown ms-auto">
+                                                        <div class="btn-link" data-bs-toggle="dropdown">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
+                                                        </div>
+                                                        <div class="dropdown-menu dropdown-menu-end delivery-list">
+                                                            <a class="dropdown-item text-black delivery-btn" asp-action="ChangeDeliveryStatus" asp-controller="delivery" asp-route-status="Qəbul" asp-route-appUserId="@item.MemberUserId" value="Qəbul" asp-route-orderId="@item.Id">
+                                                                <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="#209F84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                                    <path d="M22 4L12 14.01L9 11.01" stroke="#209F84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                                </svg>
+                                                                Qəbul
+                                                            </a>
+                                                            <a class="dropdown-item text-black delivery-btn" asp-action="ChangeDeliveryStatus" asp-controller="delivery" asp-route-status="İmtina" asp-route-appUserId="@item.MemberUserId" value="İmtina" asp-route-orderId="@item.Id">
+                                                                <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#F24242" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                                    <path d="M15 9L9 15" stroke="#F24242" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                                    <path d="M9 9L15 15" stroke="#F24242" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                                </svg>
+                                                                Imtina
+                                                            </a>
+                                                            <a class="dropdown-item text-black delivery-btn" asp-action="ChangeDeliveryStatus" asp-controller="delivery" asp-route-status="Gözləmədə" asp-route-appUserId="@item.MemberUserId" value="Gözləmədə" asp-route-orderId="@item.Id">
+                                                                <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#fff570" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                                </svg>
+                                                                Gözləmə
+                                                            </a>
+                                                            <a class="dropdown-item text-black" asp-action="detail" asp-controller="delivery" asp-route-id="@item.Id">
+                                                                <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#6F6F6F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                                    <path d="M12 16V12" stroke="#6F6F6F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                                    <path d="M12 8H12.01" stroke="#6F6F6F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                                </svg>
+                                                                Detallı bax
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    @if (item.CourierId != null)
+                                                    {
+                                                        <i class="lni lni-delivery" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" style="cursor:pointer;font-size:20px;color:#209F84;padding:0px 10px;"></i>
+                                                    }
+                                                    else
+                                                    {
+                                                        <i class="lni lni-delivery" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" style="cursor:pointer;font-size:20px;color:#FFC532;padding:0px 10px;"></i>
+                                                    }
+                                                    <input type="hidden" value="@item.Id" name="deliveryId" form="courierform">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
                                 </tbody>
                             </table>
-                            <div class="card-footer border-0 pt-0 text-center">
-                                <a href="ecom-product-list.html" class="btn-link">View More &gt;&gt;</a>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    @Html.Partial("_CourierPartial",Model.DashboardCourierViewModel)
+
 </div>
-<!--**********************************
-    Content body end
-***********************************-->
-<!--**********************************
-    Footer start
+
+@section Scripts{
+    <script src="~/manage/main.js"></script>
+}

@@ -1,0 +1,23 @@
+﻿@model DashboardCourierViewModel
+
+
+<div class="bootstrap-modal">
+    <div class="modal fade" id="exampleModalCenter" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                </div>
+                <div class="modal-body">
+                    <select class="form-control" form="courierform" asp-for="CourierId" asp-items="@new SelectList((List<Courier>)ViewBag.Couriers,nameof(Courier.Id),nameof(Courier.CourierPerson))"></select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Bağla</button>
+                    <form method="post" id="courierform">
+                        <button asp-action="detail" class="btn btn-primary">Dəyişikli yadda saxla</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

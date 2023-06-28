@@ -28,6 +28,15 @@ namespace ExpressKuryer.Persistence.Services
         {
             return await _unitOfWork.RepositoryUser.GetAsync(x => x.UserName.Equals(name));
         }
+        public int GetTodayDeliveries()
+        {
+            return _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.CreatedAt.Date.Equals(DateTime.Now.Date)).Result.Count();
+        }
+
+        public async Task<List<Delivery>> GetSupriseDeliveries()
+        {
+            return _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.suprizDelivery == true && x.CreatedAt.Date.Equals(DateTime.Now.Date)).Result.ToList();
+        }
 
     }
 }

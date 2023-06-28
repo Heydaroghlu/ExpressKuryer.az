@@ -13,6 +13,6 @@ namespace ExpressKuryer.Application.DTOs.CourierDTOs
     public class CourierCreateDto
     {
         public IFormFile? FormFile { get; set; }
-        public AppUserReturnDto CourierPerson { get; set; }
+        public AppUserCreateDto CourierPerson { get; set; }
     }
 }

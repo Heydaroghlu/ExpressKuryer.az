@@ -4,6 +4,10 @@
 
 @model JobSeekerReturnDto
 
+@{
+    string imagePath = (string)TempData["ImagePath"];
+}
+
 
 <div class="content-body" style="min-height: 876px;" bis_skin_checked="1">
 
@@ -47,7 +51,7 @@
 
                                 <div class="mb-3 image-box">
                                     <label asp-for="CV" class="form-label">
-                                        <a href="@Model.CV" download class="btn btn-outline-dark my-3">CV-ni yüklə</a>
+                                        <a href="@(imagePath+Model.CV)" download class="btn btn-outline-dark my-3">CV-ni yüklə</a>
                                     </label>
                                 </div>
 

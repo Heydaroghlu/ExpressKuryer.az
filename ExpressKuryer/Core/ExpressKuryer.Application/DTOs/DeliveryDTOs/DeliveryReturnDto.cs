@@ -1,6 +1,7 @@
 ﻿using ExpressKuryer.Application.DTOs.CourierDTOs;
 using ExpressKuryer.Application.DTOs.PartnerProduct;
 using ExpressKuryer.Application.DTOs.Service;
+using ExpressKuryer.Application.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,10 +34,12 @@ namespace ExpressKuryer.Application.DTOs.DeliveryDTOs
         public ServiceReturnDto Service { get; set; }
         public string DeliveryStatus { get; set; }
         public string OrderDeliveryStatus { get; set; }
-        public int PartnerProductId { get; set; }
+
+
         public CourierReturnDto Courier { get; set; }
-        public PartnerProductReturnDto PartnerProduct { get; set; }
-        public ExpressKuryer.Domain.Entities.AppUser AppUser { get; set; }
+        public ExpressKuryer.Domain.Entities.AppUser MemberUser { get; set; }
+
+        public DashboardCourierViewModel DashboardCourierViewModel { get; set; }
 
     }
 }

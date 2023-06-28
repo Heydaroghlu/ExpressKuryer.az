@@ -13,6 +13,7 @@ using ExpressKuryer.Infrastructure.Services.Email;
 using ExpressKuryer.Persistence.Migrations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Org.BouncyCastle.Asn1.Icao;
 
 namespace ExpressKuryer.MVC.Controllers
 {
@@ -25,6 +26,7 @@ namespace ExpressKuryer.MVC.Controllers
         RoleManager<IdentityRole> _roleManager;
         IEmailService _emailService;
         IFileService _fileService;
+        static string _imagePath = "/uploads/users/";
 
         public CourierController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage, UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager, IEmailService emailService, IFileService fileService)
         {
@@ -56,11 +58,7 @@ namespace ExpressKuryer.MVC.Controllers
             var returnDto = _mapper.Map<List<CourierReturnDto>>(entities);
 
             var list = PagenatedList<CourierReturnDto>.Save(returnDto.AsQueryable(), page, pageSize);
-
-            foreach (var item in list)
-            {
-                if (item.CourierPerson.Image != null) item.CourierPerson.Image = _storage.GetUrl("uploads/couriers/", item.CourierPerson.Image);
-            }
+            TempData["ImagePath"] = _storage.GetUrl(_imagePath, null);
 
             ViewBag.PageSize = pageSize;
             ViewBag.Word = searchWord;
@@ -108,11 +106,11 @@ namespace ExpressKuryer.MVC.Controllers
 
             var entity = _mapper.Map<ExpressKuryer.Domain.Entities.Courier>(courierCreateDto);
             var appUser = _mapper.Map<AppUser>(courierCreateDto.CourierPerson);
-
+            appUser.UserName = appUser.Email;
 
             if (courierCreateDto.FormFile != null)
             {
-                var imageInfo = await _storage.UploadAsync("uploads/couriers/", courierCreateDto.FormFile);
+                var imageInfo = await _storage.UploadAsync(_imagePath, courierCreateDto.FormFile);
                 entity.CourierPerson.Image = imageInfo.fileName;
             }
 
@@ -127,7 +125,7 @@ namespace ExpressKuryer.MVC.Controllers
             object page = TempData["Page"] as int?;
 
             _emailService.Send(appUser.Email, "Kuryer ol", "Sizin Express Kuryer-də Kuryer olaraq hesabınız yaradıldı");
-
+            //todo emailde error verende xeber cixarsin
 
 
             return RedirectToAction("Index", new { page = page });
@@ -141,8 +139,8 @@ namespace ExpressKuryer.MVC.Controllers
 
             var returnDto = _mapper.Map<CourierEditDto>(courier);
             TempData["userId"] = courier.CourierPerson.Id;
+            TempData["ImagePath"] = _storage.GetUrl(_imagePath, null);
 
-            returnDto.CourierPerson.Image = _storage.GetUrl("uploads/couriers/", courier.CourierPerson.Image);
 
             return View(returnDto);
         }
@@ -166,16 +164,16 @@ namespace ExpressKuryer.MVC.Controllers
                     ModelState.AddModelError("FormFile", ContentTypeManager.ImageContentMessage());
                     return View(editDto);
                 }
-                var check = _storage.HasFile("uploads/couriers/", existObject.CourierPerson.Image);
+                var check = _storage.HasFile(_imagePath, existObject.CourierPerson.Image);
                 if (check == true)
                 {
-                    await _storage.DeleteAsync("uploads/couriers/", existObject.CourierPerson.Image);
-                    var imageInfo = await _storage.UploadAsync("uploads/couriers/", editDto.FormFile);
+                    await _storage.DeleteAsync(_imagePath, existObject.CourierPerson.Image);
+                    var imageInfo = await _storage.UploadAsync(_imagePath, editDto.FormFile);
                     existObject.CourierPerson.Image = imageInfo.fileName;
                 }
                 else
                 {
-                    var imageInfo = await _storage.UploadAsync("uploads/couriers/", editDto.FormFile);
+                    var imageInfo = await _storage.UploadAsync(_imagePath, editDto.FormFile);
                     existObject.CourierPerson.Image = imageInfo.fileName;
                 }
             }

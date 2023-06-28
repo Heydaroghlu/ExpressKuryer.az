@@ -4,7 +4,9 @@
     int count = (Model.PageIndex - 1) * ViewBag.PageSize + 1;
     List<string> listOfURLs = ViewBag.ListOfURLs;
     string? isDeleted = (string)ViewBag.IsDeleted;
+    string imagePath = (string)TempData["ImagePath"];
 }
+
 
 <div class="content-body" style="min-height: 876px;" bis_skin_checked="1">
     <!-- row -->

@@ -17,6 +17,7 @@ namespace ExpressKuryer.MVC.Controllers
         readonly IMapper _mapper;
         readonly IStorage _storage;
         IFileService _fileService;
+        static string _imagePath = "/uploads/settings/";
         public SettingController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage, IFileService fileService)
         {
             _unitOfWork = unitOfWork;
@@ -49,14 +50,8 @@ namespace ExpressKuryer.MVC.Controllers
 
             var list = PagenatedList<SettingReturnDto>.Save(query, page, pageSize);
 
-            list.ForEach(x =>
-            {
-                if (x.Key.Contains("image"))
-                {
-                    var path = _storage.GetUrl("/uploads/settings/", x.Value);
-                    x.Value = path;
-                };
-            });
+            TempData["ImagePath"] = _storage.GetUrl(_imagePath, null);
+
 
             ViewBag.PageSize = pageSize;
 
@@ -67,7 +62,7 @@ namespace ExpressKuryer.MVC.Controllers
         public async Task<IActionResult> Edit(int id)
         {   
             var setting = await _unitOfWork.RepositorySetting.GetAsync(x => x.Id == id, false);
-            if (setting.Key.Contains("image")) setting.Value = _storage.GetUrl("/uploads/settings/", setting.Value);
+            TempData["ImagePath"] = _storage.GetUrl(_imagePath, null);
             return View(setting);
         }
 

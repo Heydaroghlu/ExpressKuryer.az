@@ -2,6 +2,7 @@
     int count = (Model.PageIndex - 1) * ViewBag.PageSize + 1;
     List<string> listOfURLs = ViewBag.ListOfURLs;
     string? isDeleted = (string)TempData["isDeleted"];
+    string? orderStat = (string)TempData["orderStat"];
 }
 
 @model PagenatedList<DeliveryReturnDto>
@@ -41,6 +42,32 @@
                         }
                     </select>
                 </div>
+                <div class="form-group" style="width:100%;margin:20px 0px;">
+                    <select class="form-control bg-gray-light" name="orderStat">
+                        @if (orderStat == "qəbul")
+                        {
+                            <option value="Qəbul" class="bg-gray-light" selected>Qəbul</option>
+                        }
+                        else
+                        {
+                            <option value="Qəbul" class="bg-gray-light">Qəbul</option>
+                        } @if (orderStat == "gözləmədə")
+                        {
+                            <option value="Gözləmədə" class="bg-gray-light" selected>Gözləmədə</option>
+                        }
+                        else
+                        {
+                            <option value="Gözləmədə" class="bg-gray-light">Gözləmədə</option>
+                        } @if (orderStat == "imtina")
+                        {
+                            <option value="İmtina" class="bg-gray-light" selected>İmtina</option>
+                        }
+                        else
+                        {
+                            <option value="İmtina" class="bg-gray-light">İmtina</option>
+                        }
+                    </select>
+                </div>
                 <button type="submit" class="btn btn-outline-dark my-3">Axtarış et</button>
 
             </form>
@@ -68,7 +95,19 @@
                                     <td class="wspace-no"> @item.CreatedAt.ToString("dd MMMM yyyy HH:MM")</td>
                                     <td>@item.Name @item.SurName</td>
                                     <td>@item.TotalAmount</td>
-                                    <td><a class="btn bgl-warning text-warning btn-sm">@item.DeliveryStatus</a></td>
+                                    <td>
+                                        @if (item.DeliveryStatus == DeliveryStatus.Gözləmədə.ToString())
+                                        {
+                                            <a class="btn bgl-warning text-warning btn-sm">@item.DeliveryStatus</a>
+                                        }else if(item.DeliveryStatus == DeliveryStatus.Qəbul.ToString())
+                                        {
+                                            <a class="btn bgl-success text-success btn-sm">@item.DeliveryStatus</a>
+                                        }
+                                        else
+                                        {
+                                            <a class="btn bgl-danger text-danger btn-sm">@item.DeliveryStatus</a>
+                                        }
+                                    </td>
                                     <td>
                                         <div class="d-flex">
                                             <a asp-action="detail" asp-route-id="@item.Id" class="btn btn-primary shadow btn-xs sharp me-1"><i class="lni lni-eye"></i></a>

@@ -1,4 +1,5 @@
 ﻿using ExpressKuryer.Domain.Entities;
+using ExpressKuryer.Domain.Entities.Common;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Asn1.Mozilla;
@@ -32,6 +33,24 @@ namespace ExpressKuryer.Persistence.Contexts
         {
 			builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(builder);
+        }
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            var entiteis = ChangeTracker.Entries<BaseEntity>();
+
+            foreach (var item in entiteis)
+            {
+                if (item.State == EntityState.Added)
+                {
+                    item.Entity.CreatedAt = DateTime.UtcNow.AddHours(4);
+                }
+                else if (item.State == EntityState.Modified)
+                {
+                    item.Entity.UpdatedAt = DateTime.UtcNow.AddHours(4);
+                }
+            }
+
+            return base.SaveChangesAsync(cancellationToken);
         }
     }
 

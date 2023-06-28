@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ExpressKuryer.Domain.Entities;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,5 +18,8 @@ namespace ExpressKuryer.Application.DTOs.PartnerProduct
         public decimal CostPrice { get; set; }
         public decimal DiscountPrice { get; set; }
         public bool IsInterestFree { get; set; }
+
+        public int PartnerId { get; set; }
+        public ExpressKuryer.Domain.Entities.Partner Partner { get; set; }
     }
 }

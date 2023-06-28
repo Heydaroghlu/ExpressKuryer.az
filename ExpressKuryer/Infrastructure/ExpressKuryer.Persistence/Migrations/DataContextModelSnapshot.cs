@@ -160,9 +160,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PartnerProductId")
-                        .HasColumnType("int");
-
                     b.Property<int>("ServiceId")
                         .HasColumnType("int");
 
@@ -195,8 +192,6 @@ namespace ExpressKuryer.Persistence.Migrations
                     b.HasIndex("CourierId");
 
                     b.HasIndex("MemberUserId");
-
-                    b.HasIndex("PartnerProductId");
 
                     b.HasIndex("ServiceId");
 
@@ -806,6 +801,9 @@ namespace ExpressKuryer.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Image")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -848,14 +846,8 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasForeignKey("CourierId");
 
                     b.HasOne("ExpressKuryer.Domain.Entities.AppUser", "MemberUser")
-                        .WithMany()
+                        .WithMany("Deliveries")
                         .HasForeignKey("MemberUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ExpressKuryer.Domain.Entities.PartnerProduct", "PartnerProduct")
-                        .WithMany()
-                        .HasForeignKey("PartnerProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -868,8 +860,6 @@ namespace ExpressKuryer.Persistence.Migrations
                     b.Navigation("Courier");
 
                     b.Navigation("MemberUser");
-
-                    b.Navigation("PartnerProduct");
 
                     b.Navigation("Service");
                 });
@@ -966,6 +956,11 @@ namespace ExpressKuryer.Persistence.Migrations
             modelBuilder.Entity("ExpressKuryer.Domain.Entities.Vacancy", b =>
                 {
                     b.Navigation("JobSeekers");
+                });
+
+            modelBuilder.Entity("ExpressKuryer.Domain.Entities.AppUser", b =>
+                {
+                    b.Navigation("Deliveries");
                 });
 #pragma warning restore 612, 618
         }

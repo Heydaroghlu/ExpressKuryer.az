@@ -21,6 +21,8 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\uploads\deliveries\" />
+    <Folder Include="wwwroot\uploads\couriers\" />
+    <Folder Include="wwwroot\uploads\sliders\" />
     <Folder Include="wwwroot\uploads\settings\" />
   </ItemGroup>
 

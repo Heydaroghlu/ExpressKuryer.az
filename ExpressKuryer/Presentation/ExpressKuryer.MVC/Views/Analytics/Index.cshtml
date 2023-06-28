@@ -1,6 +1,9 @@
-﻿<!--**********************************
-	Content body start
-***********************************-->
+﻿
+
+@model AnalyticsViewModel
+@{
+	string imagePath = (string)TempData["ImagePath"];
+}
 <div class="content-body">
 	<!-- row -->
 	<div class="container-fluid">
@@ -947,39 +950,25 @@
 						<div class="card">
 							<div class="card-header border-0 pb-0">
 								<div>
-									<h4 class="text-black">Loyal Customers</h4>
-									<p class="fs-14 mb-0"> Lorem ipsum dolor</p>
+									<h4 class="text-black">Sadiq Müştərilər</h4>
 								</div>
 							</div>
 							<div class="card-body height360 dz-scroll loadmore-content" id="loyalCustomersContent">
-								<div class="media align-items-center mb-4">
-									<img class="me-3 rounded" src="images/profile/5.jpg" width="70" alt="">
-									<div class="media-body">
-										<h5 class="text-black"><a href="javascript:;" class="text-black">Alexzander Queqe</a></h5>
-										<small class="text-primary mb-0"><strong class="font-w600">651</strong>  Times order</small>
+								
+								@foreach(var item in Model.Top5UserWhoDeliveryed)
+								{
+									<div class="media align-items-center mb-4">
+										@if(item.Image != null){
+											<img class="me-3 rounded" src="@(imagePath+item.Image)" width="70" alt="">
+										}else{
+											<img class="me-3 rounded" src="~/manage/images/profile/10.jpg" width="70" alt="">
+										}
+										<div class="media-body">
+											<h5 class="text-black"><a asp-action="Profile" asp-controller="account" asp-route-id="@item.Id" class="text-black">@item.Name @item.Surname</a></h5>
+											<small class="text-primary mb-0"><strong class="font-w600">@item.Deliveries.Count()</strong>  Çatdırılma sayı</small>
+										</div>
 									</div>
-								</div>
-								<div class="media align-items-center mb-4">
-									<img class="me-3 rounded" src="images/profile/6.jpg" width="70" alt="">
-									<div class="media-body">
-										<h5 class="text-black"><a href="javascript:;" class="text-black">Bella Simatupang</a></h5>
-										<small class="text-primary mb-0"><strong class="font-w600">356</strong>  Times order</small>
-									</div>
-								</div>
-								<div class="media align-items-center mb-4">
-									<img class="me-3 rounded" src="images/profile/7.jpg" width="70" alt="">
-									<div class="media-body">
-										<h5 class="text-black"><a href="javascript:;" class="text-black">Jordi Alaba</a></h5>
-										<small class="text-primary mb-0"><strong class="font-w600">125</strong>  Times order</small>
-									</div>
-								</div>
-								<div class="media align-items-center mb-4">
-									<img class="me-3 rounded" src="images/profile/10.jpg" width="70" alt="">
-									<div class="media-body">
-										<h5 class="text-black"><a href="javascript:;" class="text-black">Kevin Jamet</a></h5>
-										<small class="text-primary mb-0"><strong class="font-w600">78</strong>  Times order</small>
-									</div>
-								</div>
+								}
 							</div>
 							<div class="card-footer border-0 text-center">
 								<a href="javascript:void(0);" class="btn-link dz-load-more" rel="ajax/loyalCustomers.html" id="loyalCustomers">View More &gt;&gt;</a>

@@ -18,6 +18,7 @@ namespace ExpressKuryer.MVC.Controllers
         readonly IMapper _mapper;
         readonly IStorage _storage;
         IFileService _fileService;
+        static string _imagePath = "/uploads/sliders/";
         public SliderController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage, IFileService fileService)
         {
             _unitOfWork = unitOfWork;
@@ -45,11 +46,7 @@ namespace ExpressKuryer.MVC.Controllers
 
             var list = PagenatedList<Slider>.Save(entities.AsQueryable(), page, pageSize);
 
-            foreach (var item in list)
-            {
-                var listOfUrl = _storage.GetUrl("uploads/sliders/", item.Image);
-                item.Image = listOfUrl;
-            }
+            TempData["ImagePath"] = _storage.GetUrl(_imagePath, null);
 
             ViewBag.PageSize = pageSize;
             ViewBag.Word = searchWord;
@@ -79,7 +76,7 @@ namespace ExpressKuryer.MVC.Controllers
                 return View(objectDto);
             }
 
-            var imageInfo = await _storage.UploadAsync("uploads/sliders/", objectDto.FormFile);
+            var imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
 
             var entity = _mapper.Map<Slider>(objectDto);
             entity.Image = imageInfo.fileName;
@@ -99,7 +96,8 @@ namespace ExpressKuryer.MVC.Controllers
             if (existObject == null) return RedirectToAction("NotFound", "Page");
 
             var editDto = _mapper.Map<SliderEditDto>(existObject);
-            editDto.Image = _storage.GetUrl("uploads/sliders/", editDto.Image);
+            TempData["ImagePath"] = _storage.GetUrl(_imagePath, null);
+
             return View(editDto);
         }
 
@@ -121,19 +119,19 @@ namespace ExpressKuryer.MVC.Controllers
                 catch (Exception)
                 {
                     ModelState.AddModelError("FormFile", ContentTypeManager.ImageContentMessage());
-                    objectDto.Image =  _storage.GetUrl("uploads/sliders/", existObject.Image);
+                    objectDto.Image =  _storage.GetUrl(_imagePath, existObject.Image);
                     return View(objectDto);
                 }
-                var check = _storage.HasFile("uploads/sliders/", existObject.Image);
+                var check = _storage.HasFile(_imagePath, existObject.Image);
                 if (check == true)
                 {
-                    await _storage.DeleteAsync("uploads/sliders/", existObject.Image);
-                    var imageInfo = await _storage.UploadAsync("uploads/sliders/", objectDto.FormFile);
+                    await _storage.DeleteAsync(_imagePath, existObject.Image);
+                    var imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
                     existObject.Image = imageInfo.fileName;
                 }
                 else
                 {
-                    var imageInfo = await _storage.UploadAsync("uploads/sliders/", objectDto.FormFile);
+                    var imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
                     existObject.Image = imageInfo.fileName;
                 }
             }

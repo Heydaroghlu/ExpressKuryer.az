@@ -4,6 +4,7 @@
     int count = (Model.PageIndex - 1) * ViewBag.PageSize + 1;
     List<string> listOfURLs = ViewBag.ListOfURLs;
     string? isDeleted = (string)ViewBag.IsDeleted;
+    string imagePath = (string)TempData["ImagePath"];
 }
 
 <div class="content-body" style="min-height: 876px;" bis_skin_checked="1">
@@ -81,7 +82,7 @@
                                         <td><div class="d-flex align-items-center"><span class="w-space-no"></span>@slider.Title</div></td>
                                         <td>
                                             <div style="width:100px;height:100px;object-fit:cover;">
-                                                <img src="@slider.Image" style="width:100%;">
+                                                <img src="@(imagePath+slider.Image)" style="width:100%;">
                                             </div>
                                         </td>
                                         <td>@slider.CreatedAt.ToString("dd MMMM yyyy")</td>

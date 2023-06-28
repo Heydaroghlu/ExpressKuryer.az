@@ -20,7 +20,7 @@ namespace ExpressKuryer.Domain.Entities
         public string Message { get;set; }  
         public bool expressDelivery { get; set; }
         public bool suprizDelivery { get; set; }
-        public double TotalAmount { get; set; } 
+        public decimal TotalAmount { get; set; } 
         public double DisCount { get; set; }
         public string DeliveryCode { get; set; }
         public string SurName { get; set; } //todo surname 
@@ -29,10 +29,6 @@ namespace ExpressKuryer.Domain.Entities
         public string DeliveryStatus { get; set; }
         public string OrderDeliveryStatus { get; set; }
 
-
-        public int PartnerProductId { get; set; }
-        public PartnerProduct PartnerProduct { get; set; }  
-        
         public string MemberUserId { get; set; }
         public AppUser MemberUser { get; set; }
 

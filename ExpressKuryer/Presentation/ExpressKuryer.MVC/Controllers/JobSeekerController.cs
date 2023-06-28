@@ -45,13 +45,8 @@ namespace ExpressKuryer.MVC.Controllers
             var query = returnDto.AsQueryable();
 
             var list = PagenatedList<JobSeekerReturnDto>.Save(query, page, pageSize);
-            List<string> listOfUrls = new List<string>();
+            TempData["ImagePath"] = _storage.GetUrl(_imagePath, null);
 
-            foreach (var item in list)
-            {
-                var listOfUrl = _storage.GetUrl(_imagePath, item.CV);
-                item.CV = listOfUrl;
-            }
 
             return View(list);
         }
@@ -63,7 +58,8 @@ namespace ExpressKuryer.MVC.Controllers
             if (existObject == null) return RedirectToAction("NotFound", "Page");
 
             var editDto = _mapper.Map<JobSeekerReturnDto>(existObject);
-            editDto.CV = _storage.GetUrl(_imagePath, editDto.CV);
+            TempData["ImagePath"] = _storage.GetUrl(_imagePath, null);
+
             return View(editDto);
         }
 

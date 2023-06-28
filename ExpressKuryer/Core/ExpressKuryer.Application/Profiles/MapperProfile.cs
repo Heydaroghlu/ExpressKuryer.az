@@ -71,6 +71,7 @@ namespace ExpressKuryer.Application.Profiles
 			CreateMap<ServiceCreateDto, Service>();
 			CreateMap<Service, ServiceEditDto>();
 
+			CreateMap<AppUserCreateDto, AppUser>();
 		}
     }
 }

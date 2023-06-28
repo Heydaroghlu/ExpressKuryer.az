@@ -54,11 +54,8 @@ namespace ExpressKuryer.MVC.Controllers
             //todo remove this list
             List<string> listOfUrls = new List<string>();
 
-            foreach (var item in list)
-            {
-                var listOfUrl = _storage.GetUrl(_imagePath, item.Image);
-                item.Image = listOfUrl;
-            }
+            TempData["ImagePath"] = _storage.GetUrl(_imagePath, null);
+
 
             ViewBag.PageSize = pageSize;
             ViewBag.Word = searchWord;
@@ -115,7 +112,9 @@ namespace ExpressKuryer.MVC.Controllers
             if (existObject == null) return RedirectToAction("NotFound", "Page");
 
             var editDto = _mapper.Map<PartnerProductEditDto>(existObject);
-            editDto.Image = _storage.GetUrl(_imagePath, editDto.Image);
+            TempData["ImagePath"] = _storage.GetUrl(_imagePath, null);
+            ViewBag.Partners = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted);
+            //todo partner product u check et
             return View(editDto);
         }
 

@@ -1,0 +1,272 @@
+﻿@using ExpressKuryer.Domain.Enums.UserEnums;
+@model AdminAccountViewModel
+
+@{
+    string imagePath = (string)TempData["ImagePath"];
+}
+
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="profile card card-body px-3 pt-3 pb-0">
+                    <div class="profile-head">
+                        <div class="photo-content">
+                            <div class="cover-photo rounded"></div>
+                        </div>
+                        <div class="profile-info">
+                            <div class="profile-photo" style="width:100px;height:100px;">
+                                @if (Model.User.Image != null)
+                                {
+                                    <img src="@(imagePath+Model.User.Image)" style="width:100%;height:100%;object-fit:cover" class="img-fluid rounded-circle" alt="">
+                                }
+                                else
+                                {
+                                    <img src="~/manage/images/1.jpg" style="object-fit:cover" class="img-fluid rounded-circle" alt="">
+                                }
+                            </div>
+                            <div class="profile-details">
+                                <div class="profile-name px-3 pt-2">
+                                    <h4 class="text-primary mb-0">@Model.User.Name @Model.User.Surname</h4>
+                                    <p>@Model.User.UserType</p>
+                                </div>
+                                <div class="profile-email px-2 pt-2">
+                                    <h4 class="text-muted mb-0">@Model.User.Email</h4>
+                                    <p>Email</p>
+                                </div>
+                                <div class="profile-email px-2 pt-2">
+                                    <h4 class="text-muted mb-0">@Model.User.PhoneNumber</h4>
+                                    <p>Telefon</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @if (Model.User.UserType == UserRoleEnum.Admin.ToString())
+            {
+                <div class="col-xl-4">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="profile-statistics">
+                                        <div class="text-center">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h3 class="m-b-0">@Model.CourierCount</h3><span>Kuryer sayı</span>
+                                                </div>
+                                                <div class="col">
+                                                    <h3 class="m-b-0">@Model.UserCount</h3><span>İstifadəçi sayı</span>
+                                                </div>
+                                                <div class="col">
+                                                    <h3 class="m-b-0">@Model.PartnerCount</h3><span>Partnuyor sayı</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="sendMessageModal">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Send Message</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form class="comment-form">
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <div class="mb-3">
+                                                                        <label class="text-black font-w600 form-label">Name <span class="required">*</span></label>
+                                                                        <input type="text" class="form-control" value="Author" name="Author" placeholder="Author">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <div class="mb-3">
+                                                                        <label class="text-black font-w600 form-label">Email <span class="required">*</span></label>
+                                                                        <input type="text" class="form-control" value="Email" placeholder="Email" name="Email">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <div class="mb-3">
+                                                                        <label class="text-black font-w600 form-label">Comment</label>
+                                                                        <textarea rows="8" class="form-control" name="comment" placeholder="Comment"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <div class="mb-3 mb-0">
+                                                                        <input type="submit" value="Post Comment" class="submit btn btn-primary" name="submit">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="profile-tab">
+                                <div class="custom-tab-1">
+                                    <div class="tab-content">
+                                        <div class="accordion accordion-primary" id="accordion-one">
+                                            <div class="accordion-item">
+                                                <div class="accordion-header collapsed rounded-lg" id="headingThree" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-controls="collapseThree" role="button" aria-expanded="false">
+                                                    <span class="accordion-header-text">Tənzimləmələr</span>
+                                                    <span class="accordion-header-indicator"></span>
+                                                </div>
+                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion-one">
+                                                    <div class="accordion-body-text">
+                                                        <form method="post" enctype="multipart/form-data">
+                                                            <div class="row">
+                                                                <div class="mb-3 col-md-6">
+                                                                    <label asp-for="User.Email" class="form-label">Email</label>
+                                                                    <input asp-for="User.Email" placeholder="Email" class="form-control">
+                                                                    <span asp-validation-for="User.Email" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="mb-3 col-md-6">
+                                                                    <label asp-for="Password" class="form-label">Password</label>
+                                                                    <input asp-for="Password" placeholder="Password" class="form-control">
+                                                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-3 col-md-6">
+                                                                <label asp-for="User.PhoneNumber" class="form-label">Telefon</label>
+                                                                <input asp-for="User.PhoneNumber" placeholder="Telefon" class="form-control">
+                                                                <span asp-validation-for="User.PhoneNumber" class="text-danger"></span>
+                                                            </div>
+
+                                                            <div class="mb-3 image-box">
+                                                                <label asp-for="FormFile" class="form-label">Şəkil</label>
+                                                                <input asp-for="FormFile" class="form-control file input-rounded" placeholder="boşluq...">
+                                                            </div>
+                                                            <button class="btn btn-primary" type="submit">
+                                                                Dəyişiklikləri yadda saxla
+                                                            </button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Aralıq seç</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-4 mb-3">
+                                    <form method="post">
+                                        <div class="example">
+                                            <input class="form-control input-daterange-datepicker" type="text" name="daterange">
+                                            <button type="submit" class="btn btn-outline-dark" style="margin-top:20px;">Nəticəni göstər</button>
+                                            <input asp-for="User.Email" value="@Model.User.Email" type="hidden">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-12 mb-3" style="font-weight:600;">
+                                    Sifariş sayı : @Model.MemberDeliveries.Count();
+                                </div>
+                                <div class="col-xl-12 mb-3" style="font-weight:600;">
+                                    Qazancı : @Model.Courier.Gain
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12 mb-3">
+                                    <table id="example5" class="display mb-4 dataTablesCard" style="width:100%;">
+                                        <thead>
+                                            <tr>
+                                                <th><strong class="font-w600">Çatdırılma ID</strong></th>
+                                                <th><strong class="font-w600">YZamanı</strong></th>
+                                                <th><strong class="font-w600 wspace-no">Ad Soyad</strong></th>
+                                                <th><strong class="font-w600">Toplam Hesab</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (Delivery item in Model.MemberDeliveries)
+                                            {
+                                                <tr>
+                                                    <td>#@item.DeliveryCode</td>
+                                                    <td class="wspace-no"> @item.CreatedAt.ToString("dd MMMM yyyy HH:MM")</td>
+                                                    <td>@item.Name @item.SurName</td>
+                                                    <td>@item.TotalAmount</td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/manage/main.js"></script>
+    <script src="~/manage/vendor/global/global.min.js"></script>
+    <script src="~/manage/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="~/manage/vendor/chart.js/Chart.bundle.min.js"></script>
+    <script src="~/manage/js/custom.min.js"></script>
+    <script src="~/manage/js/deznav-init.js"></script>
+    <!-- Apex Chart -->
+    <script src="~/manage/vendor/apexchart/apexchart.js"></script>
+
+    <!-- Daterangepicker -->
+    <!-- momment js is must -->
+    <script src="~/manage/vendor/moment/moment.min.js"></script>
+    <script src="~/manage/vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- clockpicker -->
+    <script src="~/manage/vendor/clockpicker/js/bootstrap-clockpicker.min.js"></script>
+    <!-- asColorPicker -->
+    <script src="~/manage/vendor/jquery-asColor/jquery-asColor.min.js"></script>
+    <script src="~/manage/vendor/jquery-asGradient/jquery-asGradient.min.js"></script>
+    <script src="~/manage/vendor/jquery-asColorPicker/js/jquery-asColorPicker.min.js"></script>
+    <!-- Material color picker -->
+    <script src="~/manage/vendor/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- pickdate -->
+    <script src="~/manage/vendor/pickadate/picker.js"></script>
+    <script src="~/manage/vendor/pickadate/picker.time.js"></script>
+    <script src="~/manage/vendor/pickadate/picker.date.js"></script>
+
+
+
+    <!-- Daterangepicker -->
+    <script src="~/manage/js/plugins-init/bs-daterange-picker-init.js"></script>
+    <!-- Clockpicker init -->
+    <script src="~/manage/js/plugins-init/clock-picker-init.js"></script>
+    <!-- asColorPicker init -->
+    <script src="~/manage/js/plugins-init/jquery-asColorPicker.init.js"></script>
+    <!-- Material color picker init -->
+    <script src="~/manage/js/plugins-init/material-date-picker-init.js"></script>
+    <!-- Pickdate -->
+    <script src="~/manage/js/plugins-init/pickadate-init.js"></script>
+
+}
+

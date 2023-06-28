@@ -4,6 +4,9 @@
 
 @model CourierEditDto
 
+@{
+    string imagePath = (string)TempData["ImagePath"];
+}
 
 <div class="content-body" style="min-height: 876px;" bis_skin_checked="1">
 
@@ -63,7 +66,7 @@
                                 <div class="mb-3 image-box">
                                     <label asp-for="FormFile" class="form-label">Şəkil</label>
                                     <input asp-for="FormFile" class="form-control file input-rounded" placeholder="boşluq...">
-                                    <img src="@Model.CourierPerson.Image" style="width:150px;height:150px;object-fit:cover;margin:10px 0px;" />
+                                    <img src="@(imagePath+Model.CourierPerson.Image)" style="width:150px;height:150px;object-fit:cover;margin:10px 0px;" />
                                 </div>
 
                                 <a class="btn light btn-primary btn-change-pass" asp-action="changePassword" asp-route-userId="@Model.CourierPerson.Id">Kuryerin şirfəsini dəyiş</a>

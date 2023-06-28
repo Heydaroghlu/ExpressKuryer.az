@@ -17,7 +17,7 @@ namespace ExpressKuryer.Domain.Entities
         public bool IsAdmin { get; set; }
         public string Image { get; set; }
         public string UserType { get; set; }
-        [NotMapped]
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow.AddHours(4);
         public List<Delivery> Deliveries { get; set; }
     }
 }
