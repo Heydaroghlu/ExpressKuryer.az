@@ -8,6 +8,8 @@ using ExpressKuryer.Application.DTOs.PartnerProduct;
 using ExpressKuryer.Application.HelperManager;
 using ExpressKuryer.Domain.Entities;
 using ExpressKuryer.Application.Abstractions.File;
+using Microsoft.AspNetCore.Identity;
+using Newtonsoft.Json;
 
 namespace ExpressKuryer.MVC.Controllers
 {
@@ -18,13 +20,16 @@ namespace ExpressKuryer.MVC.Controllers
         readonly IStorage _storage;
         IFileService _fileService;
         static string _imagePath = "/uploads/partnerProducts/";
-
-        public PartnerProductController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage, IFileService fileService)
+        IWebHostEnvironment _env;
+        IConfiguration _configuration;
+        public PartnerProductController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage, IFileService fileService, IWebHostEnvironment env, IConfiguration configuration)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _storage = storage;
             _fileService = fileService;
+            _env = env;
+            _configuration = configuration;
         }
 
         [HttpGet]
@@ -187,6 +192,31 @@ namespace ExpressKuryer.MVC.Controllers
 
             return RedirectToAction("Index", new { page = page });
         }
+
+
+        [HttpPost]
+        public async Task<IActionResult> UploadImage(List<IFormFile> imageFiles)
+        {
+            var file = Request.Form.Files.First();
+
+            var fileName = await _storage.UploadAsync(_imagePath, file);
+
+            var filePath = "";
+
+            if (_env.IsDevelopment())
+            {
+                filePath = "https://localhost:7105/" + "/uploads/blogs/" + fileName;
+                filePath = _storage.GetUrl(_imagePath, fileName.fileName);
+            }
+            else
+            {
+                filePath = "http://aliyusifov.com/" + "/uploads/blogs/" + fileName;
+                filePath = _storage.GetUrl(_configuration.GetSection("WebSiteURL").Value,fileName.fileName);
+            }
+
+            return Json(new { url = filePath });
+        }
+
 
     }
 }

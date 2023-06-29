@@ -3,6 +3,7 @@
 
 @{
     string imagePath = (string)TempData["ImagePath"];
+    string daterange = (string)TempData["daterange"];
 }
 
 
@@ -177,7 +178,7 @@
                                 <div class="col-xl-4 mb-3">
                                     <form method="post">
                                         <div class="example">
-                                            <input class="form-control input-daterange-datepicker" type="text" name="daterange">
+                                            <input class="form-control input-daterange-datepicker" type="text" name="daterange" value="@daterange">
                                             <button type="submit" class="btn btn-outline-dark" style="margin-top:20px;">Nəticəni göstər</button>
                                             <input asp-for="User.Email" value="@Model.User.Email" type="hidden">
                                         </div>

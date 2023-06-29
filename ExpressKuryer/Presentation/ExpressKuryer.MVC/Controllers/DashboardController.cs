@@ -46,7 +46,6 @@ namespace ExpressKuryer.MVC.Controllers
                     Couriers = couriers,
                 }
             };
-            //todo delivery courier secmek
             return View(viewModel);
         }
 
@@ -133,8 +132,7 @@ namespace ExpressKuryer.MVC.Controllers
         private async Task<decimal> GetTotalAmount()
         {
             var totalAmount = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.OrderDeliveryStatus == OrderDeliveryStatus.Catdirildi.ToString()).Result.Select(x => x.TotalAmount).Sum();
-            // 80 - 100
-            // 10 - x 
+          
             decimal percent = Convert.ToDecimal(_unitOfWork.RepositorySetting.GetAsync(x => x.Key.Equals("GainPercent")).Result.Value);
 
             // 10* 100 = 80x

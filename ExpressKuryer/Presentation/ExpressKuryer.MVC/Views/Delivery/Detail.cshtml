@@ -1,0 +1,332 @@
+﻿@model DeliveryReturnDto
+
+@{
+    string imagePath = (string)TempData["ImagePath"];
+    string userPath = (string)TempData["UserPath"];
+}
+
+
+<!--**********************************
+    Content body start
+***********************************-->
+<div class="content-body">
+    <!-- row -->
+    <div class="container-fluid">
+        <div class="form-head d-flex mb-3 mb-md-5 align-items-start flex-wrap">
+            <div class="me-auto">
+                <h3 class="text-black font-w600 mb-0 fs-22 mb-2">Çatdırılma ID #@Model.DeliveryCode</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-9 col-xxl-12">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-body rounded" style="background:#3f4953;">
+                                <div class="row mx-0 align-items-center">
+                                    <div class="media align-items-center col-md-12 col-xl-6 col-lg-4 px-0 mb-3 mb-md-0">
+                                        @if (Model.MemberUser != null && Model.MemberUser.Image != null)
+                                        {
+                                            <img class="me-3 img-fluid rounded-circle" width="100" src="@(userPath+Model.MemberUser.Image)" alt="DexignZone" style="width: 100px;height: 100px;object-fit: cover;">
+                                        }
+                                        else
+                                        {
+                                            <img class="me-3 img-fluid rounded-circle" width="100" src="~/manage/images/profile/5.png" alt="DexignZone" style="width: 100px;height: 100px;object-fit: cover;">
+                                        }
+                                        <div class="media-body">
+                                            <p class="text-white mb-1 wspace-no"></p>
+                                            <h3 class="mb-1 text-white  fs-22">@Model.Name @Model.SurName</h3>
+                                            <small class="text-gray wspace-no">ID #@Model.DeliveryCode</small>
+                                        </div>
+                                    </div>
+                                    <div class="text-start text-lg-right col-xl-6 col-lg-8 p-0 mt-lg-0 mt-3">
+                                        <div class="iconbox">
+                                            <i class="las la-phone"></i>
+                                            <small>Telefon</small>
+                                            <p> @Model.Telephone</p>
+                                        </div>
+                                        <div class="iconbox">
+                                            <i class="las la-shipping-fast"></i>
+                                            <small>Çatdırılmanın yarandığı zaman</small>
+                                            <p> @Model.CreatedAt.ToString("dd MMMM yyyy HH:MM")</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <div class="card" style="padding:40px;">
+                            <div class="header-message" style="margin-bottom:20px;">
+                                Mesaj :
+                            </div>
+                            <div class="card-body p-0">
+                                @Html.Raw(Model.Message)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 col-xxl-12 col-lg-12 col-sm-12">
+                        <div class="widget-stat card">
+                            <div class="card-body p-4">
+                                <h4 class="card-title">Servis</h4>
+                                <h3>@Model.Service.Name</h3>
+                            </div>
+                            <div class="card-body p-4">
+                                <h4 style="color:#FFC532" class="card-title">Başlanğıç nöqtəsi : <span style="color:black">@Model.AddressTo</span> </h4>
+
+                                <h4 style="color:#FFC532" class="card-title">Çatdırılma nöqtəsi : <span style="color:black">@Model.AddressFrom</span>  </h4>
+                            </div>
+                            <div class="card-body p-4">
+                                <h6>
+                                    @if (Model.expressDelivery)
+                                    {
+                                        <span>Express Çatdırılma</span>
+                                    }
+                                    @if (Model.suprizDelivery)
+                                    {
+                                        <span>Supriz Çatdırılma</span>
+                                    }
+                                </h6>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-xxl-12">
+                <div class="row">
+                    @if (Model.Courier != null && Model.Courier.CourierPerson != null)
+                    {
+                        <div class="col-xl-12 col-md-6 col-xxl-6">
+                            <div class="card">
+                                <div class="card-body border-bottom">
+                                    <div class="media align-items-center">
+                                        @if (Model.Courier.CourierPerson.Image != null)
+                                        {
+                                            <img class="me-3 rounded-circle" src="@( userPath +Model.MemberUser.Image)" style="width: 100px;height: 100px;object-fit: cover;" alt="">
+                                        }
+                                        else
+                                        {
+                                            <img class="me-3 rounded-circle" src="~/manage/images/avatar/4.jpg" style="width: 100px;height: 100px;object-fit: cover;" alt="">
+                                        }
+                                        <div class="media-body">
+                                            <h4 class="text-black mb-3">@Model.Courier.CourierPerson.Name @Model.Courier.CourierPerson.Surname</h4>
+                                            <span class="bgl-info fs-14 text-info p-2 rounded">Kuryer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body border-bottom">
+                                    <div class="media align-items-center">
+                                        <svg class="me-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M22.9993 17.4712V20.7831C23.0006 21.0906 22.9375 21.3949 22.814 21.6766C22.6906 21.9583 22.5096 22.2112 22.2826 22.419C22.0556 22.6269 21.7876 22.7851 21.4958 22.8836C21.2039 22.9821 20.8947 23.0187 20.5879 22.991C17.1841 22.6219 13.9145 21.4611 11.0418 19.6019C8.36914 17.9069 6.10319 15.6455 4.40487 12.9781C2.53545 10.0981 1.37207 6.81909 1.00898 3.40674C0.981336 3.10146 1.01769 2.79378 1.11572 2.50329C1.21376 2.2128 1.37132 1.94586 1.57839 1.71947C1.78546 1.49308 2.03749 1.31221 2.31843 1.18836C2.59938 1.06451 2.90309 1.0004 3.21023 1.00011H6.52869C7.06551 0.994834 7.58594 1.18456 7.99297 1.53391C8.4 1.88326 8.66586 2.36841 8.74099 2.89892C8.88106 3.9588 9.14081 4.99946 9.5153 6.00106C9.66413 6.39619 9.69634 6.82562 9.60812 7.23847C9.51989 7.65131 9.31494 8.03026 9.01753 8.33042L7.61272 9.73245C9.18739 12.4963 11.4803 14.7847 14.2496 16.3562L15.6545 14.9542C15.9552 14.6574 16.3349 14.4528 16.7486 14.3648C17.1622 14.2767 17.5925 14.3089 17.9884 14.4574C18.992 14.8312 20.0348 15.0904 21.0967 15.2302C21.6341 15.3058 22.1248 15.576 22.4756 15.9892C22.8264 16.4024 23.0128 16.9298 22.9993 17.4712Z" stroke="#566069" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <h4 class="mb-0 text-black">@Model.Courier.CourierPerson.PhoneNumber</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body border-bottom">
+                                    <div class="media align-items-center">
+                                        <svg class="me-4" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="min-width: 24px;">
+                                            <path d="M28 13.3333C28 22.6667 16 30.6667 16 30.6667C16 30.6667 4 22.6667 4 13.3333C4 10.1507 5.26428 7.09848 7.51472 4.84805C9.76516 2.59761 12.8174 1.33333 16 1.33333C19.1826 1.33333 22.2348 2.59761 24.4853 4.84805C26.7357 7.09848 28 10.1507 28 13.3333Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16 17.3333C18.2091 17.3333 20 15.5425 20 13.3333C20 11.1242 18.2091 9.33333 16 9.33333C13.7909 9.33333 12 11.1242 12 13.3333C12 15.5425 13.7909 17.3333 16 17.3333Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <h4 class="mb-0 text-black">@Model.Courier.CourierPerson.Address</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="text-black font-weight-bold mb-3 wspace-no">Email</h4>
+                                    <p>@Model.Courier.CourierPerson.Email</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                    <div>
+                        <div class="col-xl-12" style="margin-bottom:50px;">
+                            <div class="dropdown ms-auto">
+                                <div class="btn btn-primary btn-rounded dropdown-toggle d-block px-4" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg class="me-2 scale5" width="14" height="14" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.12885 22H6.87549C6.11615 22 5.50049 22.615 5.50049 23.375C5.50049 24.135 6.11615 24.75 6.87549 24.75H7.12894C7.69836 26.3471 9.21032 27.5 11.0005 27.5C12.7907 27.5 14.3027 26.3471 14.8721 24.75H18.1289C18.6984 26.3471 20.2103 27.5 22.0005 27.5C23.7985 27.5 25.3154 26.3366 25.8788 24.7285C27.5195 24.6187 28.8881 23.4711 29.2494 21.8443L30.9608 14.1408C31.2065 13.037 30.9413 11.897 30.233 11.0148C29.5247 10.1312 28.47 9.62501 27.338 9.62501H25.5407C25.4027 9.11082 25.1547 8.62591 24.8035 8.2057C24.0966 7.35976 23.0586 6.87502 21.9562 6.87502H8.25049C7.49115 6.87502 6.87549 7.49001 6.87549 8.25002C6.87549 9.01002 7.49115 9.62501 8.25049 9.62501H21.9562C22.3469 9.62501 22.5859 9.8412 22.694 9.97011C22.8014 10.099 22.9713 10.3716 22.9028 10.7543L21.3436 19.3164C19.8457 19.5586 18.6267 20.6036 18.1289 22H14.8721C14.3027 20.403 12.7907 19.25 11.0005 19.25C9.21032 19.25 7.69827 20.403 7.12885 22ZM28.0879 12.7349C28.196 12.8692 28.3632 13.1525 28.2766 13.5446L26.5652 21.2481C26.4852 21.6074 26.2128 21.8686 25.8719 21.9582C25.5383 21.0569 24.8921 20.2959 24.0492 19.8082L25.403 12.375H27.338C27.7395 12.375 27.9799 12.6006 28.0879 12.7349ZM22.0005 22C22.0878 22 22.1757 22.0067 22.2348 22.0161C22.8954 22.145 23.3755 22.7157 23.3755 23.375C23.3755 24.1337 22.7585 24.75 22.0005 24.75C21.2425 24.75 20.6255 24.1337 20.6255 23.375C20.6255 22.6163 21.2425 22 22.0005 22ZM11.0005 22C11.7585 22 12.3755 22.6163 12.3755 23.375C12.3755 24.1337 11.7585 24.75 11.0005 24.75C10.2425 24.75 9.62549 24.1337 9.62549 23.375C9.62549 22.6163 10.2425 22 11.0005 22Z" fill="white"></path>
+                                        <path d="M5.5 15.125H11C11.7593 15.125 12.375 14.51 12.375 13.75C12.375 12.99 11.7593 12.375 11 12.375H5.5C4.74066 12.375 4.125 12.99 4.125 13.75C4.125 14.51 4.74066 15.125 5.5 15.125Z" fill="white"></path>
+                                        <path d="M2.75049 19.25H6.87549C7.63483 19.25 8.25049 18.635 8.25049 17.875C8.25049 17.115 7.63483 16.5 6.87549 16.5H2.75049C1.99115 16.5 1.37549 17.115 1.37549 17.875C1.37549 18.635 1.99115 19.25 2.75049 19.25Z" fill="white"></path>
+                                        <path d="M4.12451 9.62501C4.8839 9.62501 5.49951 9.0094 5.49951 8.25001C5.49951 7.49062 4.8839 6.87502 4.12451 6.87502C3.36512 6.87502 2.74951 7.49062 2.74951 8.25001C2.74951 9.0094 3.36512 9.62501 4.12451 9.62501Z" fill="white"></path>
+                                        <path d="M2.75049 24.75C3.50988 24.75 4.12549 24.1344 4.12549 23.375C4.12549 22.6156 3.50988 22 2.75049 22C1.9911 22 1.37549 22.6156 1.37549 23.375C1.37549 24.1344 1.9911 24.75 2.75049 24.75Z" fill="white"></path>
+                                    </svg>
+                                    Şifariş Çatdırılma Statusu
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-left" style="">
+                                    <a class="dropdown-item-order dropdown-item" asp-action="ChangeOrderDeliveryStatus" asp-controller="delivery" asp-route-status="Anbarda" asp-route-appUserId="@Model.MemberUser.Id" asp-route-orderId="@Model.Id" value="Anbarda"> Anbarda </a>
+                                    <a class="dropdown-item-order dropdown-item" asp-action="ChangeOrderDeliveryStatus" asp-controller="delivery" asp-route-status="Kuryerde" asp-route-appUserId="@Model.MemberUser.Id" asp-route-orderId="@Model.Id" value="Kuryerde"> Kuryerde </a>
+                                    <a class="dropdown-item-order dropdown-item" asp-action="ChangeOrderDeliveryStatus" asp-controller="delivery" asp-route-status="Catdirildi" asp-route-appUserId="@Model.MemberUser.Id" asp-route-orderId="@Model.Id" value="Catdirildi"> Catdirildi </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-xl-12">
+                            <div class="dropdown ms-auto">
+                                <div class="btn btn-primary btn-rounded dropdown-toggle d-block px-4" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg class="me-2 scale5" width="14" height="14" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.12885 22H6.87549C6.11615 22 5.50049 22.615 5.50049 23.375C5.50049 24.135 6.11615 24.75 6.87549 24.75H7.12894C7.69836 26.3471 9.21032 27.5 11.0005 27.5C12.7907 27.5 14.3027 26.3471 14.8721 24.75H18.1289C18.6984 26.3471 20.2103 27.5 22.0005 27.5C23.7985 27.5 25.3154 26.3366 25.8788 24.7285C27.5195 24.6187 28.8881 23.4711 29.2494 21.8443L30.9608 14.1408C31.2065 13.037 30.9413 11.897 30.233 11.0148C29.5247 10.1312 28.47 9.62501 27.338 9.62501H25.5407C25.4027 9.11082 25.1547 8.62591 24.8035 8.2057C24.0966 7.35976 23.0586 6.87502 21.9562 6.87502H8.25049C7.49115 6.87502 6.87549 7.49001 6.87549 8.25002C6.87549 9.01002 7.49115 9.62501 8.25049 9.62501H21.9562C22.3469 9.62501 22.5859 9.8412 22.694 9.97011C22.8014 10.099 22.9713 10.3716 22.9028 10.7543L21.3436 19.3164C19.8457 19.5586 18.6267 20.6036 18.1289 22H14.8721C14.3027 20.403 12.7907 19.25 11.0005 19.25C9.21032 19.25 7.69827 20.403 7.12885 22ZM28.0879 12.7349C28.196 12.8692 28.3632 13.1525 28.2766 13.5446L26.5652 21.2481C26.4852 21.6074 26.2128 21.8686 25.8719 21.9582C25.5383 21.0569 24.8921 20.2959 24.0492 19.8082L25.403 12.375H27.338C27.7395 12.375 27.9799 12.6006 28.0879 12.7349ZM22.0005 22C22.0878 22 22.1757 22.0067 22.2348 22.0161C22.8954 22.145 23.3755 22.7157 23.3755 23.375C23.3755 24.1337 22.7585 24.75 22.0005 24.75C21.2425 24.75 20.6255 24.1337 20.6255 23.375C20.6255 22.6163 21.2425 22 22.0005 22ZM11.0005 22C11.7585 22 12.3755 22.6163 12.3755 23.375C12.3755 24.1337 11.7585 24.75 11.0005 24.75C10.2425 24.75 9.62549 24.1337 9.62549 23.375C9.62549 22.6163 10.2425 22 11.0005 22Z" fill="white"></path>
+                                        <path d="M5.5 15.125H11C11.7593 15.125 12.375 14.51 12.375 13.75C12.375 12.99 11.7593 12.375 11 12.375H5.5C4.74066 12.375 4.125 12.99 4.125 13.75C4.125 14.51 4.74066 15.125 5.5 15.125Z" fill="white"></path>
+                                        <path d="M2.75049 19.25H6.87549C7.63483 19.25 8.25049 18.635 8.25049 17.875C8.25049 17.115 7.63483 16.5 6.87549 16.5H2.75049C1.99115 16.5 1.37549 17.115 1.37549 17.875C1.37549 18.635 1.99115 19.25 2.75049 19.25Z" fill="white"></path>
+                                        <path d="M4.12451 9.62501C4.8839 9.62501 5.49951 9.0094 5.49951 8.25001C5.49951 7.49062 4.8839 6.87502 4.12451 6.87502C3.36512 6.87502 2.74951 7.49062 2.74951 8.25001C2.74951 9.0094 3.36512 9.62501 4.12451 9.62501Z" fill="white"></path>
+                                        <path d="M2.75049 24.75C3.50988 24.75 4.12549 24.1344 4.12549 23.375C4.12549 22.6156 3.50988 22 2.75049 22C1.9911 22 1.37549 22.6156 1.37549 23.375C1.37549 24.1344 1.9911 24.75 2.75049 24.75Z" fill="white"></path>
+                                    </svg>
+                                    Çatdırılma Statusu
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-left" style="">
+                                    <a class="dropdown-item-delivery dropdown-item" asp-action="ChangeDeliveryStatus" asp-controller="delivery" asp-route-status="Gözləmədə" asp-route-appUserId="@Model.MemberUser.Id" asp-route-orderId="@Model.Id" value="Gözləmədə"> Gözləmədə </a>
+                                    <a class="dropdown-item-delivery dropdown-item" asp-action="ChangeDeliveryStatus" asp-controller="delivery" asp-route-status="Qəbul" asp-route-appUserId="@Model.MemberUser.Id" asp-route-orderId="@Model.Id" value="Qəbul"> Qəbul </a>
+                                    <a class="dropdown-item-delivery dropdown-item" asp-action="ChangeDeliveryStatus" asp-controller="delivery" asp-route-status="İmtina" asp-route-appUserId="@Model.MemberUser.Id" asp-route-orderId="@Model.Id" value="İmtina"> İmtina </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-stat card" style="margin-top:50px;">
+                        <div class="card-body p-4">
+                            <h4 style="color:#FFC532">
+                                Şifariş Çatdırılma Statusu
+                            </h4>
+                            <h6 class="orderdeliverystatus">
+                                @Model.OrderDeliveryStatus
+                            </h6>
+                        </div>
+                        <div class="card-body p-4">
+                            <h4 style="color:#FFC532">
+                                Çatdırılma Statusu
+                            </h4>
+                            <h6 class="deliverystatus">
+                                @Model.DeliveryStatus
+                            </h6>
+                        </div>
+
+                        <div class="card-body p-4">
+                            <h4 style="color:#FFC532">
+                                Kuryeri seç
+                            </h4>
+                            <h6 class="deliverystatus">
+                                @if (Model.DashboardCourierViewModel.CourierId != 0)
+                                {
+                                    <i class="lni lni-delivery" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" style="cursor:pointer;font-size:20px;color:#209F84;padding:0px 10px;"></i>
+                                }
+                                else
+                                {
+                                    <i class="lni lni-delivery" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" style="cursor:pointer;font-size:20px;color:#FFC532;padding:0px 10px;"></i>
+                                }
+                                <input type="hidden" value="@Model.Id" name="deliveryId" form="courierform">
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Partial("_DeliveryPartialForCourier",Model.DashboardCourierViewModel)
+
+
+
+@section Scripts{
+
+    <script>
+        console.log("123");
+    </script>
+
+    <script>
+
+        let dropdownDeliveryItems = document.querySelectorAll(".dropdown-item-delivery");
+        let dropdownOrderItems = document.querySelectorAll(".dropdown-item-order");
+
+        console.log(dropdownDeliveryItems);
+
+        dropdownDeliveryItems.forEach(x => {
+            x.addEventListener("click", function (e) {
+                e.preventDefault();
+                let href = x.getAttribute("href");
+
+                fetch(href).then(response => {
+                    if (!response.ok) {
+                        throw new Error('İstekte bir hata oluştu!');
+                    }
+                    response.text();
+                }).then(data => {
+
+                    var element = document.querySelector("#toaster-success")
+                    var delivery = document.querySelector(".deliverystatus")
+
+                    if (element != null) {
+                        element.value = e.srcElement.getAttribute("value") + " oldu";
+                        console.log(e.srcElement.getAttribute("value"));
+                        delivery.innerHTML = e.srcElement.getAttribute("value");
+                    } else {
+                        const success = document.createElement("input");
+                        success.id = "toaster-success";
+                        success.innerHTML = "adfafd";
+                        success.value = e.srcElement.getAttribute("value") + " oldu";
+                        delivery.innerHTML = e.srcElement.getAttribute("value");
+                        document.querySelector("body").appendChild(success);
+                        console.log(e.srcElement.getAttribute("value"));
+                    }
+
+                    if ($("#toaster-success").length) {
+                        toastr["success"]($("#toaster-success").val())
+                    }
+                }).catch(error => {
+                    var elementError = document.querySelector("#toaster-success")
+
+                    if (elementError != null) {
+                        elementError.value = "email göndərilmədi!";
+                    } else {
+                        const error = document.createElement("input");
+                        error.id = "toaster-error";
+                        error.innerHTML = "adfafd";
+                        error.value = "email göndərilmədi!";
+                        document.querySelector("body").appendChild(error);
+                    }
+
+                    if ($("#toaster-error").length) {
+                        toastr["error"]($("#toaster-error").val())
+                    }
+                });
+            });
+        });
+
+        dropdownOrderItems.forEach(x => {
+            x.addEventListener("click", function (e) {
+                e.preventDefault();
+                let href = x.getAttribute("href");
+
+                fetch(href).then(response => {
+                    response.text();
+                }).then(data => {
+
+                    var element = document.querySelector("#toaster-success")
+                    var delivery = document.querySelector(".orderdeliverystatus")
+
+                    if (element != null) {
+                        element.value = e.srcElement.getAttribute("value") + " oldu";
+                        console.log(e.srcElement.getAttribute("value"));
+                        delivery.innerHTML = e.srcElement.getAttribute("value");
+                    } else {
+                        const success = document.createElement("input");
+                        success.id = "toaster-success";
+                        success.innerHTML = "adfafd";
+                        success.value = e.srcElement.getAttribute("value") + " oldu";
+                        delivery.innerHTML = e.srcElement.getAttribute("value");
+                        document.querySelector("body").appendChild(success);
+                        console.log(e.srcElement.getAttribute("value"));
+                    }
+
+                    if ($("#toaster-success").length) {
+                        toastr["success"]($("#toaster-success").val())
+                    }
+                })
+            });
+        });
+
+    </script>
+
+}

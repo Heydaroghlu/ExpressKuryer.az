@@ -34,5 +34,8 @@ namespace ExpressKuryer.Domain.Entities
 
         public int? CourierId { get; set; }
         public Courier?  Courier { get; set; }
+
+        public decimal GainPercent { get; set; }
+
     }
 }

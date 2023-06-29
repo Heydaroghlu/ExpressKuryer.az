@@ -28,9 +28,10 @@
                             </div>
 
                             <div class="mb-3">
-                                <div id="editor">
+                                <label asp-for="Description" class="form-label">Ad</label>
+                                <div id="editor" style="border:1px solid">
                                 </div>
-                                <textarea class="form-control textarea-Name d-none" asp-for="Description" rows="3"></textarea>
+                                <textarea class="form-control textarea-Name d-none" asp-for="Description" rows="3" style="border:1px solid"></textarea>
                             </div>
 
                             <div class="mb-3">
@@ -115,7 +116,7 @@
                 // integration to choose the right communication channel. This example uses
                 // a POST request with JSON as a data structure but your configuration
                 // could be different.
-                xhr.open('POST', '@Url.Action("UploadImage","Blog")', true);
+                xhr.open('POST', '@Url.Action("UploadImage","PartnerProduct")', true);
                 xhr.responseType = 'json';
             }
             _initListeners(resolve, reject, file) {

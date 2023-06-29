@@ -4528,12 +4528,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\manage\vendor\wnumb\wNumb.js))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\couriers\8add3c0c-904a-4337-83aa-85b79e070aebmonoPOST (1).png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partners\81a15296-932f-4fab-989d-19a2a8f171f5epfmekani (1).jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ExpressKuryer.MVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ExpressKuryer.MVC</BasePath>
-      <RelativePath>uploads/couriers/8add3c0c-904a-4337-83aa-85b79e070aebmonoPOST (1).png</RelativePath>
+      <RelativePath>uploads/partners/81a15296-932f-4fab-989d-19a2a8f171f5epfmekani (1).jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4542,55 +4542,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\couriers\8add3c0c-904a-4337-83aa-85b79e070aebmonoPOST (1).png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\couriers\9d9f08ef-af45-4121-ad8d-eeee50620d61abstractPostPS.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>ExpressKuryer.MVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ExpressKuryer.MVC</BasePath>
-      <RelativePath>uploads/couriers/9d9f08ef-af45-4121-ad8d-eeee50620d61abstractPostPS.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\couriers\9d9f08ef-af45-4121-ad8d-eeee50620d61abstractPostPS.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\couriers\ab13166a-fd05-48eb-8686-258cc19382e42.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>ExpressKuryer.MVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ExpressKuryer.MVC</BasePath>
-      <RelativePath>uploads/couriers/ab13166a-fd05-48eb-8686-258cc19382e42.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\couriers\ab13166a-fd05-48eb-8686-258cc19382e42.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\couriers\fabfc3ec-7b63-42d9-a75e-ffd945618520ODF-posts.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>ExpressKuryer.MVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ExpressKuryer.MVC</BasePath>
-      <RelativePath>uploads/couriers/fabfc3ec-7b63-42d9-a75e-ffd945618520ODF-posts.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\couriers\fabfc3ec-7b63-42d9-a75e-ffd945618520ODF-posts.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partners\81a15296-932f-4fab-989d-19a2a8f171f5epfmekani (1).jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\settings\ea77712c-a7d2-4146-bf59-5eb2bc54e0ebmonoPOST (1).png))">
       <SourceType>Package</SourceType>

@@ -21,6 +21,7 @@ namespace ExpressKuryer.MVC.Controllers
         IMapper _mapper;
         IStorage _storage;
         static string _imagePath = "/uploads/deliveries/";
+        static string _userPath = "/uploads/users/";
 
         public DeliveryController(IMapper mapper, IUnitOfWork unitOfWork, UserManager<AppUser> userManager, IEmailService emailService, IStorage storage)
         {
@@ -87,6 +88,7 @@ namespace ExpressKuryer.MVC.Controllers
 
             var returnDto = _mapper.Map<DeliveryReturnDto>(entity);
             TempData["ImagePath"] = _storage.GetUrl(_imagePath, null);
+            TempData["UserPath"] = _storage.GetUrl(_userPath, null);
 
 
             var couriers = await _unitOfWork.RepositoryCourier.GetAllAsync(x => !x.IsDeleted, false, "CourierPerson");
@@ -111,7 +113,7 @@ namespace ExpressKuryer.MVC.Controllers
 
             var returnDto = _mapper.Map<DeliveryReturnDto>(entity);
             TempData["ImagePath"] = _storage.GetUrl(_imagePath, null);
-
+            TempData["UserPath"] = _storage.GetUrl(_userPath, null);
 
             var couriers = await _unitOfWork.RepositoryCourier.GetAllAsync(x => !x.IsDeleted, false, "CourierPerson");
             ViewBag.Couriers = couriers;
@@ -149,15 +151,13 @@ namespace ExpressKuryer.MVC.Controllers
             else if (status.Equals(DeliveryStatus.Gözləmədə.ToString())) entity.DeliveryStatus = DeliveryStatus.Gözləmədə.ToString();
             else if (status.Equals(DeliveryStatus.Qəbul.ToString())) entity.DeliveryStatus = DeliveryStatus.Qəbul.ToString();
 
-            //todo bura baxmag lazimdi
-
             try
             {
                 _emailService.Send(appUser.Email, $"Sifariş statusu", $"Sizin sifarişiniz statusu {status} olaraq dəyişdirildi");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return Json("Error baş verdi");
+                return StatusCode(500, ex.Message);
             }
 
             await _unitOfWork.CommitAsync();
@@ -187,9 +187,17 @@ namespace ExpressKuryer.MVC.Controllers
                 entity.Courier.Gain = entity.Courier.Gain + result;
                 // 55 * 10 / 100
             }
-            await _unitOfWork.CommitAsync();
 
-            _emailService.Send(appUser.Email, $"Sifariş statusu", $"Sizin sifarişiniz statusu {status} olaraq dəyişdirildi");
+            try
+            {
+                _emailService.Send(appUser.Email, $"Sifariş statusu", $"Sizin sifarişiniz statusu {status} olaraq dəyişdirildi");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+
+            await _unitOfWork.CommitAsync();
 
             object page = TempData["Page"] as int?;
             object word = TempData["Page"] as string;

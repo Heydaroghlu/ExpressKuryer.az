@@ -98,6 +98,7 @@ namespace ExpressKuryer.MVC.Controllers
                     viewModel.Courier.Gain = viewModel.Courier.Gain + result;
                 }
 
+
             }
             else
             {
@@ -201,6 +202,9 @@ namespace ExpressKuryer.MVC.Controllers
                     var result = ((item.TotalAmount * gainPercent) / 100);
                     viewModel.Courier.Gain = viewModel.Courier.Gain + result;
                 }
+
+                TempData["daterange"] = viewModel.daterange;
+
             }
 
 

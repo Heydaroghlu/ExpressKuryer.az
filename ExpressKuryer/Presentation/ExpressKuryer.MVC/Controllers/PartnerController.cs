@@ -17,7 +17,7 @@ namespace ExpressKuryer.MVC.Controllers
         readonly IMapper _mapper;
         readonly IStorage _storage;
         IFileService _fileService;
-        static string _imagePath = _imagePath;
+        static string _imagePath = "/uploads/partners/";
 
         public PartnerController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage, IFileService fileService)
         {
