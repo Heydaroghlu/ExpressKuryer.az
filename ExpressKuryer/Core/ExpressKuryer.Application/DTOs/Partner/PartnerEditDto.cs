@@ -9,8 +9,8 @@ namespace ExpressKuryer.Application.DTOs.Partner
 {
     public class PartnerEditDto
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public string? Image { get; set; }
-        public IFormFile FormFile { get; set; }
+        public IFormFile? FormFile { get; set; }
     }
 }

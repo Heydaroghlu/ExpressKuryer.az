@@ -11,9 +11,9 @@ namespace ExpressKuryer.Domain.Entities
 {
     public class Slider:BaseEntity
     {
-     public string Title { get; set; }
-     public string Image { get; set; }
+     public string? Title { get; set; }
+     public string? Image { get; set; }
         [NotMapped]
-     public IFormFile FormFile { get; set; }    
+     public IFormFile? FormFile { get; set; }    
     }
 }

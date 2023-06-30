@@ -11,9 +11,9 @@ namespace ExpressKuryer.Domain.Entities
 {
     public class Setting:BaseEntity
     {
-        public string Key { get; set; } 
-        public string Value { get; set; }
+        public string? Key { get; set; } 
+        public string? Value { get; set; }
         [NotMapped]
-        public IFormFile FormFile { get; set; } 
+        public IFormFile? FormFile { get; set; } 
     }
 }

@@ -11,13 +11,13 @@ namespace ExpressKuryer.Application.DTOs.PartnerProduct
 {
     public class PartnerProductReturnDto
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Image { get; set; }
-        public decimal SalePrice { get; set; }
-        public decimal CostPrice { get; set; }
-        public decimal DiscountPrice { get; set; }
-        public bool IsInterestFree { get; set; }
+        public int? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Image { get; set; }
+        public decimal? SalePrice { get; set; }
+        public decimal? CostPrice { get; set; }
+        public decimal? DiscountPrice { get; set; }
+        public bool? IsInterestFree { get; set; }
         public DateTime CreatedAt { get; set; }
     }
 }

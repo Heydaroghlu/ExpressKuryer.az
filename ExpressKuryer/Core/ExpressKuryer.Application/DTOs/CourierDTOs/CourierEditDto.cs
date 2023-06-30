@@ -10,9 +10,9 @@ namespace ExpressKuryer.Application.DTOs.CourierDTOs
 {
     public class CourierEditDto
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public IFormFile? FormFile { get; set; }
         public string? OldPassword { get; set; }
-        public AppUserReturnDto CourierPerson { get; set; }
+        public AppUserReturnDto? CourierPerson { get; set; }
     }
 }

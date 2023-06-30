@@ -8,7 +8,7 @@ namespace ExpressKuryer.Application.DTOs.Vacancy
 {
     public class VacancyCreateDto
     {
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public string? Title { get; set; }
+        public string? Description { get; set; }
     }
 }

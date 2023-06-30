@@ -9,7 +9,7 @@ namespace ExpressKuryer.Application.DTOs.Slider
 {
     public class SliderEditDto
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public string? Title { get; set; }
         public IFormFile? FormFile { get; set; }
         public string? Image { get; set; }

@@ -9,9 +9,9 @@ namespace ExpressKuryer.Domain.Entities
 {
     public class Service:BaseEntity
     {
-        public string Name { get; set; }
-        public double Depozit { get; set; } 
-        public string Icon { get;set; }
-        public double OwnAvragePercent { get; set; }
+        public string? Name { get; set; }
+        public double? Depozit { get; set; } 
+        public string? Icon { get;set; }
+        public double? OwnAvragePercent { get; set; }
     }
 }

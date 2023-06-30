@@ -8,6 +8,6 @@ namespace ExpressKuryer.Application.DTOs.Subscribe
 {
     public class SubscribeDto
     {
-        public string Email { get; set; }
+        public string? Email { get; set; }
     }
 }

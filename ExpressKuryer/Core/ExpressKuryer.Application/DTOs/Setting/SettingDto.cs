@@ -9,9 +9,9 @@ namespace ExpressKuryer.Application.DTOs.Setting
 {
     public class SettingDto
     {
-        public string Key { get; set; }
-        public string Value { get; set; }
+        public string? Key { get; set; }
+        public string? Value { get; set; }
 
-        public IFormFile FormFile { get; set; }
+        public IFormFile? FormFile { get; set; }
     }
 }

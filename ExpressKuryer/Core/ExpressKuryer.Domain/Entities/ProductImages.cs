@@ -11,9 +11,9 @@ namespace ExpressKuryer.Domain.Entities
     public class ProductImages:BaseEntity
     {
         //one to many relations by Isa
-        public string Image { get; set; }
-        public bool IsPoster { get; set; }
-        public int ProductId { get; set; }
-        public PartnerProduct PartnerProduct { get; set; }
+        public string? Image { get; set; }
+        public bool? IsPoster { get; set; }
+        public int? ProductId { get; set; }
+        public PartnerProduct? PartnerProduct { get; set; }
     }
 }

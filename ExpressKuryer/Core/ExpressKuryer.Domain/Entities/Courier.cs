@@ -10,10 +10,10 @@ namespace ExpressKuryer.Domain.Entities
 {
     public class Courier : BaseEntity
     {
-        public decimal Gain { get; set; }
+        public decimal? Gain { get; set; }
 
-        public string CourierPersonId { get; set; }
-        public AppUser CourierPerson { get; set; }
+        public string? CourierPersonId { get; set; }
+        public AppUser? CourierPerson { get; set; }
 
         [NotMapped]
         List<Delivery> Deliveries { get; set; }

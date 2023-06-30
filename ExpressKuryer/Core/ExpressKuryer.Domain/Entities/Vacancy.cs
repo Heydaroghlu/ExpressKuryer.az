@@ -12,8 +12,8 @@ namespace ExpressKuryer.Domain.Entities
     public class Vacancy:BaseEntity
     {
 
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public string? Title { get; set; }
+        public string? Description { get; set; }
         
 
         public List<JobSeeker> JobSeekers { get; set; }

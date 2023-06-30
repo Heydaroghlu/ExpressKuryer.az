@@ -10,11 +10,11 @@ namespace ExpressKuryer.Application.DTOs.Vacancy
 {
     public class VacancyDto
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Message { get; set; }
+        public string? Name { get; set; }
+        public string? Surname { get; set; }
+        public string? Message { get; set; }
 
-        public IFormFile FormFile { get; set; }
+        public IFormFile? FormFile { get; set; }
 
     }
 }

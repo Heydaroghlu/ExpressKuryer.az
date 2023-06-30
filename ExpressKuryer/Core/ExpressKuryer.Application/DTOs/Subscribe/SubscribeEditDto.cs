@@ -8,8 +8,8 @@ namespace ExpressKuryer.Application.DTOs.Subscribe
 {
     public class SubscribeEditDto
     {
-        public int Id { get; set; }
-        public string Email { get; set; }
+        public int? Id { get; set; }
+        public string? Email { get; set; }
 
     }
 }

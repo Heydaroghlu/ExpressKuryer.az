@@ -8,7 +8,7 @@ namespace ExpressKuryer.Application.DTOs.Token
 {
     public class TokenDTO
     {
-        public string AccessToken { get; set; }
-        public DateTime Expiration { get; set; }
+        public string? AccessToken { get; set; }
+        public DateTime? Expiration { get; set; }
     }
 }

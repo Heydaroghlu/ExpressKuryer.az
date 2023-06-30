@@ -12,12 +12,12 @@ namespace ExpressKuryer.Application.DTOs.CourierDTOs
 {
     public class CourierReturnDto
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public DateTime CreatedAt { get; set; }
-        public decimal Gain { get; set; }
+        public decimal? Gain { get; set; }
 
-        public string CourierPersonId { get; set; }
-        public AppUserReturnDto CourierPerson { get; set; }
+        public string? CourierPersonId { get; set; }
+        public AppUserReturnDto? CourierPerson { get; set; }
 
         [NotMapped]
         List<DeliveryReturnDto> Deliveries { get; set; }

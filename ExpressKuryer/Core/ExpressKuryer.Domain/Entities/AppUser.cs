@@ -11,13 +11,13 @@ namespace ExpressKuryer.Domain.Entities
     public class AppUser:IdentityUser
     {
         //AppUser
-        public string Name { get;set; } 
-        public string Surname { get; set; }
-        public string Address { get; set; }
+        public string? Name { get;set; } 
+        public string? Surname { get; set; }
+        public string? Address { get; set; }
         public bool IsAdmin { get; set; }
-        public string Image { get; set; }
-        public string UserType { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow.AddHours(4);
+        public string? Image { get; set; }
+        public string? UserType { get; set; }
+        public DateTime? CreatedAt { get; set; } = DateTime.UtcNow.AddHours(4);
         public List<Delivery> Deliveries { get; set; }
     }
 }

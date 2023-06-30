@@ -8,7 +8,7 @@ namespace ExpressKuryer.Application.DTOs.AppUserDTOs
 {
     public class ResetPassDTO
     {
-        public string Email { get; set; }
-        public string Token { get; set; }
+        public string? Email { get; set; }
+        public string? Token { get; set; }
     }
 }
