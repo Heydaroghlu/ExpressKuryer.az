@@ -93,12 +93,19 @@ namespace ExpressKuryer.MVC.Controllers
 
             var couriers = await _unitOfWork.RepositoryCourier.GetAllAsync(x => !x.IsDeleted, false, "CourierPerson");
             ViewBag.Couriers = couriers;
-
-            returnDto.DashboardCourierViewModel = new Application.ViewModels.DashboardCourierViewModel()
+           
+         if(returnDto.DashboardCourierViewModel!=null)
             {
-                Couriers = couriers,
-                CourierId = (int)entity.CourierId
-            };
+                if (couriers != null && couriers.Count > 0)
+                {
+                    returnDto.DashboardCourierViewModel.Couriers = couriers.ToList();
+                }
+                if (entity != null)
+                {
+                    returnDto.DashboardCourierViewModel.CourierId = (int)entity.CourierId;
+                }
+            }
+
 
             return View(returnDto);
         }
@@ -130,10 +137,7 @@ namespace ExpressKuryer.MVC.Controllers
             TempData["Success"] = "Çatdırılmaya Kuryer əlavə olundu";
 
 
-            returnDto.DashboardCourierViewModel = new Application.ViewModels.DashboardCourierViewModel()
-            {
-                Couriers = couriers,
-            };
+            returnDto.DashboardCourierViewModel.Couriers = couriers;
 
             return View(returnDto);
         }

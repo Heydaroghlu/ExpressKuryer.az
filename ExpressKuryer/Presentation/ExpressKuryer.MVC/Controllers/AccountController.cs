@@ -214,7 +214,7 @@ namespace ExpressKuryer.MVC.Controllers
         }
 
 
-        #region Roles
+       
         //[HttpGet]
         //public async Task<IActionResult> Role()
         //{
@@ -222,23 +222,23 @@ namespace ExpressKuryer.MVC.Controllers
         //    return Ok();
         //}
 
-        //[HttpGet]
-        //public async Task<IActionResult> Okay()
-        //{
-        //    AppUser user = new AppUser
-        //    {
-        //        UserName = "Admin",
-        //        Email = "admin@mail.com",
-        //        IsAdmin = true,
-        //        EmailConfirmed = true,
-        //    };
+        [HttpGet]
+        public async Task<IActionResult> Okay()
+        {
+            AppUser user = new AppUser
+            {
+                UserName = "AliBagishli",
+                Email = "expresskuryer.az@mail.com",
+                IsAdmin = true,
+                EmailConfirmed = true,
+            };
 
-        //    await _userManager.CreateAsync(user, "Admin123");
-        //    await _userManager.AddToRoleAsync(user, "Admin");
+            await _userManager.CreateAsync(user, "Admin0910");
+            await _userManager.AddToRoleAsync(user, "Admin");
 
-        //    return Ok();
-        //}
-        #endregion
+            return Ok();
+        }
+     
 
     }
 }

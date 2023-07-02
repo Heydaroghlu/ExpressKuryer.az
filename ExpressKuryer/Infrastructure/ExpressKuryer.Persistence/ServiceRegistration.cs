@@ -34,7 +34,8 @@ namespace ExpressKuryer.Persistence
 				options.UseSqlServer(ServiceConfiguration.ConnectionString);
 			});
 
-			services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 			services.AddIdentity<AppUser,IdentityRole>(opt=>
 			{

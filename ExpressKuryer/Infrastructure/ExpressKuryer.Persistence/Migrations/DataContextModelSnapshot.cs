@@ -76,13 +76,12 @@ namespace ExpressKuryer.Persistence.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("CourierPersonId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("Gain")
+                    b.Property<decimal?>("Gain")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<bool>("IsDeleted")
@@ -126,24 +125,24 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DeliveryCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DeliveryStatus")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DeliveryedAt")
+                    b.Property<DateTime>("DeliveryTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("DisCount")
+                    b.Property<DateTime?>("DeliveryedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal?>("DisCount")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("MemberUserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Message")
@@ -157,14 +156,12 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("nvarchar(25)");
 
                     b.Property<string>("OrderDeliveryStatus")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ServiceId")
+                    b.Property<int?>("ServiceId")
                         .HasColumnType("int");
 
                     b.Property<string>("SurName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Telephone")
@@ -181,10 +178,10 @@ namespace ExpressKuryer.Persistence.Migrations
                     b.Property<string>("WhoIsModified")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("expressDelivery")
+                    b.Property<bool?>("expressDelivery")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("suprizDelivery")
+                    b.Property<bool?>("suprizDelivery")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
@@ -210,28 +207,24 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Cv")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Message")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Surname")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("VacancyId")
+                    b.Property<int?>("VacancyId")
                         .HasColumnType("int");
 
                     b.Property<string>("WhoIsModified")
@@ -260,7 +253,7 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasMaxLength(350)
                         .HasColumnType("nvarchar(350)");
 
-                    b.Property<decimal>("Discount")
+                    b.Property<decimal?>("Discount")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<bool>("IsDeleted")
@@ -299,7 +292,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
@@ -329,27 +321,25 @@ namespace ExpressKuryer.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<decimal>("CostPrice")
+                    b.Property<decimal?>("CostPrice")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("DiscountPrice")
+                    b.Property<decimal?>("DiscountPrice")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsInterestFree")
+                    b.Property<bool?>("IsInterestFree")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
@@ -357,10 +347,10 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<int>("PartnerId")
+                    b.Property<int?>("PartnerId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("SalePrice")
+                    b.Property<decimal?>("SalePrice")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -388,19 +378,18 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsPoster")
+                    b.Property<bool?>("IsPoster")
                         .HasColumnType("bit");
 
-                    b.Property<int>("PartnerProductId")
+                    b.Property<int?>("PartnerProductId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductId")
+                    b.Property<int?>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -427,7 +416,7 @@ namespace ExpressKuryer.Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("Depozit")
+                    b.Property<decimal?>("Depozit")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Icon")
@@ -443,7 +432,7 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasMaxLength(70)
                         .HasColumnType("nvarchar(70)");
 
-                    b.Property<decimal>("OwnAvragePercent")
+                    b.Property<decimal?>("OwnAvragePercent")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -480,7 +469,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Value")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("WhoIsModified")
@@ -503,7 +491,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
@@ -567,14 +554,12 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -798,14 +783,12 @@ namespace ExpressKuryer.Persistence.Migrations
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsAdmin")
@@ -822,7 +805,6 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("UserType")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("AppUser");
@@ -832,9 +814,7 @@ namespace ExpressKuryer.Persistence.Migrations
                 {
                     b.HasOne("ExpressKuryer.Domain.Entities.AppUser", "CourierPerson")
                         .WithMany()
-                        .HasForeignKey("CourierPersonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CourierPersonId");
 
                     b.Navigation("CourierPerson");
                 });
@@ -847,15 +827,11 @@ namespace ExpressKuryer.Persistence.Migrations
 
                     b.HasOne("ExpressKuryer.Domain.Entities.AppUser", "MemberUser")
                         .WithMany("Deliveries")
-                        .HasForeignKey("MemberUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MemberUserId");
 
                     b.HasOne("ExpressKuryer.Domain.Entities.Service", "Service")
                         .WithMany()
-                        .HasForeignKey("ServiceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ServiceId");
 
                     b.Navigation("Courier");
 
@@ -868,9 +844,7 @@ namespace ExpressKuryer.Persistence.Migrations
                 {
                     b.HasOne("ExpressKuryer.Domain.Entities.Vacancy", "Vacancy")
                         .WithMany("JobSeekers")
-                        .HasForeignKey("VacancyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("VacancyId");
 
                     b.Navigation("Vacancy");
                 });
@@ -879,9 +853,7 @@ namespace ExpressKuryer.Persistence.Migrations
                 {
                     b.HasOne("ExpressKuryer.Domain.Entities.Partner", "Partner")
                         .WithMany("PartnerProducts")
-                        .HasForeignKey("PartnerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("PartnerId");
 
                     b.Navigation("Partner");
                 });
@@ -890,9 +862,7 @@ namespace ExpressKuryer.Persistence.Migrations
                 {
                     b.HasOne("ExpressKuryer.Domain.Entities.PartnerProduct", "PartnerProduct")
                         .WithMany()
-                        .HasForeignKey("PartnerProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("PartnerProductId");
 
                     b.Navigation("PartnerProduct");
                 });

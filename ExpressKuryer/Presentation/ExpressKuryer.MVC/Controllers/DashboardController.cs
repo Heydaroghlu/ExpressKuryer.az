@@ -3,7 +3,6 @@ using ExpressKuryer.Application.ViewModels;
 using ExpressKuryer.Domain.Entities;
 using ExpressKuryer.Domain.Enums.Delivery;
 using ExpressKuryer.Domain.Enums.UserEnums;
-using ExpressKuryer.Persistence.Migrations;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

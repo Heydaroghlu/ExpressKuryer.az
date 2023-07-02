@@ -14,6 +14,6 @@ namespace ExpressKuryer.Application.DTOs.AppUserDTOs
         public string? Address { get; set; }
         public string? Email { get; set; }
         public string? Phone { get; set; }
-        public List<Delivery> Deliveries { get; set; }
+        public List<Domain.Entities.Delivery> Deliveries { get; set; }
     }
 }

@@ -10,7 +10,6 @@ using ExpressKuryer.Application.UnitOfWorks;
 using ExpressKuryer.Domain.Entities;
 using ExpressKuryer.Domain.Enums.UserEnums;
 using ExpressKuryer.Infrastructure.Services.Email;
-using ExpressKuryer.Persistence.Migrations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Org.BouncyCastle.Asn1.Icao;

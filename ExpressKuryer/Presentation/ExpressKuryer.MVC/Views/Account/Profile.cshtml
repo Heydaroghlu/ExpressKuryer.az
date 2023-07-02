@@ -189,10 +189,26 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-xl-12 mb-3" style="font-weight:600;">
-                                    Sifariş sayı : @Model.MemberDeliveries.Count();
+                                    @if (Model.MemberDeliveries?.Count()>0)
+                                    {
+                                        <span> Sifariş sayı : @Model.MemberDeliveries.Count()</span>
+                                    }
+                                    else
+                                    {
+                                        <span> Sifariş sayı : 0</span>
+                                    }
                                 </div>
                                 <div class="col-xl-12 mb-3" style="font-weight:600;">
-                                    Qazancı : @Model.Courier.Gain
+                                    @if (Model.Courier?.Gain > 0)
+                                    {
+
+                                        <span> Qazancı : @Model.Courier.Gain</span>
+                                    }
+                                    else
+                                    {
+                                        <span> Qazancı : 0</span>
+                                    }
+                                   
                                 </div>
                             </div>
                             <div class="row">
@@ -207,14 +223,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach (Delivery item in Model.MemberDeliveries)
+                                            @if (Model.MemberDeliveries!=null
+                                            )
                                             {
-                                                <tr>
-                                                    <td>#@item.DeliveryCode</td>
-                                                    <td class="wspace-no"> @item.CreatedAt.ToString("dd MMMM yyyy HH:MM")</td>
-                                                    <td>@item.Name @item.SurName</td>
-                                                    <td>@item.TotalAmount</td>
-                                                </tr>
+                                                foreach (Delivery item in Model.MemberDeliveries)
+                                                {
+                                                    <tr>
+                                                        <td>#@item.DeliveryCode</td>
+                                                        <td class="wspace-no"> @item.CreatedAt.ToString("dd MMMM yyyy HH:MM")</td>
+                                                        <td>@item.Name @item.SurName</td>
+                                                        <td>@item.TotalAmount</td>
+                                                    </tr>
+                                                }
                                             }
                                         </tbody>
                                     </table>

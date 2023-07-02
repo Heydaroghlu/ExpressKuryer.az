@@ -2,6 +2,7 @@
 using ExpressKuryer.Application.DTOs.AppUserDTOs;
 using ExpressKuryer.Application.DTOs.Token;
 using ExpressKuryer.Application.HelperManager;
+using ExpressKuryer.Application.UnitOfWorks;
 using ExpressKuryer.Domain.Entities;
 using ExpressKuryer.Infrastructure.Services.Email;
 using ExpressKuryer.Infrastructure.Services.Token;
@@ -21,14 +22,26 @@ namespace ExpressKuryer.API.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ITokenHandler _tokenHandler;
-        private readonly IEmailService _emailService;
-        public AccountController(UserManager<AppUser> userManager,EmailService emailService,ITokenHandler tokenHandler, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
+       // private readonly IEmailService _emailService;
+        private readonly IUnitOfWork _unitOfWork;
+        public AccountController(UserManager<AppUser> userManager,IUnitOfWork unitOfWork,ITokenHandler tokenHandler, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _roleManager = roleManager;
-            _emailService = emailService;
+           // _emailService = emailService;
             _userManager = userManager;
             _signInManager = signInManager;
             _tokenHandler = tokenHandler;
+            _unitOfWork= unitOfWork;
+        }
+        [HttpGet("createrole")]
+        public async Task<IActionResult> CreateRoles()
+        {
+            var role1 = new IdentityRole("Member");
+            var role2 = new IdentityRole("Admin");
+
+            await _roleManager.CreateAsync(role1);
+            await _roleManager.CreateAsync(role2);
+            return Ok();
         }
         [HttpPost("daxilol")]
         public async Task<IActionResult> Login(LoginDTO login)
@@ -36,44 +49,49 @@ namespace ExpressKuryer.API.Controllers
             AppUser user=await _userManager.FindByNameAsync(login.UserName);
             if(user==null)
             {
-                return Unauthorized();
+                return StatusCode(401, "Ad və ya şifrə yanlışdır !");
             }
             var result = await _signInManager.PasswordSignInAsync(user, login.Password, false, false);
             if (!result.Succeeded)
             {
-                return Unauthorized();
+                return StatusCode(401, "Ad və ya şifrə yanlışdır !");
             }
             TokenDTO token = _tokenHandler.CreateAccessToken(user,60);
             return Ok(token);
-        }
 
-        [HttpPost("role")]
-        public async Task<IActionResult> Role()
+        }
+        [HttpGet]
+        [Route("Users")]
+        public async Task<IActionResult> Users()
         {
-            await _roleManager.CreateAsync(new IdentityRole("Admin"));
-            await _roleManager.CreateAsync(new IdentityRole("Member"));
-            return Ok();
+            var users = await _unitOfWork.RepositoryUser.GetAllAsync(x => x.IsAdmin != true);
+            return Ok(users);
         }
-
+        [HttpGet("logout")]
+        public IActionResult Logout()
+        {
+            _signInManager.SignOutAsync();
+            return StatusCode(201, "Ugurla hesabdan cixildi");
+        }
         [HttpPost("hesab/qeydiyyat")]
         public async Task<IActionResult> Register(RegisterDTO register)
         {
             AppUser exist = await _userManager.FindByNameAsync(register.Email);
             if (exist != null)
             {
-                return BadRequest(register);
+                return BadRequest("This User is exist");
             }
             if (register.Password != register.RepeatPassword)
             {
-                return BadRequest(register);
+                return BadRequest("Password is invalid");
             }
             if (!RegexManager.CheckMailRegex(register.Email))
             {
-                return BadRequest(register);
+                return BadRequest("Email is invalid");
             }
             if (!RegexManager.CheckPhoneRegex(register.Phone))
             {
-                return BadRequest(register);
+                return BadRequest("Phone is invalid");
             }
             AppUser user = new()
             {
@@ -91,11 +109,36 @@ namespace ExpressKuryer.API.Controllers
         [HttpGet("myaccount")]
         public async Task<IActionResult> MyAccount(string id)
         {
-            AppUser user = await _userManager.Users.Include(x => x.Deliveries).FirstOrDefaultAsync(x => x.Id == id);
+            AppUser user = await _unitOfWork.RepositoryUser.GetAsync(x => x.Id == id, false, "Deliveries");
+            var data = await _unitOfWork.RepositoryDelivery.GetAllAsync(x => x.MemberUserId == id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            AccountDTO accountDTO = new AccountDTO()
+            {
+                Name = user.Name,
+                Surname = user.Surname,
+                Address = user.Address,
+                Email = user.Email,
+                Deliveries = data.ToList(),
+                Phone = user.PhoneNumber
+            };
+            return Ok(accountDTO);
+        }
+        [HttpPost("updateAccount")]
+        public async Task<IActionResult> MyAccount(string id,RegisterDTO register)
+        {
+            AppUser user = await _unitOfWork.RepositoryUser.GetAsync(x => x.Id == id,false);
             if (user == null)
             {
                 return BadRequest();
             }
+            user.Surname = register.Surname;
+            user.Address = register.Address;
+            user.Name=register.Name;
+            user.PhoneNumber = register.Phone;
+            await _unitOfWork.CommitAsync();
             AccountDTO accountDTO = new AccountDTO()
             {
                 Name = user.Name,
@@ -107,7 +150,7 @@ namespace ExpressKuryer.API.Controllers
             };
             return Ok(accountDTO);
         }
-        [HttpGet("forgot")]
+     /*   [HttpGet("forgot")]
         public async Task<IActionResult> Forgot(string Email)
         {
             AppUser user = await _userManager.FindByNameAsync(Email);
@@ -116,10 +159,15 @@ namespace ExpressKuryer.API.Controllers
                 return Unauthorized();
             }
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-            var passurl = Url.Action(action: "MyAccount", controller: "Account", new { email = user.Email, token }, Request.Scheme);
+            var passurl = Url.Action(action: "ChangePassword", controller: "Account", new { id = user.Id, token }, Request.Scheme);
             _emailService.Send(user.Email, "Yeni Şifrə", passurl);
             return Ok();
-        }
+        }*/
+      /*  [HttpPut]
+        public async Task<IActionResult> ChangePassword(string id,string token)
+        {
+            
+        }*/
       
     }
 }

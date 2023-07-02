@@ -70,7 +70,10 @@
                         <div class="widget-stat card">
                             <div class="card-body p-4">
                                 <h4 class="card-title">Servis</h4>
-                                <h3>@Model.Service.Name</h3>
+                                @if(Model.Service?.Name!=null)
+                                {
+                                    <h3>@Model.Service.Name</h3>
+                                }
                             </div>
                             <div class="card-body p-4">
                                 <h4 style="color:#FFC532" class="card-title">Başlanğıç nöqtəsi : <span style="color:black">@Model.AddressTo</span> </h4>
@@ -156,9 +159,9 @@
                                     Şifariş Çatdırılma Statusu
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-left" style="">
-                                    <a class="dropdown-item-order dropdown-item" asp-action="ChangeOrderDeliveryStatus" asp-controller="delivery" asp-route-status="Anbarda" asp-route-appUserId="@Model.MemberUser.Id" asp-route-orderId="@Model.Id" value="Anbarda"> Anbarda </a>
-                                    <a class="dropdown-item-order dropdown-item" asp-action="ChangeOrderDeliveryStatus" asp-controller="delivery" asp-route-status="Kuryerde" asp-route-appUserId="@Model.MemberUser.Id" asp-route-orderId="@Model.Id" value="Kuryerde"> Kuryerde </a>
-                                    <a class="dropdown-item-order dropdown-item" asp-action="ChangeOrderDeliveryStatus" asp-controller="delivery" asp-route-status="Catdirildi" asp-route-appUserId="@Model.MemberUser.Id" asp-route-orderId="@Model.Id" value="Catdirildi"> Catdirildi </a>
+                                    <a class="dropdown-item-order dropdown-item" asp-action="ChangeOrderDeliveryStatus" asp-controller="delivery" asp-route-status="Anbarda" asp-route-appUserId="@Model.MemberUser?.Id" asp-route-orderId="@Model.Id" value="Anbarda"> Anbarda </a>
+                                    <a class="dropdown-item-order dropdown-item" asp-action="ChangeOrderDeliveryStatus" asp-controller="delivery" asp-route-status="Kuryerde" asp-route-appUserId="@Model.MemberUser?.Id" asp-route-orderId="@Model.Id" value="Kuryerde"> Kuryerde </a>
+                                    <a class="dropdown-item-order dropdown-item" asp-action="ChangeOrderDeliveryStatus" asp-controller="delivery" asp-route-status="Catdirildi" asp-route-appUserId="@Model.MemberUser?.Id" asp-route-orderId="@Model.Id" value="Catdirildi"> Catdirildi </a>
                                 </div>
                             </div>
                         </div>
@@ -177,9 +180,9 @@
                                     Çatdırılma Statusu
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-left" style="">
-                                    <a class="dropdown-item-delivery dropdown-item" asp-action="ChangeDeliveryStatus" asp-controller="delivery" asp-route-status="Gözləmədə" asp-route-appUserId="@Model.MemberUser.Id" asp-route-orderId="@Model.Id" value="Gözləmədə"> Gözləmədə </a>
-                                    <a class="dropdown-item-delivery dropdown-item" asp-action="ChangeDeliveryStatus" asp-controller="delivery" asp-route-status="Qəbul" asp-route-appUserId="@Model.MemberUser.Id" asp-route-orderId="@Model.Id" value="Qəbul"> Qəbul </a>
-                                    <a class="dropdown-item-delivery dropdown-item" asp-action="ChangeDeliveryStatus" asp-controller="delivery" asp-route-status="İmtina" asp-route-appUserId="@Model.MemberUser.Id" asp-route-orderId="@Model.Id" value="İmtina"> İmtina </a>
+                                    <a class="dropdown-item-delivery dropdown-item" asp-action="ChangeDeliveryStatus" asp-controller="delivery" asp-route-status="Gözləmədə" asp-route-appUserId="@Model.MemberUser?.Id" asp-route-orderId="@Model.Id" value="Gözləmədə"> Gözləmədə </a>
+                                    <a class="dropdown-item-delivery dropdown-item" asp-action="ChangeDeliveryStatus" asp-controller="delivery" asp-route-status="Qəbul" asp-route-appUserId="@Model.MemberUser?.Id" asp-route-orderId="@Model.Id" value="Qəbul"> Qəbul </a>
+                                    <a class="dropdown-item-delivery dropdown-item" asp-action="ChangeDeliveryStatus" asp-controller="delivery" asp-route-status="İmtina" asp-route-appUserId="@Model.MemberUser?.Id" asp-route-orderId="@Model.Id" value="İmtina"> İmtina </a>
                                 </div>
                             </div>
                         </div>
@@ -207,7 +210,7 @@
                                 Kuryeri seç
                             </h4>
                             <h6 class="deliverystatus">
-                                @if (Model.DashboardCourierViewModel.CourierId != 0)
+                                @if (Model.DashboardCourierViewModel?.CourierId != 0)
                                 {
                                     <i class="lni lni-delivery" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" style="cursor:pointer;font-size:20px;color:#209F84;padding:0px 10px;"></i>
                                 }
