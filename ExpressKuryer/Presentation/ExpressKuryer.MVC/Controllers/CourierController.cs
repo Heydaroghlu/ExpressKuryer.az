@@ -12,6 +12,7 @@ using ExpressKuryer.Domain.Enums.UserEnums;
 using ExpressKuryer.Infrastructure.Services.Email;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Asn1.Icao;
 
 namespace ExpressKuryer.MVC.Controllers
@@ -78,6 +79,14 @@ namespace ExpressKuryer.MVC.Controllers
 
             if (!ModelState.IsValid) return View(courierCreateDto);
 
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Email.Equals(courierCreateDto.CourierPerson.Email));
+
+            if(user != null)
+            {
+                TempData["Error"] = "Bu emaildən istifadə olunub!";
+                return View(courierCreateDto);
+            }
+
             if (courierCreateDto.FormFile != null)
             {
                 try
@@ -113,7 +122,7 @@ namespace ExpressKuryer.MVC.Controllers
                 entity.CourierPerson.Image = imageInfo.fileName;
             }
 
-            entity.CourierPerson.UserType = UserRoleEnum.Courier.ToString(); //todo here will change
+            entity.CourierPerson.UserType = UserRoleEnum.Courier.ToString();
 
             var result = await _userManager.CreateAsync(appUser, courierCreateDto.CourierPerson.Password);
             entity.CourierPersonId = appUser.Id;

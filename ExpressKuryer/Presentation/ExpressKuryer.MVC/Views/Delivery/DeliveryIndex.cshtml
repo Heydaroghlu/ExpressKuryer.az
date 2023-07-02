@@ -1,0 +1,185 @@
+﻿@{
+    int count = (Model.PageIndex - 1) * ViewBag.PageSize + 1;
+    List<string> listOfURLs = ViewBag.ListOfURLs;
+    string? isDeleted = (string)TempData["isDeleted"];
+    string? deliveryStat = (string)TempData["deliveryStat"];
+}
+
+@model PagenatedList<DeliveryReturnDto>
+
+<div class="content-body">
+
+    <div class="container-fluid">
+        <div class="form-head d-flex mb-4 align-items-start">
+
+            <form asp-action="deliveryIndex" method="get" style="width:100%;">
+                <div class="input-group search-area d-inline-flex" style="width:100%;height:50px;">
+                    <input type="search" name="searchWord" value="@(ViewBag.Word)" class="form-control" placeholder="Axtarış et" style="height:100%;">
+                </div>
+                <div class="form-group" style="width:100%;margin:20px 0px;">
+                    <select class="form-control bg-gray-light" name="isDeleted">
+                        @if (isDeleted == "null")
+                        {
+                            <option value="null" class="bg-gray-light" selected>Hamısı</option>
+                        }
+                        else
+                        {
+                            <option value="null" class="bg-gray-light">Hamısı</option>
+                        } @if (isDeleted == "false")
+                        {
+                            <option value="false" class="bg-gray-light" selected>Silinməmişlər</option>
+                        }
+                        else
+                        {
+                            <option value="false" class="bg-gray-light">Silinməmişlər</option>
+                        } @if (isDeleted == "true")
+                        {
+                            <option value="true" class="bg-gray-light" selected>Silinmişlər</option>
+                        }
+                        else
+                        {
+                            <option value="true" class="bg-gray-light">Silinmişlər</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group" style="width:100%;margin:20px 0px;">
+                    <select class="form-control bg-gray-light" name="deliveryStat">
+                        @if (deliveryStat == "anbarda")
+                        {
+                            <option value="Anbarda" class="bg-gray-light" selected>Anbarda</option>
+                        }
+                        else
+                        {
+                            <option value="Anbarda" class="bg-gray-light">Anbarda</option>
+                        } @if (deliveryStat == "kuryerde")
+                        {
+                            <option value="Kuryerde" class="bg-gray-light" selected>Kuryerde</option>
+                        }
+                        else
+                        {
+                            <option value="Kuryerde" class="bg-gray-light">Kuryerde</option>
+                        } @if (deliveryStat == "catdirildi")
+                        {
+                            <option value="Catdirildi" class="bg-gray-light" selected>Catdirildi</option>
+                        }
+                        else
+                        {
+                            <option value="Catdirildi" class="bg-gray-light">Catdirildi</option>
+                        }
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-outline-dark my-3">Axtarış et</button>
+
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="table-responsive">
+                    <table id="example5" class="display mb-4 dataTablesCard" style="width:100%;">
+                        <thead>
+                            <tr>
+                                <th><strong class="font-w600">Çatdırılma ID</strong></th>
+                                <th><strong class="font-w600">YZamanı</strong></th>
+                                <th><strong class="font-w600 wspace-no">Ad Soyad</strong></th>
+                                <th><strong class="font-w600">Toplam Hesab</strong></th>
+                                <th><strong class="font-w600 wspace-no">Çatdırılma Statusu</strong></th>
+                                <th>Aksiyonlar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (DeliveryReturnDto item in Model)
+                            {
+                                <tr>
+                                    <td>#@item.DeliveryCode</td>
+                                    <td class="wspace-no"> @item.CreatedAt.ToString("dd MMMM yyyy HH:MM")</td>
+                                    <td>@item.Name @item.SurName</td>
+                                    <td>@item.TotalAmount</td>
+                                    <td>
+                                        <a class="btn bgl-success text-success btn-sm">@item.OrderDeliveryStatus</a>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex">
+                                            <a asp-action="detail" asp-route-id="@item.Id" class="btn btn-primary shadow btn-xs sharp me-1"><i class="lni lni-eye"></i></a>
+                                            <a asp-action="delete" asp-route-id="@item.Id" class="btn btn-danger shadow btn-xs sharp btn-delete-sweet"><i class="fas fa-trash"></i></a>
+                                        </div>
+                                    </td>
+
+                                    @*<td>
+                                <div class="dropdown ms-auto">
+                                <div class="btn-link" data-bs-toggle="dropdown">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.0005 12C11.0005 12.5523 11.4482 13 12.0005 13C12.5528 13 13.0005 12.5523 13.0005 12C13.0005 11.4477 12.5528 11 12.0005 11C11.4482 11 11.0005 11.4477 11.0005 12Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M18.0005 12C18.0005 12.5523 18.4482 13 19.0005 13C19.5528 13 20.0005 12.5523 20.0005 12C20.0005 11.4477 19.5528 11 19.0005 11C18.4482 11 18.0005 11.4477 18.0005 12Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4.00049 12C4.00049 12.5523 4.4482 13 5.00049 13C5.55277 13 6.00049 12.5523 6.00049 12C6.00049 11.4477 5.55277 11 5.00049 11C4.4482 11 4.00049 11.4477 4.00049 12Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item text-info" href="#">
+                                <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18457 2.99721 7.13633 4.39828 5.49707C5.79935 3.85782 7.69279 2.71538 9.79619 2.24015C11.8996 1.76491 14.1003 1.98234 16.07 2.86" stroke="#2F4CDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M22 4L12 14.01L9 11.01" stroke="#2F4CDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                Accept order
+                                </a>
+                                <a class="dropdown-item text-black" href="#">
+                                <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#F24242" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M15 9L9 15" stroke="#F24242" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M9 9L15 15" stroke="#F24242" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                Reject order
+                                </a>
+                                </div>
+                                </div>
+                                </td>*@
+                                </tr>
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <nav aria-label="Page navigation example" class="d-flex justify-content-center align-items-center">
+                    <ul class="pagination">
+                        @if (Model.HasPrev)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" asp-action="deliveryIndex" asp-route-page="@(Model.PageIndex - 1)" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        }
+                        @for (int i = 1; i <= Model.TotalPage; i++)
+                        {
+                            if (Model.PageIndex - 1 == i)
+                            {
+                                <li class="page-item"><a class="page-link" asp-action="deliveryIndex" asp-route-page="@i" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]">@i</a></li>
+                            }
+
+                            if (Model.PageIndex == i)
+                            {
+                                <li class="page-item active"><a class="page-link" style=" z-index: 3; color: #fff; background-color: black !important; border-color: black !important;" asp-action="deliveryIndex" asp-route-page="@i" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]">@i</a></li>
+                            }
+                            if (Model.PageIndex + 1 == i)
+                            {
+                                <li class="page-item"><a class="page-link" asp-action="deliveryIndex" asp-route-page="@i" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]">@i</a></li>
+                            }
+                        }
+                        @if (Model.HasNext)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" asp-action="deliveryIndex" asp-route-page="@(Model.PageIndex + 1)" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!--**********************************
+    Content body end
+***********************************-->

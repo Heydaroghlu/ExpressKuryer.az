@@ -108,7 +108,7 @@
                                     <div class="media align-items-center">
                                         @if (Model.Courier.CourierPerson.Image != null)
                                         {
-                                            <img class="me-3 rounded-circle" src="@( userPath +Model.MemberUser.Image)" style="width: 100px;height: 100px;object-fit: cover;" alt="">
+                                            <img class="me-3 rounded-circle" src="@( userPath +Model.Courier.CourierPerson.Image)" style="width: 100px;height: 100px;object-fit: cover;" alt="">
                                         }
                                         else
                                         {
@@ -250,6 +250,7 @@
                 e.preventDefault();
                 let href = x.getAttribute("href");
 
+                console.log(href)
                 fetch(href).then(response => {
                     if (!response.ok) {
                         throw new Error('İstekte bir hata oluştu!');
@@ -301,6 +302,8 @@
             x.addEventListener("click", function (e) {
                 e.preventDefault();
                 let href = x.getAttribute("href");
+
+                console.log(href)
 
                 fetch(href).then(response => {
                     response.text();

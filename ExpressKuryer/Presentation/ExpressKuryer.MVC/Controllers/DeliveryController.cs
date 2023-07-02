@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CloudinaryDotNet.Actions;
 using ExpressKuryer.Application.DTOs;
+using ExpressKuryer.Application.DTOs.CourierDTOs;
 using ExpressKuryer.Application.DTOs.DeliveryDTOs;
 using ExpressKuryer.Application.DTOs.Setting;
 using ExpressKuryer.Application.Storages;
@@ -35,27 +36,21 @@ namespace ExpressKuryer.MVC.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> Index(int page = 1, string? searchWord = null, bool? isDeleted = false, string? orderStat = null, string? deliveryStat = null)
+        public async Task<IActionResult> Index(int page = 1, string? searchWord = null, string? isDeleted = "false", string? orderStat = null)
         {
             var entities = await _unitOfWork.RepositoryDelivery.GetAllAsync(x => true, false, "Service", "MemberUser", "Courier");
             //todo change to returnDto
             int pageSize = 10;
 
             orderStat = orderStat ?? DeliveryStatus.Gözləmədə.ToString();
-            deliveryStat = deliveryStat ?? OrderDeliveryStatus.Anbarda.ToString();
 
             if (orderStat.Equals(DeliveryStatus.İmtina.ToString())) entities = entities.Where(x => x.DeliveryStatus == DeliveryStatus.İmtina.ToString()).ToList();
             else if (orderStat.Equals(DeliveryStatus.Gözləmədə.ToString())) entities = entities.Where(x => x.DeliveryStatus == DeliveryStatus.Gözləmədə.ToString()).ToList();
             else if (orderStat.Equals(DeliveryStatus.Qəbul.ToString())) entities = entities.Where(x => x.DeliveryStatus == DeliveryStatus.Qəbul.ToString()).ToList();
 
-
-            if (deliveryStat.Equals(OrderDeliveryStatus.Anbarda.ToString())) entities = entities.Where(x => x.OrderDeliveryStatus == OrderDeliveryStatus.Anbarda.ToString()).ToList();
-            else if (deliveryStat.Equals(OrderDeliveryStatus.Kuryerde.ToString())) entities = entities.Where(x => x.OrderDeliveryStatus == OrderDeliveryStatus.Kuryerde.ToString()).ToList();
-            else if (deliveryStat.Equals(OrderDeliveryStatus.Catdirildi.ToString())) entities = entities.Where(x => x.OrderDeliveryStatus == OrderDeliveryStatus.Catdirildi.ToString()).ToList();
-
-            if (isDeleted == true)
+            if (isDeleted == "true")
                 entities = entities.Where(x => x.IsDeleted).ToList();
-            if (isDeleted == false)
+            if (isDeleted == "false")
                 entities = entities.Where(x => !x.IsDeleted).ToList();
 
             if (string.IsNullOrWhiteSpace(searchWord) == false)
@@ -68,12 +63,51 @@ namespace ExpressKuryer.MVC.Controllers
 
             ViewBag.PageSize = pageSize;
             ViewBag.Word = searchWord;
-            TempData["Title"] = "Çatdırılmalar";
+            TempData["Title"] = "Siraşiflər";
             TempData["Page"] = page;
             TempData["IsDeleted"] = isDeleted.ToString().ToLower();
             TempData["orderStat"] = orderStat.ToString().ToLower();
             //todo isdeletedleri her yerde bele istifade et
 
+
+            return View(list);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> DeliveryIndex(int page = 1, string? searchWord = null, string? isDeleted = "false", string? deliveryStat = null)
+        {
+            var entities = await _unitOfWork.RepositoryDelivery.GetAllAsync(x => true, false, "Service", "MemberUser", "Courier");
+            //todo change to returnDto
+            int pageSize = 10;
+
+            deliveryStat = deliveryStat ?? OrderDeliveryStatus.Anbarda.ToString();
+
+            if (deliveryStat.Equals(OrderDeliveryStatus.Anbarda.ToString())) entities = entities.Where(x => x.OrderDeliveryStatus == OrderDeliveryStatus.Anbarda.ToString() && x.DeliveryStatus == DeliveryStatus.Qəbul.ToString()).ToList();
+            else if (deliveryStat.Equals(OrderDeliveryStatus.Kuryerde.ToString())) entities = entities.Where(x => x.OrderDeliveryStatus == OrderDeliveryStatus.Kuryerde.ToString() && x.DeliveryStatus == DeliveryStatus.Qəbul.ToString()).ToList();
+            else if (deliveryStat.Equals(OrderDeliveryStatus.Catdirildi.ToString())) entities = entities.Where(x => x.OrderDeliveryStatus == OrderDeliveryStatus.Catdirildi.ToString() && x.DeliveryStatus == DeliveryStatus.Qəbul.ToString()).ToList();
+
+            if (isDeleted == "true")
+                entities = entities.Where(x => x.IsDeleted).ToList();
+            if (isDeleted == "false")
+                entities = entities.Where(x => !x.IsDeleted).ToList();
+
+            if (string.IsNullOrWhiteSpace(searchWord) == false)
+            {
+                entities = entities.Where(x => x.Name.ToLower().Contains(searchWord.ToLower())).ToList();
+            }
+
+            var returnDto = _mapper.Map<List<DeliveryReturnDto>>(entities);
+            var list = PagenatedList<DeliveryReturnDto>.Save(returnDto.AsQueryable(), page, pageSize);
+
+            ViewBag.PageSize = pageSize;
+            ViewBag.Word = searchWord;
+            TempData["Title"] = "Çatdırmalar";
+            TempData["Page"] = page;
+            TempData["IsDeleted"] = isDeleted.ToString().ToLower();
+            TempData["deliveryStat"] = deliveryStat.ToString().ToLower();
+            //todo isdeletedleri her yerde bele istifade et
+
+            Console.WriteLine(deliveryStat);
 
             return View(list);
         }
@@ -91,21 +125,22 @@ namespace ExpressKuryer.MVC.Controllers
             TempData["UserPath"] = _storage.GetUrl(_userPath, null);
 
 
+
             var couriers = await _unitOfWork.RepositoryCourier.GetAllAsync(x => !x.IsDeleted, false, "CourierPerson");
+            returnDto.DashboardCourierViewModel = new Application.ViewModels.DashboardCourierViewModel();
+
             ViewBag.Couriers = couriers;
-           
-         if(returnDto.DashboardCourierViewModel!=null)
+
+            if (couriers != null && couriers.Count > 0)
             {
-                if (couriers != null && couriers.Count > 0)
-                {
-                    returnDto.DashboardCourierViewModel.Couriers = couriers.ToList();
-                }
-                if (entity != null)
-                {
-                    returnDto.DashboardCourierViewModel.CourierId = (int)entity.CourierId;
-                }
+                returnDto.DashboardCourierViewModel.Couriers = couriers.ToList();
             }
 
+            if (entity != null && entity.CourierId > 0)
+            {
+                Console.WriteLine(entity.CourierId);
+                returnDto.DashboardCourierViewModel.CourierId = (int)entity.CourierId;
+            }
 
             return View(returnDto);
         }
@@ -123,21 +158,32 @@ namespace ExpressKuryer.MVC.Controllers
             TempData["UserPath"] = _storage.GetUrl(_userPath, null);
 
             var couriers = await _unitOfWork.RepositoryCourier.GetAllAsync(x => !x.IsDeleted, false, "CourierPerson");
-            ViewBag.Couriers = couriers;
 
             var delivery = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == deliveryId && !x.IsDeleted);
-            var courier = await _unitOfWork.RepositoryCourier.GetAsync(x => x.Id == courierId && !x.IsDeleted);
+            var courier = await _unitOfWork.RepositoryCourier.GetAsync(x => x.Id == courierId && !x.IsDeleted,true, "CourierPerson");
             if (courier != null)
             {
                 delivery.CourierId = courierId;
             }
 
+            ViewBag.Couriers = couriers;
+
             await _unitOfWork.CommitAsync();
 
             TempData["Success"] = "Çatdırılmaya Kuryer əlavə olundu";
 
+            //todo kuryer secilende email getsinmi?
 
-            returnDto.DashboardCourierViewModel.Couriers = couriers;
+            returnDto.DashboardCourierViewModel = new();
+            
+            if (couriers != null && couriers.Count > 0)
+            {
+                returnDto.DashboardCourierViewModel.Couriers = couriers;
+                returnDto.DashboardCourierViewModel.CourierId = courierId;
+                var courierReturnDto = _mapper.Map<CourierReturnDto>(courier);
+                returnDto.Courier = courierReturnDto;
+
+            }
 
             return View(returnDto);
         }
@@ -177,7 +223,7 @@ namespace ExpressKuryer.MVC.Controllers
         [Route("Manage/ChangeOrderDeliveryStatus")]
         public async Task<IActionResult> ChangeOrderDeliveryStatus(int orderId, string status, string appUserId)
         {
-            var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == orderId,true, "Courier");
+            var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == orderId, true, "Courier");
             var appUser = await _userManager.FindByIdAsync(appUserId);
 
 

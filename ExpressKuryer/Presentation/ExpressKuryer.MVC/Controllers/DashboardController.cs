@@ -88,13 +88,13 @@ namespace ExpressKuryer.MVC.Controllers
 
         private async Task<(int thisMonth, int percent)> GetMonthlyDeliveries()
         {
-            var thisMonth = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.CreatedAt.Month == DateTime.Now.Month && x.CreatedAt.Year == DateTime.Now.Year).Result.Count();
+            var thisMonth = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.CreatedAt.Month == DateTime.Now.Month && x.CreatedAt.Year == DateTime.Now.Year && x.OrderDeliveryStatus.Equals(OrderDeliveryStatus.Catdirildi.ToString())).Result.Count();
             int preMonth = 0;
             int percent = 0;
             if (DateTime.Now.Month == 1)
-                preMonth = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.CreatedAt.Month == 12 && x.CreatedAt.Year == (DateTime.Now.Year - 1)).Result.Count();
+                preMonth = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.CreatedAt.Month == 12 && x.CreatedAt.Year == (DateTime.Now.Year - 1) && x.OrderDeliveryStatus.Equals(OrderDeliveryStatus.Catdirildi.ToString())).Result.Count();
             else
-                preMonth = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.CreatedAt.Month == 12 && x.CreatedAt.Year == (DateTime.Now.Year - 1)).Result.Count();
+                preMonth = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.CreatedAt.Month == 12 && x.CreatedAt.Year == (DateTime.Now.Year - 1) && x.OrderDeliveryStatus.Equals(OrderDeliveryStatus.Catdirildi.ToString())).Result.Count();
             if (preMonth == 0)
                 percent = 0;
             else

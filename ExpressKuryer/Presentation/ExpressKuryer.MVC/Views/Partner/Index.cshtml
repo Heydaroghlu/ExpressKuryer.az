@@ -88,7 +88,7 @@
                                             <img src="@(imagePath+item.Image)" style="width:200px;height:200px;object-fit:contain;" />
                                         </div>
                                     </td>
-                                    <td>@item.UpdatedAt.ToString("dd:mm:yyyy")</td>
+                                    <td>@item.CreatedAt.ToString("dd MMMM yyyy")</td>
                                     <td>
                                         <div class="d-flex">
                                             <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>

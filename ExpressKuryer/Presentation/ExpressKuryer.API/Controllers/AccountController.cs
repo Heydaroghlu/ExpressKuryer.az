@@ -4,6 +4,7 @@ using ExpressKuryer.Application.DTOs.Token;
 using ExpressKuryer.Application.HelperManager;
 using ExpressKuryer.Application.UnitOfWorks;
 using ExpressKuryer.Domain.Entities;
+using ExpressKuryer.Domain.Enums.UserEnums;
 using ExpressKuryer.Infrastructure.Services.Email;
 using ExpressKuryer.Infrastructure.Services.Token;
 using Microsoft.AspNetCore.Http;
@@ -100,7 +101,8 @@ namespace ExpressKuryer.API.Controllers
                 Email = register.Email,
                 PhoneNumber = register.Phone,
                 Address = register.Address,
-                UserName = register.Email
+                UserName = register.Email,
+                UserType = UserRoleEnum.Member.ToString()
             };
             var result = await _userManager.CreateAsync(user, register.Password);
             await _userManager.AddToRoleAsync(user, "Member");

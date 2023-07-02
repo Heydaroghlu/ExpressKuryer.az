@@ -53,7 +53,10 @@ namespace ExpressKuryer.MVC.Controllers
                 ModelState.AddModelError("", "Parol və ya şifrə yanlışdır");
                 return View(loginDto);
             }
-            return RedirectToAction("Index", "Dashboard");
+            if (user.IsAdmin)
+                return RedirectToAction("Index", "Dashboard");
+            else
+                return RedirectToAction("Profile", "Account",new { id = user.Id });
         }
 
         [HttpGet("Logout")]
@@ -68,6 +71,7 @@ namespace ExpressKuryer.MVC.Controllers
         {
             AppUser memberUser = null;
             AppUser user = null;
+            TempData["Title"] = "Hesabım";
             AdminAccountViewModel viewModel = new AdminAccountViewModel()
             {
 
@@ -83,9 +87,7 @@ namespace ExpressKuryer.MVC.Controllers
 
                 var courier = await _unitOfWork.RepositoryCourier.GetAsync(x => !x.IsDeleted && x.CourierPersonId == memberUser.Id, false, "CourierPerson");
                 viewModel.Courier = courier;
-
                 viewModel.User = memberUser;
-                viewModel.MemberDeliveries = await _unitOfWork.RepositoryDelivery.GetAllAsync(x => x.MemberUserId == memberUser.Id);
 
 
                 var gainPercent = Convert.ToDecimal(_unitOfWork.RepositorySetting.GetAsync(x => x.Key.Equals("GainPercent")).Result.Value);
@@ -97,8 +99,6 @@ namespace ExpressKuryer.MVC.Controllers
                     var result = ((item.TotalAmount * gainPercent) / 100);
                     viewModel.Courier.Gain = viewModel.Courier.Gain + result;
                 }
-
-
             }
             else
             {
@@ -106,11 +106,13 @@ namespace ExpressKuryer.MVC.Controllers
                     return RedirectToAction("Page", "NotFound");
                 
                 user = await _userManager.FindByNameAsync(User.Identity.Name);
-                
+
+
                 viewModel.User = user;
                 viewModel.PartnerCount = _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted).Result.Count();
                 viewModel.CourierCount = _unitOfWork.RepositoryCourier.GetAllAsync(x => !x.IsDeleted).Result.Count();
-                viewModel.UserCount = _userManager.Users.Where(x => !x.IsAdmin && x.UserType.Equals(UserRoleEnum.Member)).Count();
+                viewModel.UserCount = _userManager.Users.Where(x => x.UserType.Equals(UserRoleEnum.Member.ToString())).Count();
+                Console.WriteLine(viewModel.UserCount);
             }
 
             TempData["ImagePath"] = _storage.GetUrl(_imagePath,null);
