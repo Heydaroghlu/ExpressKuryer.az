@@ -10,6 +10,7 @@ using ExpressKuryer.Domain.Entities;
 using ExpressKuryer.Application.Abstractions.File;
 using Microsoft.AspNetCore.Identity;
 using Newtonsoft.Json;
+using CloudinaryDotNet.Actions;
 
 namespace ExpressKuryer.MVC.Controllers
 {
@@ -76,7 +77,21 @@ namespace ExpressKuryer.MVC.Controllers
 
         public async Task<IActionResult> Create()
         {
-            ViewBag.Partners = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted);
+
+            int partnerId = 0;
+            if (TempData["PartnerId"] != null)
+            {
+                partnerId = (int)TempData["PartnerId"];
+                TempData["PartnerId"] = partnerId;
+            }
+            if (partnerId != 0)
+            {
+                var partner = await _unitOfWork.RepositoryPartner.GetAsync(x => !x.IsDeleted && x.Id == partnerId);
+                ViewBag.Partners = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted && x.Id != partnerId);
+                ViewBag.Partner = partner;
+            }
+            else
+                ViewBag.Partners = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted && x.Id != partnerId);
             return View();
         }
 
@@ -95,16 +110,40 @@ namespace ExpressKuryer.MVC.Controllers
                 return View(objectDto);
             }
 
+            foreach (var item in objectDto.ImageFiles)
+            {
+                try
+                {
+                    _fileService.CheckFileType(item, ContentTypeManager.ImageContentTypes);
+                }
+                catch (Exception)
+                {
+                    ModelState.AddModelError("ImageFiles", ContentTypeManager.ImageContentMessage());
+                    return View(objectDto);
+                }
+            }
+
             var imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
 
             var partner = _mapper.Map<PartnerProduct>(objectDto);
             partner.Image = imageInfo.fileName;
 
+            foreach (var item in objectDto.ImageFiles)
+            {
+                imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
+                ProductImages productImages = new()
+                {
+                    Image = imageInfo.fileName,
+                    IsPoster = false,
+                    ProductId = objectDto.PartnerId,
+                };
+                await _unitOfWork.RepositoryProductImages.InsertAsync(productImages);
+            }
+
             await _unitOfWork.RepositoryPartnerProduct.InsertAsync(partner);
             await _unitOfWork.CommitAsync();
 
             object page = TempData["Page"] as int?;
-            partner.PartnerId = (int)TempData["PartnerId"];
 
             return RedirectToAction("Index", new { partnerId = partner.PartnerId, page = page });
         }
@@ -129,7 +168,31 @@ namespace ExpressKuryer.MVC.Controllers
             var existObject = await _unitOfWork.RepositoryPartnerProduct.GetAsync(x => x.Id == id);
 
             if (existObject == null) return RedirectToAction("NotFound", "Page");
+            
+            if (!ModelState.IsValid) return View(objectDto);
 
+            try
+            {
+                _fileService.CheckFileType(objectDto.FormFile, ContentTypeManager.ImageContentTypes);
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("FormFile", ContentTypeManager.ImageContentMessage());
+                return View(objectDto);
+            }
+
+            foreach (var item in objectDto.ImageFiles)
+            {
+                try
+                {
+                    _fileService.CheckFileType(item, ContentTypeManager.ImageContentTypes);
+                }
+                catch (Exception)
+                {
+                    ModelState.AddModelError("ImageFiles", ContentTypeManager.ImageContentMessage());
+                    return View(objectDto);
+                }
+            }
 
             //todo change to rule to all conrtroller Image url can be return
             objectDto.Image = _storage.GetUrl(_imagePath, existObject.Image);
@@ -163,19 +226,30 @@ namespace ExpressKuryer.MVC.Controllers
                 }
             }
 
+            foreach (var item in objectDto.ImageFiles)
+            {
+                var imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
+                ProductImages productImages = new()
+                {
+                    Image = imageInfo.fileName,
+                    IsPoster = false,
+                    ProductId = objectDto.PartnerId,
+                };
+                await _unitOfWork.RepositoryProductImages.InsertAsync(productImages);
+            }
+            //todo silmek elave et bura
+
             existObject.Name = objectDto.Name;
             existObject.CostPrice = objectDto.CostPrice;
             existObject.SalePrice = objectDto.SalePrice;
             existObject.Description = objectDto.Description;
             existObject.DiscountPrice = objectDto.DiscountPrice;
-            existObject.IsInterestFree = objectDto.IsInterestFree;
-            
+
             await _unitOfWork.CommitAsync();
 
             object page = TempData["Page"] as int?;
-            int partnerId = (int)TempData["PartnerId"];
 
-            return RedirectToAction("Index", new { partnerId = partnerId, page = page });
+            return RedirectToAction("Index", new { page = page });
         }
 
         public async Task<IActionResult> Delete(int id)

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ExpressKuryer.Persistence.Migrations
 {
-    public partial class DbCreated : Migration
+    public partial class dbCreated : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

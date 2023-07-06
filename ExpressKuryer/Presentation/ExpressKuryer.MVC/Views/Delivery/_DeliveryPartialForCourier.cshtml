@@ -9,7 +9,7 @@
                     <h5 class="modal-title">Kuryerlər</h5>
                 </div>
                 <div class="modal-body">
-                    @if (ViewBag.Couriers != null)
+                    @if (Model.Couriers != null)
                     {
                         <select class="form-control" form="courierform" asp-for="CourierId" asp-items="@new SelectList((List<Courier>)ViewBag.Couriers,nameof(Courier.Id),nameof(Courier.CourierPerson))"></select>
                     }

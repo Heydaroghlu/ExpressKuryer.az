@@ -16,6 +16,7 @@ namespace ExpressKuryer.Application.DTOs.PartnerProduct
         public decimal? SalePrice { get; set; }
         public decimal? CostPrice { get; set; }
         public decimal? DiscountPrice { get; set; }
-        public bool? IsInterestFree { get; set; }
+        //public bool? IsInterestFree { get; set; }
+        public List<IFormFile>? ImageFiles { get; set; }
     }
 }

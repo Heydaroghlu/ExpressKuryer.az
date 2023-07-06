@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExpressKuryer.Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230630200416_DbCreated")]
-    partial class DbCreated
+    [Migration("20230706182954_dbCreated")]
+    partial class dbCreated
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

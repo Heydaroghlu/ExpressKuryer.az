@@ -111,30 +111,38 @@ namespace ExpressKuryer.MVC.Controllers
                 ModelState.AddModelError("CourierPerson.PhoneNumber", "Telefon doğru deyil");
                 return View(courierCreateDto);
             }
-
-            var entity = _mapper.Map<ExpressKuryer.Domain.Entities.Courier>(courierCreateDto);
+            
             var appUser = _mapper.Map<AppUser>(courierCreateDto.CourierPerson);
+
             appUser.UserName = appUser.Email;
+            appUser.UserType = UserRoleEnum.Courier.ToString();
 
             if (courierCreateDto.FormFile != null)
             {
                 var imageInfo = await _storage.UploadAsync(_imagePath, courierCreateDto.FormFile);
-                entity.CourierPerson.Image = imageInfo.fileName;
+                appUser.Image = imageInfo.fileName;
             }
 
-            entity.CourierPerson.UserType = UserRoleEnum.Courier.ToString();
-
             var result = await _userManager.CreateAsync(appUser, courierCreateDto.CourierPerson.Password);
+
+            var entity = _mapper.Map<ExpressKuryer.Domain.Entities.Courier>(courierCreateDto);
             entity.CourierPersonId = appUser.Id;
+            entity.CourierPerson = null;
+
+            //try
+            //{
+            //    _emailService.Send(appUser.Email, "Kuryer ol", "Sizin Express Kuryer-də Kuryer olaraq hesabınız yaradıldı");
+            //}
+            //catch (Exception ex)
+            //{
+            //    TempData["Error"] = "Kuryer-ə email göndərilmədi!";
+            //    return View(courierCreateDto);
+            //}
 
             await _unitOfWork.RepositoryCourier.InsertAsync(entity);
             await _unitOfWork.CommitAsync();
 
             object page = TempData["Page"] as int?;
-
-            _emailService.Send(appUser.Email, "Kuryer ol", "Sizin Express Kuryer-də Kuryer olaraq hesabınız yaradıldı");
-            //todo emailde error verende xeber cixarsin
-
 
             return RedirectToAction("Index", new { page = page });
         }
@@ -206,6 +214,19 @@ namespace ExpressKuryer.MVC.Controllers
             existObject.CourierPerson.Email = editDto.CourierPerson.Email;
 
 
+            try
+            {
+                _emailService.Send(existObject.CourierPerson.Email, "Kuryer ol", "Sizin Express Kuryer-də Kuryer olaraq hesabınız yaradıldı");
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "Kuryer-ə email göndərilmədi!";
+                return View(editDto);
+            }
+
+            await _unitOfWork.CommitAsync();
+
+
             object page = TempData["Page"] as int?;
 
 
@@ -252,7 +273,15 @@ namespace ExpressKuryer.MVC.Controllers
             if (resetResult.Succeeded)
             {
                 TempData["Success"] = "Parol Dəyişildi";
-                _emailService.Send(appUser.Email, "Parol Prosesi", $"Sizin Express Kuryer-də hesabızın parolu yeniləndi : {newPassword}");
+                try
+                {
+                    _emailService.Send(appUser.Email, "Parol Prosesi", $"Sizin Express Kuryer-də hesabızın parolu yeniləndi : {newPassword}");
+                }
+                catch (Exception ex)
+                {
+                    //todo front teref
+                    return StatusCode(500, ex.Message);
+                }
                 Console.WriteLine("OK");
             }
             else

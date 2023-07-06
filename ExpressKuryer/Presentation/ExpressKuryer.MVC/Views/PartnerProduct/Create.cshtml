@@ -1,5 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Edit";
+    int partnerId = 0;
+    if(TempData["PartnerId"] != null)
+    {
+        partnerId = (int)TempData["PartnerId"];
+    }
+    var partner = (Partner)ViewBag.Partner;
 }
 
 @model PartnerProductCreateDto
@@ -28,7 +34,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <label asp-for="Description" class="form-label">Ad</label>
+                                <label asp-for="Description" class="form-label">Açıqlama</label>
                                 <div id="editor" style="border:1px solid">
                                 </div>
                                 <textarea class="form-control textarea-Name d-none" asp-for="Description" rows="3" style="border:1px solid"></textarea>
@@ -54,21 +60,38 @@
 
                             <div class="mb-3">
                                 <label asp-for="PartnerId" class="form-label">Partnuyor</label>
-                                <select class="form-control" asp-for="PartnerId" asp-items="@new SelectList((List<Partner>)ViewBag.Partners,nameof(Partner.Id),nameof(Partner.Name))"></select>
+                                <select class="form-control" asp-for="PartnerId">
+                                    @if(partner != null)
+                                    {
+                                            <option disabled selected>@partner.Name</option>
+                                    }
+                                    @foreach (Partner item in ViewBag.Partners)
+                                    {
+                                        <option value="@item.Id" >@item.Name</option>
+                                    }
+                                </select>
                                 <span class="text-danger" asp-validation-for="PartnerId"></span>
                             </div>
 
 
-                            <div class="mb-3">
+                        @*    <div class="mb-3">
                                 <label asp-for="IsInterestFree" class="form-label">IsInterestFree</label>
-                                <input asp-for="IsInterestFree">
+                                <input asp-for="IsInterestFree" style="margin:20px 0px">
                                 <span class="text-danger" asp-validation-for="IsInterestFree"></span>
                             </div>
-
+*@
                             <div class="mb-3 image-box">
-                                <label asp-for="FormFile" class="form-label">Şəkil</label>
+                                <label asp-for="FormFile" class="form-label">Poster Şəkil</label>
                                 <input asp-for="FormFile" class="form-control file" style="margin:20px 0px">
                                 <img style="width:300px;height:300px;object-fit:cover;" />
+                                <span class="text-danger" asp-validation-for="FormFile"></span>
+                            </div>
+
+                            <div class="mb-3 image-boxs">
+                                <label asp-for="ImageFiles" class="form-label">Detallı Şəkillər</label>
+                                <input asp-for="ImageFiles" multiple class="form-control multi-file" style="margin:20px 0px">
+                                <img style="width:300px;height:300px;object-fit:cover;" />
+                                <span class="text-danger" asp-validation-for="ImageFiles"></span>
                             </div>
 
                             <div>

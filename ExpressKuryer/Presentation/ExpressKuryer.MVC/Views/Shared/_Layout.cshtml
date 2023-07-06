@@ -1,9 +1,8 @@
-﻿
-@inject LayoutService layout
+﻿@inject LayoutService layout
 @{
     AppUser user = null;
     //todo image i yoxlayan yerde path deyismelidi
-    
+
     if (User.Identity.IsAuthenticated == true) user = await layout.GetUserAsync(User.Identity.Name);
     var todayDeliveryCount = layout.GetTodayDeliveries();
     var todaySupriseDeliveries = await layout.GetSupriseDeliveries();
@@ -28,7 +27,6 @@
     <meta name="format-detection" content="telephone=no">
     <title>Express Kuryer </title>
     <!-- Favicon icon -->
-
     @* <link rel="icon" type="image/png" sizes="16x16" href="~/manage/images/favicon.png"> *@
     <link href="~/manage/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/manage/vendor/chartist/css/chartist.min.css">
@@ -74,7 +72,7 @@
     {
         <input type="hidden" id="toaster-warning" value="@TempData["Warning"]" />
     }
-    
+
     <!--*******************
         Preloader start
     ********************-->
@@ -144,7 +142,14 @@
                                     <li class="active dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="~/manage/images/avatar/1.jpg" class="rounded-circle user_img" alt="" />
+                                                @if (user.Image != null)
+                                                {
+                                                    <img src="@user.Image" class="rounded-circle user_img" alt="" />
+                                                }
+                                                else
+                                                {
+                                                    <img src="~/manage/images/blank-profile-picture-973460_1280.png" class="rounded-circle user_img" alt="" />
+                                                }
                                                 <span class="online_icon"></span>
                                             </div>
                                             <div class="user_info">
@@ -542,68 +547,68 @@
                         </div>
                     </div>
                     @*<div class="tab-pane fade" id="notes">
-                        <div class="card mb-sm-3 mb-md-0 note_card">
-                            <div class="card-header chat-list-header text-center">
-                                <a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect fill="#000000" x="4" y="11" width="16" height="2" rx="1" /><rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) " x="4" y="11" width="16" height="2" rx="1" /></g></svg></a>
-                                <div>
-                                    <h6 class="mb-1">Notes</h6>
-                                    <p class="mb-0">Add New Nots</p>
-                                </div>
-                                <a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24" /><path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" /><path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero" /></g></svg></a>
-                            </div>
-                            <div class="card-body contacts_body p-0 dz-scroll" id="DZ_W_Contacts_Body2">
-                                <ul class="contacts">
-                                    <li class="active">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="user_info">
-                                                <span>New order placed..</span>
-                                                <p>10 Aug 2020</p>
-                                            </div>
-                                            <div class="ms-auto">
-                                                <a href="javascript:;" class="btn btn-primary btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-                                                <a href="javascript:;" class="btn btn-danger btn-xs sharp"><i class="fas fa-trash"></i></a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="d-flex bd-highlight">
-                                            <div class="user_info">
-                                                <span>Youtube, a video-sharing website..</span>
-                                                <p>10 Aug 2020</p>
-                                            </div>
-                                            <div class="ms-auto">
-                                                <a href="javascript:;" class="btn btn-primary btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-                                                <a href="javascript:;" class="btn btn-danger btn-xs sharp"><i class="fas fa-trash"></i></a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="d-flex bd-highlight">
-                                            <div class="user_info">
-                                                <span>john just buy your product..</span>
-                                                <p>10 Aug 2020</p>
-                                            </div>
-                                            <div class="ms-auto">
-                                                <a href="javascript:;" class="btn btn-primary btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-                                                <a href="javascript:;" class="btn btn-danger btn-xs sharp"><i class="fas fa-trash"></i></a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="d-flex bd-highlight">
-                                            <div class="user_info">
-                                                <span>Athan Jacoby</span>
-                                                <p>10 Aug 2020</p>
-                                            </div>
-                                            <div class="ms-auto">
-                                                <a href="javascript:;" class="btn btn-primary btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-                                                <a href="javascript:;" class="btn btn-danger btn-xs sharp"><i class="fas fa-trash"></i></a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="card mb-sm-3 mb-md-0 note_card">
+                    <div class="card-header chat-list-header text-center">
+                    <a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect fill="#000000" x="4" y="11" width="16" height="2" rx="1" /><rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) " x="4" y="11" width="16" height="2" rx="1" /></g></svg></a>
+                    <div>
+                    <h6 class="mb-1">Notes</h6>
+                    <p class="mb-0">Add New Nots</p>
+                    </div>
+                    <a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24" /><path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" /><path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero" /></g></svg></a>
+                    </div>
+                    <div class="card-body contacts_body p-0 dz-scroll" id="DZ_W_Contacts_Body2">
+                    <ul class="contacts">
+                    <li class="active">
+                    <div class="d-flex bd-highlight">
+                    <div class="user_info">
+                    <span>New order placed..</span>
+                    <p>10 Aug 2020</p>
+                    </div>
+                    <div class="ms-auto">
+                    <a href="javascript:;" class="btn btn-primary btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                    <a href="javascript:;" class="btn btn-danger btn-xs sharp"><i class="fas fa-trash"></i></a>
+                    </div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="d-flex bd-highlight">
+                    <div class="user_info">
+                    <span>Youtube, a video-sharing website..</span>
+                    <p>10 Aug 2020</p>
+                    </div>
+                    <div class="ms-auto">
+                    <a href="javascript:;" class="btn btn-primary btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                    <a href="javascript:;" class="btn btn-danger btn-xs sharp"><i class="fas fa-trash"></i></a>
+                    </div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="d-flex bd-highlight">
+                    <div class="user_info">
+                    <span>john just buy your product..</span>
+                    <p>10 Aug 2020</p>
+                    </div>
+                    <div class="ms-auto">
+                    <a href="javascript:;" class="btn btn-primary btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                    <a href="javascript:;" class="btn btn-danger btn-xs sharp"><i class="fas fa-trash"></i></a>
+                    </div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="d-flex bd-highlight">
+                    <div class="user_info">
+                    <span>Athan Jacoby</span>
+                    <p>10 Aug 2020</p>
+                    </div>
+                    <div class="ms-auto">
+                    <a href="javascript:;" class="btn btn-primary btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                    <a href="javascript:;" class="btn btn-danger btn-xs sharp"><i class="fas fa-trash"></i></a>
+                    </div>
+                    </div>
+                    </li>
+                    </ul>
+                    </div>
+                    </div>
                     </div>*@
                 </div>
             </div>
@@ -678,10 +683,13 @@
                                         <div class="header-info">
                                             <span>@user.Name @user.Surname</span>
                                         </div>
-                                        @if(user.Image != null){
-                                            <img src="~/uploads/users/@user.Image" width="20" alt="" />
-                                        }else{
-                                        <img src="~/manage/images/1.jpg" width="20" alt="" />
+                                        @if (user.Image != null)
+                                        {
+                                            <img src="@user.Image" class="rounded-circle user_img" alt="" />
+                                        }
+                                        else
+                                        {
+                                            <img src="~/manage/images/blank-profile-picture-973460_1280.png" class="rounded-circle user_img" alt="" />
                                         }
                                     }
                                 </a>
@@ -691,8 +699,8 @@
                                         <span class="ms-2">Profile </span>
                                     </a>
                                     @*<a href="email-inbox.html" class="dropdown-item ai-icon">
-                                        <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                        <span class="ms-2">Inbox </span>
+                                    <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                    <span class="ms-2">Inbox </span>
                                     </a>*@
                                     <a asp-action="Logout" asp-controller="Account" class="dropdown-item ai-icon">
                                         <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
@@ -714,8 +722,8 @@
         <div class="deznav">
             <div class="deznav-scroll">
                 <ul class="metismenu" id="menu">
-                    
-                @if (user.IsAdmin)
+
+                    @if (user.IsAdmin)
                     {
                         <li>
                             <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -758,7 +766,9 @@
                                 <li><a asp-action="index" asp-controller="setting">Tənzimləmələr</a></li>
                             </ul>
                         </li>
-                    }else{
+                    }
+                    else
+                    {
                         <li>
                             <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                                 <i class="flaticon-dashboard-1"></i>
@@ -769,7 +779,7 @@
                             </ul>
                         </li>
                     }
-                   
+
 
                 </ul>
 
@@ -811,7 +821,7 @@
 
     <!-- Dashboard 1 -->
     <script src="~/manage/js/dashboard/analytics.js"></script>
-    
+
 
     @RenderSection("Scripts",false)
 

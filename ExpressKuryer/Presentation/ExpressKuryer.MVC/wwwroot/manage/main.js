@@ -1,5 +1,6 @@
 ﻿
 var inputFiles = document.querySelectorAll(".file");
+var multiInputFiles = document.querySelectorAll(".multi-file");
 
 inputFiles.forEach(element => {
     var imageBox = document.querySelector(".image-box");
@@ -24,6 +25,37 @@ inputFiles.forEach(element => {
                     images.forEach(e=>e.remove())
 
                     imageBox.appendChild(newimg)
+                }
+                reader.readAsDataURL(x)
+            }
+        })
+    }
+});
+
+
+multiInputFiles.forEach(element => {
+
+    var imageBox = document.querySelector(".image-boxs");
+
+    element.onchange = function (e) {
+        let files = e.target.files
+        let filesarr = [...files]
+        var images = document.querySelectorAll(".image-boxs img");
+
+        filesarr.forEach(x => {
+
+            if (x.type.startsWith("image/")) {
+                let reader = new FileReader()
+                reader.onload = function () {
+                    let newimg = document.createElement("img")
+                    newimg.style.width = "300px";
+                    newimg.style.margin = "10px";
+                    newimg.setAttribute("src", reader.result)
+
+                    images.forEach(e => e.remove())
+
+                    imageBox.appendChild(newimg)
+                    console.log("asd");
                 }
                 reader.readAsDataURL(x)
             }

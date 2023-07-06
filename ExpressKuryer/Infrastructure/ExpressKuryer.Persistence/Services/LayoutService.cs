@@ -1,4 +1,5 @@
 ﻿using ExpressKuryer.Application.Enums;
+using ExpressKuryer.Application.Storages;
 using ExpressKuryer.Application.UnitOfWorks;
 using ExpressKuryer.Domain.Entities;
 using System;
@@ -13,10 +14,11 @@ namespace ExpressKuryer.Persistence.Services
     {
 
         readonly IUnitOfWork _unitOfWork;
-
-        public LayoutService(IUnitOfWork unitOfWork)
+        IStorage _storage;
+        public LayoutService(IUnitOfWork unitOfWork, IStorage storage)
         {
             _unitOfWork = unitOfWork;
+            _storage = storage;
         }
 
         public async Task<List<Setting>> GetSettingsAsync()
@@ -26,7 +28,9 @@ namespace ExpressKuryer.Persistence.Services
 
         public async Task<AppUser> GetUserAsync(string name)
         {
-            return await _unitOfWork.RepositoryUser.GetAsync(x => x.UserName.Equals(name));
+            var user = await _unitOfWork.RepositoryUser.GetAsync(x => x.UserName.Equals(name));
+            user.Image = _storage.GetUrl("/uploads/users/", user.Image);
+            return user;
         }
         public int GetTodayDeliveries()
         {

@@ -108,7 +108,7 @@ namespace ExpressKuryer.MVC.Controllers
             //this 40 - x
             //pre 50 - 100
 
-            // 40*100/50 = 80 -20%
+            // 40*100/50 = 80 -20%  
 
             return (thisMonth, percent);
         }
@@ -125,7 +125,9 @@ namespace ExpressKuryer.MVC.Controllers
 
         private async Task<List<Delivery>> GetTodayDeliveries()
         {
-            return _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.CreatedAt.Date.Equals(DateTime.Now.Date)).Result.ToList();
+            var date = DateTime.Now.Date;
+            var ass = await _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.CreatedAt.Date == DateTime.Now.Date , true, "MemberUser");
+            return ass.ToList();
         }
 
         private async Task<decimal> GetTotalAmount()

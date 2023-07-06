@@ -32,6 +32,7 @@ namespace ExpressKuryer.Persistence.UnitOfWorks
             RepositoryVacancy = new Repository<Vacancy>(_context);
             RepositoryCourier = new Repository<Courier>(_context);
             RepositoryJobSeeker = new Repository<JobSeeker>(_context);
+            RepositoryProductImages = new Repository<ProductImages>(_context);
         }
 
         public IRepository<AppUser> RepositoryUser { get; set; }
@@ -47,6 +48,7 @@ namespace ExpressKuryer.Persistence.UnitOfWorks
         public IRepository<Vacancy> RepositoryVacancy { get; set; }
         public IRepository<Courier> RepositoryCourier { get; set; }
         public IRepository<JobSeeker> RepositoryJobSeeker { get; set; }
+        public IRepository<ProductImages> RepositoryProductImages { get; set; }
 
         public async Task<int> CommitAsync()
         {

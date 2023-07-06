@@ -41,14 +41,16 @@ namespace ExpressKuryer.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginDTO loginDto)
         {
-            AppUser user = await _userManager.FindByNameAsync(loginDto.UserName);
+            AppUser user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName.Equals(loginDto.UserName));
+
             if (user == null)
             {
                 ModelState.AddModelError("", "Parol və ya şifrə yanlışdır");
                 return View(loginDto);
             }
             var result = await _signInManager.PasswordSignInAsync(user, loginDto.Password, false, false);
-            if (!result.Succeeded)
+            Console.WriteLine(result.Succeeded);
+            if (result.Succeeded == false)
             {
                 ModelState.AddModelError("", "Parol və ya şifrə yanlışdır");
                 return View(loginDto);
@@ -107,12 +109,33 @@ namespace ExpressKuryer.MVC.Controllers
                 
                 user = await _userManager.FindByNameAsync(User.Identity.Name);
 
+                if (user.IsAdmin)
+                {
+                    viewModel.User = user;
+                    viewModel.PartnerCount = _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted).Result.Count();
+                    viewModel.CourierCount = _unitOfWork.RepositoryCourier.GetAllAsync(x => !x.IsDeleted).Result.Count();
+                    viewModel.UserCount = _userManager.Users.Where(x => x.UserType.Equals(UserRoleEnum.Member.ToString())).Count();
+                }
+                else
+                {
+                    var deliveries = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.MemberUserId == user.Id).Result.ToList();
+                    viewModel.MemberDeliveries = deliveries;
 
-                viewModel.User = user;
-                viewModel.PartnerCount = _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted).Result.Count();
-                viewModel.CourierCount = _unitOfWork.RepositoryCourier.GetAllAsync(x => !x.IsDeleted).Result.Count();
-                viewModel.UserCount = _userManager.Users.Where(x => x.UserType.Equals(UserRoleEnum.Member.ToString())).Count();
-                Console.WriteLine(viewModel.UserCount);
+                    var courier = await _unitOfWork.RepositoryCourier.GetAsync(x => !x.IsDeleted && x.CourierPersonId == user.Id, false, "CourierPerson");
+                    viewModel.Courier = courier;
+                    viewModel.User = user;
+
+
+                    var gainPercent = Convert.ToDecimal(_unitOfWork.RepositorySetting.GetAsync(x => x.Key.Equals("GainPercent")).Result.Value);
+
+                    viewModel.Courier.Gain = 0;
+
+                    foreach (var item in deliveries)
+                    {
+                        var result = ((item.TotalAmount * gainPercent) / 100);
+                        viewModel.Courier.Gain = viewModel.Courier.Gain + result;
+                    }
+                }
             }
 
             TempData["ImagePath"] = _storage.GetUrl(_imagePath,null);
@@ -216,30 +239,32 @@ namespace ExpressKuryer.MVC.Controllers
         }
 
 
-       
+
         //[HttpGet]
         //public async Task<IActionResult> Role()
         //{
         //    await _roleManager.CreateAsync(new IdentityRole("Courier"));
+        //    await _roleManager.CreateAsync(new IdentityRole("Member"));
+        //    await _roleManager.CreateAsync(new IdentityRole("Admin"));
         //    return Ok();
         //}
 
-        [HttpGet]
-        public async Task<IActionResult> Okay()
-        {
-            AppUser user = new AppUser
-            {
-                UserName = "AliBagishli",
-                Email = "expresskuryer.az@mail.com",
-                IsAdmin = true,
-                EmailConfirmed = true,
-            };
+        //[HttpGet]
+        //public async Task<IActionResult> Okay()
+        //{
+        //    AppUser user = new AppUser
+        //    {
+        //        UserName = "AliBagishli",
+        //        Email = "expresskuryer.az@mail.com",
+        //        IsAdmin = true,
+        //        EmailConfirmed = true,
+        //    };
 
-            await _userManager.CreateAsync(user, "Admin0910");
-            await _userManager.AddToRoleAsync(user, "Admin");
+        //    await _userManager.CreateAsync(user, "Admin0910");
+        //    await _userManager.AddToRoleAsync(user, "Admin");
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
      
 
     }
