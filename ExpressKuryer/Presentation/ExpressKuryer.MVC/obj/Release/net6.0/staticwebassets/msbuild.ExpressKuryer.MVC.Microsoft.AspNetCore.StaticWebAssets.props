@@ -4544,5 +4544,85 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\manage\vendor\wnumb\wNumb.js))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partnerProducts\1845b967-ac17-4432-8f62-17845b9d5a77women_cashmerevnecksweater_black5_10-Black00x.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ExpressKuryer.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ExpressKuryer.MVC</BasePath>
+      <RelativePath>uploads/partnerProducts/1845b967-ac17-4432-8f62-17845b9d5a77women_cashmerevnecksweater_black5_10-Black00x.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partnerProducts\1845b967-ac17-4432-8f62-17845b9d5a77women_cashmerevnecksweater_black5_10-Black00x.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partnerProducts\1b2f775f-b748-4368-b082-f62b389fe8cbmen-cashmere-pullover-black_2_1000x.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ExpressKuryer.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ExpressKuryer.MVC</BasePath>
+      <RelativePath>uploads/partnerProducts/1b2f775f-b748-4368-b082-f62b389fe8cbmen-cashmere-pullover-black_2_1000x.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partnerProducts\1b2f775f-b748-4368-b082-f62b389fe8cbmen-cashmere-pullover-black_2_1000x.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partnerProducts\87c7d784-4f9d-4d7f-ad1a-03f721696630men-cashmere-pullover-black_2_1000x.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ExpressKuryer.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ExpressKuryer.MVC</BasePath>
+      <RelativePath>uploads/partnerProducts/87c7d784-4f9d-4d7f-ad1a-03f721696630men-cashmere-pullover-black_2_1000x.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partnerProducts\87c7d784-4f9d-4d7f-ad1a-03f721696630men-cashmere-pullover-black_2_1000x.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partnerProducts\cd2d54a7-ee90-47cd-b8a7-2f9e88884d1cmen-cashmere-pullover-black_2_1000x.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ExpressKuryer.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ExpressKuryer.MVC</BasePath>
+      <RelativePath>uploads/partnerProducts/cd2d54a7-ee90-47cd-b8a7-2f9e88884d1cmen-cashmere-pullover-black_2_1000x.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partnerProducts\cd2d54a7-ee90-47cd-b8a7-2f9e88884d1cmen-cashmere-pullover-black_2_1000x.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partnerProducts\f32fc8e1-3e9e-432d-89b4-52cb3177337dmen-cashmere-pullover-black_2_1000x.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ExpressKuryer.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ExpressKuryer.MVC</BasePath>
+      <RelativePath>uploads/partnerProducts/f32fc8e1-3e9e-432d-89b4-52cb3177337dmen-cashmere-pullover-black_2_1000x.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partnerProducts\f32fc8e1-3e9e-432d-89b4-52cb3177337dmen-cashmere-pullover-black_2_1000x.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>
