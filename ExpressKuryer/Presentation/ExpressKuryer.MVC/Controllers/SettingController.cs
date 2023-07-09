@@ -51,7 +51,7 @@ namespace ExpressKuryer.MVC.Controllers
             var list = PagenatedList<SettingReturnDto>.Save(query, page, pageSize);
 
             TempData["ImagePath"] = _storage.GetUrl(_imagePath, null);
-
+            TempData["Title"] = "Tənzimləmələr";
 
             ViewBag.PageSize = pageSize;
 
@@ -63,12 +63,15 @@ namespace ExpressKuryer.MVC.Controllers
         {   
             var setting = await _unitOfWork.RepositorySetting.GetAsync(x => x.Id == id, false);
             TempData["ImagePath"] = _storage.GetUrl(_imagePath, null);
+            TempData["Title"] = "Tənzimləmə";
+
             return View(setting);
         }
 
         [HttpPost]
         public async Task<IActionResult> Edit(SettingDto settingDto, int id, int page = 1)
         {
+            TempData["Title"] = "Tənzimləmə";
 
             var existSetting = await _unitOfWork.RepositorySetting.GetAsync(x => x.Key == settingDto.Key);
 
