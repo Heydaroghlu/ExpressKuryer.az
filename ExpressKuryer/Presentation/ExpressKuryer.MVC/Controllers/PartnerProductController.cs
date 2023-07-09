@@ -36,9 +36,9 @@ namespace ExpressKuryer.MVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(int partnerId, int page = 1, string? searchWord = null, string? isDeleted = "false")
         {
-            List<PartnerProduct> entities = await _unitOfWork.RepositoryPartnerProduct.GetAllAsync(x => !x.IsDeleted,false, "Partner");
+            List<PartnerProduct> entities = await _unitOfWork.RepositoryPartnerProduct.GetAllAsync(x => !x.IsDeleted, false, "Partner");
 
-            if(partnerId != 0)
+            if (partnerId != 0)
             {
                 entities = await _unitOfWork.RepositoryPartnerProduct.GetAllAsync(x => !x.IsDeleted && x.PartnerId == partnerId, false, "Partner");
             }
@@ -71,7 +71,7 @@ namespace ExpressKuryer.MVC.Controllers
             ViewBag.Partners = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted);
             TempData["Title"] = "Məhsul Partnuyorları";
 
-            if(partnerId != 0)
+            if (partnerId != 0)
             {
                 ViewBag.Partner = await _unitOfWork.RepositoryPartner.GetAsync(x => x.Id == partnerId);
                 ViewBag.Partners = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted && x.Id != partnerId);
@@ -126,23 +126,24 @@ namespace ExpressKuryer.MVC.Controllers
             var partner = _mapper.Map<PartnerProduct>(objectDto);
             partner.Image = imageInfo.fileName;
 
+            await _unitOfWork.RepositoryPartnerProduct.InsertAsync(partner);
+            await _unitOfWork.CommitAsync();
 
             if (objectDto.ImageFiles != null)
             {
                 foreach (var item in objectDto.ImageFiles)
                 {
-                    imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
+                    imageInfo = await _storage.UploadAsync(_imagePath, item);
                     ProductImages productImages = new()
                     {
                         Image = imageInfo.fileName,
                         IsPoster = false,
-                        PartnerProductId = objectDto.PartnerId,
+                        PartnerProductId = partner.Id,
                     };
                     await _unitOfWork.RepositoryProductImages.InsertAsync(productImages);
                 }
             }
 
-            await _unitOfWork.RepositoryPartnerProduct.InsertAsync(partner);
             await _unitOfWork.CommitAsync();
 
             object page = TempData["Page"] as int?;
@@ -167,32 +168,40 @@ namespace ExpressKuryer.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(PartnerProductEditDto objectDto, int id)
         {
+            ViewBag.Partners = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted);
             var existObject = await _unitOfWork.RepositoryPartnerProduct.GetAsync(x => x.Id == id);
 
             if (existObject == null) return RedirectToAction("NotFound", "Page");
 
             if (!ModelState.IsValid) return View(objectDto);
 
-            try
-            {
-                _fileService.CheckFileType(objectDto.FormFile, ContentTypeManager.ImageContentTypes);
-            }
-            catch (Exception)
-            {
-                ModelState.AddModelError("FormFile", ContentTypeManager.ImageContentMessage());
-                return View(objectDto);
-            }
-
-            foreach (var item in objectDto.ImageFiles)
+            if (objectDto.FormFile != null)
             {
                 try
                 {
-                    _fileService.CheckFileType(item, ContentTypeManager.ImageContentTypes);
+                    _fileService.CheckFileType(objectDto.FormFile, ContentTypeManager.ImageContentTypes);
                 }
                 catch (Exception)
                 {
-                    ModelState.AddModelError("ImageFiles", ContentTypeManager.ImageContentMessage());
+                    ModelState.AddModelError("FormFile", ContentTypeManager.ImageContentMessage());
                     return View(objectDto);
+                }
+            }
+
+            if (objectDto.ImageFiles != null)
+            {
+
+                foreach (var item in objectDto.ImageFiles)
+                {
+                    try
+                    {
+                        _fileService.CheckFileType(item, ContentTypeManager.ImageContentTypes);
+                    }
+                    catch (Exception)
+                    {
+                        ModelState.AddModelError("ImageFiles", ContentTypeManager.ImageContentMessage());
+                        return View(objectDto);
+                    }
                 }
             }
 
@@ -228,18 +237,20 @@ namespace ExpressKuryer.MVC.Controllers
                 }
             }
 
-            foreach (var item in objectDto.ImageFiles)
+            if (objectDto.ImageFiles != null)
             {
-                var imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
-                ProductImages productImages = new()
+                foreach (var item in objectDto.ImageFiles)
                 {
-                    Image = imageInfo.fileName,
-                    IsPoster = false,
-                    PartnerProductId = objectDto.PartnerId,
-                };
-                await _unitOfWork.RepositoryProductImages.InsertAsync(productImages);
+                    var imageInfo = await _storage.UploadAsync(_imagePath, item);
+                    ProductImages productImages = new()
+                    {
+                        Image = imageInfo.fileName,
+                        IsPoster = false,
+                        PartnerProductId = existObject.Id,
+                    };
+                    await _unitOfWork.RepositoryProductImages.InsertAsync(productImages);
+                }
             }
-            //todo silmek elave et bura
 
             existObject.Name = objectDto.Name;
             existObject.CostPrice = objectDto.CostPrice;
@@ -250,8 +261,8 @@ namespace ExpressKuryer.MVC.Controllers
             await _unitOfWork.CommitAsync();
 
             object page = TempData["Page"] as int?;
-
-            return RedirectToAction("Index", new { page = page });
+            TempData["Success"] = "Dəyişikliklər qeydə alındı";
+            return RedirectToAction("edit",existObject.Id);
         }
 
         public async Task<IActionResult> Delete(int id)
@@ -293,6 +304,20 @@ namespace ExpressKuryer.MVC.Controllers
             return Json(new { url = filePath });
         }
 
+        [HttpGet]
+        public async Task<IActionResult> DeleteImage(int id)
+        {
+            try
+            {
+                await _unitOfWork.RepositoryProductImages.Remove(x => x.Id == id);
+                await _unitOfWork.CommitAsync();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
 
+            return Json("OK");
+        }
     }
 }

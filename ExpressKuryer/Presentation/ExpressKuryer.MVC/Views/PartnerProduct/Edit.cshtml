@@ -18,7 +18,7 @@
 
     <div class="row mb-2">
         <div class="col-sm-12" style="padding: 20px; display: flex; justify-content: center; align-items: center;">
-            <h1>Partnuyor Məhsulu Yarat</h1>
+            <h1>Partnuyor Məhsulu Tənzimlə</h1>
         </div>
     </div>
 
@@ -38,6 +38,7 @@
                             <div class="mb-3">
                                 <label asp-for="Description" class="form-label">Açıqlama</label>
                                 <div id="editor" style="border:1px solid">
+                                    @Html.Raw(Model.Description)
                                 </div>
                                 <textarea class="form-control textarea-Name d-none" asp-for="Description" rows="3" style="border:1px solid"></textarea>
                             </div>
@@ -92,12 +93,12 @@
                             <div class="mb-3 image-boxs">
                                 <label asp-for="ImageFiles" class="form-label">Detallı Şəkillər</label>
                                 <input asp-for="ImageFiles" multiple class="form-control multi-file" style="margin:20px 0px">
-                                
-                                @foreach(ProductImages image in Model.ProductImages)
+
+                                @foreach (ProductImages image in Model.ProductImages)
                                 {
-                                    <div style="display:flex;">
-                                       <img style="width:300px;height:300px;object-fit:cover;margin:0px 20px;" src="@(imagePath + image.Image)" />
-                                        <i class="lni lni-cross-circle"></i>   
+                                    <div style="display:inline;position:relative;margin:0px 20px;" >
+                                       <img style="width:300px;height:300px;object-fit:cover;"  src="@(imagePath + image.Image)" />
+                                        <i class="lni lni-cross-circle imageCollection" value="@image.Id" style="cursor:pointer;right: 20px;position: absolute;color: white;top: -126px;"></i>
                                     </div>
                                 }
                                 <span class="text-danger" asp-validation-for="ImageFiles"></span>

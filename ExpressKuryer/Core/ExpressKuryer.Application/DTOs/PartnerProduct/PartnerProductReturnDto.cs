@@ -1,4 +1,5 @@
 ﻿using ExpressKuryer.Application.DTOs.Partner;
+using ExpressKuryer.Application.DTOs.ProductImageDTOs;
 using ExpressKuryer.Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using System;
@@ -20,6 +21,7 @@ namespace ExpressKuryer.Application.DTOs.PartnerProduct
         public decimal? DiscountPrice { get; set; }
         public bool? IsInterestFree { get; set; }
         public DateTime CreatedAt { get; set; }
-        public PartnerReturnDto Partner { get; set; }
+        public List<ProductImageReturnDto> ProductImages { get; set; }
+        public PartnerReturnDto? Partner { get; set; }
     }
 }

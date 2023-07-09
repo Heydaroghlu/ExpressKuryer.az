@@ -306,6 +306,9 @@
                 console.log(href)
 
                 fetch(href).then(response => {
+                    if (!response.ok) {
+                        throw new Error('İstekte bir hata oluştu!');
+                    }
                     response.text();
                 }).then(data => {
 
@@ -329,7 +332,23 @@
                     if ($("#toaster-success").length) {
                         toastr["success"]($("#toaster-success").val())
                     }
-                })
+                }).catch(error => {
+                    var elementError = document.querySelector("#toaster-success")
+
+                    if (elementError != null) {
+                        elementError.value = "email göndərilmədi!";
+                    } else {
+                        const error = document.createElement("input");
+                        error.id = "toaster-error";
+                        error.innerHTML = "adfafd";
+                        error.value = "email göndərilmədi!";
+                        document.querySelector("body").appendChild(error);
+                    }
+
+                    if ($("#toaster-error").length) {
+                        toastr["error"]($("#toaster-error").val())
+                    }
+                });
             });
         });
 

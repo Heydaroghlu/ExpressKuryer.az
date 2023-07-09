@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6JT+sBOnxl/ix0vCh49yFp4FlADE4/D6tJ/8B4Xo2EZ7L5qlRxpi+EAH0gjUkTjjF+EYnMpqaOKrCOC3mJRFQg==",
+  "dgSpecHash": "yMSmfZ1bbbF5a7wI8iLcTE8EmTQZGMVHNJfkwsZ+nnGELskYFr2Ar16bHapCL1MukhnsaqNFwSA9/jtqW2J/hA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SWIFT\\Desktop\\last version\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.API\\ExpressKuryer.API.csproj",
+  "projectFilePath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.API\\ExpressKuryer.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SWIFT\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\SWIFT\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

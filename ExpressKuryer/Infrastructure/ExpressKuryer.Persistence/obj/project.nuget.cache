@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q1e0O0tLCA+E7bUW0Vag1mRbVqDp1w7qoRx4mEkFgD5XDzm+LGz588qePWIhrGK3iESkhovUp+ARPK03Itx9vw==",
+  "dgSpecHash": "LQf6G0AAfK9MMtcXgbiblmrjkZBF511rUT2eOhvo1aIw6h/TiYpCjHtLTrJlPRx55dyAbq3VP0RdbyyiZbwwLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SWIFT\\Desktop\\last version\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SWIFT\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\SWIFT\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

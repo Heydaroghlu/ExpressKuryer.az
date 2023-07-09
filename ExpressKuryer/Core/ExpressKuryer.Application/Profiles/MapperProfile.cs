@@ -6,6 +6,7 @@ using ExpressKuryer.Application.DTOs.DeliveryDTOs;
 using ExpressKuryer.Application.DTOs.JobSeekerDTOs;
 using ExpressKuryer.Application.DTOs.Partner;
 using ExpressKuryer.Application.DTOs.PartnerProduct;
+using ExpressKuryer.Application.DTOs.ProductImageDTOs;
 using ExpressKuryer.Application.DTOs.Service;
 using ExpressKuryer.Application.DTOs.Setting;
 using ExpressKuryer.Application.DTOs.Slider;
@@ -21,57 +22,60 @@ using System.Threading.Tasks;
 
 namespace ExpressKuryer.Application.Profiles
 {
-	public class MapperProfile : Profile
-	{
-		public MapperProfile()
-		{
-			CreateMap<ContactDto, Contact>();	
-			CreateMap<Contact, ContactReturnDto>();
+    public class MapperProfile : Profile
+    {
+        public MapperProfile()
+        {
+            CreateMap<ContactDto, Contact>();
+            CreateMap<Contact, ContactReturnDto>();
 
-			CreateMap<Setting, SettingReturnDto>();
-			CreateMap<PartnerCreateDto, Partner>();
-			CreateMap<Partner,PartnerReturnDto>();
+            CreateMap<Setting, SettingReturnDto>();
+            CreateMap<PartnerCreateDto, Partner>();
+            CreateMap<Partner, PartnerReturnDto>();
 
-			CreateMap<VacancyDto, Vacancy>();
+            CreateMap<VacancyDto, Vacancy>();
             CreateMap<Subscribe, SubscribeReturnDto>();
             CreateMap<Subscribe, SubscribeEditDto>();
 
             CreateMap<Partner, PartnerEditDto>();
 
-			CreateMap<SliderCreateDto, Slider>();	
-			CreateMap<Slider, SliderReturnDto>();
-			CreateMap<Slider, SliderEditDto>();
+            CreateMap<SliderCreateDto, Slider>();
+            CreateMap<Slider, SliderReturnDto>();
+            CreateMap<Slider, SliderEditDto>();
 
 
-			CreateMap<Vacancy, VacancyReturnDto>();
+            CreateMap<Vacancy, VacancyReturnDto>();
 
-			CreateMap<Contact, ContactReturnDto>();
-			CreateMap<Contact, ContactEditDto>();
+            CreateMap<Contact, ContactReturnDto>();
+            CreateMap<Contact, ContactEditDto>();
 
-			CreateMap<PartnerProductCreateDto, PartnerProduct>();
-			CreateMap<PartnerProduct, PartnerProductEditDto>();
-			CreateMap<PartnerProductEditDto, PartnerProduct>();
+            CreateMap<PartnerProductCreateDto, PartnerProduct>();
+            CreateMap<PartnerProduct, PartnerProductEditDto>();
+            CreateMap<PartnerProductEditDto, PartnerProduct>();
 
             CreateMap<Delivery, DeliveryReturnDto>();
             CreateMap<Service, ServiceReturnDto>();
             CreateMap<PartnerProduct, PartnerProductReturnDto>();
 
-			CreateMap<Courier, CourierReturnDto>();
-			CreateMap<Courier, CourierEditDto>();
+            CreateMap<Courier, CourierReturnDto>();
+            CreateMap<Courier, CourierEditDto>();
             CreateMap<CourierCreateDto, Courier>();
-			CreateMap<AppUser, AppUserReturnDto>();
-			CreateMap<AppUserReturnDto, AppUser>();
+            CreateMap<AppUser, AppUserReturnDto>();
+            CreateMap<AppUserReturnDto, AppUser>();
 
-			CreateMap<JobSeeker, JobSeekerReturnDto>();
+            CreateMap<JobSeeker, JobSeekerReturnDto>();
 
-			CreateMap<VacancyCreateDto, Vacancy>();
-			CreateMap<Vacancy, VacancyReturnDto>();
-			CreateMap<Vacancy, VacancyEditDto>();
+            CreateMap<VacancyCreateDto, Vacancy>();
+            CreateMap<Vacancy, VacancyReturnDto>();
+            CreateMap<Vacancy, VacancyEditDto>();
 
-			CreateMap<ServiceCreateDto, Service>();
-			CreateMap<Service, ServiceEditDto>();
+            CreateMap<ServiceCreateDto, Service>();
+            CreateMap<Service, ServiceEditDto>();
 
-			CreateMap<AppUserCreateDto, AppUser>();
-		}
+            CreateMap<AppUserCreateDto, AppUser>();
+
+            CreateMap<ProductImages, ProductImageReturnDto>();
+
+        }
     }
 }
