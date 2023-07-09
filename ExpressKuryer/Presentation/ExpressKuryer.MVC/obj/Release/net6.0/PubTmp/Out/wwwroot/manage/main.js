@@ -1,10 +1,11 @@
 ﻿
 var inputFiles = document.querySelectorAll(".file");
+var multiInputFiles = document.querySelectorAll(".multi-file");
 
 inputFiles.forEach(element => {
     var imageBox = document.querySelector(".image-box");
 
-    
+
     element.onchange = function (e) {
         let files = e.target.files
         let filesarr = [...files]
@@ -21,9 +22,38 @@ inputFiles.forEach(element => {
                     newimg.style.margin = "10px 0px";
                     newimg.setAttribute("src", reader.result)
 
-                    images.forEach(e=>e.remove())
+                    images.forEach(e => e.remove())
 
                     imageBox.appendChild(newimg)
+                }
+                reader.readAsDataURL(x)
+            }
+        })
+    }
+});
+
+
+multiInputFiles.forEach(element => {
+
+    var imageBox = document.querySelector(".image-boxs");
+
+    element.onchange = function (e) {
+        let files = e.target.files
+        let filesarr = [...files]
+        var images = document.querySelectorAll(".image-boxs img");
+
+        filesarr.forEach(x => {
+
+            if (x.type.startsWith("image/")) {
+                let reader = new FileReader()
+                reader.onload = function () {
+                    let newimg = document.createElement("img")
+                    newimg.style.width = "300px";
+                    newimg.style.margin = "10px";
+                    newimg.setAttribute("src", reader.result)
+
+                    imageBox.appendChild(newimg)
+                    console.log("asd");
                 }
                 reader.readAsDataURL(x)
             }
@@ -85,3 +115,30 @@ dropdownDeliveryItems.forEach(x => {
         })
     });
 });
+
+
+
+let imageCollections = document.querySelectorAll(".imageCollection");
+
+imageCollections.forEach(x => {
+
+    x.addEventListener("click", function (e) {
+        console.log();
+        var id = x.getAttribute("value");
+        console.log(id);
+
+        fetch("/partnerProduct/deleteImage/" + id).then(response => {
+            if (!response.ok) {
+                throw new Error('İstekte bir hata oluştu!');
+            }
+            response.text();
+        })
+            .then(data => {
+                console.log(x.parentElement);
+                x.parentElement.remove();
+                if ($("#toaster-success").length) {
+                    toastr["success"]($("#toaster-success").val())
+                }
+            })
+    })
+})

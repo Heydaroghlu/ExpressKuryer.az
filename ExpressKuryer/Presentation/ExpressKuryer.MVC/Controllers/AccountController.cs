@@ -266,7 +266,10 @@ namespace ExpressKuryer.MVC.Controllers
                 Email = "expresskuryer.az@mail.com",
                 IsAdmin = true,
                 EmailConfirmed = true,
-                UserType = UserRoleEnum.Admin.ToString()
+                UserType = UserRoleEnum.Admin.ToString(),
+                Name = "Ali",
+                Surname = "Bagishli",
+                PhoneNumber = "055 555 55 55"
             };
 
             await _userManager.CreateAsync(user, "Admin0910");

@@ -21,6 +21,9 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\uploads\deliveries\" />
+    <Folder Include="wwwroot\uploads\deliveries\" />
+    <Folder Include="wwwroot\uploads\users\" />
+    <Folder Include="wwwroot\uploads\vacancies\" />
     <Folder Include="wwwroot\uploads\vacancies\" />
     <Folder Include="wwwroot\uploads\partnerProducts\" />
     <Folder Include="wwwroot\uploads\partnerProducts\" />
