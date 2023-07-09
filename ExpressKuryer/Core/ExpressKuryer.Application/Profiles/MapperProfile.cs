@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ExpressKuryer.Application.DTOs.AppUserDTOs;
+using ExpressKuryer.Application.DTOs.BeCourierDTOs;
 using ExpressKuryer.Application.DTOs.Contact;
 using ExpressKuryer.Application.DTOs.CourierDTOs;
 using ExpressKuryer.Application.DTOs.DeliveryDTOs;
@@ -75,6 +76,8 @@ namespace ExpressKuryer.Application.Profiles
             CreateMap<AppUserCreateDto, AppUser>();
 
             CreateMap<ProductImages, ProductImageReturnDto>();
+
+            CreateMap<BeCouirer, BeCourierReturnDto>();
 
         }
     }

@@ -1,0 +1,91 @@
+﻿@using ExpressKuryer.Application.DTOs.BeCourierDTOs;
+@{
+    ViewData["Title"] = "Detail";
+    string isDeleted = (string)TempData["isDeleted"];
+    string word = (string)TempData["searchWord"];
+}
+@model BeCourierReturnDto
+
+<style>
+    p{
+        font-size:20px !important;
+    }
+</style>
+<!--**********************************
+    Content body start
+***********************************-->
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="right-box-padding">
+                                                <div class="read-content">
+                                                    <div class="media mb-2 mt-3">
+                                                        <div class="media-body">
+                                                            <p class="read-content-email">
+                                                                Ad : @Model.Name
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media mb-2 mt-3">
+                                                        <div class="media-body">
+                                                            <p class="read-content-email">
+                                                                Soyad : @Model.Surname
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media mb-2 mt-3">
+                                                        <div class="media-body">
+                                                            <p class="read-content-email">
+                                                                YZaman : @Model.CreatedAt.ToString("dd MMMM yyyy")
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media mb-2 mt-3">
+                                                        <div class="media-body">
+                                                            <p class="read-content-email">
+                                                                Email : @Model.Email
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="media mb-2 mt-3">
+                                                    <div class="media-body">
+                                                        <p class="read-content-email">
+                                                            Telefon : @Model.Phone
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="media mb-2 mt-3">
+                                                    <div class="media-body">
+                                                        <p class="read-content-email">
+                                                            @Html.Raw(Model.Desc)
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--**********************************
+    Content body end
+***********************************-->
