@@ -34,7 +34,6 @@ namespace ExpressKuryer.MVC.Controllers
 
         public IActionResult Login()
         {
-            if (User.Identity.IsAuthenticated) return RedirectToAction("Index", "Dashboard");
             return View();
         }
 
@@ -55,10 +54,15 @@ namespace ExpressKuryer.MVC.Controllers
                 ModelState.AddModelError("", "Parol və ya şifrə yanlışdır");
                 return View(loginDto);
             }
-            if (user.IsAdmin)
+            if (user.UserType == UserRoleEnum.Admin.ToString())
                 return RedirectToAction("Index", "Dashboard");
-            else
+            else if(user.UserType == UserRoleEnum.Courier.ToString())
                 return RedirectToAction("Profile", "Account",new { id = user.Id });
+            else
+            {
+                ModelState.AddModelError("", "Parol və ya şifrə yanlışdır");
+                return View(loginDto);
+            }
         }
 
         [HttpGet("Logout")]
@@ -177,6 +181,7 @@ namespace ExpressKuryer.MVC.Controllers
                 }
 
                 user.Email = viewModel.User.Email;
+                user.UserName = viewModel.User.Email;
                 user.PhoneNumber = viewModel.User.PhoneNumber;
 
                 if (viewModel.Password != null)
@@ -217,6 +222,9 @@ namespace ExpressKuryer.MVC.Controllers
 
                 var courier = await _unitOfWork.RepositoryCourier.GetAsync(x => !x.IsDeleted && x.CourierPersonId == user.Id, false, "CourierPerson");
                 viewModel.Courier = courier;
+                viewModel.User = user;
+
+                user.UserName = viewModel.User.Email;
 
                 var gainPercent = Convert.ToDecimal(_unitOfWork.RepositorySetting.GetAsync(x => x.Key.Equals("GainPercent")).Result.Value);
 
@@ -240,32 +248,33 @@ namespace ExpressKuryer.MVC.Controllers
 
 
 
-        //[HttpGet]
-        //public async Task<IActionResult> Role()
-        //{
-        //    await _roleManager.CreateAsync(new IdentityRole("Courier"));
-        //    await _roleManager.CreateAsync(new IdentityRole("Member"));
-        //    await _roleManager.CreateAsync(new IdentityRole("Admin"));
-        //    return Ok();
-        //}
+        [HttpGet]
+        public async Task<IActionResult> Role()
+        {
+            await _roleManager.CreateAsync(new IdentityRole("Courier"));
+            await _roleManager.CreateAsync(new IdentityRole("Member"));
+            await _roleManager.CreateAsync(new IdentityRole("Admin"));
+            return Ok();
+        }
 
-        //[HttpGet]
-        //public async Task<IActionResult> Okay()
-        //{
-        //    AppUser user = new AppUser
-        //    {
-        //        UserName = "AliBagishli",
-        //        Email = "expresskuryer.az@mail.com",
-        //        IsAdmin = true,
-        //        EmailConfirmed = true,
-        //    };
+        [HttpGet]
+        public async Task<IActionResult> Okay()
+        {
+            AppUser user = new AppUser
+            {
+                UserName = "AliBagishli",
+                Email = "expresskuryer.az@mail.com",
+                IsAdmin = true,
+                EmailConfirmed = true,
+                UserType = UserRoleEnum.Admin.ToString()
+            };
 
-        //    await _userManager.CreateAsync(user, "Admin0910");
-        //    await _userManager.AddToRoleAsync(user, "Admin");
+            await _userManager.CreateAsync(user, "Admin0910");
+            await _userManager.AddToRoleAsync(user, "Admin");
 
-        //    return Ok();
-        //}
-     
+            return Ok();
+        }
+
 
     }
 }

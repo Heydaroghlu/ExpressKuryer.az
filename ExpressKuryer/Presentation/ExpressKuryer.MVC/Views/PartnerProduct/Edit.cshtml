@@ -6,6 +6,8 @@
         partnerId = (int)TempData["PartnerId"];
     }
     var partner = (Partner)ViewBag.Partner;
+
+    string imagePath = (string)TempData["ImagePath"];
 }
 
 @model PartnerProductEditDto
@@ -83,14 +85,21 @@
                             <div class="mb-3 image-box">
                                 <label asp-for="FormFile" class="form-label">Poster Şəkil</label>
                                 <input asp-for="FormFile" class="form-control file" style="margin:20px 0px">
-                                <img style="width:300px;height:300px;object-fit:cover;" />
+                                <img style="width:300px;height:300px;object-fit:cover;" src="@(imagePath + Model.Image)" />
                                 <span class="text-danger" asp-validation-for="FormFile"></span>
                             </div>
 
                             <div class="mb-3 image-boxs">
                                 <label asp-for="ImageFiles" class="form-label">Detallı Şəkillər</label>
                                 <input asp-for="ImageFiles" multiple class="form-control multi-file" style="margin:20px 0px">
-                                <img style="width:300px;height:300px;object-fit:cover;" />
+                                
+                                @foreach(ProductImages image in Model.ProductImages)
+                                {
+                                    <div style="display:flex;">
+                                       <img style="width:300px;height:300px;object-fit:cover;margin:0px 20px;" src="@(imagePath + image.Image)" />
+                                        <i class="lni lni-cross-circle"></i>   
+                                    </div>
+                                }
                                 <span class="text-danger" asp-validation-for="ImageFiles"></span>
                             </div>
 

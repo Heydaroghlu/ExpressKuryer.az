@@ -5,6 +5,7 @@
     List<string> listOfURLs = ViewBag.ListOfURLs;
     string? isDeleted = (string)ViewBag.IsDeleted;
     string imagePath = (string)TempData["ImagePath"];
+    Partner partner = (Partner)ViewBag.Partner;
 }
 
 
@@ -57,6 +58,23 @@
                         }
                     </select>
                 </div>
+
+                 <div class="form-group" style="width:100%;margin:20px 0px;">
+                    <select class="form-control bg-gray-light" name="partnerId">
+                        
+
+                        @if(partner != null){
+                            <option value="@partner.Id" selected class="bg-gray-light">@partner.Name</option>
+                        }
+                        
+                        @foreach (Partner item in ViewBag.Partners)
+                        {
+                            <option value="@item.Id" class="bg-gray-light">@item.Name</option>
+                        }
+
+                    </select>
+                </div>
+
                 <button type="submit" class="btn btn-outline-dark my-3">Axtarış et</button>
 
             </form>
@@ -73,7 +91,7 @@
                                 <th scope="col">Satış Qiyməti</th>
                                 <th scope="col">Maya Qiyməti</th>
                                 <th scope="col">Endirim faizi</th>
-                                <th scope="col">IsInterestFree</th>
+                                <th scope="col">Partnyor</th>
                                 <th scope="col">YZaman</th>
                                 <th>
                                     Aksiyonlar :
@@ -95,15 +113,11 @@
                                     <td>@item.SalePrice</td>
                                     <td>@item.CostPrice</td>
                                     <td>@item.DiscountPrice</td>
-                                    <td>@item.IsInterestFree</td>
+                                    <td>@item.Partner.Name</td>
                                     <td>@item.CreatedAt.ToString("dd:mm:yyyy")</td>
                                     <td>
-                                        <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-outline-dark">
-                                            <i class="bi bi-pencil-square"></i>
-                                        </a>
-                                        <a asp-action="delete" asp-route-partnerId="@item.Id" class="btn btn-outline-dark btn-delete-sweet">
-                                            <i class="bi bi-x-lg"></i>
-                                        </a>
+                                        <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                        <a asp-action="delete" asp-route-id="@item.Id" class="btn btn-danger shadow btn-xs sharp btn-delete-sweet"><i class="fas fa-trash"></i></a>
                                     </td>
                                 </tr>
                             }

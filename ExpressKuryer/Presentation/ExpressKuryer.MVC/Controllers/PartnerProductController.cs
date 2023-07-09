@@ -36,13 +36,14 @@ namespace ExpressKuryer.MVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(int partnerId, int page = 1, string? searchWord = null, string? isDeleted = "false")
         {
-            var entities = await _unitOfWork.RepositoryPartnerProduct.GetAllAsync(x => x.PartnerId == partnerId, false);
-            var partner = await _unitOfWork.RepositoryPartner.GetAsync(x => x.Id == partnerId);
+            List<PartnerProduct> entities = await _unitOfWork.RepositoryPartnerProduct.GetAllAsync(x => !x.IsDeleted,false, "Partner");
+
+            if(partnerId != 0)
+            {
+                entities = await _unitOfWork.RepositoryPartnerProduct.GetAllAsync(x => !x.IsDeleted && x.PartnerId == partnerId, false, "Partner");
+            }
             int pageSize = 10;
 
-            //ViewBag.PartnerName = partner.Name;
-            
-            
             if (isDeleted == "true")
                 entities = entities.Where(x => x.IsDeleted).ToList();
             if (isDeleted == "false")
@@ -67,37 +68,30 @@ namespace ExpressKuryer.MVC.Controllers
             ViewBag.Word = searchWord;
             ViewBag.IsDeleted = isDeleted;
             TempData["PartnerId"] = partnerId;
+            ViewBag.Partners = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted);
             TempData["Title"] = "Məhsul Partnuyorları";
 
-            if (!partnerId.Equals(0))
-                TempData["Title"] = $"{partner.Name} Məhsulları";
+            if(partnerId != 0)
+            {
+                ViewBag.Partner = await _unitOfWork.RepositoryPartner.GetAsync(x => x.Id == partnerId);
+                ViewBag.Partners = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted && x.Id != partnerId);
+            }
 
             return View(list);
         }
 
         public async Task<IActionResult> Create()
         {
-
-            int partnerId = 0;
-            if (TempData["PartnerId"] != null)
-            {
-                partnerId = (int)TempData["PartnerId"];
-                TempData["PartnerId"] = partnerId;
-            }
-            if (partnerId != 0)
-            {
-                var partner = await _unitOfWork.RepositoryPartner.GetAsync(x => !x.IsDeleted && x.Id == partnerId);
-                ViewBag.Partners = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted && x.Id != partnerId);
-                ViewBag.Partner = partner;
-            }
-            else
-                ViewBag.Partners = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted && x.Id != partnerId);
+            ViewBag.Partners = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted);
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(PartnerProductCreateDto objectDto)
         {
+
+            ViewBag.Partners = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted);
+
             if (!ModelState.IsValid) return View(objectDto);
 
             try
@@ -110,17 +104,21 @@ namespace ExpressKuryer.MVC.Controllers
                 return View(objectDto);
             }
 
-            foreach (var item in objectDto.ImageFiles)
+            if (objectDto.ImageFiles != null)
             {
-                try
+                foreach (var item in objectDto.ImageFiles)
                 {
-                    _fileService.CheckFileType(item, ContentTypeManager.ImageContentTypes);
+                    try
+                    {
+                        _fileService.CheckFileType(item, ContentTypeManager.ImageContentTypes);
+                    }
+                    catch (Exception)
+                    {
+                        ModelState.AddModelError("ImageFiles", ContentTypeManager.ImageContentMessage());
+                        return View(objectDto);
+                    }
                 }
-                catch (Exception)
-                {
-                    ModelState.AddModelError("ImageFiles", ContentTypeManager.ImageContentMessage());
-                    return View(objectDto);
-                }
+
             }
 
             var imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
@@ -128,16 +126,20 @@ namespace ExpressKuryer.MVC.Controllers
             var partner = _mapper.Map<PartnerProduct>(objectDto);
             partner.Image = imageInfo.fileName;
 
-            foreach (var item in objectDto.ImageFiles)
+
+            if (objectDto.ImageFiles != null)
             {
-                imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
-                ProductImages productImages = new()
+                foreach (var item in objectDto.ImageFiles)
                 {
-                    Image = imageInfo.fileName,
-                    IsPoster = false,
-                    ProductId = objectDto.PartnerId,
-                };
-                await _unitOfWork.RepositoryProductImages.InsertAsync(productImages);
+                    imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
+                    ProductImages productImages = new()
+                    {
+                        Image = imageInfo.fileName,
+                        IsPoster = false,
+                        PartnerProductId = objectDto.PartnerId,
+                    };
+                    await _unitOfWork.RepositoryProductImages.InsertAsync(productImages);
+                }
             }
 
             await _unitOfWork.RepositoryPartnerProduct.InsertAsync(partner);
@@ -145,14 +147,14 @@ namespace ExpressKuryer.MVC.Controllers
 
             object page = TempData["Page"] as int?;
 
-            return RedirectToAction("Index", new { partnerId = partner.PartnerId, page = page });
+            return RedirectToAction("Index", new { page = page });
         }
 
 
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            var existObject = await _unitOfWork.RepositoryPartnerProduct.GetAsync(x => x.Id == id, false);
+            var existObject = await _unitOfWork.RepositoryPartnerProduct.GetAsync(x => x.Id == id, false, "ProductImages");
             if (existObject == null) return RedirectToAction("NotFound", "Page");
 
             var editDto = _mapper.Map<PartnerProductEditDto>(existObject);
@@ -168,7 +170,7 @@ namespace ExpressKuryer.MVC.Controllers
             var existObject = await _unitOfWork.RepositoryPartnerProduct.GetAsync(x => x.Id == id);
 
             if (existObject == null) return RedirectToAction("NotFound", "Page");
-            
+
             if (!ModelState.IsValid) return View(objectDto);
 
             try
@@ -233,7 +235,7 @@ namespace ExpressKuryer.MVC.Controllers
                 {
                     Image = imageInfo.fileName,
                     IsPoster = false,
-                    ProductId = objectDto.PartnerId,
+                    PartnerProductId = objectDto.PartnerId,
                 };
                 await _unitOfWork.RepositoryProductImages.InsertAsync(productImages);
             }
@@ -285,7 +287,7 @@ namespace ExpressKuryer.MVC.Controllers
             else
             {
                 filePath = "http://aliyusifov.com/" + "/uploads/blogs/" + fileName;
-                filePath = _storage.GetUrl(_configuration.GetSection("WebSiteURL").Value,fileName.fileName);
+                filePath = _storage.GetUrl(_configuration.GetSection("WebSiteURL").Value, fileName.fileName);
             }
 
             return Json(new { url = filePath });

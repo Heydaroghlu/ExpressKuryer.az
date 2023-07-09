@@ -17,7 +17,6 @@ namespace ExpressKuryer.Domain.Entities
         public string? Image { get; set; }
         [NotMapped]
         public IFormFile PosterImage { get; set;}
-        [NotMapped]
         public List<ProductImages> ProductImages { get; set; }
         [NotMapped]
         public List<int> ProductImageIds { get; set; } = new List<int>();

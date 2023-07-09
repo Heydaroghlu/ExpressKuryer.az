@@ -389,9 +389,6 @@ namespace ExpressKuryer.Persistence.Migrations
                     b.Property<int?>("PartnerProductId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
@@ -861,7 +858,7 @@ namespace ExpressKuryer.Persistence.Migrations
             modelBuilder.Entity("ExpressKuryer.Domain.Entities.ProductImages", b =>
                 {
                     b.HasOne("ExpressKuryer.Domain.Entities.PartnerProduct", "PartnerProduct")
-                        .WithMany()
+                        .WithMany("ProductImages")
                         .HasForeignKey("PartnerProductId");
 
                     b.Navigation("PartnerProduct");
@@ -921,6 +918,11 @@ namespace ExpressKuryer.Persistence.Migrations
             modelBuilder.Entity("ExpressKuryer.Domain.Entities.Partner", b =>
                 {
                     b.Navigation("PartnerProducts");
+                });
+
+            modelBuilder.Entity("ExpressKuryer.Domain.Entities.PartnerProduct", b =>
+                {
+                    b.Navigation("ProductImages");
                 });
 
             modelBuilder.Entity("ExpressKuryer.Domain.Entities.Vacancy", b =>

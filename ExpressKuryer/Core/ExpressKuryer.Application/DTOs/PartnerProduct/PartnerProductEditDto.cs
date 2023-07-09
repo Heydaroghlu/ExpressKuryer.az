@@ -20,7 +20,7 @@ namespace ExpressKuryer.Application.DTOs.PartnerProduct
         //public bool? IsInterestFree { get; set; }
         public List<IFormFile>? ImageFiles{ get; set; }
 
-
+        public List<ProductImages> ProductImages { get; set; }
         public int? PartnerId { get; set; }
         public ExpressKuryer.Domain.Entities.Partner? Partner { get; set; }
     }

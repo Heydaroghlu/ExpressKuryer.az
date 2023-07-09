@@ -13,7 +13,7 @@ namespace ExpressKuryer.Domain.Entities
         //one to many relations by Isa
         public string? Image { get; set; }
         public bool? IsPoster { get; set; }
-        public int? ProductId { get; set; }
+        public int? PartnerProductId { get; set; }
         public PartnerProduct? PartnerProduct { get; set; }
     }
 }

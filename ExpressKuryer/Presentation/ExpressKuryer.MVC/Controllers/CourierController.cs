@@ -167,8 +167,6 @@ namespace ExpressKuryer.MVC.Controllers
 
             var existObject = await _unitOfWork.RepositoryCourier.GetAsync(x => x.Id == editDto.Id, true, "CourierPerson");
 
-            if (!ModelState.IsValid) return View(editDto);
-
             if (editDto.FormFile != null)
             {
                 try
@@ -212,6 +210,7 @@ namespace ExpressKuryer.MVC.Controllers
             existObject.CourierPerson.Address = editDto.CourierPerson.Address;
             existObject.CourierPerson.PhoneNumber = editDto.CourierPerson.PhoneNumber;
             existObject.CourierPerson.Email = editDto.CourierPerson.Email;
+            existObject.CourierPerson.UserName = editDto.CourierPerson.Email;
 
 
             try

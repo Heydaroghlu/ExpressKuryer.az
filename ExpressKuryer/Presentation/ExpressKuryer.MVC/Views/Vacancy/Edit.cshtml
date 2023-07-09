@@ -31,11 +31,13 @@
                                     <span asp-validation-for="Title" class="text-danger"></span>
                                 </div>
 
-                               <div class="mb-3">
-                                <div id="editor">
+                                <div class="mb-3">
+                                    <label asp-for="Description" class="form-label">Açıqlama</label>
+                                    <div id="editor" style="border:1px solid">
+                                        @Html.Raw(Model.Description)
+                                    </div>
+                                    <textarea class="form-control textarea-Name d-none"  asp-for="Description" rows="3" style="border:1px solid"></textarea>
                                 </div>
-                                <textarea class="form-control textarea-Name d-none" asp-for="Description" rows="3"></textarea>
-                            </div>
 
                                 <input type="hidden" value="@Model.Id" asp-for="Id" />
 
@@ -81,7 +83,7 @@
                 // integration to choose the right communication channel. This example uses
                 // a POST request with JSON as a data structure but your configuration
                 // could be different.
-                xhr.open('POST', '@Url.Action("UploadImage","Blog")', true);
+                xhr.open('POST', '@Url.Action("UploadImage","Vacancy")', true);
                 xhr.responseType = 'json';
             }
             _initListeners(resolve, reject, file) {
@@ -294,4 +296,5 @@
     </script>
 
     <script src="~/manage/main.js"></script>
+
 }

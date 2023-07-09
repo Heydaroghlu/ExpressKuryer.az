@@ -1,11 +1,5 @@
 ﻿@{
     ViewData["Title"] = "Edit";
-    int partnerId = 0;
-    if(TempData["PartnerId"] != null)
-    {
-        partnerId = (int)TempData["PartnerId"];
-    }
-    var partner = (Partner)ViewBag.Partner;
 }
 
 @model PartnerProductCreateDto
@@ -61,10 +55,6 @@
                             <div class="mb-3">
                                 <label asp-for="PartnerId" class="form-label">Partnuyor</label>
                                 <select class="form-control" asp-for="PartnerId">
-                                    @if(partner != null)
-                                    {
-                                            <option disabled selected>@partner.Name</option>
-                                    }
                                     @foreach (Partner item in ViewBag.Partners)
                                     {
                                         <option value="@item.Id" >@item.Name</option>
@@ -92,10 +82,6 @@
                                 <input asp-for="ImageFiles" multiple class="form-control multi-file" style="margin:20px 0px">
                                 <img style="width:300px;height:300px;object-fit:cover;" />
                                 <span class="text-danger" asp-validation-for="ImageFiles"></span>
-                            </div>
-
-                            <div>
-                                <span class="text-danger" asp-validation-for="FormFile" style="display:flex;"></span>
                             </div>
 
                             <button type="submit" class="btn btn-outline-dark my-3">Submit</button>

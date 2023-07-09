@@ -1,4 +1,5 @@
-﻿using ExpressKuryer.Domain.Entities;
+﻿using ExpressKuryer.Application.DTOs.Partner;
+using ExpressKuryer.Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -19,5 +20,6 @@ namespace ExpressKuryer.Application.DTOs.PartnerProduct
         public decimal? DiscountPrice { get; set; }
         public bool? IsInterestFree { get; set; }
         public DateTime CreatedAt { get; set; }
+        public PartnerReturnDto Partner { get; set; }
     }
 }

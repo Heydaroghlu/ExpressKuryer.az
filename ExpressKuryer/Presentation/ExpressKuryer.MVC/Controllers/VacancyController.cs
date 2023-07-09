@@ -15,11 +15,16 @@ namespace ExpressKuryer.MVC.Controllers
         readonly IUnitOfWork _unitOfWork;
         readonly IMapper _mapper;
         readonly IStorage _storage;
-        public VacancyController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage)
+        static string _imagePath = "/uploads/vacancies";
+        readonly IWebHostEnvironment _env;
+        readonly IConfiguration _configuration;
+        public VacancyController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage, IWebHostEnvironment env, IConfiguration configuration)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _storage = storage;
+            _env = env;
+            _configuration = configuration;
         }
 
         [HttpGet]
@@ -117,5 +122,31 @@ namespace ExpressKuryer.MVC.Controllers
 
             return RedirectToAction("Index", new { page = page });
         }
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> UploadImage(List<IFormFile> imageFiles)
+        {
+            var file = Request.Form.Files.First();
+
+            var fileName = await _storage.UploadAsync(_imagePath, file);
+
+            var filePath = "";
+
+            if (_env.IsDevelopment())
+            {
+                filePath = "https://localhost:7283/" + _imagePath  + fileName;
+                filePath = _storage.GetUrl(_imagePath, fileName.fileName);
+            }
+            else
+            {
+                filePath = "http://aliyusifov.com/" + _imagePath + fileName;
+                filePath = _storage.GetUrl(_configuration.GetSection("WebSiteURL").Value, fileName.fileName);
+            }
+
+            return Json(new { url = filePath });
+        }
+
     }
 }
