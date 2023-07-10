@@ -14,6 +14,7 @@ namespace ExpressKuryer.Application.DTOs.Delivery
         public bool Supris { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
+        public string Type { get; set; }
         public string Descripton { get; set; }
         public decimal TotalAmount { get; set; }
         public string? AppUserId { get; set; }

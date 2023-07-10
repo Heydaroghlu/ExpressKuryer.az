@@ -25,7 +25,7 @@ namespace ExpressKuryer.Domain.Entities
         public string? DeliveryCode { get; set; }
         public string? SurName { get; set; } //todo surname 
         public DateTime DeliveryTime { get; set; }
-
+        public string Type { get; set; }
         public Service? Service { get; set; }
         public string? DeliveryStatus { get; set; }
         public string? OrderDeliveryStatus { get; set; }
