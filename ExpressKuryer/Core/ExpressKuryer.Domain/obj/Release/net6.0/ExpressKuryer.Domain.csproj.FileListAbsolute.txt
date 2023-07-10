@@ -22,18 +22,6 @@ C:\Users\SWIFT\Desktop\last version\ExpressKuryer.az\ExpressKuryer\Core\ExpressK
 C:\Users\SWIFT\Desktop\last version\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\refint\ExpressKuryer.Domain.dll
 C:\Users\SWIFT\Desktop\last version\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.pdb
 C:\Users\SWIFT\Desktop\last version\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ref\ExpressKuryer.Domain.dll
-C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\bin\Release\net6.0\ExpressKuryer.Domain.deps.json
-C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\bin\Release\net6.0\ExpressKuryer.Domain.dll
-C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\bin\Release\net6.0\ExpressKuryer.Domain.pdb
-C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.csproj.AssemblyReference.cache
-C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.AssemblyInfoInputs.cache
-C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.AssemblyInfo.cs
-C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.csproj.CoreCompileInputs.cache
-C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.dll
-C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\refint\ExpressKuryer.Domain.dll
-C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.pdb
-C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ref\ExpressKuryer.Domain.dll
 C:\Users\Isa\Desktop\express admin\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\bin\Release\net6.0\ExpressKuryer.Domain.deps.json
 C:\Users\Isa\Desktop\express admin\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\bin\Release\net6.0\ExpressKuryer.Domain.dll
 C:\Users\Isa\Desktop\express admin\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\bin\Release\net6.0\ExpressKuryer.Domain.pdb
@@ -46,3 +34,15 @@ C:\Users\Isa\Desktop\express admin\ExpressKuryer.az\ExpressKuryer\Core\ExpressKu
 C:\Users\Isa\Desktop\express admin\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\refint\ExpressKuryer.Domain.dll
 C:\Users\Isa\Desktop\express admin\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.pdb
 C:\Users\Isa\Desktop\express admin\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ref\ExpressKuryer.Domain.dll
+C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\bin\Release\net6.0\ExpressKuryer.Domain.deps.json
+C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\bin\Release\net6.0\ExpressKuryer.Domain.dll
+C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\bin\Release\net6.0\ExpressKuryer.Domain.pdb
+C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.csproj.AssemblyReference.cache
+C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.AssemblyInfoInputs.cache
+C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.AssemblyInfo.cs
+C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.csproj.CoreCompileInputs.cache
+C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.dll
+C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\refint\ExpressKuryer.Domain.dll
+C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.pdb
+C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ref\ExpressKuryer.Domain.dll
