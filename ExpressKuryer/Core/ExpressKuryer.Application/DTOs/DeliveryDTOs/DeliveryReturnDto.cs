@@ -36,6 +36,8 @@ namespace ExpressKuryer.Application.DTOs.DeliveryDTOs
         public string? OrderDeliveryStatus { get; set; }
 
         public string Type { get; set; }
+        public string TrackCode { get; set; }
+
         public CourierReturnDto? Courier { get; set; }
         public ExpressKuryer.Domain.Entities.AppUser? MemberUser { get; set; }
 

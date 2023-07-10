@@ -11,7 +11,7 @@ namespace ExpressKuryer.Domain.Entities
     public class Delivery:BaseEntity
     {
         public int? ServiceId { get; set; }
-
+        public string TrackCode { get; set; }
         public DateTime? DeliveryedAt { get; set; }
         public string? AddressFrom { get; set; }
         public string? AddressTo { get; set; }

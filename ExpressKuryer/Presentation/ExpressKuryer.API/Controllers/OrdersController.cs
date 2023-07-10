@@ -1,4 +1,5 @@
-﻿using ExpressKuryer.Application.DTOs.Delivery;
+﻿using Avon.Infrastructure.Referal;
+using ExpressKuryer.Application.DTOs.Delivery;
 using ExpressKuryer.Application.UnitOfWorks;
 using ExpressKuryer.Domain.Entities;
 using Microsoft.AspNetCore.Http;
@@ -30,11 +31,14 @@ namespace ExpressKuryer.API.Controllers
                 Name = deliveryPost.Name,
                 Telephone = deliveryPost.Phone,
                 Message = deliveryPost.Descripton,
+                Type = deliveryPost.Type,
                 suprizDelivery = deliveryPost.Supris,
                 DeliveryTime = DateTime.UtcNow.AddHours(4),
                 DeliveryStatus = Domain.Enums.Delivery.DeliveryStatus.Gözləmədə.ToString(),
                 OrderDeliveryStatus = Domain.Enums.Delivery.OrderDeliveryStatus.Anbarda.ToString(),
-                TotalAmount = deliveryPost.TotalAmount
+                TotalAmount = deliveryPost.TotalAmount,
+                TrackCode = CodeGeneratorManager.Generate(deliveryPost.Name, deliveryPost.Descripton)
+
             };
             
             if(deliveryPost.AppUserId!=null)
@@ -68,6 +72,17 @@ namespace ExpressKuryer.API.Controllers
                 return NotFound();
             }
             return Ok(orders);
+        }
+        [HttpGet]
+        [Route("Track")]
+        public async Task<IActionResult> Tracking(string TrackId)
+        {
+            var order=await _unitOfWork.RepositoryDelivery.GetAsync(x=>x.TrackCode== TrackId);
+            if(order==null)
+            {
+                return NotFound("This order is not exist");
+            }
+            return Ok(order);
         }
         [HttpGet]
         [Route("Orders")]
