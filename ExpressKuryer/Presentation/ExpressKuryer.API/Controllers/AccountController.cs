@@ -131,7 +131,7 @@ namespace ExpressKuryer.API.Controllers
         [HttpPost("updateAccount")]
         public async Task<IActionResult> MyAccount(string id,RegisterDTO register)
         {
-            AppUser user = await _unitOfWork.RepositoryUser.GetAsync(x => x.Id == id,false);
+            AppUser user = await _unitOfWork.RepositoryUser.GetAsync(x => x.Id == id,true);
             if (user == null)
             {
                 return BadRequest();
@@ -140,7 +140,6 @@ namespace ExpressKuryer.API.Controllers
             user.Address = register.Address;
             user.Name=register.Name;
             user.PhoneNumber = register.Phone;
-            await _unitOfWork.CommitAsync();
             AccountDTO accountDTO = new AccountDTO()
             {
                 Name = user.Name,
@@ -150,6 +149,16 @@ namespace ExpressKuryer.API.Controllers
                 Deliveries = user.Deliveries,
                 Phone = user.PhoneNumber
             };
+            if (register.Password != null && register.Password==register.RepeatPassword)
+            {
+                var resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
+                var resetResult = await _userManager.ResetPasswordAsync(user, resetToken, register.Password);
+                if (!resetResult.Succeeded)
+                {
+                    return BadRequest("Password error!");
+                }
+            }
+            await _unitOfWork.CommitAsync();
             return Ok(accountDTO);
         }
      /*   [HttpGet("forgot")]

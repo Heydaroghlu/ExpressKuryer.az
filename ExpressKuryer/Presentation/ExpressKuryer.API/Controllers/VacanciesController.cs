@@ -23,7 +23,20 @@ namespace ExpressKuryer.API.Controllers
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-
+        [HttpPost]
+        [Route("BeCourier")]
+        public async Task<IActionResult> BeCourier(KuryerPost kuryer)
+        {
+            BeCouirer couirer=new BeCouirer ();
+            couirer.Name=kuryer.Name;
+            couirer.Surname = kuryer.Surname;
+            couirer.Phone=kuryer.Phone;
+            couirer.Email=kuryer.Email;
+            couirer.Desc=kuryer.Desc;
+            await _unitOfWork.RepositoryBeCourier.InsertAsync(couirer);
+            await _unitOfWork.CommitAsync();
+            return Ok(couirer);
+        }
         /*[HttpPost]
         [Route("SendVacancy")]
         public async Task<IActionResult> SendVacancy([FromForm]VacancyDto vacancyDto)
