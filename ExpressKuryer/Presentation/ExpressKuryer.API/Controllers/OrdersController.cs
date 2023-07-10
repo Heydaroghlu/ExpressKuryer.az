@@ -2,6 +2,7 @@
 using ExpressKuryer.Application.DTOs.Delivery;
 using ExpressKuryer.Application.UnitOfWorks;
 using ExpressKuryer.Domain.Entities;
+using ExpressKuryer.Infrastructure.Services.Email;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,9 +13,12 @@ namespace ExpressKuryer.API.Controllers
     public class OrdersController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        public OrdersController(IUnitOfWork unitOfWork)
+        IEmailService _emailService;
+        public OrdersController(IUnitOfWork unitOfWork, IEmailService emailService)
         {
             _unitOfWork=unitOfWork;
+            _emailService=emailService;
+
         }
         [HttpPost]
         [Route("Create")]
@@ -40,10 +44,10 @@ namespace ExpressKuryer.API.Controllers
                 TrackCode = CodeGeneratorManager.Generate(deliveryPost.Name, deliveryPost.Descripton)
 
             };
-            
+            AppUser user = null;
             if(deliveryPost.AppUserId!=null)
             {
-                AppUser user = await _unitOfWork.RepositoryUser.GetAsync(x => x.Id == deliveryPost.AppUserId);
+                user = await _unitOfWork.RepositoryUser.GetAsync(x => x.Id == deliveryPost.AppUserId);
                 if(user!=null)
                 {
                     delivery.MemberUserId = deliveryPost.AppUserId;
@@ -54,12 +58,16 @@ namespace ExpressKuryer.API.Controllers
             try
             {
                 await _unitOfWork.CommitAsync();
+                if(user!=null)
+                {
+                    _emailService.Send(user.Email, $"Hörmətli müştəri { deliveryPost.Name} ", $"Sizin sifarişiniz Gözləmədədir. Ən qısa zamanda sizinlə əlaqə saxlanılacaqdır. Təşəkkürlər");
+                }
             }
             catch
             {
                 return Ok("Commit Error");
             }
-            return StatusCode(201);
+            return Ok(new { TrackCode=delivery.TrackCode});
         }
         [HttpGet]
         [Route("OrderGet")]

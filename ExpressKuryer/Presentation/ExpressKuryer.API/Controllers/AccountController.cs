@@ -1,5 +1,6 @@
 ﻿using ExpressKuryer.Application.Abstractions.Token;
 using ExpressKuryer.Application.DTOs.AppUserDTOs;
+using ExpressKuryer.Application.DTOs.Delivery;
 using ExpressKuryer.Application.DTOs.Token;
 using ExpressKuryer.Application.HelperManager;
 using ExpressKuryer.Application.UnitOfWorks;
@@ -23,12 +24,12 @@ namespace ExpressKuryer.API.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ITokenHandler _tokenHandler;
-       // private readonly IEmailService _emailService;
+        IEmailService _emailService;
         private readonly IUnitOfWork _unitOfWork;
-        public AccountController(UserManager<AppUser> userManager,IUnitOfWork unitOfWork,ITokenHandler tokenHandler, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
+        public AccountController(UserManager<AppUser> userManager,IEmailService emailService,IUnitOfWork unitOfWork,ITokenHandler tokenHandler, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _roleManager = roleManager;
-           // _emailService = emailService;
+            _emailService = emailService;
             _userManager = userManager;
             _signInManager = signInManager;
             _tokenHandler = tokenHandler;
@@ -157,6 +158,7 @@ namespace ExpressKuryer.API.Controllers
                 {
                     return BadRequest("Password error!");
                 }
+                _emailService.Send(user.Email, $"Hörmətli müştəri {user.Name} ", $"Sizin şifrəniz {DateTime.UtcNow.AddHours(4)} tarixində dəyişdirildi.Yeni şifrəniz: {register.Password} .Təşəkkürlər");
             }
             await _unitOfWork.CommitAsync();
             return Ok(accountDTO);
