@@ -1,10 +1,12 @@
 ﻿using ExpressKuryer.Application.Abstractions.File;
+using ExpressKuryer.Application.DTOs;
 using ExpressKuryer.Application.DTOs.AppUserDTOs;
 using ExpressKuryer.Application.HelperManager;
 using ExpressKuryer.Application.Storages;
 using ExpressKuryer.Application.UnitOfWorks;
 using ExpressKuryer.Application.ViewModels;
 using ExpressKuryer.Domain.Entities;
+using ExpressKuryer.Domain.Enums.Delivery;
 using ExpressKuryer.Domain.Enums.UserEnums;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -110,8 +112,8 @@ namespace ExpressKuryer.MVC.Controllers
             {
                 if (!User.Identity.IsAuthenticated)
                     return RedirectToAction("Page", "NotFound");
-                
-                user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+                user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName.Equals(User.Identity.Name));
 
                 if (user.IsAdmin)
                 {
@@ -146,7 +148,7 @@ namespace ExpressKuryer.MVC.Controllers
 
             return View(viewModel);
         }
-
+            
 		[HttpPost]
         public async Task<IActionResult> Profile(AdminAccountViewModel viewModel)
         {
@@ -181,7 +183,6 @@ namespace ExpressKuryer.MVC.Controllers
                 }
 
                 user.Email = viewModel.User.Email;
-                user.UserName = viewModel.User.Email;
                 user.PhoneNumber = viewModel.User.PhoneNumber;
 
                 if (viewModel.Password != null)
@@ -247,35 +248,62 @@ namespace ExpressKuryer.MVC.Controllers
         }
 
 
+        //[HttpGet]
+        //public async Task<IActionResult> Role()
+        //{
+        //    await _roleManager.CreateAsync(new IdentityRole("Courier"));
+        //    await _roleManager.CreateAsync(new IdentityRole("Member"));
+        //    await _roleManager.CreateAsync(new IdentityRole("Admin"));
+        //    return Ok();
+        //}
+
+        //[HttpGet]
+        //public async Task<IActionResult> Okay()
+        //{
+        //    AppUser user = new AppUser
+        //    {
+        //        UserName = "AliBagishli",
+        //        Email = "expresskuryer.az@mail.com",
+        //        IsAdmin = true,
+        //        EmailConfirmed = true,
+        //        UserType = UserRoleEnum.Admin.ToString(),
+        //        Name = "Ali",
+        //        Surname = "Bagishli",
+        //        PhoneNumber = "055 555 55 55"
+        //    };
+
+        //    await _userManager.CreateAsync(user, "Admin0910");
+        //    await _userManager.AddToRoleAsync(user, "Admin");
+
+        //    return Ok();
+        //}
 
         [HttpGet]
-        public async Task<IActionResult> Role()
+        public async Task<IActionResult> AllUser(int page = 1, string? searchWord = null)
         {
-            await _roleManager.CreateAsync(new IdentityRole("Courier"));
-            await _roleManager.CreateAsync(new IdentityRole("Member"));
-            await _roleManager.CreateAsync(new IdentityRole("Admin"));
-            return Ok();
-        }
+            if (!User.Identity.IsAuthenticated)
+                return RedirectToAction("NotFound", "Page");
 
-        [HttpGet]
-        public async Task<IActionResult> Okay()
-        {
-            AppUser user = new AppUser
-            {
-                UserName = "AliBagishli",
-                Email = "expresskuryer.az@mail.com",
-                IsAdmin = true,
-                EmailConfirmed = true,
-                UserType = UserRoleEnum.Admin.ToString(),
-                Name = "Ali",
-                Surname = "Bagishli",
-                PhoneNumber = "055 555 55 55"
-            };
+            int pageSize = 10;
 
-            await _userManager.CreateAsync(user, "Admin0910");
-            await _userManager.AddToRoleAsync(user, "Admin");
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == User.Identity.Name);
 
-            return Ok();
+            if (!user.IsAdmin)
+                return RedirectToAction("NotFound", "Page");
+
+            var users = _userManager.Users.Where(x => !x.IsAdmin).Include(x=>x.Deliveries.Where(x=>x.OrderDeliveryStatus == OrderDeliveryStatus.Catdirildi.ToString())).ToList();
+
+            if (string.IsNullOrWhiteSpace(searchWord) == false)
+                users = users.Where(x => x.Name.Contains(searchWord) || x.Surname.Contains(searchWord)).ToList();
+
+            var list = PagenatedList<AppUser>.Save(users.AsQueryable(), page, pageSize);
+
+
+            ViewBag.PageSize = pageSize;
+            ViewBag.Word = searchWord;
+            TempData["Title"] = "İstifadəçilər";
+
+            return View(list);
         }
 
 

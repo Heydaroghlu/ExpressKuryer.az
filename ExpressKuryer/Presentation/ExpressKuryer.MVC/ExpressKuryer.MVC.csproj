@@ -23,6 +23,12 @@
     <Folder Include="wwwroot\uploads\deliveries\" />
     <Folder Include="wwwroot\uploads\deliveries\" />
     <Folder Include="wwwroot\uploads\deliveries\" />
+    <Folder Include="wwwroot\uploads\deliveries\" />
+    <Folder Include="wwwroot\uploads\vacancies\" />
+    <Folder Include="wwwroot\uploads\settings\" />
+    <Folder Include="wwwroot\uploads\partners\" />
+    <Folder Include="wwwroot\uploads\sliders\" />
+    <Folder Include="wwwroot\uploads\users\" />
     <Folder Include="wwwroot\uploads\vacancies\" />
     <Folder Include="wwwroot\uploads\users\" />
     <Folder Include="wwwroot\uploads\sliders\" />
