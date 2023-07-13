@@ -11,7 +11,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.14" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.15" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +24,11 @@
     <Folder Include="wwwroot\uploads\deliveries\" />
     <Folder Include="wwwroot\uploads\deliveries\" />
     <Folder Include="wwwroot\uploads\deliveries\" />
+    <Folder Include="wwwroot\uploads\deliveries\" />
+    <Folder Include="wwwroot\uploads\vacancies\" />
+    <Folder Include="wwwroot\uploads\partners\" />
+    <Folder Include="wwwroot\uploads\settings\" />
+    <Folder Include="wwwroot\uploads\sliders\" />
     <Folder Include="wwwroot\uploads\vacancies\" />
     <Folder Include="wwwroot\uploads\settings\" />
     <Folder Include="wwwroot\uploads\partners\" />

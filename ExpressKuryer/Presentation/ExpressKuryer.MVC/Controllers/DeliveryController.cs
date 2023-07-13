@@ -112,6 +112,28 @@ namespace ExpressKuryer.MVC.Controllers
             return View(list);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> DeliveryIndexForCourier(int page = 1, string? searchWord = null)
+        {
+            var entities = await _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted, false, "Service", "MemberUser", "Courier");
+            int pageSize = 10;
+            
+            entities = entities.Where(x => x.OrderDeliveryStatus == OrderDeliveryStatus.Kuryerde.ToString() && x.DeliveryStatus == DeliveryStatus.Qəbul.ToString()).ToList();
+
+            if (string.IsNullOrWhiteSpace(searchWord) == false)
+                entities = entities.Where(x => x.Name.ToLower().Contains(searchWord.ToLower())).ToList();
+
+            var returnDto = _mapper.Map<List<DeliveryReturnDto>>(entities);
+            var list = PagenatedList<DeliveryReturnDto>.Save(returnDto.AsQueryable(), page, pageSize);
+
+            ViewBag.PageSize = pageSize;
+            ViewBag.Word = searchWord;
+            TempData["Title"] = "Çatdırmalar";
+            TempData["Page"] = page;
+
+            return View(list);
+        }
+
 
         [HttpGet]
         [Route("Manage/Detail")]
@@ -187,8 +209,6 @@ namespace ExpressKuryer.MVC.Controllers
 
             return View(returnDto);
         }
-
-
 
         [HttpGet]
         [Route("Manage/ChangeDeliveryStatus")]

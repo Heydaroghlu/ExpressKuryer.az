@@ -77,11 +77,15 @@
                                 <span class="text-danger" asp-validation-for="FormFile"></span>
                             </div>
 
-                            <div class="mb-3 image-boxs">
+                            <div class="mb-3">
                                 <label asp-for="ImageFiles" class="form-label">Detallı Şəkillər</label>
                                 <input asp-for="ImageFiles" multiple class="form-control multi-file" style="margin:20px 0px">
-                                <img style="width:300px;height:300px;object-fit:cover;" />
                                 <span class="text-danger" asp-validation-for="ImageFiles"></span>
+
+
+                                <div class="image-boxs removable">
+
+                                </div>
                             </div>
 
                             <button type="submit" class="btn btn-outline-dark my-3">Submit</button>

@@ -309,8 +309,12 @@ namespace ExpressKuryer.MVC.Controllers
         {
             try
             {
+                var fileName = _unitOfWork.RepositoryProductImages.GetAsync(x => x.Id == id).Result.Image;
                 await _unitOfWork.RepositoryProductImages.Remove(x => x.Id == id);
                 await _unitOfWork.CommitAsync();
+
+
+                await _storage.DeleteAsync(_imagePath, fileName);
             }
             catch (Exception ex)
             {

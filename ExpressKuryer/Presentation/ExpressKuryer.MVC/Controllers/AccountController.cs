@@ -217,12 +217,14 @@ namespace ExpressKuryer.MVC.Controllers
 
                 DateTime startTime = DateTime.ParseExact(dateTimes[0], "MM/dd/yyyy", CultureInfo.InvariantCulture);
                 DateTime endTime = DateTime.ParseExact(dateTimes[1], "MM/dd/yyyy", CultureInfo.InvariantCulture);
-
-                var deliveries = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.MemberUserId == user.Id && x.CreatedAt > startTime && x.CreatedAt < endTime).Result.ToList();
-                viewModel.MemberDeliveries = deliveries;
-
+                
                 var courier = await _unitOfWork.RepositoryCourier.GetAsync(x => !x.IsDeleted && x.CourierPersonId == user.Id, false, "CourierPerson");
                 viewModel.Courier = courier;
+
+                var deliveries = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.CourierId == courier.Id && x.CreatedAt > startTime && x.CreatedAt < endTime).Result.ToList();
+                viewModel.MemberDeliveries = deliveries;
+
+               
                 viewModel.User = user;
 
                 user.UserName = viewModel.User.Email;

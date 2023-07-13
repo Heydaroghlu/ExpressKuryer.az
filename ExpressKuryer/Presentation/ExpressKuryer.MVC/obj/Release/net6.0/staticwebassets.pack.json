@@ -1,1171 +1,1163 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\ExpressKuryer.MVC.bundle.scp.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\ExpressKuryer.MVC.bundle.scp.css",
       "PackagePath": "staticwebassets\\ExpressKuryer.MVC.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\css\\style.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\css\\style.css",
       "PackagePath": "staticwebassets\\manage\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\avasta\\css\\style.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\avasta\\css\\style.css",
       "PackagePath": "staticwebassets\\manage\\icons\\avasta\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\avasta\\fonts\\avasta.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\avasta\\fonts\\avasta.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\avasta\\fonts\\avasta.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\avasta\\fonts\\avasta.svg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\avasta\\fonts\\avasta.svg",
       "PackagePath": "staticwebassets\\manage\\icons\\avasta\\fonts\\avasta.svg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\avasta\\fonts\\avasta.ttf",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\avasta\\fonts\\avasta.ttf",
       "PackagePath": "staticwebassets\\manage\\icons\\avasta\\fonts\\avasta.ttf"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\avasta\\fonts\\avasta.woff",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\avasta\\fonts\\avasta.woff",
       "PackagePath": "staticwebassets\\manage\\icons\\avasta\\fonts\\avasta.woff"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\avasta\\fonts\\avasta.woff2",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\avasta\\fonts\\avasta.woff2",
       "PackagePath": "staticwebassets\\manage\\icons\\avasta\\fonts\\avasta.woff2"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\flaticon-1\\font\\flaticon-1.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\flaticon-1\\font\\flaticon-1.css",
       "PackagePath": "staticwebassets\\manage\\icons\\flaticon-1\\font\\flaticon-1.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.svg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.svg",
       "PackagePath": "staticwebassets\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.svg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.ttf",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.ttf",
       "PackagePath": "staticwebassets\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.ttf"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.woff",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.woff",
       "PackagePath": "staticwebassets\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.woff"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.woff2",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.woff2",
       "PackagePath": "staticwebassets\\manage\\icons\\flaticon-1\\font\\flaticon-131b9.woff2"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\css\\all.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\css\\all.min.css",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\css\\all.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.svg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.svg",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.svg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.ttf",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.ttf"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.woff",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.woff",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.woff"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.woff2",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400.woff2"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400d41d.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400d41d.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-brands-400d41d.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.svg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.svg",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.svg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.ttf",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.ttf"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.woff",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.woff",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.woff"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.woff2",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400.woff2"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400d41d.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400d41d.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-regular-400d41d.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.svg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.svg",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.svg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.ttf",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.ttf"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.woff",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.woff",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.woff"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.woff2",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900.woff2"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900d41d.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900d41d.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\font-awesome\\webfonts\\fa-solid-900d41d.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\icomoon\\fonts\\icomoon.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\icomoon\\fonts\\icomoon.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\icomoon\\fonts\\icomoon.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\icomoon\\fonts\\icomoon.svg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\icomoon\\fonts\\icomoon.svg",
       "PackagePath": "staticwebassets\\manage\\icons\\icomoon\\fonts\\icomoon.svg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\icomoon\\fonts\\icomoon.svg.readme",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\icomoon\\fonts\\icomoon.svg.readme",
       "PackagePath": "staticwebassets\\manage\\icons\\icomoon\\fonts\\icomoon.svg.readme"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\icomoon\\fonts\\icomoon.ttf",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\icomoon\\fonts\\icomoon.ttf",
       "PackagePath": "staticwebassets\\manage\\icons\\icomoon\\fonts\\icomoon.ttf"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\icomoon\\fonts\\icomoon.woff",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\icomoon\\fonts\\icomoon.woff",
       "PackagePath": "staticwebassets\\manage\\icons\\icomoon\\fonts\\icomoon.woff"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\icomoon\\icomoon.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\icomoon\\icomoon.css",
       "PackagePath": "staticwebassets\\manage\\icons\\icomoon\\icomoon.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\css\\line-awesome.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\css\\line-awesome.min.css",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\css\\line-awesome.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-brands-400.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-brands-400.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-brands-400.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-brands-400.svg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-brands-400.svg",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-brands-400.svg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-brands-400.ttf",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-brands-400.ttf",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-brands-400.ttf"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-brands-400.woff",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-brands-400.woff",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-brands-400.woff"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-brands-400.woff2",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-brands-400.woff2",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-brands-400.woff2"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-brands-400d41d.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-brands-400d41d.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-brands-400d41d.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-regular-400.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-regular-400.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-regular-400.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-regular-400.svg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-regular-400.svg",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-regular-400.svg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-regular-400.ttf",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-regular-400.ttf",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-regular-400.ttf"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-regular-400.woff",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-regular-400.woff",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-regular-400.woff"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-regular-400.woff2",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-regular-400.woff2",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-regular-400.woff2"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-regular-400d41d.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-regular-400d41d.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-regular-400d41d.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-solid-900.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-solid-900.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-solid-900.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-solid-900.svg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-solid-900.svg",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-solid-900.svg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-solid-900.ttf",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-solid-900.ttf",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-solid-900.ttf"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-solid-900.woff",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-solid-900.woff",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-solid-900.woff"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-solid-900.woff2",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-solid-900.woff2",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-solid-900.woff2"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-solid-900d41d.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\line-awesome\\fonts\\la-solid-900d41d.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\line-awesome\\fonts\\la-solid-900d41d.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\material-design-iconic-font\\css\\materialdesignicons.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\material-design-iconic-font\\css\\materialdesignicons.min.css",
       "PackagePath": "staticwebassets\\manage\\icons\\material-design-iconic-font\\css\\materialdesignicons.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.svg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.svg",
       "PackagePath": "staticwebassets\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.svg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.ttf",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.ttf",
       "PackagePath": "staticwebassets\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.ttf"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.woff",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.woff",
       "PackagePath": "staticwebassets\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.woff"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.woff2",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.woff2",
       "PackagePath": "staticwebassets\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.woff2"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfontd41d.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfontd41d.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfontd41d.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\simple-line-icons\\css\\simple-line-icons.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\simple-line-icons\\css\\simple-line-icons.css",
       "PackagePath": "staticwebassets\\manage\\icons\\simple-line-icons\\css\\simple-line-icons.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.svg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.svg",
       "PackagePath": "staticwebassets\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.svg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.ttf",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.ttf",
       "PackagePath": "staticwebassets\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.ttf"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.woff",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.woff",
       "PackagePath": "staticwebassets\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.woff"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.woff2",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.woff2",
       "PackagePath": "staticwebassets\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.woff2"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Iconsd41dd41d.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Iconsd41dd41d.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\simple-line-icons\\fonts\\Simple-Line-Iconsd41dd41d.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\themify-icons\\css\\themify-icons.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\themify-icons\\css\\themify-icons.css",
       "PackagePath": "staticwebassets\\manage\\icons\\themify-icons\\css\\themify-icons.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\themify-icons\\fonts\\themify.ttf",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\themify-icons\\fonts\\themify.ttf",
       "PackagePath": "staticwebassets\\manage\\icons\\themify-icons\\fonts\\themify.ttf"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\themify-icons\\fonts\\themify.woff",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\themify-icons\\fonts\\themify.woff",
       "PackagePath": "staticwebassets\\manage\\icons\\themify-icons\\fonts\\themify.woff"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\themify-icons\\fonts\\themify9f249f24.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\themify-icons\\fonts\\themify9f249f24.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\themify-icons\\fonts\\themify9f249f24.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\themify-icons\\fonts\\themify9f249f24.svg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\themify-icons\\fonts\\themify9f249f24.svg",
       "PackagePath": "staticwebassets\\manage\\icons\\themify-icons\\fonts\\themify9f249f24.svg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\themify-icons\\fonts\\themifyd41dd41d.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\icons\\themify-icons\\fonts\\themifyd41dd41d.eot",
       "PackagePath": "staticwebassets\\manage\\icons\\themify-icons\\fonts\\themifyd41dd41d.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\1.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\1.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\1.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\1.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\avatar\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\1.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\1.png",
       "PackagePath": "staticwebassets\\manage\\images\\avatar\\1.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\2.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\2.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\avatar\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\3.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\3.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\avatar\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\4.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\4.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\avatar\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\5.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\5.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\avatar\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\5.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\5.png",
       "PackagePath": "staticwebassets\\manage\\images\\avatar\\5.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\6.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\6.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\avatar\\6.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\7.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\7.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\avatar\\7.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\8.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\avatar\\8.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\avatar\\8.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img1.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img1.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\big\\img1.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img2.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img2.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\big\\img2.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img3.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img3.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\big\\img3.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img4.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img4.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\big\\img4.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img5.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img5.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\big\\img5.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img6.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img6.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\big\\img6.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img7.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img7.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\big\\img7.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img8.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\big\\img8.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\big\\img8.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\blank-profile-picture-973460_1280.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\blank-profile-picture-973460_1280.png",
       "PackagePath": "staticwebassets\\manage\\images\\blank-profile-picture-973460_1280.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\1.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\1.png",
       "PackagePath": "staticwebassets\\manage\\images\\card\\1.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\2.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\2.png",
       "PackagePath": "staticwebassets\\manage\\images\\card\\2.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\3.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\3.png",
       "PackagePath": "staticwebassets\\manage\\images\\card\\3.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic1.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic1.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\card\\pic1.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic10.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic10.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\card\\pic10.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic11.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic11.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\card\\pic11.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic12.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic12.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\card\\pic12.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic2.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic2.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\card\\pic2.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic3.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic3.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\card\\pic3.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic4.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic4.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\card\\pic4.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic5.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic5.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\card\\pic5.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic6.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic6.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\card\\pic6.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic7.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic7.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\card\\pic7.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic8.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic8.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\card\\pic8.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic9.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\card\\pic9.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\card\\pic9.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\dots.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\dots.png",
       "PackagePath": "staticwebassets\\manage\\images\\dots.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\dots2.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\dots2.png",
       "PackagePath": "staticwebassets\\manage\\images\\dots2.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\favicon.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\favicon.png",
       "PackagePath": "staticwebassets\\manage\\images\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\footer.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\footer.png",
       "PackagePath": "staticwebassets\\manage\\images\\footer.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\like.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\like.png",
       "PackagePath": "staticwebassets\\manage\\images\\like.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\logo-full.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\logo-full.png",
       "PackagePath": "staticwebassets\\manage\\images\\logo-full.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\logo-text.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\logo-text.png",
       "PackagePath": "staticwebassets\\manage\\images\\logo-text.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\logo-text2.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\logo-text2.png",
       "PackagePath": "staticwebassets\\manage\\images\\logo-text2.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\logo.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\logo.png",
       "PackagePath": "staticwebassets\\manage\\images\\logo.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\navLogo.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\navLogo.png",
       "PackagePath": "staticwebassets\\manage\\images\\navLogo.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\pexels-photo-813011.jpeg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\pexels-photo-813011.jpeg",
       "PackagePath": "staticwebassets\\manage\\images\\pexels-photo-813011.jpeg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\product\\1.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\product\\1.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\product\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\product\\2.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\product\\2.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\product\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\product\\3.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\product\\3.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\product\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\product\\4.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\product\\4.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\product\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\product\\5.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\product\\5.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\product\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\product\\6.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\product\\6.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\product\\6.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\product\\7.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\product\\7.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\product\\7.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\1.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\1.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\10.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\10.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\10.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\12.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\12.png",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\12.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\2.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\2.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\3.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\3.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\4.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\4.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\5.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\5.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\5.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\5.png",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\5.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\6.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\6.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\6.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\7.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\7.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\7.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\8.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\8.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\8.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\9.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\9.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\9.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\cover.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\cover.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\cover.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\pawel-czerwinski-RGIGfGw3mRk-unsplash.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\pawel-czerwinski-RGIGfGw3mRk-unsplash.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\pawel-czerwinski-RGIGfGw3mRk-unsplash.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\profile.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\profile.png",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\profile.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic1.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic1.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\small\\pic1.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic10.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic10.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\small\\pic10.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic2.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic2.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\small\\pic2.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic3.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic3.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\small\\pic3.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic4.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic4.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\small\\pic4.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic5.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic5.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\small\\pic5.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic6.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic6.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\small\\pic6.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic7.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic7.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\small\\pic7.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic8.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic8.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\small\\pic8.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic9.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\profile\\small\\pic9.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\profile\\small\\pic9.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\qr.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\qr.png",
       "PackagePath": "staticwebassets\\manage\\images\\qr.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\svg\\map.svg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\svg\\map.svg",
       "PackagePath": "staticwebassets\\manage\\images\\svg\\map.svg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\tab\\1.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\tab\\1.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\tab\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\tab\\2.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\tab\\2.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\tab\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\tab\\3.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\tab\\3.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\tab\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\tab\\4.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\images\\tab\\4.jpg",
       "PackagePath": "staticwebassets\\manage\\images\\tab\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\custom.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\custom.min.js",
       "PackagePath": "staticwebassets\\manage\\js\\custom.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\dashboard\\analytics.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\dashboard\\analytics.js",
       "PackagePath": "staticwebassets\\manage\\js\\dashboard\\analytics.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\dashboard\\dashboard-1.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\dashboard\\dashboard-1.js",
       "PackagePath": "staticwebassets\\manage\\js\\dashboard\\dashboard-1.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\dashboard\\order.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\dashboard\\order.js",
       "PackagePath": "staticwebassets\\manage\\js\\dashboard\\order.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\deznav-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\deznav-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\deznav-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\bs-daterange-picker-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\bs-daterange-picker-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\bs-daterange-picker-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\chartist-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\chartist-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\chartist-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\chartjs-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\chartjs-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\chartjs-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\clock-picker-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\clock-picker-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\clock-picker-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\datatables.init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\datatables.init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\datatables.init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\flot-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\flot-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\flot-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\fullcalendar-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\fullcalendar-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\fullcalendar-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\jquery-asColorPicker.init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\jquery-asColorPicker.init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\jquery-asColorPicker.init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\jquery.validate-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\jquery.validate-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\jquery.validate-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\jqvmap-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\jqvmap-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\jqvmap-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\material-date-picker-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\material-date-picker-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\material-date-picker-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\morris-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\morris-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\morris-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\nestable-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\nestable-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\nestable-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\nouislider-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\nouislider-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\nouislider-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\pickadate-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\pickadate-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\pickadate-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\piety-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\piety-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\piety-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\select2-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\select2-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\select2-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\sparkline-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\sparkline-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\sparkline-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\summernote-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\summernote-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\summernote-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\sweetalert.init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\sweetalert.init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\sweetalert.init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\toastr-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\toastr-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\toastr-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\widgets-script-init.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\js\\plugins-init\\widgets-script-init.js",
       "PackagePath": "staticwebassets\\manage\\js\\plugins-init\\widgets-script-init.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\main.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\main.js",
       "PackagePath": "staticwebassets\\manage\\main.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\sweetalert.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\sweetalert.js",
       "PackagePath": "staticwebassets\\manage\\sweetalert.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\animate\\animate.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\animate\\animate.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\animate\\animate.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\aos\\css\\aos.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\aos\\css\\aos.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\aos\\css\\aos.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\apexchart\\apexchart.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\apexchart\\apexchart.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\apexchart\\apexchart.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\bootstrap-daterangepicker\\daterangepicker.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\bootstrap-daterangepicker\\daterangepicker.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\bootstrap-daterangepicker\\daterangepicker.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\bootstrap-daterangepicker\\daterangepicker.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\bootstrap-daterangepicker\\daterangepicker.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\bootstrap-daterangepicker\\daterangepicker.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\bootstrap-material-datetimepicker\\css\\bootstrap-material-datetimepicker.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\bootstrap-material-datetimepicker\\css\\bootstrap-material-datetimepicker.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\bootstrap-material-datetimepicker\\css\\bootstrap-material-datetimepicker.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\bootstrap-material-datetimepicker\\js\\bootstrap-material-datetimepicker.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\bootstrap-material-datetimepicker\\js\\bootstrap-material-datetimepicker.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\bootstrap-material-datetimepicker\\js\\bootstrap-material-datetimepicker.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\bootstrap-select\\dist\\css\\bootstrap-select.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\bootstrap-select\\dist\\css\\bootstrap-select.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\bootstrap-select\\dist\\css\\bootstrap-select.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\bootstrap-select\\dist\\js\\bootstrap-select.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\bootstrap-select\\dist\\js\\bootstrap-select.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\bootstrap-select\\dist\\js\\bootstrap-select.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\chart.js\\Chart.bundle.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\chart.js\\Chart.bundle.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\chart.js\\Chart.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\chartist-plugin-tooltips\\js\\chartist-plugin-tooltip.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\chartist-plugin-tooltips\\js\\chartist-plugin-tooltip.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\chartist-plugin-tooltips\\js\\chartist-plugin-tooltip.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\chartist\\css\\chartist.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\chartist\\css\\chartist.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\chartist\\css\\chartist.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\chartist\\js\\chartist.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\chartist\\js\\chartist.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\chartist\\js\\chartist.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\ckeditor\\ckeditor.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\ckeditor\\ckeditor.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\ckeditor\\ckeditor.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\clockpicker\\css\\bootstrap-clockpicker.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\clockpicker\\css\\bootstrap-clockpicker.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\clockpicker\\css\\bootstrap-clockpicker.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\clockpicker\\js\\bootstrap-clockpicker.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\clockpicker\\js\\bootstrap-clockpicker.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\clockpicker\\js\\bootstrap-clockpicker.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\datatables\\css\\jquery.dataTables.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\datatables\\css\\jquery.dataTables.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\datatables\\css\\jquery.dataTables.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\datatables\\images\\sort_asc.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\datatables\\images\\sort_asc.png",
       "PackagePath": "staticwebassets\\manage\\vendor\\datatables\\images\\sort_asc.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\datatables\\images\\sort_asc_disabled.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\datatables\\images\\sort_asc_disabled.png",
       "PackagePath": "staticwebassets\\manage\\vendor\\datatables\\images\\sort_asc_disabled.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\datatables\\images\\sort_both.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\datatables\\images\\sort_both.png",
       "PackagePath": "staticwebassets\\manage\\vendor\\datatables\\images\\sort_both.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\datatables\\images\\sort_desc.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\datatables\\images\\sort_desc.png",
       "PackagePath": "staticwebassets\\manage\\vendor\\datatables\\images\\sort_desc.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\datatables\\images\\sort_desc_disabled.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\datatables\\images\\sort_desc_disabled.png",
       "PackagePath": "staticwebassets\\manage\\vendor\\datatables\\images\\sort_desc_disabled.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\datatables\\js\\jquery.dataTables.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\datatables\\js\\jquery.dataTables.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\datatables\\js\\jquery.dataTables.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\deznav\\deznav.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\deznav\\deznav.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\deznav\\deznav.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\dropzone\\dist\\dropzone.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\dropzone\\dist\\dropzone.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\dropzone\\dist\\dropzone.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\dropzone\\dist\\dropzone.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\dropzone\\dist\\dropzone.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\dropzone\\dist\\dropzone.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\flot-spline\\jquery.flot.spline.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\flot-spline\\jquery.flot.spline.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\flot-spline\\jquery.flot.spline.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\flot\\jquery.flot.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\flot\\jquery.flot.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\flot\\jquery.flot.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\flot\\jquery.flot.pie.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\flot\\jquery.flot.pie.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\flot\\jquery.flot.pie.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\flot\\jquery.flot.resize.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\flot\\jquery.flot.resize.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\flot\\jquery.flot.resize.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\fullcalendar\\css\\fullcalendar.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\fullcalendar\\css\\fullcalendar.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\fullcalendar\\css\\fullcalendar.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\fullcalendar\\js\\fullcalendar.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\fullcalendar\\js\\fullcalendar.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\fullcalendar\\js\\fullcalendar.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\global\\global.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\global\\global.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\global\\global.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\highlightjs\\highlight.pack.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\highlightjs\\highlight.pack.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\highlightjs\\highlight.pack.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asColorPicker\\css\\asColorPicker.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asColorPicker\\css\\asColorPicker.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\jquery-asColorPicker\\css\\asColorPicker.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asColorPicker\\images\\alpha.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asColorPicker\\images\\alpha.png",
       "PackagePath": "staticwebassets\\manage\\vendor\\jquery-asColorPicker\\images\\alpha.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asColorPicker\\images\\hue.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asColorPicker\\images\\hue.png",
       "PackagePath": "staticwebassets\\manage\\vendor\\jquery-asColorPicker\\images\\hue.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asColorPicker\\images\\saturation.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asColorPicker\\images\\saturation.png",
       "PackagePath": "staticwebassets\\manage\\vendor\\jquery-asColorPicker\\images\\saturation.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asColorPicker\\images\\transparent.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asColorPicker\\images\\transparent.png",
       "PackagePath": "staticwebassets\\manage\\vendor\\jquery-asColorPicker\\images\\transparent.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asColorPicker\\js\\jquery-asColorPicker.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asColorPicker\\js\\jquery-asColorPicker.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\jquery-asColorPicker\\js\\jquery-asColorPicker.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asColor\\jquery-asColor.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asColor\\jquery-asColor.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\jquery-asColor\\jquery-asColor.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asGradient\\jquery-asGradient.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-asGradient\\jquery-asGradient.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\jquery-asGradient\\jquery-asGradient.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-smartwizard\\dist\\css\\smart_wizard.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-smartwizard\\dist\\css\\smart_wizard.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\jquery-smartwizard\\dist\\css\\smart_wizard.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-smartwizard\\dist\\js\\jquery.smartWizard.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-smartwizard\\dist\\js\\jquery.smartWizard.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\jquery-smartwizard\\dist\\js\\jquery.smartWizard.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-sparkline\\jquery.sparkline.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-sparkline\\jquery.sparkline.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\jquery-sparkline\\jquery.sparkline.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-validation\\jquery.validate.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jquery-validation\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\jquery-validation\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jqueryui\\js\\jquery-ui.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jqueryui\\js\\jquery-ui.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\jqueryui\\js\\jquery-ui.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jqvmap\\css\\jqvmap.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jqvmap\\css\\jqvmap.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\jqvmap\\css\\jqvmap.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jqvmap\\js\\jquery.vmap.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jqvmap\\js\\jquery.vmap.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\jqvmap\\js\\jquery.vmap.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jqvmap\\js\\jquery.vmap.usa.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jqvmap\\js\\jquery.vmap.usa.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\jqvmap\\js\\jquery.vmap.usa.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jqvmap\\js\\jquery.vmap.world.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\jqvmap\\js\\jquery.vmap.world.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\jqvmap\\js\\jquery.vmap.world.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\css\\lightgallery.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\css\\lightgallery.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\lightgallery\\css\\lightgallery.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\fonts\\lgd41d.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\fonts\\lgd41d.eot",
       "PackagePath": "staticwebassets\\manage\\vendor\\lightgallery\\fonts\\lgd41d.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\fonts\\lgd641.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\fonts\\lgd641.eot",
       "PackagePath": "staticwebassets\\manage\\vendor\\lightgallery\\fonts\\lgd641.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\fonts\\lgd641.svg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\fonts\\lgd641.svg",
       "PackagePath": "staticwebassets\\manage\\vendor\\lightgallery\\fonts\\lgd641.svg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\fonts\\lgd641.ttf",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\fonts\\lgd641.ttf",
       "PackagePath": "staticwebassets\\manage\\vendor\\lightgallery\\fonts\\lgd641.ttf"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\fonts\\lgd641.woff",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\fonts\\lgd641.woff",
       "PackagePath": "staticwebassets\\manage\\vendor\\lightgallery\\fonts\\lgd641.woff"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\img\\loading.gif",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\img\\loading.gif",
       "PackagePath": "staticwebassets\\manage\\vendor\\lightgallery\\img\\loading.gif"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\img\\video-play.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\img\\video-play.png",
       "PackagePath": "staticwebassets\\manage\\vendor\\lightgallery\\img\\video-play.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\img\\vimeo-play.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\img\\vimeo-play.png",
       "PackagePath": "staticwebassets\\manage\\vendor\\lightgallery\\img\\vimeo-play.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\img\\youtube-play.png",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\img\\youtube-play.png",
       "PackagePath": "staticwebassets\\manage\\vendor\\lightgallery\\img\\youtube-play.png"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\js\\lightgallery-all.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\lightgallery\\js\\lightgallery-all.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\lightgallery\\js\\lightgallery-all.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\metismenu\\css\\metisMenu.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\metismenu\\css\\metisMenu.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\metismenu\\css\\metisMenu.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\moment\\moment.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\moment\\moment.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\moment\\moment.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\morris\\morris.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\morris\\morris.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\morris\\morris.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\nestable2\\css\\jquery.nestable.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\nestable2\\css\\jquery.nestable.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\nestable2\\css\\jquery.nestable.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\nestable2\\js\\jquery.nestable.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\nestable2\\js\\jquery.nestable.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\nestable2\\js\\jquery.nestable.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\nouislider\\nouislider.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\nouislider\\nouislider.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\nouislider\\nouislider.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\nouislider\\nouislider.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\nouislider\\nouislider.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\nouislider\\nouislider.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\peity\\jquery.peity.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\peity\\jquery.peity.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\peity\\jquery.peity.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\perfect-scrollbar\\css\\perfect-scrollbar.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\perfect-scrollbar\\css\\perfect-scrollbar.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\perfect-scrollbar\\css\\perfect-scrollbar.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\pickadate\\picker.date.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\pickadate\\picker.date.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\pickadate\\picker.date.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\pickadate\\picker.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\pickadate\\picker.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\pickadate\\picker.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\pickadate\\picker.time.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\pickadate\\picker.time.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\pickadate\\picker.time.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\pickadate\\themes\\default.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\pickadate\\themes\\default.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\pickadate\\themes\\default.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\pickadate\\themes\\default.date.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\pickadate\\themes\\default.date.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\pickadate\\themes\\default.date.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\raphael\\raphael.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\raphael\\raphael.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\raphael\\raphael.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\select2\\css\\select2.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\select2\\css\\select2.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\select2\\css\\select2.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\select2\\js\\select2.full.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\select2\\js\\select2.full.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\select2\\js\\select2.full.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\star-rating\\jquery.star-rating-svg.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\star-rating\\jquery.star-rating-svg.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\star-rating\\jquery.star-rating-svg.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\star-rating\\star-rating-svg.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\star-rating\\star-rating-svg.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\star-rating\\star-rating-svg.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\summernote\\font\\summernotec360.eot",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\summernote\\font\\summernotec360.eot",
       "PackagePath": "staticwebassets\\manage\\vendor\\summernote\\font\\summernotec360.eot"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\summernote\\font\\summernotec360.ttf",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\summernote\\font\\summernotec360.ttf",
       "PackagePath": "staticwebassets\\manage\\vendor\\summernote\\font\\summernotec360.ttf"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\summernote\\font\\summernotec360.woff",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\summernote\\font\\summernotec360.woff",
       "PackagePath": "staticwebassets\\manage\\vendor\\summernote\\font\\summernotec360.woff"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\summernote\\summernote.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\summernote\\summernote.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\summernote\\summernote.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\svganimation\\svg.animation.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\svganimation\\svg.animation.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\svganimation\\svg.animation.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\svganimation\\vivus.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\svganimation\\vivus.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\svganimation\\vivus.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\sweetalert2\\dist\\sweetalert2.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\sweetalert2\\dist\\sweetalert2.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\sweetalert2\\dist\\sweetalert2.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\sweetalert2\\dist\\sweetalert2.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\sweetalert2\\dist\\sweetalert2.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\sweetalert2\\dist\\sweetalert2.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\toastr\\css\\toastr.min.css",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\toastr\\css\\toastr.min.css",
       "PackagePath": "staticwebassets\\manage\\vendor\\toastr\\css\\toastr.min.css"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\toastr\\js\\toastr.min.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\toastr\\js\\toastr.min.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\toastr\\js\\toastr.min.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\wnumb\\wNumb.js",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\manage\\vendor\\wnumb\\wNumb.js",
       "PackagePath": "staticwebassets\\manage\\vendor\\wnumb\\wNumb.js"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\partnerProducts\\1845b967-ac17-4432-8f62-17845b9d5a77women_cashmerevnecksweater_black5_10-Black00x.jpg",
-      "PackagePath": "staticwebassets\\uploads\\partnerProducts\\1845b967-ac17-4432-8f62-17845b9d5a77women_cashmerevnecksweater_black5_10-Black00x.jpg"
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\partnerProducts\\1398ecf6-24a5-4ea5-9b1b-2ac6dfe102b9DS-WSW-10-000-011-CHA_Charcoal_01_2_1000x.jpg",
+      "PackagePath": "staticwebassets\\uploads\\partnerProducts\\1398ecf6-24a5-4ea5-9b1b-2ac6dfe102b9DS-WSW-10-000-011-CHA_Charcoal_01_2_1000x.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\partnerProducts\\1b2f775f-b748-4368-b082-f62b389fe8cbmen-cashmere-pullover-black_2_1000x.jpg",
-      "PackagePath": "staticwebassets\\uploads\\partnerProducts\\1b2f775f-b748-4368-b082-f62b389fe8cbmen-cashmere-pullover-black_2_1000x.jpg"
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\partnerProducts\\293c0f4e-a23f-49fb-9e88-9d904e570a50DS-WSW-10-000-011-CAM_Camel_01_2_1000x.jpg",
+      "PackagePath": "staticwebassets\\uploads\\partnerProducts\\293c0f4e-a23f-49fb-9e88-9d904e570a50DS-WSW-10-000-011-CAM_Camel_01_2_1000x.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\partnerProducts\\87c7d784-4f9d-4d7f-ad1a-03f721696630men-cashmere-pullover-black_2_1000x.jpg",
-      "PackagePath": "staticwebassets\\uploads\\partnerProducts\\87c7d784-4f9d-4d7f-ad1a-03f721696630men-cashmere-pullover-black_2_1000x.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\partnerProducts\\cd2d54a7-ee90-47cd-b8a7-2f9e88884d1cmen-cashmere-pullover-black_2_1000x.jpg",
-      "PackagePath": "staticwebassets\\uploads\\partnerProducts\\cd2d54a7-ee90-47cd-b8a7-2f9e88884d1cmen-cashmere-pullover-black_2_1000x.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\partnerProducts\\f32fc8e1-3e9e-432d-89b4-52cb3177337dmen-cashmere-pullover-black_2_1000x.jpg",
-      "PackagePath": "staticwebassets\\uploads\\partnerProducts\\f32fc8e1-3e9e-432d-89b4-52cb3177337dmen-cashmere-pullover-black_2_1000x.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\users\\254324eb-ad6f-4228-ae86-9b1ec8a813e5DS-MPT-04-000-005-BLK_BLACK_1_1000x.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\users\\254324eb-ad6f-4228-ae86-9b1ec8a813e5DS-MPT-04-000-005-BLK_BLACK_1_1000x.jpg",
       "PackagePath": "staticwebassets\\uploads\\users\\254324eb-ad6f-4228-ae86-9b1ec8a813e5DS-MPT-04-000-005-BLK_BLACK_1_1000x.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\users\\3a272180-bd68-4fcf-b709-3d970afc35f0DS-MSW-10-000-007-BLK_Black_2_1000x.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\users\\3a272180-bd68-4fcf-b709-3d970afc35f0DS-MSW-10-000-007-BLK_Black_2_1000x.jpg",
       "PackagePath": "staticwebassets\\uploads\\users\\3a272180-bd68-4fcf-b709-3d970afc35f0DS-MSW-10-000-007-BLK_Black_2_1000x.jpg"
     },
     {
-      "Id": "C:\\Users\\Isa\\Desktop\\express admin\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\users\\af1ddcbd-794c-41f5-a081-3b2b118bb81dDS-MSW-10-000-007-BLK_Black_2_1000x.jpg",
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\users\\4aa180d8-3544-4249-a7ec-ad7d760c8ff0DS-WSW-10-000-011-CAM_Camel_01_2_1000x.jpg",
+      "PackagePath": "staticwebassets\\uploads\\users\\4aa180d8-3544-4249-a7ec-ad7d760c8ff0DS-WSW-10-000-011-CAM_Camel_01_2_1000x.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\wwwroot\\uploads\\users\\af1ddcbd-794c-41f5-a081-3b2b118bb81dDS-MSW-10-000-007-BLK_Black_2_1000x.jpg",
       "PackagePath": "staticwebassets\\uploads\\users\\af1ddcbd-794c-41f5-a081-3b2b118bb81dDS-MSW-10-000-007-BLK_Black_2_1000x.jpg"
     },
     {
