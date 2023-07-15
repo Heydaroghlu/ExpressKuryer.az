@@ -66,7 +66,7 @@ namespace ExpressKuryer.MVC.Controllers
             TempData["Title"] = "Kuryerlər";
             return View(list);
         }
-
+         
         [HttpGet]
         public IActionResult Create()
         {

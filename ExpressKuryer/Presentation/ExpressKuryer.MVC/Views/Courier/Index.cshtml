@@ -73,7 +73,7 @@
                                     <th><strong>Ad</strong></th>
                                     <th><strong>Soyad</strong></th>
                                     <th><strong>Telefon</strong></th>
-                                    <th><strong>Qazanc</strong></th>
+                                    @*<th><strong>Qazanc</strong></th>*@
                                     <th><strong>YZamanı</strong></th>
                                     <th><strong>Şəkil</strong></th>
                                     <th><strong>Aksiyonlar</strong></th>
@@ -83,11 +83,11 @@
                                 @foreach (CourierReturnDto item in Model)
                                 {
                                     <tr>
-                                        <td><strong>@count</strong></td>
+                                        <td><strong>@(count++)</strong></td>
                                         <td><div class="d-flex align-items-center"><span class="w-space-no"></span>@item.CourierPerson.Name</div></td>
                                         <td><div class="d-flex align-items-center"><span class="w-space-no"></span>@item.CourierPerson.Surname</div></td>
                                         <td><div class="d-flex align-items-center"><span class="w-space-no"></span>@item.CourierPerson.PhoneNumber</div></td>
-                                        <td><div class="d-flex align-items-center"><span class="w-space-no"></span>@item.Gain</div></td>
+                                        @*<td><div class="d-flex align-items-center"><span class="w-space-no"></span>@item.Gain</div></td>*@
                                         <td>@item.CreatedAt.ToString("dd MMMM yyyy")</td>
                                         <td>
                                             <div style="width:100px;object-fit:cover;">
@@ -114,7 +114,7 @@
                     {
                         <li class="page-item">
                             <a class="page-link" asp-action="index" asp-route-page="@(Model.PageIndex - 1)" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
+                                <span style="color:black" aria-hidden="true">&laquo;</span>
                             </a>
                         </li>
                     }
@@ -138,7 +138,7 @@
                     {
                         <li class="page-item">
                             <a class="page-link" asp-action="index" asp-route-page="@(Model.PageIndex + 1)" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
+                                <span style="color:black" aria-hidden="true">&raquo;</span>
                             </a>
                         </li>
                     }

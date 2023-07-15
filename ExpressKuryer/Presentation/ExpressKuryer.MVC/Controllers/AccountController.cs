@@ -49,6 +49,11 @@ namespace ExpressKuryer.MVC.Controllers
                 ModelState.AddModelError("", "Parol və ya şifrə yanlışdır");
                 return View(loginDto);
             }
+            if(string.IsNullOrWhiteSpace(loginDto.Password))
+            {
+                ModelState.AddModelError("", "Parol və ya şifrə yanlışdır");
+                return View(loginDto);
+            }
             var result = await _signInManager.PasswordSignInAsync(user, loginDto.Password, false, false);
             Console.WriteLine(result.Succeeded);
             if (result.Succeeded == false)
@@ -221,23 +226,16 @@ namespace ExpressKuryer.MVC.Controllers
                 var courier = await _unitOfWork.RepositoryCourier.GetAsync(x => !x.IsDeleted && x.CourierPersonId == user.Id, false, "CourierPerson");
                 viewModel.Courier = courier;
 
-                var deliveries = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.CourierId == courier.Id && x.CreatedAt > startTime && x.CreatedAt < endTime).Result.ToList();
+                var deliveries = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.CourierId == courier.Id).Result.ToList();
+                var totalAmount = deliveries.Select(x => x.CourierGain).Sum();
                 viewModel.MemberDeliveries = deliveries;
-
-               
                 viewModel.User = user;
+                viewModel.TotalCourierGain = totalAmount ?? 0;
 
+                deliveries = deliveries.Where(x => x.CreatedAt > startTime && x.CreatedAt < endTime).ToList();
                 user.UserName = viewModel.User.Email;
 
-                var gainPercent = Convert.ToDecimal(_unitOfWork.RepositorySetting.GetAsync(x => x.Key.Equals("GainPercent")).Result.Value);
-
-                viewModel.Courier.Gain = 0;
-
-                foreach (var item in deliveries)
-                {
-                    var result = ((item.TotalAmount * gainPercent) / 100);
-                    viewModel.Courier.Gain = viewModel.Courier.Gain + result;
-                }
+                var gainPercent = deliveries.Select(x => x.CourierGain).Sum();
 
                 TempData["daterange"] = viewModel.daterange;
 

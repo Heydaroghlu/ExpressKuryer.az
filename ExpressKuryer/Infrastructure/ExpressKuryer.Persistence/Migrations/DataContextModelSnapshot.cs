@@ -163,6 +163,12 @@ namespace ExpressKuryer.Persistence.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
+                    b.Property<decimal?>("CompanyGain")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("CourierGain")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<int?>("CourierId")
                         .HasColumnType("int");
 

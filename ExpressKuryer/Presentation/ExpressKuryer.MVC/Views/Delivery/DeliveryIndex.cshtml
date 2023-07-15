@@ -146,7 +146,7 @@
                         {
                             <li class="page-item">
                                 <a class="page-link" asp-action="deliveryIndex" asp-route-page="@(Model.PageIndex - 1)" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
+                                    <span style="color:black" aria-hidden="true">&laquo;</span>
                                 </a>
                             </li>
                         }
@@ -170,7 +170,7 @@
                         {
                             <li class="page-item">
                                 <a class="page-link" asp-action="deliveryIndex" asp-route-page="@(Model.PageIndex + 1)" asp-route-select="@ViewBag.select" asp-route-word="@TempData["Word"]" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
+                                    <span style="color:black" aria-hidden="true">&raquo;</span>
                                 </a>
                             </li>
                         }

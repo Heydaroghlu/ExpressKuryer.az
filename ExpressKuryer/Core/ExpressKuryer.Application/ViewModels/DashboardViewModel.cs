@@ -17,5 +17,7 @@ namespace ExpressKuryer.Application.ViewModels
         public int AllDelivery { get; set; }
         public DashboardCourierViewModel DashboardCourierViewModel { get; set; }
         public decimal GetTotalAmount { get; set; }
+        public decimal GetCompanyTotalAmount { get; set; }
+        public decimal GetCourierTotalAmount { get; set; }
     }
 }

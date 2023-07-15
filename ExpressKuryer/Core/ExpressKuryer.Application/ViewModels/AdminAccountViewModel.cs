@@ -24,5 +24,10 @@ namespace ExpressKuryer.Application.ViewModels
         public DateTime EndDate { get; set; }
         public string daterange { get; set; }
         public Courier Courier { get; set; }
+
+
+        public decimal CourierGain { get; set; }
+        public decimal TotalCourierGain { get; set; }
+
     }
 }

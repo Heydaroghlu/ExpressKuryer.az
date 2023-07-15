@@ -54,14 +54,12 @@ namespace ExpressKuryer.MVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            var existObject = await _unitOfWork.RepositorySubscribe.GetAsync(x => x.Id == id, false);
-            if (existObject == null) return RedirectToAction("NotFound", "Page");
-
-            var editDto = _mapper.Map<SubscribeEditDto>(existObject);
-            return View(editDto);
+            var exist = await _unitOfWork.RepositorySubscribe.GetAsync(x => x.Id == id);
+            if (exist == null) return RedirectToAction("NotFound", "Pages");
+            return View(exist);
         }
 
-        [HttpPost]
+        [HttpPost]  
         public async Task<IActionResult> Edit(SubscribeEditDto objectDto, int id)
         {
             var existObject = await _unitOfWork.RepositorySubscribe.GetAsync(x => x.Id == id);

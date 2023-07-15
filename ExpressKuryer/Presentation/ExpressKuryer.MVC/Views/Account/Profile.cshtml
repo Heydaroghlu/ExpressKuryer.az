@@ -199,16 +199,26 @@
                                     }
                                 </div>
                                 <div class="col-xl-12 mb-3" style="font-weight:600;">
-                                    @if (Model.Courier?.Gain > 0)
+                                    @if (Model.CourierGain > 0)
                                     {
 
-                                        <span> Qazancı : @Model.Courier.Gain</span>
+                                        <span> Zamana uyğun qazanc : @Model.CourierGain</span>
                                     }
                                     else
                                     {
-                                        <span> Qazancı : 0</span>
+                                        <span> Zamana uyğun qazanc : 0</span>
                                     }
-                                   
+                                </div>
+                                <div class="col-xl-12 mb-3" style="font-weight:600;">
+                                    @if (Model.CourierGain > 0)
+                                    {
+
+                                        <span> Ümümi Qazancı : @Model.TotalCourierGain </span>
+                                    }
+                                    else
+                                    {
+                                        <span> Ümümi Qazancı : 0</span>
+                                    }
                                 </div>
                             </div>
                             <div class="row">

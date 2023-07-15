@@ -134,7 +134,7 @@ namespace ExpressKuryer.MVC.Controllers
             return View(list);
         }
 
-
+             
         [HttpGet]
         [Route("Manage/Detail")]
         public async Task<IActionResult> Detail(int id)

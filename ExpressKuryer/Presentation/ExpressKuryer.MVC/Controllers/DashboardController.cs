@@ -56,6 +56,9 @@ namespace ExpressKuryer.MVC.Controllers
             var allUser = GetAllUsers();
             var deliveries = await GetTodayDeliveries();
             var couriers = await _unitOfWork.RepositoryCourier.GetAllAsync(x => !x.IsDeleted, false, "CourierPerson");
+            var companyGain = await GetCompanyTotalAmount();
+            var courierGain = await GetCourierTotalAmount();
+            var totalAmount = await GetTotalAmount();
             ViewBag.Couriers = couriers;
 
             DashboardViewModel viewModel = new()
@@ -65,6 +68,9 @@ namespace ExpressKuryer.MVC.Controllers
                 MonthPercent = monthly.percent,
                 ThisMonth = monthly.thisMonth,
                 AllDelivery = allDelivery,
+                GetCompanyTotalAmount = companyGain,
+                GetCourierTotalAmount = courierGain,
+                GetTotalAmount = totalAmount,
                 DashboardCourierViewModel = new DashboardCourierViewModel
                 {
                     Couriers = couriers,
@@ -132,22 +138,21 @@ namespace ExpressKuryer.MVC.Controllers
 
         private async Task<decimal> GetTotalAmount()
         {
-            var totalAmount = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.OrderDeliveryStatus == OrderDeliveryStatus.Catdirildi.ToString()).Result.Select(x => x.TotalAmount).Sum();
-          
-            decimal percent = Convert.ToDecimal(_unitOfWork.RepositorySetting.GetAsync(x => x.Key.Equals("GainPercent")).Result.Value);
-
-            // 10* 100 = 80x
-
-            //total amount - 13,000 --- 100
-            //               x       -  10
-
-
-            //todo gain temasini hesabla 
-            //todo email gondermek
-            return totalAmount - (totalAmount * percent / 100);
+            return _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.OrderDeliveryStatus == OrderDeliveryStatus.Catdirildi.ToString()).Result.Select(x => x.TotalAmount).Sum();
         }
 
+        private async Task<decimal> GetCompanyTotalAmount()
+        {
+            var totalAmount = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.OrderDeliveryStatus == OrderDeliveryStatus.Catdirildi.ToString()).Result.Select(x => x.CompanyGain).Sum();
+            return totalAmount ?? 0;
+        }
 
+        private async Task<decimal> GetCourierTotalAmount()
+        {
+            var totalAmount = _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.OrderDeliveryStatus == OrderDeliveryStatus.Catdirildi.ToString()).Result.Select(x => x.CourierGain).Sum();
+
+            return totalAmount ?? 0;
+        }
 
     }
 }
