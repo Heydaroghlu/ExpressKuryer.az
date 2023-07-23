@@ -10,19 +10,32 @@ $(function () {
         console.log(url);
 
         Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'Əminsiniz?',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            cancelButtonText: 'Xeyr',
+            confirmButtonText: 'Bəli, sil'
         }).then((result) => {
             if (result.isConfirmed) {
                 fetch(url)
                     .then(response => response.text())
                     .then(data => {
                         console.log(data);
+
+
+                        const success = document.createElement("input");
+                        success.id = "toaster-success";
+                        success.innerHTML = "adfafd";
+                        success.value = "Silindi";
+                        document.querySelector("body").appendChild(success);
+
+                        if ($("#toaster-success").length) {
+                            toastr["success"]($("#toaster-success").val())
+                        }
+
+
                         location.reload();
                     })
             }

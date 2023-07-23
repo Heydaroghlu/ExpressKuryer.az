@@ -307,7 +307,8 @@
 
                 fetch(href).then(response => {
                     if (!response.ok) {
-                        throw new Error('İstekte bir hata oluştu!');
+                        console.log(response)
+                        return response.text().then(text => { throw new Error(text) })
                     }
                     response.text();
                 }).then(data => {
@@ -319,7 +320,8 @@
                         element.value = e.srcElement.getAttribute("value") + " oldu";
                         console.log(e.srcElement.getAttribute("value"));
                         delivery.innerHTML = e.srcElement.getAttribute("value");
-                    } else {
+                    } 
+                    else {
                         const success = document.createElement("input");
                         success.id = "toaster-success";
                         success.innerHTML = "adfafd";
@@ -333,16 +335,19 @@
                         toastr["success"]($("#toaster-success").val())
                     }
                 }).catch(error => {
-                    var elementError = document.querySelector("#toaster-success")
+
+                    console.log(error);
+                    var elementError = document.querySelector("#toaster-error")
 
                     if (elementError != null) {
                         elementError.value = "email göndərilmədi!";
-                    } else {
-                        const error = document.createElement("input");
-                        error.id = "toaster-error";
-                        error.innerHTML = "adfafd";
-                        error.value = "email göndərilmədi!";
-                        document.querySelector("body").appendChild(error);
+                    } 
+                    else {
+                        const errorItem = document.createElement("input");
+                        errorItem.id = "toaster-error";
+                        errorItem.innerHTML = "adfafd";
+                        errorItem.value = error.message;
+                        document.querySelector("body").appendChild(errorItem);
                     }
 
                     if ($("#toaster-error").length) {
