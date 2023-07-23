@@ -34,6 +34,7 @@ namespace ExpressKuryer.Persistence.UnitOfWorks
             RepositoryJobSeeker = new Repository<JobSeeker>(_context);
             RepositoryProductImages = new Repository<ProductImages>(_context);
             RepositoryBeCourier = new Repository<BeCouirer>(_context);
+            RepositoryServiceTwo = new Repository<ServiceTwo>(_context);
         }
 
         public IRepository<AppUser> RepositoryUser { get; set; }
@@ -43,6 +44,7 @@ namespace ExpressKuryer.Persistence.UnitOfWorks
         public IRepository<Partner> RepositoryPartner { get; set; }
         public IRepository<PartnerProduct> RepositoryPartnerProduct { get; set; }
         public IRepository<Service> RepositoryService { get; set; }
+        public IRepository<ServiceTwo> RepositoryServiceTwo { get; set; }
         public IRepository<Setting> RepositorySetting { get; set; }
         public IRepository<Slider> RepositorySlider { get; set; }
         public IRepository<Subscribe> RepositorySubscribe { get; set; }

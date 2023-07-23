@@ -49,7 +49,7 @@ namespace ExpressKuryer.Application.Profiles
 
             CreateMap<Contact, ContactReturnDto>();
             CreateMap<Contact, ContactEditDto>();
-
+            CreateMap<ServiceTwo,ServiceTwoReturnDTO>();    
             CreateMap<PartnerProductCreateDto, PartnerProduct>();
             CreateMap<PartnerProduct, PartnerProductEditDto>();
             CreateMap<PartnerProductEditDto, PartnerProduct>();

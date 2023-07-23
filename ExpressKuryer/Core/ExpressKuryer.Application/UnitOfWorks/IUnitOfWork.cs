@@ -25,6 +25,8 @@ namespace ExpressKuryer.Application.UnitOfWorks
         public IRepository<JobSeeker> RepositoryJobSeeker { get; set; }
         public IRepository<ProductImages> RepositoryProductImages { get; set; }
         public IRepository<BeCouirer> RepositoryBeCourier { get; set; }
+        public IRepository<ServiceTwo> RepositoryServiceTwo { get; set; }
+
         Task<int> CommitAsync();
 	}
 }

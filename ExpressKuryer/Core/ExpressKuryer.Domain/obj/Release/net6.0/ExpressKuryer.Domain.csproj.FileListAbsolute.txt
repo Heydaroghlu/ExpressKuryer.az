@@ -58,3 +58,15 @@ C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Core\ExpressKury
 C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\refint\ExpressKuryer.Domain.dll
 C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.pdb
 C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ref\ExpressKuryer.Domain.dll
+C:\Users\Isa\Desktop\expend\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\bin\Release\net6.0\ExpressKuryer.Domain.deps.json
+C:\Users\Isa\Desktop\expend\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\bin\Release\net6.0\ExpressKuryer.Domain.dll
+C:\Users\Isa\Desktop\expend\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\bin\Release\net6.0\ExpressKuryer.Domain.pdb
+C:\Users\Isa\Desktop\expend\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.csproj.AssemblyReference.cache
+C:\Users\Isa\Desktop\expend\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isa\Desktop\expend\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.AssemblyInfoInputs.cache
+C:\Users\Isa\Desktop\expend\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.AssemblyInfo.cs
+C:\Users\Isa\Desktop\expend\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Isa\Desktop\expend\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.dll
+C:\Users\Isa\Desktop\expend\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\refint\ExpressKuryer.Domain.dll
+C:\Users\Isa\Desktop\expend\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ExpressKuryer.Domain.pdb
+C:\Users\Isa\Desktop\expend\ExpressKuryer.az\ExpressKuryer\Core\ExpressKuryer.Domain\obj\Release\net6.0\ref\ExpressKuryer.Domain.dll
