@@ -181,7 +181,7 @@ namespace ExpressKuryer.Persistence.Migrations
                     b.Property<string>("DeliveryStatus")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DeliveryTime")
+                    b.Property<DateTime?>("DeliveryTime")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("DeliveryedAt")
@@ -189,6 +189,9 @@ namespace ExpressKuryer.Persistence.Migrations
 
                     b.Property<decimal?>("DisCount")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -198,13 +201,13 @@ namespace ExpressKuryer.Persistence.Migrations
 
                     b.Property<string>("Message")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
+                        .HasMaxLength(55)
+                        .HasColumnType("nvarchar(55)");
 
                     b.Property<string>("OrderDeliveryStatus")
                         .HasColumnType("nvarchar(max)");
@@ -217,18 +220,16 @@ namespace ExpressKuryer.Persistence.Migrations
 
                     b.Property<string>("Telephone")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<decimal>("TotalAmount")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("TrackCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")

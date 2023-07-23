@@ -38,7 +38,7 @@ namespace ExpressKuryer.Application.HelperManager
         }
         public static bool CheckPhoneRegex(string email)
         {
-            string mailPattern = @"^0?(55|50|70|77) ?([0-9]){3} ?([0-9]){2} ?([0-9]){2}";
+            string mailPattern = @"^0?(55|51|99|10|50|70|77) ?([0-9]){3} ?([0-9]){2} ?([0-9]){2}";
             string mailInput = email;
 
             if (mailInput != null)

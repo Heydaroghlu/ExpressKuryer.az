@@ -11,11 +11,11 @@ namespace ExpressKuryer.Domain.Entities
     public class Delivery:BaseEntity
     {
         public int? ServiceId { get; set; }
-        public string TrackCode { get; set; }
+        public string? TrackCode { get; set; }
         public DateTime? DeliveryedAt { get; set; }
         public string? AddressFrom { get; set; }
         public string? AddressTo { get; set; }
-        public string? Name { get; set; }    
+        public string?   Name { get; set; }    
         public string? Telephone { get; set; }
         public string? Message { get;set; }  
         public bool? expressDelivery { get; set; }
@@ -24,12 +24,12 @@ namespace ExpressKuryer.Domain.Entities
         public double? DisCount { get; set; }
         public string? DeliveryCode { get; set; }
         public string? SurName { get; set; } //todo surname 
-        public DateTime DeliveryTime { get; set; }
-        public string Type { get; set; }
+        public DateTime? DeliveryTime { get; set; }
+        public string? Type { get; set; }
         public Service? Service { get; set; }
         public string? DeliveryStatus { get; set; }
         public string? OrderDeliveryStatus { get; set; }
-
+        public string? Email { get; set; }
         public string? MemberUserId { get; set; }
         public AppUser?  MemberUser { get; set; }
 

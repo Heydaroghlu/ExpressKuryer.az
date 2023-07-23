@@ -83,3 +83,20 @@ C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKury
 C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\obj\Debug\net6.0\refint\ExpressKuryer.Infrastructure.dll
 C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\obj\Debug\net6.0\ExpressKuryer.Infrastructure.pdb
 C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\obj\Debug\net6.0\ref\ExpressKuryer.Infrastructure.dll
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\bin\Debug\net6.0\ExpressKuryer.Infrastructure.deps.json
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\bin\Debug\net6.0\ExpressKuryer.Infrastructure.dll
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\bin\Debug\net6.0\ExpressKuryer.Infrastructure.pdb
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\bin\Debug\net6.0\ExpressKuryer.Application.dll
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\bin\Debug\net6.0\ExpressKuryer.Domain.dll
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\bin\Debug\net6.0\ExpressKuryer.Application.pdb
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\bin\Debug\net6.0\ExpressKuryer.Domain.pdb
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\obj\Debug\net6.0\ExpressKuryer.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\obj\Debug\net6.0\ExpressKuryer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\obj\Debug\net6.0\ExpressKuryer.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\obj\Debug\net6.0\ExpressKuryer.Infrastructure.AssemblyInfo.cs
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\obj\Debug\net6.0\ExpressKuryer.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\obj\Debug\net6.0\ExpressKuryer.Infrastructure.csproj.CopyComplete
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\obj\Debug\net6.0\ExpressKuryer.Infrastructure.dll
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\obj\Debug\net6.0\refint\ExpressKuryer.Infrastructure.dll
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\obj\Debug\net6.0\ExpressKuryer.Infrastructure.pdb
+C:\Users\Isa\Desktop\express end\ExpressKuryer.az\ExpressKuryer\Infrastructure\ExpressKuryer.Infrastructure\obj\Debug\net6.0\ref\ExpressKuryer.Infrastructure.dll

@@ -42,11 +42,18 @@ multiInputFiles.forEach(element => {
         let filesarr = [...files]
         var images = document.querySelectorAll(".image-boxs img");
 
+
+
         filesarr.forEach(x => {
+
+            if (imageBox.classList.contains("removable")) {
+                imageBox.innerHTML = "";
+            }
 
             if (x.type.startsWith("image/")) {
                 let reader = new FileReader()
                 reader.onload = function () {
+
                     let newimg = document.createElement("img")
                     newimg.style.width = "300px";
                     newimg.style.margin = "10px";
@@ -54,6 +61,7 @@ multiInputFiles.forEach(element => {
 
                     imageBox.appendChild(newimg)
                     console.log("asd");
+
                 }
                 reader.readAsDataURL(x)
             }

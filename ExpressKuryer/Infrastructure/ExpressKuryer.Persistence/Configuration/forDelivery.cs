@@ -14,15 +14,13 @@ namespace ExpressKuryer.Persistence.Configuration
         public void Configure(EntityTypeBuilder<Delivery> builder)
         {
             builder.ToTable("express_deliveries");
-            builder.Property(x=>x.Name).IsRequired().HasMaxLength(25);
-            builder.Property(x => x.Telephone).IsRequired().HasMaxLength(25);
-            builder.Property(x => x.Message).IsRequired().HasMaxLength(25);
+            builder.Property(x => x.Name).IsRequired().HasMaxLength(55);
+            builder.Property(x => x.Telephone).IsRequired().HasMaxLength(30);
+            builder.Property(x => x.Message).IsRequired().HasMaxLength(500);
             builder.Property(x => x.AddressFrom).IsRequired().HasMaxLength(150);
             builder.Property(x => x.AddressTo).IsRequired().HasMaxLength(150);
             builder.Property(x => x.TotalAmount).HasColumnType("decimal(18,2)");
             builder.Property(x => x.DisCount).HasColumnType("decimal(18,2)");
-
-
 
         }
     }

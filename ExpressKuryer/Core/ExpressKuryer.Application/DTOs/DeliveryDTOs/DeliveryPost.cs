@@ -11,13 +11,13 @@ namespace ExpressKuryer.Application.DTOs.Delivery
     {
         public string From { get; set; }
         public string To { get; set; }
-        public bool Supris { get; set; }
-        public string Name { get; set; }
-        public string Phone { get; set; }
-        public string Type { get; set; }
-        public string Descripton { get; set; }
+        public bool? Supris { get; set; }
+        public string? Name { get; set; }
+        public string? Phone { get; set; }
+        public string? Type { get; set; }
+        public string? Descripton { get; set; }
         public decimal TotalAmount { get; set; }
         public string? AppUserId { get; set; }
-
+        public string? Email { get; set; }
     }
 }

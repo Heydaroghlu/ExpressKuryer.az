@@ -24,10 +24,17 @@ namespace ExpressKuryer.API.Controllers
         [Route("Create")]
         public async Task<IActionResult> Create(DeliveryPost deliveryPost)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                return BadRequest(new { ModelState,message="Model is not true"});
+                return BadRequest(new { ModelState, message = "Model is not true" });
             }
+            // var data = await _unitOfWork.RepositorySetting.GetAsync(x => x.Key == "CompanyGain", false);
+            //var data2 = await _unitOfWork.RepositorySetting.GetAsync(x => x.Key == "Depozit", false);
+            var data = 1;
+            var data2 = 2;
+            decimal companyGain = Convert.ToDecimal(data);
+            decimal coruierGain = 100 - companyGain;
+
             Delivery delivery = new Delivery()
             {
                 AddressFrom = deliveryPost.From,
@@ -36,38 +43,44 @@ namespace ExpressKuryer.API.Controllers
                 Telephone = deliveryPost.Phone,
                 Message = deliveryPost.Descripton,
                 Type = deliveryPost.Type,
+               
                 suprizDelivery = deliveryPost.Supris,
                 DeliveryTime = DateTime.UtcNow.AddHours(4),
                 DeliveryStatus = Domain.Enums.Delivery.DeliveryStatus.Gözləmədə.ToString(),
                 OrderDeliveryStatus = Domain.Enums.Delivery.OrderDeliveryStatus.Anbarda.ToString(),
                 TotalAmount = deliveryPost.TotalAmount,
-                TrackCode = CodeGeneratorManager.Generate(deliveryPost.Name, deliveryPost.Descripton)
+                TrackCode = CodeGeneratorManager.Generate(deliveryPost.Name, deliveryPost.Descripton),
+                CompanyGain = deliveryPost.TotalAmount - (deliveryPost.TotalAmount * companyGain) / 100,
+                CourierGain = deliveryPost.TotalAmount - (deliveryPost.TotalAmount * coruierGain) / 100,
 
             };
             AppUser user = null;
-            if(deliveryPost.AppUserId!=null)
+            if (deliveryPost.AppUserId != null)
             {
                 user = await _unitOfWork.RepositoryUser.GetAsync(x => x.Id == deliveryPost.AppUserId);
-                if(user!=null)
+                if (user != null)
                 {
                     delivery.MemberUserId = deliveryPost.AppUserId;
+                    delivery.Email=user.Email;
                 }
-               
+
+            }
+            if(deliveryPost.Email != null)
+            {
+                delivery.Email = deliveryPost.Email;
+                 _emailService.Send(delivery.Email, "Express Kuryer", delivery.TrackCode);
             }
             await _unitOfWork.RepositoryDelivery.InsertAsync(delivery);
             try
             {
                 await _unitOfWork.CommitAsync();
-                if(user!=null)
-                {
-                    _emailService.Send(user.Email, $"Hörmətli müştəri { deliveryPost.Name} ", $"Sizin sifarişiniz Gözləmədədir. Ən qısa zamanda sizinlə əlaqə saxlanılacaqdır. Təşəkkürlər");
-                }
+               
             }
-            catch
+            catch (Exception e)
             {
-                return Ok("Commit Error");
+                return BadRequest(e.InnerException.ToString());
             }
-            return Ok(new { TrackCode=delivery.TrackCode});
+            return Ok(new { TrackCode = delivery.TrackCode });
         }
         [HttpGet]
         [Route("OrderGet")]
