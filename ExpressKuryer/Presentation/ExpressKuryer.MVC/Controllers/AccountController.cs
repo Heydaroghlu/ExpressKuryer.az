@@ -102,16 +102,7 @@ namespace ExpressKuryer.MVC.Controllers
                 viewModel.Courier = courier;
                 viewModel.User = memberUser;
 
-
-                var gainPercent = Convert.ToDecimal(_unitOfWork.RepositorySetting.GetAsync(x => x.Key.Equals("GainPercent")).Result.Value);
-
-                viewModel.Courier.Gain = 0;
-
-                foreach (var item in deliveries)
-                {
-                    var result = ((item.TotalAmount * gainPercent) / 100);
-                    viewModel.Courier.Gain = viewModel.Courier.Gain + result;
-                }
+                viewModel.TotalCourierGain = deliveries.Select(x => x.CourierGain).Sum().Value;
             }
             else
             {
@@ -137,15 +128,15 @@ namespace ExpressKuryer.MVC.Controllers
                     viewModel.User = user;
 
 
-                    var gainPercent = Convert.ToDecimal(_unitOfWork.RepositorySetting.GetAsync(x => x.Key.Equals("GainPercent")).Result.Value);
+                    //var gainPercent = Convert.ToDecimal(_unitOfWork.RepositorySetting.GetAsync(x => x.Key.Equals("GainPercent")).Result.Value);
 
-                    viewModel.Courier.Gain = 0;
+                    //viewModel.Courier.Gain = 0;
 
-                    foreach (var item in deliveries)
-                    {
-                        var result = ((item.TotalAmount * gainPercent) / 100);
-                        viewModel.Courier.Gain = viewModel.Courier.Gain + result;
-                    }
+                    //foreach (var item in deliveries)
+                    //{
+                    //    var result = ((item.TotalAmount * gainPercent) / 100);
+                    //    viewModel.Courier.Gain = viewModel.Courier.Gain + result;
+                    //}
                 }
             }
 
@@ -231,11 +222,11 @@ namespace ExpressKuryer.MVC.Controllers
                 viewModel.MemberDeliveries = deliveries;
                 viewModel.User = user;
                 viewModel.TotalCourierGain = totalAmount ?? 0;
-
+                
                 deliveries = deliveries.Where(x => x.CreatedAt > startTime && x.CreatedAt < endTime).ToList();
                 user.UserName = viewModel.User.Email;
 
-                var gainPercent = deliveries.Select(x => x.CourierGain).Sum();
+                viewModel.CourierGain = deliveries.Where(x=>x.DeliveryStatus.Equals(DeliveryStatus.Qəbul.ToString()) && x.OrderDeliveryStatus.Equals(OrderDeliveryStatus.Catdirildi.ToString())).Select(x => x.CourierGain).Sum().Value;
 
                 TempData["daterange"] = viewModel.daterange;
 

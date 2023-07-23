@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\SWIFT\Desktop\ExpressKuryer.az\ExpressKuryer\Presentation\ExpressKuryer.MVC
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/SWIFT/Desktop/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Account/AllUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBbGxVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/SWIFT/Desktop/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/SWIFT/Desktop/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Delivery/DeliveryIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVsaXZlcnlcRGVsaXZlcnlJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SWIFT/Desktop/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Delivery/DeliveryIndexForCourier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVsaXZlcnlcRGVsaXZlcnlJbmRleEZvckNvdXJpZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SWIFT/Desktop/ExpressKuryer.az/ExpressKuryer/Presentation/ExpressKuryer.MVC/Views/Delivery/Detail.cshtml]

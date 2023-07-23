@@ -39,7 +39,7 @@ namespace ExpressKuryer.MVC.Controllers
         public async Task<IActionResult> Index(int page = 1, string? searchWord = null, string? isDeleted = "false", string? orderStat = null)
         {
             var entities = await _unitOfWork.RepositoryDelivery.GetAllAsync(x => true, false, "Service", "MemberUser", "Courier");
-            //todo change to returnDto
+            //todo change to returnDto  
             int pageSize = 10;
 
             orderStat = orderStat ?? DeliveryStatus.Gözləmədə.ToString();
@@ -76,7 +76,7 @@ namespace ExpressKuryer.MVC.Controllers
         [HttpGet]
         public async Task<IActionResult> DeliveryIndex(int page = 1, string? searchWord = null, string? isDeleted = "false", string? deliveryStat = null)
         {
-            var entities = await _unitOfWork.RepositoryDelivery.GetAllAsync(x => true, false, "Service", "MemberUser", "Courier");
+            var entities = _unitOfWork.RepositoryDelivery.GetAllAsync(x => true, false, "Service", "MemberUser", "Courier").Result.OrderByDescending(x => x.CreatedAt).ToList();
             //todo change to returnDto
             int pageSize = 10;
 
@@ -118,7 +118,7 @@ namespace ExpressKuryer.MVC.Controllers
             var entities = await _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted, false, "Service", "MemberUser", "Courier");
             int pageSize = 10;
             
-            entities = entities.Where(x => x.OrderDeliveryStatus == OrderDeliveryStatus.Kuryerde.ToString() && x.DeliveryStatus == DeliveryStatus.Qəbul.ToString()).ToList();
+            entities = entities.Where(x => x.OrderDeliveryStatus == OrderDeliveryStatus.Kuryerde.ToString() && x.DeliveryStatus == DeliveryStatus.Qəbul.ToString()).OrderByDescending(x=>x.CreatedAt).ToList();
 
             if (string.IsNullOrWhiteSpace(searchWord) == false)
                 entities = entities.Where(x => x.Name.ToLower().Contains(searchWord.ToLower())).ToList();
@@ -136,7 +136,7 @@ namespace ExpressKuryer.MVC.Controllers
 
              
         [HttpGet]
-        [Route("Manage/Detail")]
+        [Route("Detail")]
         public async Task<IActionResult> Detail(int id)
         {
             var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == id, false, "Service", "MemberUser", "Courier.CourierPerson");
@@ -169,7 +169,7 @@ namespace ExpressKuryer.MVC.Controllers
 
 
         [HttpPost]
-        [Route("Manage/Detail")]
+        [Route("Detail")]
         public async Task<IActionResult> Detail(int courierId, int deliveryId)
         {
             var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == deliveryId, false, "Service", "MemberUser", "Courier.CourierPerson");
@@ -211,7 +211,7 @@ namespace ExpressKuryer.MVC.Controllers
         }
 
         [HttpGet]
-        [Route("Manage/ChangeDeliveryStatus")]
+        [Route("ChangeDeliveryStatus")]
         public async Task<IActionResult> ChangeDeliveryStatus(int orderId, string status, string appUserId)
         {
             var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == orderId);
@@ -240,7 +240,7 @@ namespace ExpressKuryer.MVC.Controllers
         }
 
         [HttpGet]
-        [Route("Manage/ChangeOrderDeliveryStatus")]
+        [Route("ChangeOrderDeliveryStatus")]
         public async Task<IActionResult> ChangeOrderDeliveryStatus(int orderId, string status, string appUserId)
         {
             var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == orderId, true, "Courier");
@@ -249,13 +249,14 @@ namespace ExpressKuryer.MVC.Controllers
 
             if (status.Equals(OrderDeliveryStatus.Anbarda.ToString())) entity.OrderDeliveryStatus = OrderDeliveryStatus.Anbarda.ToString();
             else if (status.Equals(OrderDeliveryStatus.Kuryerde.ToString())) entity.OrderDeliveryStatus = OrderDeliveryStatus.Kuryerde.ToString();
+
+            if(entity.CourierId == null)
+            {
+                return StatusCode(500, "Çatdırılma üçün kuryer seçilməyib");
+            }
             else if (status.Equals(OrderDeliveryStatus.Catdirildi.ToString()) && entity.CourierId != null)
             {
                 entity.OrderDeliveryStatus = OrderDeliveryStatus.Catdirildi.ToString();
-                var gainPercent = Convert.ToDecimal(_unitOfWork.RepositorySetting.GetAsync(x => x.Key.Equals("GainPercent")).Result.Value);
-                var result = ((entity.TotalAmount * gainPercent) / 100);
-                entity.Courier.Gain = entity.Courier.Gain + result;
-                // 55 * 10 / 100
             }
 
             try
@@ -275,8 +276,8 @@ namespace ExpressKuryer.MVC.Controllers
             return RedirectToAction("Index", new { page = page, searchWord = word, isDeleted = isDeleted });
         }
 
-        [HttpDelete]
-        [Route("Manage/Delete")]
+        [HttpGet]
+        [Route("Delete/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == id);
@@ -287,12 +288,12 @@ namespace ExpressKuryer.MVC.Controllers
 
             object page = TempData["Page"] as int?;
             object word = TempData["Page"] as string;
-            object isDeleted = TempData["Page"] as bool?;
-            return RedirectToAction("GetAll", new { page = page, searchWord = word, isDeleted = isDeleted });
+            object isDeleted = TempData["Page"] as bool?;   
+            return RedirectToAction("Index", new { page = page, searchWord = word, isDeleted = isDeleted });
         }
 
         [HttpPost]
-        [Route("Manage/Recover")]
+        [Route("Recover")]
         public async Task<IActionResult> Recover(int id)
         {
             var entity = await _unitOfWork.RepositoryDelivery.GetAsync(x => x.Id == id);
@@ -304,7 +305,7 @@ namespace ExpressKuryer.MVC.Controllers
             object page = TempData["Page"] as int?;
             object word = TempData["Page"] as string;
             object isDeleted = TempData["Page"] as bool?;
-            return RedirectToAction("GetAll", new { page = page, searchWord = word, isDeleted = isDeleted });
+            return RedirectToAction("Index", new { page = page, searchWord = word, isDeleted = isDeleted });
         }
 
     }

@@ -121,7 +121,7 @@ namespace ExpressKuryer.MVC.Controllers
 
         private async Task<int> GetAllDeliveries()
         {
-            return _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted).Result.Count();
+            return _unitOfWork.RepositoryDelivery.GetAllAsync(x => !x.IsDeleted && x.OrderDeliveryStatus.Equals(OrderDeliveryStatus.Catdirildi.ToString())).Result.Count();
         }
 
         private int GetAllUsers()
