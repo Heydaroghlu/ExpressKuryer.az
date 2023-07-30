@@ -221,14 +221,14 @@ namespace ExpressKuryer.MVC.Controllers
             else if (status.Equals(DeliveryStatus.Gözləmədə.ToString())) entity.DeliveryStatus = DeliveryStatus.Gözləmədə.ToString();
             else if (status.Equals(DeliveryStatus.Qəbul.ToString())) entity.DeliveryStatus = DeliveryStatus.Qəbul.ToString();
 
-            try
-            {
-                _emailService.Send(appUser.Email, $"Sifariş statusu", $"Sizin sifarişiniz statusu {status} olaraq dəyişdirildi");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
+            //try
+            //{
+            //    _emailService.Send(appUser.Email, $"Sifariş statusu", $"Sizin sifarişiniz statusu {status} olaraq dəyişdirildi");
+            //}
+            //catch (Exception ex)
+            //{
+            //    return StatusCode(500, ex.Message);
+            //}
 
             await _unitOfWork.CommitAsync();
 
@@ -259,14 +259,14 @@ namespace ExpressKuryer.MVC.Controllers
                 entity.OrderDeliveryStatus = OrderDeliveryStatus.Catdirildi.ToString();
             }
 
-            try
-            {
-                _emailService.Send(appUser.Email, $"Sifariş statusu", $"Sizin sifarişiniz statusu {status} olaraq dəyişdirildi");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
+            //try
+            //{
+            //    _emailService.Send(appUser.Email, $"Sifariş statusu", $"Sizin sifarişiniz statusu {status} olaraq dəyişdirildi");
+            //}
+            //catch (Exception ex)
+            //{
+            //    return StatusCode(500, ex.Message);
+            //}
 
             await _unitOfWork.CommitAsync();
 

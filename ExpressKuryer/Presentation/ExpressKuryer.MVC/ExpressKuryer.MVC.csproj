@@ -20,11 +20,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="wwwroot\uploads\deliveries\" />
     <Folder Include="wwwroot\uploads\deliveries\" />
     <Folder Include="wwwroot\uploads\deliveries\" />
     <Folder Include="wwwroot\uploads\deliveries\" />
     <Folder Include="wwwroot\uploads\deliveries\" />
+    <Folder Include="wwwroot\uploads\deliveries\" />
+    <Folder Include="wwwroot\uploads\vacancies\" />
+    <Folder Include="wwwroot\uploads\settings\" />
+    <Folder Include="wwwroot\uploads\partners\" />
     <Folder Include="wwwroot\uploads\vacancies\" />
     <Folder Include="wwwroot\uploads\partners\" />
     <Folder Include="wwwroot\uploads\settings\" />
@@ -55,4 +60,4 @@
     <Folder Include="wwwroot\uploads\settings\" />
   </ItemGroup>
 
-</Project>
+</Project>  
