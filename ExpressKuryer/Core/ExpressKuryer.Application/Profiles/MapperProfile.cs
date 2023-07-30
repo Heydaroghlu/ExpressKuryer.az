@@ -9,6 +9,7 @@ using ExpressKuryer.Application.DTOs.Partner;
 using ExpressKuryer.Application.DTOs.PartnerProduct;
 using ExpressKuryer.Application.DTOs.ProductImageDTOs;
 using ExpressKuryer.Application.DTOs.Service;
+using ExpressKuryer.Application.DTOs.ServiceTwoDTOs;
 using ExpressKuryer.Application.DTOs.Setting;
 using ExpressKuryer.Application.DTOs.Slider;
 using ExpressKuryer.Application.DTOs.Subscribe;
@@ -76,8 +77,11 @@ namespace ExpressKuryer.Application.Profiles
             CreateMap<AppUserCreateDto, AppUser>();
 
             CreateMap<ProductImages, ProductImageReturnDto>();
-
             CreateMap<BeCouirer, BeCourierReturnDto>();
+
+            CreateMap<ExpressKuryer.Domain.Entities.ServiceTwo, ExpressKuryer.Application.DTOs.ServiceTwoDTOs.ServiceTwoReturnDto>();
+            CreateMap<ExpressKuryer.Domain.Entities.ServiceTwo, ExpressKuryer.Application.DTOs.ServiceTwoDTOs.ServiceTwoEditDto>();
+            CreateMap<ServiceTwoCreateDto, ServiceTwo>();
 
         }
     }

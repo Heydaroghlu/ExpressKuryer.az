@@ -1,26 +1,22 @@
 ﻿using AutoMapper;
-using ExpressKuryer.Application.DTOs.Subscribe;
+using ExpressKuryer.Application.Abstractions.File;
+using ExpressKuryer.Application.DTOs.Service;
 using ExpressKuryer.Application.DTOs;
 using ExpressKuryer.Application.Storages;
 using ExpressKuryer.Application.UnitOfWorks;
-using Microsoft.AspNetCore.Mvc;
-using ExpressKuryer.Application.DTOs.Service;
-using ExpressKuryer.Application.DTOs.Partner;
-using ExpressKuryer.Application.HelperManager;
 using ExpressKuryer.Domain.Entities;
-using ExpressKuryer.Application.Abstractions.File;
-using ExpressKuryer.Application.DTOs.Slider;
+using Microsoft.AspNetCore.Mvc;
 using ExpressKuryer.Application.DTOs.ServiceTwoDTOs;
 
 namespace ExpressKuryer.MVC.Controllers
 {
-    public class ServiceController : Controller
+    public class ServiceTwoController : Controller
     {
         readonly IUnitOfWork _unitOfWork;
         readonly IMapper _mapper;
         readonly IStorage _storage;
         IFileService _fileService;
-        public ServiceController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage, IFileService fileService)
+        public ServiceTwoController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage, IFileService fileService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
@@ -31,14 +27,14 @@ namespace ExpressKuryer.MVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(int page = 1, string? searchWord = null, string? isDeleted = "false")
         {
-            var entities = await _unitOfWork.RepositoryService.GetAllAsync(x => true, false);
+            var entities = await _unitOfWork.RepositoryServiceTwo.GetAllAsync(x => true, false);
             int pageSize = 10;
-          
+
 
             if (isDeleted == "true")
-                entities = await _unitOfWork.RepositoryService.GetAllAsync(x => x.IsDeleted);
+                entities = await _unitOfWork.RepositoryServiceTwo.GetAllAsync(x => x.IsDeleted);
             if (isDeleted == "false")
-                entities = await _unitOfWork.RepositoryService.GetAllAsync(x => !x.IsDeleted);
+                entities = await _unitOfWork.RepositoryServiceTwo.GetAllAsync(x => !x.IsDeleted);
 
             if (string.IsNullOrWhiteSpace(searchWord) == false)
             {
@@ -53,7 +49,7 @@ namespace ExpressKuryer.MVC.Controllers
             ViewBag.PageSize = pageSize;
             ViewBag.Word = searchWord;
             ViewBag.IsDeleted = isDeleted;
-            TempData["Title"] = "Servis";
+            TempData["Title"] = "Xidmətlər";
 
             return View(list);
         }
@@ -64,13 +60,13 @@ namespace ExpressKuryer.MVC.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(ServiceCreateDto objectDto)
+        public async Task<IActionResult> Create(ServiceTwoCreateDto objectDto)
         {
-            if (!ModelState.IsValid) return View(ModelState);
+            if (!ModelState.IsValid) return View(objectDto);
 
-            var partner = _mapper.Map<Service>(objectDto);
+            var partner = _mapper.Map<ServiceTwo>(objectDto);
 
-            await _unitOfWork.RepositoryService.InsertAsync(partner);
+            await _unitOfWork.RepositoryServiceTwo.InsertAsync(partner);
             await _unitOfWork.CommitAsync();
 
             object page = TempData["Page"] as int?;
@@ -81,26 +77,25 @@ namespace ExpressKuryer.MVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            var existObject = await _unitOfWork.RepositoryService.GetAsync(x => x.Id == id, false);
+            var existObject = await _unitOfWork.RepositoryServiceTwo.GetAsync(x => x.Id == id, false);
             if (existObject == null) return RedirectToAction("NotFound", "Page");
 
-            var editDto = _mapper.Map<ServiceEditDto>(existObject);
+            var editDto = _mapper.Map<ServiceTwoEditDto>(existObject);
             return View(editDto);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(ServiceEditDto objectDto)
+        public async Task<IActionResult> Edit(ServiceTwoEditDto objectDto)
         {
-            var existObject = await _unitOfWork.RepositoryService.GetAsync(x => x.Id == objectDto.Id);
+            var existObject = await _unitOfWork.RepositoryServiceTwo.GetAsync(x => x.Id == objectDto.Id);
 
             if (existObject == null) return RedirectToAction("NotFound", "Page");
 
             if (!ModelState.IsValid) return View(objectDto);
 
             existObject.Name = objectDto.Name;
-            existObject.OwnAvragePercent = objectDto.OwnAvragePercent;
-            existObject.Depozit = objectDto.Depozit;
             existObject.Icon = objectDto.Icon;
+            existObject.Description = objectDto.Description;
 
             await _unitOfWork.CommitAsync();
 
@@ -108,9 +103,10 @@ namespace ExpressKuryer.MVC.Controllers
 
             return RedirectToAction("Index", new { page = page });
         }
+
         public async Task<IActionResult> Delete(int id)
         {
-            var entity = await _unitOfWork.RepositoryService.GetAsync(x => x.Id == id);
+            var entity = await _unitOfWork.RepositoryServiceTwo.GetAsync(x => x.Id == id);
 
             if (entity == null) return RedirectToAction("NotFound", "Page");
 
