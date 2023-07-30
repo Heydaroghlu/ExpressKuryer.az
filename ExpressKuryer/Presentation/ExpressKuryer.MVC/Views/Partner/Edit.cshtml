@@ -32,10 +32,22 @@
                                 <span class="text-danger" asp-validation-for="Name"></span>
                             </div>
 
+                            <div class="mb-3">
+                                <label asp-for="PartnerCategory" class="form-label">Partner Kateqori</label>
+                                <input asp-for="PartnerCategory" class="form-control">
+                                <span class="text-danger" asp-validation-for="PartnerCategory"></span>
+                            </div>
+
                             <div class="mb-3 image-box">
                                 <label asp-for="FormFile" class="form-label">Şəkil</label>
                                 <input asp-for="FormFile" class="form-control file" style="margin:20px 0px">
                                 <img src="@(imagePath+Model.Image)" style="width:300px;height:300px;object-fit:cover;" />
+                            </div>
+
+                            <div class="mb-3 image-box-hover">
+                                <label asp-for="HoverFormFile" class="form-label">Hover Şəkil</label>
+                                <input asp-for="HoverFormFile" class="form-control hoverFile" style="margin:20px 0px">
+                                <img src="@(imagePath+Model.HoverImage)" style="width:300px;height:300px;object-fit:cover;" />
                             </div>
 
                             <div>

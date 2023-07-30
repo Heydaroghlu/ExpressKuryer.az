@@ -11,6 +11,8 @@ namespace ExpressKuryer.Application.DTOs.Partner
     public class PartnerCreateDto
     {
         public string? Name { get; set; }
+        public string? PartnerCategory { get; set; }
         public IFormFile? FormFile { get; set; }
+        public IFormFile? HoverFormFile { get; set; }
     }
 }

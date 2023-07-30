@@ -78,10 +78,22 @@ namespace ExpressKuryer.MVC.Controllers
                 return View(objectDto);
             }
 
+            try
+            {
+                _fileService.CheckFileType(objectDto.HoverFormFile, ContentTypeManager.ImageContentTypes);
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("HoverFormFile", ContentTypeManager.ImageContentMessage());
+                return View(objectDto);
+            }
+
             var imageInfo = await _storage.UploadAsync(_imagePath, objectDto.FormFile);
+            var hoverImageInfo = await _storage.UploadAsync(_imagePath, objectDto.HoverFormFile);
 
             var partner = _mapper.Map<Partner>(objectDto);
             partner.Image = imageInfo.fileName;
+            partner.HoverImage = hoverImageInfo.fileName;
 
             await _unitOfWork.RepositoryPartner.InsertAsync(partner);
             await _unitOfWork.CommitAsync();
@@ -138,7 +150,35 @@ namespace ExpressKuryer.MVC.Controllers
                 }
             }
 
+            if (objectDto.HoverFormFile != null)
+            {
+                try
+                {
+                    _fileService.CheckFileType(objectDto.HoverFormFile, ContentTypeManager.ImageContentTypes);
+                }
+                catch (Exception)
+                {
+                    ModelState.AddModelError("HoverFormFile", ContentTypeManager.ImageContentMessage());
+                    objectDto.HoverImage = _storage.GetUrl(_imagePath, existObject.HoverImage);
+                    return View(objectDto);
+                }
+
+                var check = _storage.HasFile(_imagePath, existObject.HoverImage);
+                if (check == true)
+                {
+                    await _storage.DeleteAsync(_imagePath, existObject.HoverImage);
+                    var imageInfo = await _storage.UploadAsync(_imagePath, objectDto.HoverFormFile);
+                    existObject.HoverImage = imageInfo.fileName;
+                }
+                else
+                {
+                    var imageInfo = await _storage.UploadAsync(_imagePath, objectDto.HoverFormFile);
+                    existObject.HoverImage = imageInfo.fileName;
+                }
+            }
+
             existObject.Name = objectDto.Name;
+            existObject.PartnerCategory = objectDto.PartnerCategory;
             await _unitOfWork.CommitAsync();
 
             object page = TempData["Page"] as int?;

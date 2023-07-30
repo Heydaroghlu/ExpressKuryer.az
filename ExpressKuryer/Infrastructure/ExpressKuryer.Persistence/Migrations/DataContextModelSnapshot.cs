@@ -351,6 +351,9 @@ namespace ExpressKuryer.Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("HoverImage")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
@@ -361,6 +364,9 @@ namespace ExpressKuryer.Persistence.Migrations
                         .IsRequired()
                         .HasMaxLength(90)
                         .HasColumnType("nvarchar(90)");
+
+                    b.Property<string>("PartnerCategory")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
