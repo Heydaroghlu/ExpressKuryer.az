@@ -13,7 +13,7 @@ namespace ExpressKuryer.Domain.Entities
         public decimal? Gain { get; set; }
 
         public string? CourierPersonId { get; set; }
-        public AppUser? CourierPerson { get; set; }
+        public AppUser? CourierPerson { get; set; } 
 
         [NotMapped]
         List<Delivery> Deliveries { get; set; }

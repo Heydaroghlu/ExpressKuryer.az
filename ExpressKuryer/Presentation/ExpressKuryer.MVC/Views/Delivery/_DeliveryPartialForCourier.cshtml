@@ -1,4 +1,4 @@
-﻿@model DashboardCourierViewModel
+﻿@model List<Courier>
 
 
 <div class="bootstrap-modal">
@@ -9,9 +9,15 @@
                     <h5 class="modal-title">Kuryerlər</h5>
                 </div>
                 <div class="modal-body">
-                    @if (Model.Couriers != null)
+                    @if (Model != null)
                     {
-                        <select class="form-control" form="courierform" asp-for="CourierId" asp-items="@new SelectList((List<Courier>)ViewBag.Couriers,nameof(Courier.Id),nameof(Courier.CourierPerson))"></select>
+                        <select class="form-control" form="courierform">
+                            @foreach (var item in Model)
+                            {
+                                <option value="@item.Id">@item.CourierPerson.Name @item.CourierPerson.Surname</option>
+                            }
+                        </select>
+                        @*<select class="form-control" form="courierform" asp-for="Model" asp-items="@new SelectList((List<Courier>)ViewBag.Couriers,nameof(Courier.Id),nameof(Courier.CourierPerson.Name))"></select>*@
                     }
                     else
                     {

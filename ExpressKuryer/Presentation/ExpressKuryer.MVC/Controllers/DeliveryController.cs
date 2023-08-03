@@ -11,6 +11,7 @@ using ExpressKuryer.Domain.Enums.Delivery;
 using ExpressKuryer.Infrastructure.Services.Email;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Protocol;
 
 namespace ExpressKuryer.MVC.Controllers
 {
@@ -151,7 +152,7 @@ namespace ExpressKuryer.MVC.Controllers
             var couriers = await _unitOfWork.RepositoryCourier.GetAllAsync(x => !x.IsDeleted, false, "CourierPerson");
             returnDto.DashboardCourierViewModel = new Application.ViewModels.DashboardCourierViewModel();
 
-            ViewBag.Couriers = couriers;
+            returnDto.Couriers = couriers;
 
             if (couriers != null && couriers.Count > 0)
             {
@@ -257,6 +258,7 @@ namespace ExpressKuryer.MVC.Controllers
             else if (status.Equals(OrderDeliveryStatus.Catdirildi.ToString()) && entity.CourierId != null)
             {
                 entity.OrderDeliveryStatus = OrderDeliveryStatus.Catdirildi.ToString();
+                
             }
 
             //try

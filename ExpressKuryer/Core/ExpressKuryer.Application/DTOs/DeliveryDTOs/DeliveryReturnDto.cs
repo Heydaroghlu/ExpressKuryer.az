@@ -2,6 +2,7 @@
 using ExpressKuryer.Application.DTOs.PartnerProduct;
 using ExpressKuryer.Application.DTOs.Service;
 using ExpressKuryer.Application.ViewModels;
+using ExpressKuryer.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +41,8 @@ namespace ExpressKuryer.Application.DTOs.DeliveryDTOs
 
         public CourierReturnDto? Courier { get; set; }
         public ExpressKuryer.Domain.Entities.AppUser? MemberUser { get; set; }
+
+        public List<Courier> Couriers { get; set; }
 
         public DashboardCourierViewModel? DashboardCourierViewModel { get; set; }
 

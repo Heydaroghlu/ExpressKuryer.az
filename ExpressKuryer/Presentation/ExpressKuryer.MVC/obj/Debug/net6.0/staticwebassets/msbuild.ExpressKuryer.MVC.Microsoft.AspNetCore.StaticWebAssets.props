@@ -4592,6 +4592,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partners\2fa78d82-0e19-4be9-9a5c-9ed47b92d8e4Untitled design (6).png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partners\e1bc77fc-43e3-4a90-aaa7-b8f075ebe96eneom-207NEuFvjlg-unsplash (1).jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ExpressKuryer.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ExpressKuryer.MVC</BasePath>
+      <RelativePath>uploads/partners/e1bc77fc-43e3-4a90-aaa7-b8f075ebe96eneom-207NEuFvjlg-unsplash (1).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partners\e1bc77fc-43e3-4a90-aaa7-b8f075ebe96eneom-207NEuFvjlg-unsplash (1).jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partners\e29eb149-1090-4821-9e78-d325bc22c1afODFGROUPWHITE.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ExpressKuryer.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ExpressKuryer.MVC</BasePath>
+      <RelativePath>uploads/partners/e29eb149-1090-4821-9e78-d325bc22c1afODFGROUPWHITE.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\partners\e29eb149-1090-4821-9e78-d325bc22c1afODFGROUPWHITE.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\b1b5856a-b276-4a57-9710-30a5350b793cDS-WSW-10-000-011-BLK_Black_026_1000x.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ExpressKuryer.MVC</SourceId>
