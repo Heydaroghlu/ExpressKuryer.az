@@ -32,7 +32,7 @@ namespace ExpressKuryer.API.Controllers
         [Route("GetAll")]
         public async Task<IActionResult> GetAll()
         {
-            var entities = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted, false);
+            var entities = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted, false,"PartnerProducts");
 
             var returnDto = _mapper.Map<List<PartnerReturnDto>>(entities);
 

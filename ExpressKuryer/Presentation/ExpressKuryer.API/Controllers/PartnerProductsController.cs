@@ -3,6 +3,7 @@ using ExpressKuryer.Application.DTOs.Partner;
 using ExpressKuryer.Application.DTOs.PartnerProduct;
 using ExpressKuryer.Application.Storages;
 using ExpressKuryer.Application.UnitOfWorks;
+using ExpressKuryer.Infrastructure.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,6 +16,7 @@ namespace ExpressKuryer.API.Controllers
         readonly IUnitOfWork _unitOfWork;
         readonly IMapper _mapper;
         readonly IStorage _storage;
+        static string _imagePath = "/uploads/partnerProducts/";
         public PartnerProductsController(IUnitOfWork unitOfWork, IMapper mapper, IStorage storage)
         {
             _unitOfWork = unitOfWork;
@@ -30,6 +32,11 @@ namespace ExpressKuryer.API.Controllers
 
             var returnDto = _mapper.Map<PartnerProductReturnDto>(entity);
 
+            returnDto.Image = HttpService.StorageUrl(_imagePath, returnDto.Image);
+            returnDto.ProductImages.ForEach(x =>
+            {
+                x.Image = HttpService.StorageUrl(_imagePath, x.Image);
+            });
             return Ok(returnDto);
         }
 

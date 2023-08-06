@@ -1,11 +1,13 @@
 ﻿using ExpressKuryer.Application.Abstractions.Token;
 using ExpressKuryer.Application.DTOs.AppUserDTOs;
 using ExpressKuryer.Application.DTOs.Delivery;
+using ExpressKuryer.Application.DTOs.Partner;
 using ExpressKuryer.Application.DTOs.Token;
 using ExpressKuryer.Application.HelperManager;
 using ExpressKuryer.Application.UnitOfWorks;
 using ExpressKuryer.Domain.Entities;
 using ExpressKuryer.Domain.Enums.UserEnums;
+using ExpressKuryer.Infrastructure.Services;
 using ExpressKuryer.Infrastructure.Services.Email;
 using ExpressKuryer.Infrastructure.Services.Token;
 using Microsoft.AspNetCore.Http;
@@ -26,6 +28,7 @@ namespace ExpressKuryer.API.Controllers
         private readonly ITokenHandler _tokenHandler;
         IEmailService _emailService;
         private readonly IUnitOfWork _unitOfWork;
+        private static string _imagePath = "/uploads/users/";
         public AccountController(UserManager<AppUser> userManager,IEmailService emailService,IUnitOfWork unitOfWork,ITokenHandler tokenHandler, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _roleManager = roleManager;
@@ -67,6 +70,11 @@ namespace ExpressKuryer.API.Controllers
         public async Task<IActionResult> Users()
         {
             var users = await _unitOfWork.RepositoryUser.GetAllAsync(x => x.IsAdmin != true);
+
+            users.ForEach(x =>
+            {
+                x.Image = HttpService.StorageUrl(_imagePath, x.Image);
+            });
             return Ok(users);
         }
         [HttpGet("logout")]
@@ -125,7 +133,8 @@ namespace ExpressKuryer.API.Controllers
                 Address = user.Address,
                 Email = user.Email,
                 Deliveries = data.ToList(),
-                Phone = user.PhoneNumber
+                Phone = user.PhoneNumber,
+                Image = HttpService.StorageUrl(_imagePath, user.Image)
             };
             return Ok(accountDTO);
         }
@@ -148,7 +157,8 @@ namespace ExpressKuryer.API.Controllers
                 Address = user.Address,
                 Email = user.Email,
                 Deliveries = user.Deliveries,
-                Phone = user.PhoneNumber
+                Phone = user.PhoneNumber,
+                Image = HttpService.StorageUrl(_imagePath, user.Image)
             };
             if (register.Password != null && register.Password==register.RepeatPassword)
             {

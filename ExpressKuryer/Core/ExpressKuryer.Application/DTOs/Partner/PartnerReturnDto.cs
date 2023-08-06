@@ -1,4 +1,5 @@
-﻿using Org.BouncyCastle.Bcpg;
+﻿using ExpressKuryer.Application.DTOs.PartnerProduct;
+using Org.BouncyCastle.Bcpg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace ExpressKuryer.Application.DTOs.Partner
         public DateTime UpdatedAt { get; set; }
         public string? WhoIsModified { get; set; }
         public bool? IsDeleted { get; set; }
+        public PartnerProductReturnDto PartnerProducts { get; set; }
 
     }
 }
