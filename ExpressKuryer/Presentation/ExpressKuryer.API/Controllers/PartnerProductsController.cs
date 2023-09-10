@@ -37,6 +37,7 @@ namespace ExpressKuryer.API.Controllers
             {
                 x.Image = HttpService.StorageUrl(_imagePath, x.Image);
             });
+
             return Ok(returnDto);
         }
 

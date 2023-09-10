@@ -15,7 +15,9 @@ namespace ExpressKuryer.Infrastructure.Services
             _httpContextAccessor = new HttpContextAccessor();
         }
 
-        public static string StorageUrl(string storagePath, string? fileName)
+
+        public static string Url() => $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}";
+		public static string StorageUrl(string storagePath, string? fileName)
         {
             string storageUrl = null;
             if (fileName != null)
