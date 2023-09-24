@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5EcCvAV97LRMP7fxEhT4B24IkPeVV80AqTzusk+EJqXq9EIQBS+4GLc3yLg79MqSxhij4o4+F/+JrYesEM5Izg==",
+  "dgSpecHash": "be1KtlM8MrdezjixwnxI0UVP0jMND1Z2v/yvPWhupAK75QFs+dErxxqK/8veI/73LTKn74o2cjigpmTeKBViDw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
+  "projectFilePath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SWIFT\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.16\\microsoft.aspnetcore.cryptography.internal.6.0.16.nupkg.sha512",
     "C:\\Users\\SWIFT\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.16\\microsoft.aspnetcore.cryptography.keyderivation.6.0.16.nupkg.sha512",

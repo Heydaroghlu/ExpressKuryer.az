@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj": {}
+    "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj": {
+    "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj",
+        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj",
         "projectName": "ExpressKuryer.Application",
-        "projectPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj",
+        "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj",
         "packagesPath": "C:\\Users\\SWIFT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\obj\\",
+        "outputPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SWIFT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj": {
-                "projectPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj"
+              "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj": {
+                "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj"
               }
             }
           }
@@ -93,14 +93,14 @@
         }
       }
     },
-    "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj": {
+    "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
         "projectName": "ExpressKuryer.Domain",
-        "projectPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
+        "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\ExpressKuryer.Domain.csproj",
         "packagesPath": "C:\\Users\\SWIFT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\obj\\",
+        "outputPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SWIFT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -158,14 +158,14 @@
         }
       }
     },
-    "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj": {
+    "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj",
         "projectName": "ExpressKuryer.Infrastructure",
-        "projectPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\SWIFT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SWIFT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -182,8 +182,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj": {
-                "projectPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj"
+              "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj": {
+                "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj"
               }
             }
           }
@@ -247,14 +247,14 @@
         }
       }
     },
-    "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj": {
+    "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj",
         "projectName": "ExpressKuryer.Persistence",
-        "projectPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj",
+        "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj",
         "packagesPath": "C:\\Users\\SWIFT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SWIFT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -271,8 +271,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj": {
-                "projectPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj"
+              "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj": {
+                "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Core\\ExpressKuryer.Application\\ExpressKuryer.Application.csproj"
               }
             }
           }
@@ -324,14 +324,14 @@
         }
       }
     },
-    "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj": {
+    "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
+        "projectUniqueName": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
         "projectName": "ExpressKuryer.MVC",
-        "projectPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
+        "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\ExpressKuryer.MVC.csproj",
         "packagesPath": "C:\\Users\\SWIFT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\",
+        "outputPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Presentation\\ExpressKuryer.MVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SWIFT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -348,11 +348,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj"
+              "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Infrastructure\\ExpressKuryer.Infrastructure.csproj"
               },
-              "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj": {
-                "projectPath": "C:\\Users\\SWIFT\\Desktop\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj"
+              "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj": {
+                "projectPath": "C:\\Users\\SWIFT\\Desktop\\GitRepos\\ExpressKuryer.az\\ExpressKuryer\\Infrastructure\\ExpressKuryer.Persistence\\ExpressKuryer.Persistence.csproj"
               }
             }
           }
