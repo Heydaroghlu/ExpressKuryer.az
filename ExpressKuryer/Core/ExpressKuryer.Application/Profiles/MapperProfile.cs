@@ -25,7 +25,7 @@ using System.Threading.Tasks;
 namespace ExpressKuryer.Application.Profiles
 {
     public class MapperProfile : Profile
-    {
+    {   
         public MapperProfile()
         {
             CreateMap<ContactDto, Contact>();
@@ -33,7 +33,7 @@ namespace ExpressKuryer.Application.Profiles
 
             CreateMap<Setting, SettingReturnDto>();
             CreateMap<PartnerCreateDto, Partner>();
-            CreateMap<Partner, PartnerReturnDto>();
+            CreateMap<ExpressKuryer.Domain.Entities.Partner, ExpressKuryer.Application.DTOs.Partner.PartnerReturnDto>();
 
             CreateMap<VacancyDto, Vacancy>();
             CreateMap<Subscribe, SubscribeReturnDto>();

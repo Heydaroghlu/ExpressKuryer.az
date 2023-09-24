@@ -21,7 +21,10 @@ namespace ExpressKuryer.Persistence.Configurations
 			
 				configurationManager.AddJsonFile("appsettings.json");
 
-				return configurationManager.GetConnectionString("DataContext");
+				var connection = configurationManager.GetConnectionString("DataContext");
+
+
+                return connection;
 			}
 		}
 

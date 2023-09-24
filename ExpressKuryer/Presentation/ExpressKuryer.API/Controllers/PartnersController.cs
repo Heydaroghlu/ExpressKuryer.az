@@ -34,15 +34,15 @@ namespace ExpressKuryer.API.Controllers
         {
             var entities = await _unitOfWork.RepositoryPartner.GetAllAsync(x => !x.IsDeleted, false,"PartnerProducts");
 
-            var returnDto = _mapper.Map<List<PartnerReturnDto>>(entities);
+            //var returnDto = _mapper.Map<List<PartnerReturnDto>>(entities);
 
-            returnDto.ForEach(x =>
+            entities.ForEach(x =>
             {
                 x.Image = HttpService.StorageUrl(_imagePath, x.Image);
                 x.HoverImage = HttpService.StorageUrl(_imagePath, x.HoverImage);
             });
 
-            return Ok(returnDto);
+            return Ok(entities);
         }
 
     }
